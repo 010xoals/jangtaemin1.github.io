@@ -1,0 +1,33 @@
+name: Update Data & Deploy
+on:
+  schedule:
+    - cron: '0 */2 * * *'   # 2시간마다
+  workflow_dispatch: {}      # 수동 실행 버튼
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install deps
+        run: npm ci || npm i
+      - name: Build data (YouTube + Spotify + Sheets)
+        env:
+          YT_API_KEY: ${{ secrets.YT_API_KEY }}
+          SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
+          SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
+          SHEETS_RELEASES_CSV_URL: ${{ secrets.SHEETS_RELEASES_CSV_URL }}
+        run: node scripts/build_all.js
+      - name: Commit updated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/*.json
+          git commit -m "chore(data): refresh JSON from APIs" || echo "No changes to commit"
+      - name: Push
+        run: git push
