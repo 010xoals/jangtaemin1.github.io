@@ -1,9 +1,21 @@
 {
   "youtube": {
-    "playlists": []
+    "playlists": [
+      // ——— K-POP ———
+      { "name": "JYP Entertainment - Uploads", "id": "UUaO6TYtlC8U5ttz62hTrZgg" },
+      { "name": "SMTOWN - Uploads",           "id": "UUEf_Bc-KVd7onSeifS3py9g" },
+      { "name": "1theK - Uploads",            "id": "UUweOkPb1wVVH0Q0Tlj4a5Pw" },
+      { "name": "HYBE LABELS - Uploads",      "id": "UU3IZKseVpdzPSBaWxBxundA" },
+
+      // ——— J-POP ———
+      { "name": "Ado - Uploads",              "id": "UUln9P4Qm3-EAY4aiEPmRwEA" },
+      { "name": "YOASOBI - Uploads",          "id": "UUvpredjG93ifbCP1Y77JyFA" },
+
+      // ——— POP (Global) ———
+      { "name": "Taylor Swift - Uploads",     "id": "UUqECaJ8Gagnn7YCbPEzWH6g" },
+      { "name": "Ed Sheeran - Uploads",       "id": "UU0C-w0YjGpqDXGB8IHb662A" },
+      { "name": "Ariana Grande - Uploads",    "id": "UU9CoOnJkIBMdeijd9qYoT_g" }
+    ]
   },
-  "spotify": {
-    "artist_ids": [],
-    "track_ids": []
-  }
+  "spotify": { "artist_ids": [], "track_ids": [] }
 }
