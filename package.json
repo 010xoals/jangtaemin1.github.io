@@ -1,0 +1,13 @@
+{
+  "name": "music-portal-data-pipeline",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "fetch:youtube": "node scripts/fetch_youtube.js",
+    "fetch:spotify": "node scripts/fetch_spotify.js",
+    "fetch:sheets": "node scripts/fetch_sheets.js",
+    "build:all": "node scripts/build_all.js"
+  },
+  "dependencies": {}
+}

@@ -1,27 +1,36 @@
 
-# Music Discovery Hub — Static Site (Ad-Ready)
+# Music Portal — Data Pipeline
 
-This is a static, SEO-friendly music portal designed to drive traffic and ad revenue. Upload the entire folder to your hosting (e.g., GitHub Pages, Nginx).
+This toolkit fetches **real data** and writes JSON files the static site can read:
+- `data/artists.json`
+- `data/songs.json`
+- `data/releases.json`
 
-## Features
-- Home + K-POP/J-POP/POP genre pages
-- Release Calendar (client-side from JSON)
-- Artists Index + Artist/Song detail pages
-- Voting (localStorage) for engagement
-- Ad placeholders: Top Leaderboard, In-Feed, In-Article, Anchor
-- SEO: meta tags, Open Graph, robots.txt, sitemap.xml, rss.xml, ads.txt
+## Sources
+- **YouTube**: Playlist items → artists/songs
+- **Spotify**: Artists/Tracks by ID (Client Credentials)
+- **Google Sheets**: Published CSV → releases.json
 
-## How to Deploy
-1. Copy the `music_portal_static` contents to your web root.
-2. Ensure your domain points to the host. For GitHub Pages, commit to the repository's root (or `/docs`) and enable Pages.
-3. Replace sample data in `/data/*.json` with your real content.
-4. Swap ad placeholders with your AdSense tags once approved.
+## Setup (GitHub Actions, recommended)
+1. Copy this folder into your **site repository root** (same repo that has index.html).
+2. Commit & push.
+3. In GitHub: **Settings → Secrets and variables → Actions → New Repository Secret** and add:
+   - `YT_API_KEY`
+   - `SPOTIFY_CLIENT_ID`
+   - `SPOTIFY_CLIENT_SECRET`
+   - `SHEETS_RELEASES_CSV_URL` (CSV publish URL)
+4. (Optional) Edit `config/config.json` to add YouTube playlist IDs and Spotify IDs.
+5. Go to **Actions** tab → enable workflows. It will run every 2 hours (and on manual dispatch).
 
-## Customize
-- Edit `/data/*.json` to add artists/songs/releases.
-- Tweak styles in `/assets/css/style.css`.
-- Add news links in `/news.html` (curated).
+## Local Run (optional)
+```bash
+npm i
+export YT_API_KEY=xxx
+export SPOTIFY_CLIENT_ID=xxx
+export SPOTIFY_CLIENT_SECRET=yyy
+export SHEETS_RELEASES_CSV_URL='https://docs.google.com/spreadsheets/d/.../export?format=csv'
+node scripts/build_all.js
+```
 
-## Notes
-- Lyrics should not be posted in full due to copyright; link to official sources.
-- For dynamic/server features (ISR, programmatic pages), migrate to Next.js + Vercel later.
+## Mapping to Site
+The static site reads JSON at `/data/*.json`. After workflow runs, the updated files are committed, so Pages redeploy picks them up.
