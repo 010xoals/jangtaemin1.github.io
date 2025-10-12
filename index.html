@@ -1,130 +1,422 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Music Discovery Hub</title>
-  <meta name="description" content="K-POP / J-POP / POP — Top 5 Songs of the Year, Month, Week, and Today">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg:#f7f7fb; --card:#fff; --text:#111; --muted:#666; --line:#e5e7eb; --brand:#111;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{margin:0; font-family:Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', Arial, sans-serif; background:linear-gradient(#fff, var(--bg)); color:var(--text)}
-    a{color:inherit}
-    .container{max-width:1140px; margin:0 auto; padding:0 16px}
-    header{position:sticky; top:0; z-index:10; background:#ffffffcc; backdrop-filter:saturate(180%) blur(8px); border-bottom:1px solid var(--line)}
-    .h-wrap{display:flex; align-items:center; justify-content:space-between; padding:12px 0}
-    .brand{display:flex; gap:10px; align-items:center}
-    .logo{width:36px; height:36px; border-radius:12px; background:var(--brand); color:#fff; display:grid; place-items:center; font-weight:700}
-    nav.tabs{display:flex; gap:6px}
-    .tab{border:1px solid var(--line); border-radius:12px; padding:8px 12px; font-size:14px; background:#fff; cursor:pointer}
-    .tab.active{background:var(--brand); color:#fff; border-color:var(--brand)}
+import React, { useMemo, useState } from "react";
 
-    .subtabs{display:flex; gap:8px; padding:14px 0}
-    .subtab{border:1px solid var(--line); border-radius:999px; padding:8px 12px; font-size:14px; background:#fff; cursor:pointer}
-    .subtab.active{background:#111; color:#fff}
+/**
+ * Music Discovery Hub — Single-file React Component
+ *
+ * ✅ Features
+ * 1) Tabs: K-POP / J-POP / POP
+ * 2) Sub-tabs: Year / Month / Week / Today — each showing 5 picks
+ * 3) Each track shows: Release Date, Artist, Lyrics (excerpt), YouTube (embedded)
+ * 4) Track detail via modal (can be swapped to routing later)
+ * 5) Ready to expand with external chart/streaming APIs and ad slots
+ *
+ * 🔧 How to use
+ * - Replace the sample `mockData` below with your real picks.
+ * - For lyrics, respect copyright: show brief excerpts only.
+ */
 
-    .grid{display:grid; grid-template-columns:repeat(1, minmax(0,1fr)); gap:16px}
-    @media(min-width:640px){.grid{grid-template-columns:repeat(2,1fr)}}
-    @media(min-width:1024px){.grid{grid-template-columns:repeat(3,1fr)}}
-    @media(min-width:1280px){.grid{grid-template-columns:repeat(5,1fr)}}
+// Extract YouTube video ID from a variety of URL formats
+function getYouTubeId(url) {
+  try {
+    const u = new URL(url);
+    if (u.hostname.includes("youtu.be")) return u.pathname.slice(1);
+    if (u.searchParams.get("v")) return u.searchParams.get("v");
+    const parts = u.pathname.split("/").filter(Boolean); // e.g., /embed/<id>
+    if (parts[0] === "embed" && parts[1]) return parts[1];
+    return null;
+  } catch (e) {
+    return null;
+  }
+}
 
-    .card{background:var(--card); border:1px solid var(--line); border-radius:16px; overflow:hidden; box-shadow:0 6px 16px rgba(0,0,0,.04)}
-    .cover{aspect-ratio:1/1; width:100%; background:#eee; object-fit:cover}
-    .pad{padding:14px}
-    .row{display:flex; align-items:center; justify-content:space-between; gap:8px}
-    .title{font-weight:600; font-size:15px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
-    .badge{display:inline-block; border:1px solid var(--line); color:#444; padding:2px 8px; border-radius:999px; font-size:11px}
-    .meta{color:var(--muted); font-size:13px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
-    .iframe-wrap{margin-top:8px; border-radius:12px; overflow:hidden; background:#000; aspect-ratio:16/9}
-    .btn{width:100%; margin-top:8px; border:1px solid var(--line); border-radius:12px; padding:10px 12px; background:#fff; cursor:pointer; font-size:13px}
-    .btn:hover{background:#f7f7f9}
+// Data schema
+// type Track = { title, artist, releasedAt(YYYY-MM-DD), lyrics(optional), youtube(url), cover(url optional) }
+// type PeriodKey = "year" | "month" | "week" | "day";
+// type GenreKey = "kpop" | "jpop" | "pop";
 
-    .section{margin:28px 0}
-    .section h2{font-size:18px; font-weight:600; margin:0 0 10px}
-    .section .caption{font-size:12px; color:var(--muted)}
+const mockData = {
+  kpop: {
+    year: [
+      { title: "Sample K-POP — Year #1", artist: "Artist A", releasedAt: "2025-03-15", lyrics: "A short one-liner (excerpt)", youtube: "https://www.youtube.com/watch?v=dQw4w9WgXcQ", cover: "https://picsum.photos/seed/k1/600/600" },
+      { title: "Sample K-POP — Year #2", artist: "Artist B", releasedAt: "2025-05-09", youtube: "https://youtu.be/dQw4w9WgXcQ", cover: "https://picsum.photos/seed/k2/600/600" },
+      { title: "Sample K-POP — Year #3", artist: "Artist C", releasedAt: "2025-01-22", youtube: "https://www.youtube.com/embed/dQw4w9WgXcQ", cover: "https://picsum.photos/seed/k3/600/600" },
+      { title: "Sample K-POP — Year #4", artist: "Artist D", releasedAt: "2025-04-02", youtube: "https://www.youtube.com/watch?v=dQw4w9WgXcQ", cover: "https://picsum.photos/seed/k4/600/600" },
+      { title: "Sample K-POP — Year #5", artist: "Artist E", releasedAt: "2025-07-18", youtube: "https://youtu.be/dQw4w9WgXcQ", cover: "https://picsum.photos/seed/k5/600/600" },
+    ],
+    month: Array.from({ length: 5 }).map((_, i) => ({
+      title: `Sample K-POP — This Month ${i + 1}`,
+      artist: `Artist ${i + 1}`,
+      releasedAt: `2025-10-${String(10 - i).padStart(2, "0")}`,
+      youtube: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      cover: `https://picsum.photos/seed/km${i}/600/600`,
+    })),
+    week: Array.from({ length: 5 }).map((_, i) => ({
+      title: `Sample K-POP — This Week ${i + 1}`,
+      artist: `Artist ${i + 1}`,
+      releasedAt: `2025-10-${String(6 - i).padStart(2, "0")}`,
+      youtube: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      cover: `https://picsum.photos/seed/kw${i}/600/600`,
+    })),
+    day: Array.from({ length: 5 }).map((_, i) => ({
+      title: `Sample K-POP — Today ${i + 1}`,
+      artist: `Artist ${i + 1}`,
+      releasedAt: "2025-10-12",
+      youtube: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      cover: `https://picsum.photos/seed/kd${i}/600/600`,
+    })),
+  },
+  jpop: {
+    year: Array.from({ length: 5 }).map((_, i) => ({
+      title: `Sample J-POP — Year ${i + 1}`,
+      artist: `Artist JP ${i + 1}`,
+      releasedAt: `2025-0${(i % 9) + 1}-15`,
+      youtube: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      cover: `https://picsum.photos/seed/jy${i}/600/600`,
+    })),
+    month: Array.from({ length: 5 }).map((_, i) => ({
+      title: `Sample J-POP — This Month ${i + 1}`,
+      artist: `Artist JP ${i + 6}`,
+      releasedAt: `2025-10-${String(9 - i).padStart(2, "0")}`,
+      youtube: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      cover: `https://picsum.photos/seed/jm${i}/600/600`,
+    })),
+    week: Array.from({ length: 5 }).map((_, i) => ({
+      title: `Sample J-POP — This Week ${i + 1}`,
+      artist: `Artist JP ${i + 11}`,
+      releasedAt: `2025-10-${String(6 - i).padStart(2, "0")}`,
+      youtube: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      cover: `https://picsum.photos/seed/jw${i}/600/600`,
+    })),
+    day: Array.from({ length: 5 }).map((_, i) => ({
+      title: `Sample J-POP — Today ${i + 1}`,
+      artist: `Artist JP ${i + 16}`,
+      releasedAt: "2025-10-12",
+      youtube: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      cover: `https://picsum.photos/seed/jd${i}/600/600`,
+    })),
+  },
+  pop: {
+    year: Array.from({ length: 5 }).map((_, i) => ({
+      title: `Sample POP — Year ${i + 1}`,
+      artist: `Artist Global ${i + 1}`,
+      releasedAt: `2025-0${(i % 9) + 1}-10`,
+      youtube: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      cover: `https://picsum.photos/seed/py${i}/600/600`,
+    })),
+    month: Array.from({ length: 5 }).map((_, i) => ({
+      title: `Sample POP — This Month ${i + 1}`,
+      artist: `Artist Global ${i + 6}`,
+      releasedAt: `2025-10-${String(8 - i).padStart(2, "0")}`,
+      youtube: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      cover: `https://picsum.photos/seed/pm${i}/600/600`,
+    })),
+    week: Array.from({ length: 5 }).map((_, i) => ({
+      title: `Sample POP — This Week ${i + 1}`,
+      artist: `Artist Global ${i + 11}`,
+      releasedAt: `2025-10-${String(5 - i).padStart(2, "0")}`,
+      youtube: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      cover: `https://picsum.photos/seed/pw${i}/600/600`,
+    })),
+    day: Array.from({ length: 5 }).map((_, i) => ({
+      title: `Sample POP — Today ${i + 1}`,
+      artist: `Artist Global ${i + 16}`,
+      releasedAt: "2025-10-12",
+      youtube: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      cover: `https://picsum.photos/seed/pd${i}/600/600`,
+    })),
+  },
+};
 
-    .hero{padding:24px 0}
-    .hero h1{font-size:28px; margin:0 0 6px}
-    .hero p{margin:0; color:#444}
+const GENRES = [
+  { key: "kpop", label: "K-POP" },
+  { key: "jpop", label: "J-POP" },
+  { key: "pop", label: "POP" },
+];
+const PERIODS = [
+  { key: "year", label: "Year Picks" },
+  { key: "month", label: "Monthly Picks" },
+  { key: "week", label: "Weekly Picks" },
+  { key: "day", label: "Today’s Picks" },
+];
 
-    footer{border-top:1px solid var(--line); margin-top:40px; padding:14px 0; font-size:12px; color:#666}
-    .pill{display:inline-block; font-size:11px; border:1px solid var(--line); padding:2px 8px; border-radius:999px; background:#fafafa}
-  </style>
-</head>
-<body>
-  <header>
-    <div class="container h-wrap">
-      <div class="brand">
-        <div class="logo">Mu</div>
-        <strong>Music Discovery Hub</strong>
+function Badge({ children }) {
+  return (
+    <span className="inline-block rounded-full border px-2 py-0.5 text-xs text-gray-600">
+      {children}
+    </span>
+  );
+}
+
+function SongCard({ track, onOpen }) {
+  const vid = getYouTubeId(track.youtube);
+  return (
+    <div className="group relative rounded-2xl border shadow-sm overflow-hidden bg-white">
+      <div className="aspect-square w-full bg-gray-100">
+        {track.cover ? (
+          <img src={track.cover} alt={`${track.title} cover`} className="h-full w-full object-cover" />
+        ) : (
+          <div className="h-full w-full flex items-center justify-center text-gray-400">No Cover</div>
+        )}
       </div>
-      <nav class="tabs" id="topTabs">
-        <button class="tab" data-route="#/">Home</button>
-        <button class="tab" data-route="#/kpop">K-POP</button>
-        <button class="tab" data-route="#/jpop">J-POP</button>
-        <button class="tab" data-route="#/pop">POP</button>
-      </nav>
+      <div className="p-4 space-y-2">
+        <div className="flex items-center justify-between gap-2">
+          <h3 className="font-semibold line-clamp-1" title={track.title}>{track.title}</h3>
+          <Badge>{track.releasedAt}</Badge>
+        </div>
+        <p className="text-sm text-gray-600 line-clamp-1" title={track.artist}>{track.artist}</p>
+        {vid && (
+          <div className="mt-2">
+            <div className="aspect-video w-full rounded-lg overflow-hidden">
+              <iframe
+                className="h-full w-full"
+                src={`https://www.youtube.com/embed/${vid}`}
+                title={track.title}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
+            </div>
+          </div>
+        )}
+        {track.lyrics && (
+          <p className="text-xs text-gray-500 line-clamp-2" title={track.lyrics}>{track.lyrics}</p>
+        )}
+        <button
+          onClick={onOpen}
+          className="mt-2 w-full rounded-xl border px-3 py-2 text-sm hover:bg-gray-50"
+        >
+          View details
+        </button>
+      </div>
     </div>
-  </header>
+  );
+}
 
-  <main class="container" id="app">
-    <section class="hero">
-      <h1>Music Discovery Hub</h1>
-      <p>Discover the best of K-POP, J-POP, and POP — top 5 songs of the year, month, week, and today.</p>
+function Modal({ open, onClose, track }) {
+  if (!open) return null;
+  const vid = getYouTubeId(track?.youtube || "");
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50">
+      <div className="max-w-3xl w-full bg-white rounded-2xl overflow-hidden shadow-xl">
+        <div className="flex items-center justify-between p-4 border-b">
+          <h3 className="font-semibold">{track.title}</h3>
+          <button className="rounded-lg px-3 py-1.5 text-sm border hover:bg-gray-50" onClick={onClose}>Close</button>
+        </div>
+        <div className="p-4 space-y-4">
+          <div className="flex flex-col md:flex-row gap-4">
+            <div className="md:w-1/2">
+              <div className="aspect-video w-full rounded-xl overflow-hidden bg-black">
+                {vid ? (
+                  <iframe
+                    className="h-full w-full"
+                    src={`https://www.youtube.com/embed/${vid}`}
+                    title={track.title}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                  />
+                ) : (
+                  <div className="h-full w-full flex items-center justify-center text-white/70">No YouTube link</div>
+                )}
+              </div>
+            </div>
+            <div className="md:w-1/2 space-y-2">
+              <div className="flex items-center justify-between">
+                <Badge>Released: {track.releasedAt}</Badge>
+                <Badge>Artist: {track.artist}</Badge>
+              </div>
+              {track.cover && (
+                <img src={track.cover} alt="cover" className="rounded-xl w-full" />
+              )}
+              {track.lyrics && (
+                <div className="mt-2">
+                  <h4 className="font-medium mb-1">Lyrics (excerpt)</h4>
+                  <p className="text-sm text-gray-700 whitespace-pre-wrap">{track.lyrics}</p>
+                </div>
+              )}
+              <a
+                href={track.youtube}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-block mt-2 text-sm underline text-blue-600"
+              >
+                Open on YouTube ↗
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Section({ title, tracks, onOpen }) {
+  return (
+    <section className="space-y-3">
+      <div className="flex items-center justify-between">
+        <h2 className="text-lg font-semibold">{title}</h2>
+        <span className="text-xs text-gray-500">{tracks.length} tracks</span>
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
+        {tracks.map((t, idx) => (
+          <SongCard key={idx} track={t} onOpen={() => onOpen(t)} />
+        ))}
+      </div>
     </section>
+  );
+}
 
-    <div class="section">
-      <h2>Quick Access</h2>
-      <div class="grid">
-        <a class="card" href="#/kpop">
-          <img class="cover" src="https://picsum.photos/seed/hero-kpop/800/800" alt="K-POP" />
-          <div class="pad">
-            <div class="row">
-              <div class="title">K-POP</div>
-              <span class="badge">Explore</span>
-            </div>
-            <p class="meta">Year · Month · Week · Today</p>
-          </div>
-        </a>
-        <a class="card" href="#/jpop">
-          <img class="cover" src="https://picsum.photos/seed/hero-jpop/800/800" alt="J-POP" />
-          <div class="pad">
-            <div class="row">
-              <div class="title">J-POP</div>
-              <span class="badge">Explore</span>
-            </div>
-            <p class="meta">Year · Month · Week · Today</p>
-          </div>
-        </a>
-        <a class="card" href="#/pop">
-          <img class="cover" src="https://picsum.photos/seed/hero-pop/800/800" alt="POP" />
-          <div class="pad">
-            <div class="row">
-              <div class="title">POP</div>
-              <span class="badge">Explore</span>
-            </div>
-            <p class="meta">Year · Month · Week · Today</p>
-          </div>
-        </a>
+function Header({ active, setActive }) {
+  return (
+    <header className="sticky top-0 z-40 bg-white/90 backdrop-blur border-b">
+      <div className="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between">
+        <div className="flex items-center gap-2">
+          <div className="h-9 w-9 rounded-2xl bg-black text-white flex items-center justify-center font-bold">Mu</div>
+          <h1 className="font-semibold">Music Discovery</h1>
+        </div>
+        <nav className="flex gap-1">
+          {GENRES.map((g) => (
+            <button
+              key={g.key}
+              onClick={() => setActive(g.key)}
+              className={`px-3 py-1.5 rounded-xl text-sm border ${
+                active === g.key ? "bg-black text-white" : "hover:bg-gray-50"
+              }`}
+            >
+              {g.label}
+            </button>
+          ))}
+        </nav>
+      </div>
+    </header>
+  );
+}
+
+function SubTabs({ period, setPeriod }) {
+  return (
+    <div className="mx-auto max-w-7xl px-4 mt-6">
+      <div className="flex flex-wrap gap-2">
+        {PERIODS.map((p) => (
+          <button
+            key={p.key}
+            onClick={() => setPeriod(p.key)}
+            className={`px-3 py-1.5 rounded-full border text-sm ${
+              period === p.key ? "bg-gray-900 text-white" : "hover:bg-gray-50"
+            }`}
+          >
+            {p.label}
+          </button>
+        ))}
       </div>
     </div>
-  </main>
+  );
+}
 
-  <footer>
-    <div class="container" style="display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap">
-      <span>© <span id="year"></span> Music Discovery Hub · Built by jangtaemin1.com</span>
-      <span class="pill">K-POP · J-POP · POP — Top 5 Picks of the Year, Month, Week & Today</span>
+function Toolbar({ query, setQuery, sort, setSort }) {
+  return (
+    <div className="mx-auto max-w-7xl px-4 mt-4 flex flex-col md:flex-row gap-3 md:items-center md:justify-between">
+      <input
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
+        placeholder="Search: title, artist, lyrics…"
+        className="w-full md:w-1/2 rounded-xl border px-3 py-2 text-sm"
+      />
+      <div className="flex items-center gap-2">
+        <label className="text-sm text-gray-600">Sort:</label>
+        <select
+          value={sort}
+          onChange={(e) => setSort(e.target.value)}
+          className="rounded-xl border px-3 py-2 text-sm"
+        >
+          <option value="recent">Newest</option>
+          <option value="old">Oldest</option>
+          <option value="title">Title A→Z</option>
+          <option value="artist">Artist A→Z</option>
+        </select>
+      </div>
     </div>
-  </footer>
+  );
+}
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
+export default function MusicSite() {
+  const [active, setActive] = useState("kpop"); // kpop | jpop | pop
+  const [period, setPeriod] = useState("year"); // year | month | week | day
+  const [query, setQuery] = useState("");
+  const [sort, setSort] = useState("recent");
+  const [openTrack, setOpenTrack] = useState(null);
+
+  const base = mockData[active]?.[period] || [];
+
+  const filtered = useMemo(() => {
+    let arr = [...base];
+    if (query.trim()) {
+      const q = query.toLowerCase();
+      arr = arr.filter((t) =>
+        [t.title, t.artist, t.lyrics || ""].some((x) => (x || "").toLowerCase().includes(q))
+      );
+    }
+    if (sort === "recent") arr.sort((a, b) => (b.releasedAt || "").localeCompare(a.releasedAt || ""));
+    if (sort === "old") arr.sort((a, b) => (a.releasedAt || "").localeCompare(b.releasedAt || ""));
+    if (sort === "title") arr.sort((a, b) => a.title.localeCompare(b.title));
+    if (sort === "artist") arr.sort((a, b) => a.artist.localeCompare(b.artist));
+    return arr;
+  }, [base, query, sort]);
+
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
+      <Header active={active} setActive={setActive} />
+
+      {/* Sub-tabs (Year/Month/Week/Today) */}
+      <SubTabs period={period} setPeriod={setPeriod} />
+
+      {/* Search / Sort toolbar */}
+      <Toolbar query={query} setQuery={setQuery} sort={sort} setSort={setSort} />
+
+      {/* Main content */}
+      <main className="mx-auto max-w-7xl px-4 py-6 space-y-8">
+        <Section
+          title={PERIODS.find((p) => p.key === period)?.label || "Picks"}
+          tracks={filtered}
+          onOpen={(t) => setOpenTrack(t)}
+        />
+
+        {/* Home highlights (Top 1 from each genre for the selected period) */}
+        <div className="space-y-3">
+          <h2 className="text-lg font-semibold">Highlights</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {GENRES.map((g) => {
+              const first = mockData[g.key][period][0];
+              return (
+                <div key={g.key} className="rounded-2xl border p-4 bg-white">
+                  <div className="flex items-center justify-between mb-2">
+                    <div className="font-medium">{g.label}</div>
+                    <Badge>{first.releasedAt}</Badge>
+                  </div>
+                  <div className="text-sm text-gray-700 line-clamp-1">{first.title} — {first.artist}</div>
+                  <button
+                    onClick={() => setOpenTrack(first)}
+                    className="mt-3 w-full rounded-xl border px-3 py-2 text-sm hover:bg-gray-50"
+                  >
+                    View
+                  </button>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </main>
+
+      <footer className="mx-auto max-w-7xl px-4 pb-10 text-xs text-gray-500">
+        <div className="border-t pt-4 flex flex-col sm:flex-row gap-2 sm:items-center sm:justify-between">
+          <p>© {new Date().getFullYear()} Music Discovery. Built by jangtaemin1.com</p>
+          <div className="flex gap-3">
+            <a className="underline" href="#">Privacy</a>
+            <a className="underline" href="#">Contact</a>
+          </div>
+        </div>
+      </footer>
+
+      <Modal open={!!openTrack} onClose={() => setOpenTrack(null)} track={openTrack} />
+    </div>
+  );
+}
