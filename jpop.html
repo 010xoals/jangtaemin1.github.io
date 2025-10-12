@@ -1,108 +1,175 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>J-POP — Music Discovery Hub</title>
-  <meta name="description" content="Top picks, video embeds, and details for J-POP.">
-  <meta property="og:title" content="J-POP — Music Discovery Hub">
-  <meta property="og:description" content="Top picks, video embeds, and details for J-POP.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://jangtaemin1.com/jpop.html">
-  <meta property="og:image" content="https://picsum.photos/seed/music-hub/1200/630">
-  <meta name="twitter:card" content="summary_large_image">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Genre — Music Discovery Hub</title>
+  <meta name="description" content="Top picks with newest and most-viewed sorting, YouTube thumbnails, and quick filtering.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
-<header class="site-header">
-  <div class="container h-wrap">
-    <a class="brand" href="/"><span class="logo">Mu</span><strong>Music Discovery Hub</strong></a>
-    <nav class="tabs">
-      <a class="tab" href="/kpop.html">K-POP</a>
-      <a class="tab" href="/jpop.html">J-POP</a>
-      <a class="tab" href="/pop.html">POP</a>
-      <a class="tab" href="/calendar.html">Calendar</a>
-      <a class="tab" href="/artists/index.html">Artists</a>
-      <a class="tab" href="/games.html">Vote</a>
-      <a class="tab" href="/news.html">News</a>
-    </nav>
-  </div>
-  <div id="ad_top_leaderboard" class="ad ad-leader">AD TOP 970×250 / 320×100</div>
-</header>
-<main class="container">
-<section class='hero'><h1>J-POP</h1><p>Top 5 picks for today. Use search & sort to explore.</p></section>
-<div class="searchbar">
-  <input id="q" placeholder="Search: title, artist…" />
-  <div>
-    <label class="meta">Sort</label>
-    <select id="sort">
-      <option value="recent">Newest</option>
-      <option value="old">Oldest</option>
-      <option value="title">Title A→Z</option>
-      <option value="artist">Artist A→Z</option>
-    </select>
-  </div>
-</div>
-<div class="section"><h2>Top 5 — Today</h2><div id="grid" class="grid"></div></div>
-<script>
-(async function(){
-  const [artists, songs] = await Promise.all([
-    fetch('/data/artists.json').then(r=>r.json()),
-    fetch('/data/songs.json').then(r=>r.json())
-  ]);
-  const today = songs.slice(0,5); // demo data
-  const grid = document.getElementById('grid');
-  function ytId(u){try{const url=new URL(u); if(url.hostname.includes('youtu.be')) return url.pathname.slice(1); const v=url.searchParams.get('v'); if(v) return v; const p=url.pathname.split('/').filter(Boolean); if(p[0]==='embed'&&p[1]) return p[1];}catch(e){} return null;}
-  function render(list){
-    grid.innerHTML='';
-    list.forEach(t=>{
-      const vid = ytId(t.yt_url);
-      grid.insertAdjacentHTML('beforeend', `
+  <header class="site-header">
+    <div class="container h-wrap">
+      <a class="brand" href="/"><span class="logo">Mu</span><strong>Music Discovery Hub</strong></a>
+      <nav class="tabs">
+        <a class="tab" href="/kpop.html">K-POP</a>
+        <a class="tab" href="/jpop.html">J-POP</a>
+        <a class="tab" href="/pop.html">POP</a>
+        <a class="tab" href="/calendar.html">Calendar</a>
+        <a class="tab" href="/artists/index.html">Artists</a>
+        <a class="tab" href="/games.html">Vote</a>
+        <a class="tab" href="/news.html">News</a>
+      </nav>
+    </div>
+    <div id="ad_top_leaderboard" class="ad ad-leader">AD TOP 970×250 / 320×100</div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1 id="genreTitle">Genre</h1>
+      <p>Top 5 picks with newest/most-viewed sorting and crisp thumbnails.</p>
+    </section>
+
+    <div class="searchbar">
+      <input id="q" placeholder="Search: title or artist…" />
+      <div>
+        <label class="meta">Sort</label>
+        <select id="sort">
+          <option value="newest">Newest</option>
+          <option value="views">Most viewed</option>
+          <option value="title">Title A→Z</option>
+          <option value="artist">Artist A→Z</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Top 5</h2>
+      <div id="grid" class="grid"></div>
+    </div>
+
+    <div id="ad_infeed_home_1" class="ad infeed">AD In-Feed</div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container f-wrap">
+      <div>© <span id="year"></span> Music Discovery Hub · Built by jangtaemin1.com</div>
+      <div class="links">
+        <a href="/privacy.html">Privacy</a>
+        <a href="/ads.html">Ads</a>
+        <a href="/contact.html">Contact</a>
+        <a href="/rss.xml">RSS</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/app.js"></script>
+  <script>
+    const bust = () => '?t=' + Date.now();
+    const $ = (s) => document.querySelector(s);
+
+    // 어떤 장르 페이지인지 pathname으로 감지 (kpop/jpop/pop.html)
+    const path = (location.pathname || '').toLowerCase();
+    let MODE = 'ALL';
+    if (path.includes('kpop')) MODE = 'K';
+    else if (path.includes('jpop')) MODE = 'J';
+    else if (path.includes('pop')) MODE = 'P';
+
+    const TITLE = MODE === 'K' ? 'K-POP'
+                 : MODE === 'J' ? 'J-POP'
+                 : 'POP';
+    $('#genreTitle').textContent = TITLE;
+
+    function ytId(u){
+      try{
+        const url = new URL(u);
+        if (url.hostname.includes('youtu.be')) return url.pathname.slice(1);
+        const v = url.searchParams.get('v');
+        if (v) return v;
+        const p = url.pathname.split('/').filter(Boolean);
+        if (p[0]==='embed' && p[1]) return p[1];
+      }catch(e){}
+      return null;
+    }
+
+    function cardHTML(t, a){
+      const vid = ytId(t.yt_url || '');
+      const thumb = t.thumbnail || `https://picsum.photos/seed/${t.slug||t.id}/800/800`;
+      return `
         <article class="card">
-          <img class="cover" src="https://picsum.photos/seed/${t.slug||t.id}/600/600" alt="cover">
+          <img class="cover" src="${thumb}" alt="cover of ${t.title}">
           <div class="pad">
-            <div class="row"><div class="title">${t.title}</div><span class="badge">${t.release_date}</span></div>
-            <div class="meta">${(artists.find(a=>a.id===t.artist_id)||{}).name||''}</div>
-            ${vid ? `<div class="iframe-wrap"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/${vid}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>`:''}
+            <div class="row">
+              <div class="title" title="${t.title}">${t.title}</div>
+              <span class="badge">${t.release_date || ''}</span>
+            </div>
+            <div class="meta" title="${a?.name || ''}">${a?.name || ''}</div>
+            ${vid ? `<div class="iframe-wrap"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/${vid}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>` : ''}
             <a class="btn" href="/song.html?slug=${encodeURIComponent(t.slug||t.id)}">View details</a>
           </div>
         </article>
-      `);
-    });
-  }
-  render(today);
-  document.getElementById('q').addEventListener('input', e=>{
-    const q=e.target.value.toLowerCase();
-    const base=songs.filter(t=>[t.title,(artists.find(a=>a.id===t.artist_id)||{}).name||''].some(x=>String(x).toLowerCase().includes(q)));
-    render(base.slice(0,5));
-  });
-  document.getElementById('sort').addEventListener('change', e=>{
-    const val=e.target.value;
-    const arr=songs.slice();
-    if(val==='recent') arr.sort((a,b)=>b.release_date.localeCompare(a.release_date));
-    if(val==='old') arr.sort((a,b)=>a.release_date.localeCompare(b.release_date));
-    if(val==='title') arr.sort((a,b)=>a.title.localeCompare(b.title));
-    if(val==='artist') arr.sort((a,b)=>((artists.find(x=>x.id===a.artist_id)||{}).name||'').localeCompare(((artists.find(x=>x.id===b.artist_id)||{}).name||'')));
-    render(arr.slice(0,5));
-  });
-})();
-</script>
+      `;
+    }
 
-</main>
-<footer class="site-footer">
-  <div class="container f-wrap">
-    <div>© <span id="year"></span> Music Discovery Hub · Built by jangtaemin1.com</div>
-    <div class="links">
-      <a href="/privacy.html">Privacy</a>
-      <a href="/ads.html">Ads</a>
-      <a href="/contact.html">Contact</a>
-      <a href="/rss.xml">RSS</a>
-    </div>
-  </div>
-</footer>
-<script src="/assets/js/app.js"></script>
+    async function load(){
+      const [artists, songs] = await Promise.all([
+        fetch('./data/artists.json' + bust()).then(r=>r.json()),
+        fetch('./data/songs.json' + bust()).then(r=>r.json())
+      ]);
+
+      // 아티스트 country(KR/JP/US 등) 기준으로 장르 페이지 필터 (유튜브 수집 시 채워짐)
+      const mapArtist = Object.fromEntries((artists||[]).map(a => [a.id, a]));
+      let base = (songs||[]).filter(s => {
+        const a = mapArtist[s.artist_id];
+        if (!a) return MODE==='ALL';
+        if (MODE==='K') return (a.country||'') === 'KR';
+        if (MODE==='J') return (a.country||'') === 'JP';
+        if (MODE==='P') return (a.country||'') !== 'KR' && (a.country||'') !== 'JP'; // 나머지
+        return true;
+      });
+
+      // 기본 정렬: 최신순
+      function sortBy(k){
+        if (k==='newest') base.sort((a,b) => (b.release_date||'').localeCompare(a.release_date||''));
+        if (k==='views') base.sort((a,b) => (Number(b.views||0) - Number(a.views||0)));
+        if (k==='title') base.sort((a,b) => (a.title||'').localeCompare(b.title||''));
+        if (k==='artist') base.sort((a,b) => {
+          const an = (mapArtist[a.artist_id]?.name || '');
+          const bn = (mapArtist[b.artist_id]?.name || '');
+          return an.localeCompare(bn);
+        });
+      }
+      sortBy('newest');
+
+      const grid = $('#grid');
+      function render(list){
+        grid.innerHTML = '';
+        list.slice(0,5).forEach(t => {
+          const a = mapArtist[t.artist_id];
+          grid.insertAdjacentHTML('beforeend', cardHTML(t, a));
+        });
+      }
+      render(base);
+
+      $('#q').addEventListener('input', e=>{
+        const q = (e.target.value || '').toLowerCase();
+        const filtered = base.filter(t=>{
+          const a = mapArtist[t.artist_id] || {};
+          return [t.title||'', a.name||''].some(x => String(x).toLowerCase().includes(q));
+        });
+        render(filtered);
+      });
+
+      $('#sort').addEventListener('change', e=>{
+        sortBy(e.target.value);
+        render(base);
+      });
+    }
+
+    load();
+  </script>
 </body>
 </html>
