@@ -3,594 +3,372 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>K-POP NOW | 최신 컴백·차트·영상 모음</title>
-  <meta name="description" content="최신 K-POP 컴백 일정, 차트, 영상, 뉴스까지 한 곳에서!" />
-  <link rel="canonical" href="https://jangtaemin1.com/" />
-
-  <!-- Open Graph / Twitter -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="K-POP NOW | 최신 컴백·차트·영상" />
-  <meta property="og:description" content="최신 K-POP 컴백 일정, 차트, 영상, 뉴스까지 한 곳에서!" />
-  <meta property="og:image" content="https://jangtaemin1.com/assets/og-cover.jpg" />
-  <meta name="twitter:card" content="summary_large_image" />
-
-  <!-- Favicon (원하면 교체) -->
-  <link rel="icon" href="/favicon.ico" />
-
-  <!-- 기본 스타일: 빌드 없이 가볍게 사용 가능 -->
+  <title>음악 소개 홈페이지</title>
+  <meta name="description" content="K-POP / J-POP / POP — 올해·이달·금주·오늘의 음악 추천(각 5곡)">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root{
-      --bg:#0b0b12;--elev:#131320;--text:#e8e9fe;--muted:#adb0cb;--brand:#8a7bff;--brand2:#ff69c9;--line:#24243a;--card:#11111c;
-      --radius:16px;--shadow:0 10px 30px rgba(0,0,0,.25);--max:1200px
+      --bg:#f7f7fb; --card:#fff; --text:#111; --muted:#666; --line:#e5e7eb; --brand:#111; --brand-weak:#222;
     }
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:radial-gradient(1200px 600px at 20% -10%,rgba(138,123,255,.25),transparent),radial-gradient(800px 400px at 90% 0,rgba(255,105,201,.2),transparent),var(--bg);color:var(--text);font:400 16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Apple SD Gothic Neo,\B3CB\C6C0,Malgun Gothic,Noto Sans KR,sans-serif}
-    a{color:inherit;text-decoration:none}
-    .wrap{max-width:var(--max);margin-inline:auto;padding:0 20px}
+    html,body{height:100%}
+    body{margin:0; font-family:Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif; background:linear-gradient(#fff, var(--bg)); color:var(--text)}
+    a{color:inherit}
+    .container{max-width:1140px; margin:0 auto; padding:0 16px}
+    header{position:sticky; top:0; z-index:10; background:#ffffffcc; backdrop-filter:saturate(180%) blur(8px); border-bottom:1px solid var(--line)}
+    .h-wrap{display:flex; align-items:center; justify-content:space-between; padding:12px 0}
+    .brand{display:flex; gap:10px; align-items:center}
+    .logo{width:36px; height:36px; border-radius:12px; background:var(--brand); color:#fff; display:grid; place-items:center; font-weight:700}
+    nav.tabs{display:flex; gap:6px}
+    .tab{border:1px solid var(--line); border-radius:12px; padding:8px 12px; font-size:14px; background:#fff; cursor:pointer}
+    .tab.active{background:var(--brand); color:#fff; border-color:var(--brand)}
 
-    /* Header */
-    header{position:sticky;top:0;z-index:50;background:rgba(11,11,18,.7);backdrop-filter:saturate(180%) blur(14px);border-bottom:1px solid var(--line)}
-    .top{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
-    .brand{display:flex;align-items:center;gap:10px;font-weight:700}
-    .logo{width:28px;height:28px;border-radius:8px;background:linear-gradient(135deg,var(--brand),var(--brand2));box-shadow:0 4px 12px rgba(138,123,255,.5)}
-    nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0}
-    .nav-btn{display:none}
-    @media (max-width:820px){
-      nav{display:none}
-      .nav-btn{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);padding:8px 12px;border-radius:10px;background:transparent;color:var(--text)}
-      .drawer{position:fixed;inset:0 0 auto auto;background:rgba(11,11,18,.95);backdrop-filter:blur(12px);border-left:1px solid var(--line);width:min(80vw,320px);height:100vh;transform:translateX(100%);transition:.3s;z-index:70;padding:24px}
-      .drawer.open{transform:translateX(0)}
-      .drawer ul{display:flex;flex-direction:column;gap:14px;list-style:none;padding:0;margin:0}
-    }
+    .subtabs{display:flex; gap:8px; padding:14px 0}
+    .subtab{border:1px solid var(--line); border-radius:999px; padding:8px 12px; font-size:14px; background:#fff; cursor:pointer}
+    .subtab.active{background:#111; color:#fff}
 
-    /* Hero */
-    .hero{padding:56px 0}
-    .hero .inner{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center}
-    .tag{display:inline-flex;gap:8px;align-items:center;border:1px solid var(--line);color:var(--muted);padding:6px 10px;border-radius:999px;font-size:13px}
-    h1{font-size:44px;line-height:1.15;margin:14px 0 12px}
-    .lead{color:var(--muted);margin-bottom:18px}
-    .cta{display:flex;gap:12px}
-    .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 16px;border-radius:12px;border:1px solid var(--line);background:linear-gradient(180deg,#17172a,#0f1020);box-shadow:var(--shadow)}
-    .btn.primary{border-color:transparent;background:linear-gradient(135deg,var(--brand),var(--brand2));color:#0b0b12;font-weight:700}
-    .hero-card{background:linear-gradient(180deg,#111122,#0e0e18);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
-    .hero-card img{width:100%;height:260px;object-fit:cover;border-radius:12px}
-    @media (max-width:980px){.hero .inner{grid-template-columns:1fr}}
+    .grid{display:grid; grid-template-columns:repeat(1, minmax(0,1fr)); gap:16px}
+    @media(min-width:640px){.grid{grid-template-columns:repeat(2,1fr)}}
+    @media(min-width:1024px){.grid{grid-template-columns:repeat(3,1fr)}}
+    @media(min-width:1280px){.grid{grid-template-columns:repeat(5,1fr)}}
 
-    /* Section */
-    section{padding:28px 0}
-    .sec-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
-    .sec-head h2{margin:0;font-size:22px}
-    .more{color:var(--muted);font-size:14px}
+    .card{background:var(--card); border:1px solid var(--line); border-radius:16px; overflow:hidden; box-shadow:0 6px 16px rgba(0,0,0,.04)}
+    .cover{aspect-ratio:1/1; width:100%; background:#eee; object-fit:cover}
+    .pad{padding:14px}
+    .row{display:flex; align-items:center; justify-content:space-between; gap:8px}
+    .title{font-weight:600; font-size:15px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+    .badge{display:inline-block; border:1px solid var(--line); color:#444; padding:2px 8px; border-radius:999px; font-size:11px}
+    .meta{color:var(--muted); font-size:13px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+    .iframe-wrap{margin-top:8px; border-radius:12px; overflow:hidden; background:#000; aspect-ratio:16/9}
+    .btn{width:100%; margin-top:8px; border:1px solid var(--line); border-radius:12px; padding:10px 12px; background:#fff; cursor:pointer; font-size:13px}
+    .btn:hover{background:#f7f7f9}
 
-    /* Feature slider */
-    .slider{position:relative;overflow:hidden;border-radius:var(--radius);border:1px solid var(--line)}
-    .slides{display:flex;gap:16px;padding:16px;overflow:auto;scroll-snap-type:x mandatory}
-    .slides::-webkit-scrollbar{height:8px}
-    .slides::-webkit-scrollbar-thumb{background:#2c2c46;border-radius:999px}
-    .card{min-width:280px;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
-    .card img{width:100%;height:160px;object-fit:cover}
-    .card .pad{padding:12px}
-    .chip{display:inline-block;font-size:12px;color:#cdd0ff;background:#1a1a2c;border:1px solid var(--line);padding:4px 8px;border-radius:999px}
+    .section{margin:28px 0}
+    .section h2{font-size:18px; font-weight:600; margin:0 0 10px}
+    .section .caption{font-size:12px; color:var(--muted)}
 
-    /* Grid */
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    @media (max-width:1000px){.grid{grid-template-columns:repeat(2,1fr)}}
-    @media (max-width:680px){.grid{grid-template-columns:1fr}}
-    .tile{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
-    .tile img{width:100%;height:180px;object-fit:cover}
-    .tile .meta{padding:12px;display:flex;flex-direction:column;gap:6px}
-    .meta .title{font-weight:700}
-    .meta .sub{color:var(--muted);font-size:14px}
+    .hero{padding:24px 0}
+    .hero h1{font-size:28px; margin:0 0 6px}
+    .hero p{margin:0; color:#444}
 
-    /* Table schedule */
-    table{width:100%;border-collapse:collapse;overflow:hidden;border-radius:14px;border:1px solid var(--line)}
-    th,td{padding:12px;border-bottom:1px solid var(--line)}
-    th{background:#13132a;text-align:left}
+    .detail{max-width:920px; margin:24px auto; background:#fff; border:1px solid var(--line); border-radius:18px; overflow:hidden}
+    .detail .head{display:flex; align-items:center; justify-content:space-between; padding:14px 16px; border-bottom:1px solid var(--line)}
+    .detail .body{padding:16px}
+    .detail .grid2{display:grid; grid-template-columns:1fr; gap:16px}
+    @media(min-width:860px){.detail .grid2{grid-template-columns:1fr 1fr}}
+    .detail .lyrics{white-space:pre-wrap; font-size:14px; color:#333; line-height:1.6}
 
-    /* Video */
-    .video{position:relative;padding-bottom:56.25%;height:0;border-radius:14px;overflow:hidden;border:1px solid var(--line)}
-    .video iframe{position:absolute;inset:0;width:100%;height:100%}
-
-    /* Ad blocks (placeholder styles) */
-    .ad{border:1px dashed #3a3a54;border-radius:12px;padding:10px;text-align:center;color:#9aa0d0;background:#0f0f1b}
-
-    /* Footer */
-    footer{padding:40px 0;border-top:1px solid var(--line);color:var(--muted)}
-    .foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:20px}
-    @media (max-width:820px){.foot-grid{grid-template-columns:1fr}}
-    .copy{margin-top:8px;font-size:13px}
+    footer{border-top:1px solid var(--line); margin-top:40px; padding:14px 0; font-size:12px; color:#666}
+    .hidden{display:none !important}
+    .pill{display:inline-block; font-size:11px; border:1px solid var(--line); padding:2px 8px; border-radius:999px; background:#fafafa}
+    .link{color:#0b57d0; text-decoration:underline}
   </style>
-
-  <!-- JSON-LD 구조화 데이터 (검색엔진 도움) -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"WebSite",
-    "name":"K-POP NOW",
-    "url":"https://jangtaemin1.com/",
-    "potentialAction":{
-      "@type":"SearchAction",
-      "target":"https://jangtaemin1.com/search?q={query}",
-      "query-input":"required name=query"
-    }
-  }
-  </script>
-
-  <!-- AdSense 전역 스크립트 (퍼블리셔 ID로 교체) -->
-  <!-- 승인 전/후 모두 head에 유지하세요.  -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
 </head>
 <body>
   <header>
-    <div class="wrap top">
-      <a class="brand" href="/">
-        <span class="logo" aria-hidden="true"></span>
-        <span>K-POP NOW</span>
-      </a>
-      <nav aria-label="주요 메뉴">
-        <ul>
-          <li><a href="#latest">최신</a></li>
-          <li><a href="#comeback">컴백 일정</a></li>
-          <li><a href="#charts">차트</a></li>
-          <li><a href="#videos">영상</a></li>
-          <li><a href="/contact/">문의</a></li>
-        </ul>
+    <div class="container h-wrap">
+      <div class="brand">
+        <div class="logo">Mu</div>
+        <strong>음악 소개</strong>
+      </div>
+      <nav class="tabs" id="topTabs">
+        <button class="tab" data-route="#/">메인</button>
+        <button class="tab" data-route="#/kpop">K-POP</button>
+        <button class="tab" data-route="#/jpop">J-POP</button>
+        <button class="tab" data-route="#/pop">POP</button>
       </nav>
-      <button class="nav-btn" id="openNav" aria-controls="drawer" aria-expanded="false">메뉴</button>
     </div>
-    <aside class="drawer" id="drawer" aria-hidden="true">
-      <button class="nav-btn" id="closeNav" aria-controls="drawer">닫기</button>
-      <ul>
-        <li><a href="#latest" onclick="toggleDrawer(false)">최신</a></li>
-        <li><a href="#comeback" onclick="toggleDrawer(false)">컴백 일정</a></li>
-        <li><a href="#charts" onclick="toggleDrawer(false)">차트</a></li>
-        <li><a href="#videos" onclick="toggleDrawer(false)">영상</a></li>
-        <li><a href="/contact/">문의</a></li>
-      </ul>
-    </aside>
   </header>
 
-  <main>
-    <!-- 상단 광고 배너 (728x90 또는 반응형) -->
-    <div class="wrap" style="margin-top:14px">
-      <div class="ad" aria-label="상단 광고">
-        <!-- 애드센스 반응형 광고 단위 삽입 위치 -->
-        <!--
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-             data-ad-slot="YYYYYYYYYY"
-             data-ad-format="auto"
-             data-full-width-responsive="true"></ins>
-        <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
-        -->
-        상단 광고 영역 (애드센스 코드 붙여넣기)
-      </div>
-    </div>
-
-    <!-- Hero -->
-    <section class="hero">
-      <div class="wrap inner">
-        <div>
-          <span class="tag">🔥 지금 뜨는 K-POP</span>
-          <h1>최신 컴백·차트·영상
-            <br/>한 번에 모아보는 <em style="font-style:normal;color:var(--brand2)">K-POP NOW</em></h1>
-          <p class="lead">아이돌 컴백 일정부터 뮤직비디오, 실시간 차트까지. 오늘의 이슈를 빠르게 체크하세요.</p>
-          <div class="cta">
-            <a class="btn primary" href="#comeback">컴백 일정 보기</a>
-            <a class="btn" href="#latest">최신 글</a>
-          </div>
-        </div>
-        <div class="hero-card">
-          <img src="https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?q=80&w=1600&auto=format&fit=crop" alt="K-POP 공연 무대 조명" loading="lazy" />
-          <p style="margin:10px 0 0;color:var(--muted);font-size:14px">무대, 티저, 쇼케이스 소식을 매일 업데이트합니다.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Featured / Comeback slider -->
-    <section id="comeback">
-      <div class="wrap">
-        <div class="sec-head">
-          <h2>이번 주 컴백</h2>
-          <a class="more" href="/calendar/">전체 일정 →</a>
-        </div>
-        <div class="slider">
-          $1
-            <!-- 카드 예시 1 -->
-            <article class="card">
-              <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=1400&auto=format&fit=crop" alt="걸그룹 콘셉트 포토" loading="lazy"/>
-              <div class="pad">
-                <div class="chip">10.12 (일) 18:00</div>
-                <h3 style="margin:8px 0 4px;font-size:18px">NEWJEANS — New Single</h3>
-                <p style="color:var(--muted);margin:0">티저/하이라이트 메들리 공개</p>
-              </div>
-            </article>
-            <!-- 카드 예시 2 -->
-            <article class="card">
-              <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1400&auto=format&fit=crop" alt="보이그룹 콘셉트 포토" loading="lazy"/>
-              <div class="pad">
-                <div class="chip">10.14 (화) 18:00</div>
-                <h3 style="margin:8px 0 4px;font-size:18px">SEVENTEEN — Mini Album</h3>
-                <p style="color:var(--muted);margin:0">컴백 쇼케이스 예정</p>
-              </div>
-            </article>
-            <!-- 카드 예시 3 -->
-            <article class="card">
-              <img src="https://images.unsplash.com/photo-1524242109383-e349707a1065?q=80&w=1400&auto=format&fit=crop" alt="솔로 아티스트 콘셉트 포토" loading="lazy"/>
-              <div class="pad">
-                <div class="chip">10.16 (목) 18:00</div>
-                <h3 style="margin:8px 0 4px;font-size:18px">IU — Digital Single</h3>
-                <p style="color:var(--muted);margin:0">MV 동시 공개</p>
-              </div>
-            </article>
-            <!-- 카드 예시 4 -->
-            <article class="card">
-              <img src="https://images.unsplash.com/photo-1518972559570-7cc1309f3229?q=80&w=1400&auto=format&fit=crop" alt="보컬 콘셉트 포토" loading="lazy"/>
-              <div class="pad">
-                <div class="chip">10.18 (토) 18:00</div>
-                <h3 style="margin:8px 0 4px;font-size:18px">IVE — Special Single</h3>
-                <p style="color:var(--muted);margin:0">리릭 비디오 공개</p>
-              </div>
-            </article>
-            <!-- 카드 예시 5 -->
-            <article class="card">
-              <img src="https://images.unsplash.com/photo-1514512364185-4c2b4b2e1c86?q=80&w=1400&auto=format&fit=crop" alt="레코딩 스튜디오" loading="lazy"/>
-              <div class="pad">
-                <div class="chip">10.20 (월) 18:00</div>
-                <h3 style="margin:8px 0 4px;font-size:18px">STRAY KIDS — Digital Single</h3>
-                <p style="color:var(--muted);margin:0">챌린지 티저</p>
-              </div>
-            </article>
-            <!-- 카드 예시 6 -->
-            <article class="card">
-              <img src="https://images.unsplash.com/photo-1528319352700-79f7c1d95f0c?q=80&w=1400&auto=format&fit=crop" alt="라이브 무대" loading="lazy"/>
-              <div class="pad">
-                <div class="chip">10.22 (수) 18:00</div>
-                <h3 style="margin:8px 0 4px;font-size:18px">LE SSERAFIM — EP</h3>
-                <p style="color:var(--muted);margin:0">하이라이트 메들리</p>
-              </div>
-            </article>
-            <!-- 카드 예시 7 -->
-            <article class="card">
-              <img src="https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?q=80&w=1600&auto=format&fit=crop" alt="공연 조명" loading="lazy"/>
-              <div class="pad">
-                <div class="chip">10.24 (금) 18:00</div>
-                <h3 style="margin:8px 0 4px;font-size:18px">BTS — Special Release</h3>
-                <p style="color:var(--muted);margin:0">콘셉트 포토 2</p>
-              </div>
-            </article>
-            <!-- 카드 예시 8 -->
-            <article class="card">
-              <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?q=80&w=1600&auto=format&fit=crop" alt="댄스 퍼포먼스" loading="lazy"/>
-              <div class="pad">
-                <div class="chip">10.26 (일) 18:00</div>
-                <h3 style="margin:8px 0 4px;font-size:18px">BLACKPINK — Collab</h3>
-                <p style="color:var(--muted);margin:0">콜라보 싱글</p>
-              </div>
-            </article>
-          $3
-                <h3 style="margin:8px 0 4px;font-size:18px">NEWJEANS — New Single</h3>
-                <p style="color:var(--muted);margin:0">티저/하이라이트 메들리 공개</p>
-              </div>
-            </article>
-            <!-- 카드 예시 2 -->
-            <article class="card">
-              <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1400&auto=format&fit=crop" alt="보이그룹 콘셉트 포토" loading="lazy"/>
-              <div class="pad">
-                <div class="chip">10.14 (화) 18:00</div>
-                <h3 style="margin:8px 0 4px;font-size:18px">SEVENTEEN — Mini Album</h3>
-                <p style="color:var(--muted);margin:0">컴백 쇼케이스 예정</p>
-              </div>
-            </article>
-            <!-- 카드 예시 3 -->
-            <article class="card">
-              <img src="https://images.unsplash.com/photo-1524242109383-e349707a1065?q=80&w=1400&auto=format&fit=crop" alt="솔로 아티스트 콘셉트 포토" loading="lazy"/>
-              <div class="pad">
-                <div class="chip">10.16 (목) 18:00</div>
-                <h3 style="margin:8px 0 4px;font-size:18px">IU — Digital Single</h3>
-                <p style="color:var(--muted);margin:0">MV 동시 공개</p>
-              </div>
-            </article>
-            <!-- 더 추가 가능 -->
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- In-content Ad -->
-    <div class="wrap">
-      <div class="ad" aria-label="본문 중간 광고" style="margin:8px 0 18px">
-        <!-- 애드센스 반응형 광고 단위 삽입 위치 -->
-        본문 중간 광고 영역 (애드센스 코드)
-      </div>
-    </div>
-
-    <!-- Latest posts -->
-    $1
-          <!-- 타일 12개 예시 (운영 시 Jekyll 루프로 교체 권장) -->
-          
-          <!-- 1 -->
-          <article class="tile">
-            <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1400&auto=format&fit=crop" alt="뮤직비디오 촬영" loading="lazy"/>
-            <div class="meta">
-              <a class="title" href="#">[컴백] aespa, 정규 2집 예고</a>
-              <span class="sub">2025-10-11 · 티저 이미지 공개</span>
-            </div>
-          </article>
-          
-          <!-- 2 -->
-          <article class="tile">
-            <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=1400&auto=format&fit=crop" alt="무대 조명" loading="lazy"/>
-            <div class="meta">
-              <a class="title" href="#">[차트] 주간 아이돌 차트 TOP 10</a>
-              <span class="sub">2025-10-10 · 멜론/스포티파이 기준</span>
-            </div>
-          </article>
-
-          <!-- 3 -->
-          <article class="tile">
-            <img src="https://images.unsplash.com/photo-1524242109383-e349707a1065?q=80&w=1400&auto=format&fit=crop" alt="콘셉트 포토" loading="lazy"/>
-            <div class="meta">
-              <a class="title" href="#">[영상] 이번 주 뜨는 퍼포먼스 모음</a>
-              <span class="sub">2025-10-09 · 릴스/숏츠</span>
-            </div>
-          </article>
-
-          <!-- 4 -->
-          <article class="tile">
-            <img src="https://images.unsplash.com/photo-1518972559570-7cc1309f3229?q=80&w=1400&auto=format&fit=crop" alt="팬라이트" loading="lazy"/>
-            <div class="meta">
-              <a class="title" href="#">[화보] 엔터 포토슈트 비하인드</a>
-              <span class="sub">2025-10-09 · 매거진</span>
-            </div>
-          </article>
-
-          <!-- 5 -->
-          <article class="tile">
-            <img src="https://images.unsplash.com/photo-1514512364185-4c2b4b2e1c86?q=80&w=1400&auto=format&fit=crop" alt="녹음 스튜디오" loading="lazy"/>
-            <div class="meta">
-              <a class="title" href="#">[인터뷰] 신인 보이그룹 데뷔 준비기</a>
-              <span class="sub">2025-10-08 · 스포일러</span>
-            </div>
-          </article>
-
-          <!-- 6 -->
-          <article class="tile">
-            <img src="https://images.unsplash.com/photo-1528319352700-79f7c1d95f0c?q=80&w=1400&auto=format&fit=crop" alt="라이브 무대" loading="lazy"/>
-            <div class="meta">
-              <a class="title" href="#">[이벤트] 팬사인회/공연 예매 오픈</a>
-              <span class="sub">2025-10-08 · 링크 모음</span>
-            </div>
-          </article>
-
-          <!-- 7 -->
-          <article class="tile">
-            <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?q=80&w=1400&auto=format&fit=crop" alt="댄스 연습" loading="lazy"/>
-            <div class="meta">
-              <a class="title" href="#">[비하인드] 안무 메이킹 영상</a>
-              <span class="sub">2025-10-07 · 유튜브</span>
-            </div>
-          </article>
-
-          <!-- 8 -->
-          <article class="tile">
-            <img src="https://images.unsplash.com/photo-1526178610665-8fe0b6f27ce1?q=80&w=1400&auto=format&fit=crop" alt="앨범 아트워크" loading="lazy"/>
-            <div class="meta">
-              <a class="title" href="#">[앨범] 리마스터 발매</a>
-              <span class="sub">2025-10-07 · 리메이크</span>
-            </div>
-          </article>
-
-          <!-- 9 -->
-          <article class="tile">
-            <img src="https://images.unsplash.com/photo-1520975922325-24bc2b189b55?q=80&w=1400&auto=format&fit=crop" alt="팬덤 굿즈" loading="lazy"/>
-            <div class="meta">
-              <a class="title" href="#">[굿즈] 한정판 드랍 일정</a>
-              <span class="sub">2025-10-06 · 스토어</span>
-            </div>
-          </article>
-
-          <!-- 10 -->
-          <article class="tile">
-            <img src="https://images.unsplash.com/photo-1507878866276-a947ef722fee?q=80&w=1400&auto=format&fit=crop" alt="라이브 방송" loading="lazy"/>
-            <div class="meta">
-              <a class="title" href="#">[라이브] 팬과의 실시간 소통</a>
-              <span class="sub">2025-10-06 · 방송</span>
-            </div>
-          </article>
-
-          <!-- 11 -->
-          <article class="tile">
-            <img src="https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?q=80&w=1400&auto=format&fit=crop" alt="잡지 커버" loading="lazy"/>
-            <div class="meta">
-              <a class="title" href="#">[커버] 매거진 화보 공개</a>
-              <span class="sub">2025-10-05 · 커버스토리</span>
-            </div>
-          </article>
-
-          <!-- 12 -->
-          <article class="tile">
-            <img src="https://images.unsplash.com/photo-1526178610665-82b9834a7251?q=80&w=1400&auto=format&fit=crop" alt="투어 포스터" loading="lazy"/>
-            <div class="meta">
-              <a class="title" href="#">[투어] 아시아 투어 일정</a>
-              <span class="sub">2025-10-05 · 공지</span>
-            </div>
-          </article>
-        $3
-
-    <!-- Charts (placeholder) -->
-    <section id="charts">
-      <div class="wrap">
-        <div class="sec-head">
-          <h2>오늘의 차트</h2>
-          <a class="more" href="/charts/">전체 보기 →</a>
-        </div>
-        <table aria-label="오늘의 차트 Top 100">
-          <thead>
-            <tr><th style="width:56px">#</th><th>곡명</th><th>아티스트</th><th style="width:120px">스트림</th></tr>
-          </thead>
-          <tbody id="chartBody">
-            <tr><td colspan="4" style="color:var(--muted)">차트를 불러오는 중...</td></tr>
-          </tbody>
-        </table>
-        <p style="color:var(--muted);margin-top:8px">* 유튜브 뮤직 차트(대한민국/Top songs) 데이터를 자동 반영합니다. 데이터 소스 JSON: <code>/data/youtube_top_songs_kr.json</code></p>
-      </div>
-    </section>
-
-    <!-- In-content Ad 2 -->
-    <div class="wrap">
-      <div class="ad" aria-label="본문 중간 광고" style="margin:8px 0 18px">
-        추가 광고 영역 (애드센스 코드)
-      </div>
-    </div>
-
-    <!-- Videos -->
-    <section id="videos">
-      <div class="wrap">
-        <div class="sec-head">
-          <h2>핫한 뮤비/퍼포먼스</h2>
-          <a class="more" href="/videos/">더 보기 →</a>
-        </div>
-        <div class="grid">
-          <div class="video">
-            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-          </div>
-          <div class="video">
-            <iframe src="https://www.youtube.com/embed/o-YBDTqX_ZU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-          </div>
-          <div class="video">
-            <iframe src="https://www.youtube.com/embed/9bZkp7q19f0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Newsletter / 구독 폼 (Formspree 등으로 연결 가능) -->
-    <section>
-      <div class="wrap">
-        <div class="sec-head"><h2>업데이트 받아보기</h2></div>
-        <form action="https://formspree.io/f/your-id" method="POST" class="hero-card" style="display:grid;grid-template-columns:1fr auto;gap:10px">
-          <input name="email" type="email" placeholder="이메일 주소" required style="border:1px solid var(--line);background:#0e0e18;color:var(--text);padding:12px;border-radius:12px;outline:none"/>
-          <button class="btn primary" type="submit">구독</button>
-          <small style="grid-column:1/-1;color:var(--muted)">스팸 없이 새 글/컴백 소식만 보내드려요.</small>
-        </form>
-      </div>
-    </section>
+  <main class="container" id="app">
+    <!-- 콘텐츠가 여기에 렌더링됩니다 -->
   </main>
 
   <footer>
-    <div class="wrap foot-grid">
-      <div>
-        <div class="brand"><span class="logo" aria-hidden="true"></span><span>K-POP NOW</span></div>
-        <p class="copy">© <span id="year"></span> K-POP NOW · <a href="/privacy/">개인정보처리방침</a> · <a href="/contact/">문의</a></p>
-      </div>
-      <div>
-        <strong>바로가기</strong>
-        <ul style="list-style:none;padding:0;margin:10px 0 0;display:grid;gap:8px">
-          <li><a href="#comeback">컴백 일정</a></li>
-          <li><a href="#charts">차트</a></li>
-          <li><a href="#videos">영상</a></li>
-        </ul>
-      </div>
-      <div>
-        <strong>SNS</strong>
-        <ul style="list-style:none;padding:0;margin:10px 0 0;display:grid;gap:8px">
-          <li><a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
-          <li><a href="https://x.com/" target="_blank" rel="noopener">X (Twitter)</a></li>
-          <li><a href="https://youtube.com/" target="_blank" rel="noopener">YouTube</a></li>
-        </ul>
+    <div class="container">
+      <div style="display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap">
+        <span>© <span id="year"></span> 음악 소개. 제작: jangtaemin1.com</span>
+        <span class="pill">K-POP · J-POP · POP — 올해/이달/금주/오늘 5곡 추천</span>
       </div>
     </div>
   </footer>
 
   <script>
-    // 연도 표시
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // 모바일 내비 드로어 토글
-    const drawer = document.getElementById('drawer');
-    const openBtn = document.getElementById('openNav');
-    const closeBtn = document.getElementById('closeNav');
-    function toggleDrawer(open){
-      if(!drawer) return; drawer.classList.toggle('open', open);
-      drawer.setAttribute('aria-hidden', open ? 'false' : 'true');
-      openBtn && openBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    // -------- 데이터 스키마 --------
+    // Track: { id, title, artist, releasedAt(YYYY-MM-DD), lyrics, youtube, cover }
+    // DB: { [genre]: { year: Track[], month: Track[], week: Track[], day: Track[] } }
+
+    const GENRES = [
+      { key: 'kpop', label: 'K-POP' },
+      { key: 'jpop', label: 'J-POP' },
+      { key: 'pop',  label: 'POP'   },
+    ];
+    const PERIODS = [
+      { key: 'year',  label: '올해의 음악 추천' },
+      { key: 'month', label: '이달의 음악 추천' },
+      { key: 'week',  label: '금주의 음악 추천' },
+      { key: 'day',   label: '오늘의 음악 추천' },
+    ];
+
+    // 샘플 5곡을 자동 생성하는 헬퍼
+    function makeFiveTracks(prefix, baseDate, coverSeed) {
+      const arr = [];
+      for (let i = 1; i <= 5; i++) {
+        const dt = new Date(baseDate);
+        dt.setDate(dt.getDate() - i);
+        const y = dt.getFullYear();
+        const m = String(dt.getMonth()+1).padStart(2, '0');
+        const d = String(dt.getDate()).padStart(2, '0');
+        arr.push({
+          id: `${prefix}-${i}`,
+          title: `${prefix} ${i}`,
+          artist: `Artist ${i}`,
+          releasedAt: `${y}-${m}-${d}`,
+          lyrics: '가사는 저작권을 준수해 필요한 범위(짧은 발췌)만 공개하세요.',
+          youtube: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+          cover: `https://picsum.photos/seed/${coverSeed}${i}/600/600`
+        });
+      }
+      return arr;
     }
-    openBtn && openBtn.addEventListener('click', ()=>toggleDrawer(true));
-    closeBtn && closeBtn.addEventListener('click', ()=>toggleDrawer(false));
 
-    // 슬라이더 키보드/마우스 접근성
-    const slides = document.getElementById('slides');
-    if(slides){ slides.addEventListener('wheel', (e)=>{ if(Math.abs(e.deltaY) > Math.abs(e.deltaX)){ slides.scrollLeft += e.deltaY; e.preventDefault(); } }, {passive:false}); }
-  
-  <script>
-    // 연도 표시
-    document.getElementById('year').textContent = new Date().getFullYear();
+    const todayStr = new Date().toISOString().slice(0,10);
 
-    // 모바일 내비 드로어 토글
-    const drawer = document.getElementById('drawer');
-    const openBtn = document.getElementById('openNav');
-    const closeBtn = document.getElementById('closeNav');
-    function toggleDrawer(open){
-      if(!drawer) return; drawer.classList.toggle('open', open);
-      drawer.setAttribute('aria-hidden', open ? 'false' : 'true');
-      openBtn && openBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    const DB = {
+      kpop: {
+        year:  makeFiveTracks('K-POP 올해의',  new Date('2025-09-30'), 'kpy'),
+        month: makeFiveTracks('K-POP 이달의', new Date('2025-10-12'), 'kpm'),
+        week:  makeFiveTracks('K-POP 금주의', new Date('2025-10-12'), 'kpw'),
+        day:   makeFiveTracks('K-POP 오늘의', new Date('2025-10-12'), 'kpd').map((t,i)=>({...t, releasedAt: todayStr}))
+      },
+      jpop: {
+        year:  makeFiveTracks('J-POP 올해의',  new Date('2025-09-15'), 'jpy'),
+        month: makeFiveTracks('J-POP 이달의', new Date('2025-10-11'), 'jpm'),
+        week:  makeFiveTracks('J-POP 금주의', new Date('2025-10-12'), 'jpw'),
+        day:   makeFiveTracks('J-POP 오늘의', new Date('2025-10-12'), 'jpd').map((t,i)=>({...t, releasedAt: todayStr}))
+      },
+      pop: {
+        year:  makeFiveTracks('POP 올해의',  new Date('2025-08-28'), 'py'),
+        month: makeFiveTracks('POP 이달의', new Date('2025-10-10'), 'pm'),
+        week:  makeFiveTracks('POP 금주의', new Date('2025-10-12'), 'pw'),
+        day:   makeFiveTracks('POP 오늘의', new Date('2025-10-12'), 'pd').map((t,i)=>({...t, releasedAt: todayStr}))
+      }
+    };
+
+    // -------- 유틸 --------
+    function getYouTubeId(url) {
+      try {
+        const u = new URL(url);
+        if (u.hostname.includes('youtu.be')) return u.pathname.slice(1);
+        const v = u.searchParams.get('v');
+        if (v) return v;
+        const parts = u.pathname.split('/').filter(Boolean);
+        if (parts[0]==='embed' && parts[1]) return parts[1];
+        return null;
+      } catch(e){ return null; }
     }
-    openBtn && openBtn.addEventListener('click', ()=>toggleDrawer(true));
-    closeBtn && closeBtn.addEventListener('click', ()=>toggleDrawer(false));
+    function el(html){ const t=document.createElement('template'); t.innerHTML=html.trim(); return t.content.firstElementChild; }
+    function escapeHtml(s=''){ return s.replace(/[&<>"']/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c])); }
 
-    // 슬라이더 키보드/마우스 접근성
-    const slides = document.getElementById('slides');
-    if(slides){ slides.addEventListener('wheel', (e)=>{ if(Math.abs(e.deltaY) > Math.abs(e.deltaX)){ slides.scrollLeft += e.deltaY; e.preventDefault(); } }, {passive:false}); }
+    // -------- 렌더러 --------
+    function renderMain(){
+      const wrap = el(`
+        <div>
+          <section class="hero">
+            <h1>음악 소개 홈페이지</h1>
+            <p>K-POP · J-POP · POP 장르별로 올해/이달/금주/오늘의 추천 5곡을 소개합니다.</p>
+          </section>
+          <div class="section">
+            <h2>빠른 이동</h2>
+            <div class="grid">
+              ${GENRES.map(g=>`
+                <a class="card" href="#/${g.key}">
+                  <img class="cover" src="https://picsum.photos/seed/hero-${g.key}/800/800" alt="${g.label} 이미지" />
+                  <div class="pad">
+                    <div class="row">
+                      <div class="title">${g.label}</div>
+                      <span class="badge">바로가기</span>
+                    </div>
+                    <p class="meta">올해 · 이달 · 금주 · 오늘 5곡</p>
+                  </div>
+                </a>`).join('')}
+            </div>
+          </div>
+        </div>
+      `);
+      return wrap;
+    }
 
-    // ===== YouTube Music 차트 자동 반영 =====
-    // 1) /data/youtube_top_songs_kr.json 파일을 리포지토리에 추가하세요.
-    //    예시 스키마:
-    //    [
-    //      {"rank":1, "title":"Supernova", "artist":"aespa", "streams": "3,201,234"},
-    //      {"rank":2, "title":"How Sweet", "artist":"NewJeans", "streams": "2,982,110"}
-    //    ]
-    // 2) 필요 시 GitHub Actions로 매일 자동 업데이트하도록 확장할 수 있습니다.
-    (function renderYTCharts(){
-      const body = document.getElementById('chartBody');
-      async function load(){
-        try {
-          const res = await fetch('/data/youtube_top_songs_kr.json', {cache:'no-store'});
-          if(!res.ok) throw new Error('HTTP '+res.status);
-          const data = await res.json();
-          paint(Array.isArray(data) ? data : []);
-        } catch (e){
-          // 실패 시 샘플 데이터로 폴백
-          const sample = [
-            {rank:1,title:'곡명 A',artist:'아티스트 A',streams:'—'},
-            {rank:2,title:'곡명 B',artist:'아티스트 B',streams:'—'},
-            {rank:3,title:'곡명 C',artist:'아티스트 C',streams:'—'},
-            {rank:4,title:'곡명 D',artist:'아티스트 D',streams:'—'},
-            {rank:5,title:'곡명 E',artist:'아티스트 E',streams:'—'}
-          ];
-          paint(sample);
+    function renderGenre(genreKey){
+      const genre = GENRES.find(g=>g.key===genreKey) || GENRES[0];
+      const state = { period: 'year', query:'', sort:'recent' };
+
+      const root = el(`<div></div>`);
+
+      const subtabs = el(`
+        <div class="subtabs" role="tablist" aria-label="추천 기간">
+          ${PERIODS.map(p=>`<button class="subtab" data-key="${p.key}">${p.label}</button>`).join('')}
+        </div>
+      `);
+      root.appendChild(subtabs);
+
+      const toolbar = el(`
+        <div style="display:flex; gap:12px; align-items:center; justify-content:space-between; flex-wrap:wrap">
+          <input id="q" placeholder="검색: 곡명, 아티스트, 가사…" style="flex:1; min-width:240px; border:1px solid var(--line); border-radius:12px; padding:10px 12px; font-size:14px" />
+          <div style="display:flex; align-items:center; gap:8px">
+            <label class="meta">정렬</label>
+            <select id="sort" style="border:1px solid var(--line); border-radius:12px; padding:10px 12px; font-size:14px">
+              <option value="recent">최신 발매순</option>
+              <option value="old">오래된 발매순</option>
+              <option value="title">제목 A→Z</option>
+              <option value="artist">아티스트 A→Z</option>
+            </select>
+          </div>
+        </div>
+      `);
+      root.appendChild(toolbar);
+
+      const section = el(`<div class="section"><h2>${PERIODS.find(p=>p.key===state.period).label}</h2><div class="caption">총 5곡</div><div class="grid" id="grid"></div></div>`);
+      root.appendChild(section);
+
+      function drawSubtabs(){
+        subtabs.querySelectorAll('.subtab').forEach(btn=>{
+          btn.classList.toggle('active', btn.dataset.key===state.period);
+        });
+      }
+      function getData(){
+        let arr = [...(DB[genre.key][state.period]||[])];
+        if (state.query){
+          const q = state.query.toLowerCase();
+          arr = arr.filter(t => [t.title, t.artist, t.lyrics||''].some(x => (x||'').toLowerCase().includes(q)));
         }
+        if (state.sort==='recent') arr.sort((a,b)=>b.releasedAt.localeCompare(a.releasedAt));
+        if (state.sort==='old')    arr.sort((a,b)=>a.releasedAt.localeCompare(b.releasedAt));
+        if (state.sort==='title')  arr.sort((a,b)=>a.title.localeCompare(b.title));
+        if (state.sort==='artist') arr.sort((a,b)=>a.artist.localeCompare(b.artist));
+        return arr;
       }
-      function paint(rows){
-        const top = rows.slice(0, 100);
-        body.innerHTML = top.map(r=>`<tr><td>${r.rank ?? ''}</td><td>${escapeHTML(r.title ?? '')}</td><td>${escapeHTML(r.artist ?? '')}</td><td>${r.streams ?? ''}</td></tr>`).join('');
+      function card(t){
+        const vid = getYouTubeId(t.youtube);
+        return el(`
+          <article class="card">
+            <img class="cover" src="${escapeHtml(t.cover||'')}" alt="${escapeHtml(t.title)} cover" />
+            <div class="pad">
+              <div class="row">
+                <div class="title" title="${escapeHtml(t.title)}">${escapeHtml(t.title)}</div>
+                <span class="badge">${escapeHtml(t.releasedAt)}</span>
+              </div>
+              <div class="meta" title="${escapeHtml(t.artist)}">${escapeHtml(t.artist)}</div>
+              ${vid ? `<div class="iframe-wrap"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/${vid}" title="${escapeHtml(t.title)}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>` : ''}
+              ${t.lyrics ? `<p class="meta" style="margin-top:6px">${escapeHtml(t.lyrics)}</p>` : ''}
+              <a class="btn" href="#/track/${genre.key}/${state.period}/${encodeURIComponent(t.id)}">자세히 보기</a>
+            </div>
+          </article>
+        `);
       }
-      function escapeHTML(s){
-        return String(s).replace(/[&<>"']/g, m=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[m]));
+      function draw(){
+        section.querySelector('h2').textContent = PERIODS.find(p=>p.key===state.period).label;
+        const grid = section.querySelector('#grid');
+        grid.innerHTML = '';
+        getData().forEach(t=>grid.appendChild(card(t)));
       }
-      load();
-    })();
-  </script>
 
-  <!-- 자동광고를 함께 쓰려면 아래 주석 해제 (중복 노출 주의) -->
-  <!--
-  <script>
-    (adsbygoogle = window.adsbygoogle || []).push({
-      google_ad_client: "ca-pub-XXXXXXXXXXXXXXXX",
-      enable_page_level_ads: true
+      // events
+      subtabs.addEventListener('click', (e)=>{
+        if (e.target.closest('.subtab')){
+          state.period = e.target.closest('.subtab').dataset.key;
+          drawSubtabs();
+          draw();
+        }
+      });
+      toolbar.querySelector('#q').addEventListener('input', (e)=>{ state.query = e.target.value; draw(); });
+      toolbar.querySelector('#sort').addEventListener('change', (e)=>{ state.sort = e.target.value; draw(); });
+
+      // init
+      drawSubtabs();
+      draw();
+      return root;
+    }
+
+    function renderTrackDetail(genreKey, periodKey, id){
+      const t = (DB[genreKey] && DB[genreKey][periodKey] || []).find(x=>String(x.id)===String(id));
+      if (!t){
+        return el(`<div class="section"><h2>곡을 찾을 수 없습니다.</h2><p class="meta"><a class="link" href="#/${genreKey}">← ${genreKey.toUpperCase()} 페이지로 돌아가기</a></p></div>`);
+      }
+      const vid = getYouTubeId(t.youtube);
+      const wrap = el(`
+        <article class="detail">
+          <div class="head">
+            <strong>${escapeHtml(t.title)}</strong>
+            <a class="pill" href="#/${genreKey}">목록으로</a>
+          </div>
+          <div class="body">
+            <div class="grid2">
+              <div>
+                <div class="iframe-wrap">${vid ? `<iframe width="100%" height="100%" src="https://www.youtube.com/embed/${vid}" title="${escapeHtml(t.title)}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>` : `<div style="display:grid;place-items:center;color:#fff; height:100%">YouTube 링크 없음</div>`}</div>
+                <p style="margin:10px 0 0"><a class="link" target="_blank" rel="noreferrer" href="${escapeHtml(t.youtube)}">YouTube에서 열기 ↗</a></p>
+              </div>
+              <div>
+                <img class="cover" style="border-radius:14px" src="${escapeHtml(t.cover||'')}" alt="cover" />
+                <p style="margin:10px 0 0"><span class="badge">발매일: ${escapeHtml(t.releasedAt)}</span> <span class="badge">뮤지션: ${escapeHtml(t.artist)}</span></p>
+                ${t.lyrics ? `<div style="margin-top:12px"><h3 style="margin:0 0 6px; font-size:15px">가사(발췌)</h3><div class="lyrics">${escapeHtml(t.lyrics)}</div></div>`: ''}
+              </div>
+            </div>
+          </div>
+        </article>
+      `);
+      return wrap;
+    }
+
+    // -------- 라우터 (해시) --------
+    function setActiveTab(route){
+      document.querySelectorAll('#topTabs .tab').forEach(btn=>{
+        btn.classList.toggle('active', btn.dataset.route===route);
+      });
+    }
+
+    function render(){
+      const root = document.getElementById('app');
+      const hash = location.hash || '#/'
+      const seg = hash.replace(/^#\//,'').split('/');
+      // 경로: #/           → 메인
+      // 경로: #/kpop       → 장르 페이지
+      // 경로: #/track/:g/:p/:id → 곡 상세(별동 페이지)
+
+      if (seg[0]==='track'){
+        setActiveTab(`#/${seg[1]||''}`);
+        root.innerHTML='';
+        root.appendChild(renderTrackDetail(seg[1], seg[2], decodeURIComponent(seg[3]||'')));
+        return;
+      }
+
+      if (seg[0]==='kpop' || seg[0]==='jpop' || seg[0]==='pop'){
+        setActiveTab(`#/${seg[0]}`);
+        root.innerHTML='';
+        root.appendChild(renderGenre(seg[0]));
+        return;
+      }
+
+      // default: 메인
+      setActiveTab('#/');
+      root.innerHTML='';
+      root.appendChild(renderMain());
+    }
+
+    window.addEventListener('hashchange', render);
+    document.getElementById('topTabs').addEventListener('click', (e)=>{
+      const btn = e.target.closest('.tab');
+      if (!btn) return;
+      location.hash = btn.dataset.route;
     });
+
+    // 초기 렌더링
+    if (!location.hash) location.hash = '#/'
+    render();
   </script>
-  -->
 </body>
 </html>
