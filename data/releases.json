@@ -1,27 +1,20 @@
 [
   {
-    "song_id": "bubble-gum",
-    "region": "KR",
-    "release_at": "2025-10-10"
+    "region": ""
   },
   {
-    "song_id": "idol",
-    "region": "JP",
-    "release_at": "2023-04-12"
+    "region": "KR"
   },
   {
-    "song_id": "love-dive",
-    "region": "KR",
-    "release_at": "2022-04-05"
+    "region": "JP"
   },
   {
-    "song_id": "cruel-summer",
-    "region": "US",
-    "release_at": "2019-08-23"
+    "region": "KR"
   },
   {
-    "song_id": "super-shy",
-    "region": "Global",
-    "release_at": "2023-07-07"
+    "region": "US"
+  },
+  {
+    "region": "Global"
   }
 ]
