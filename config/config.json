@@ -1,24 +1,9 @@
 {
   "youtube": {
-    "playlists": [
-      {
-        "name": "KPOP Official MVs",
-        "id": "PLWsnao9n727qKFMvx6bMpiKFFitvolG98"
-      },
-      {
-        "name": "JPOP Official MVs",
-        "id": "PLWsnao9n727p2b2bJQ0S8Yb3G0s4y7xxx"
-      }
-    ]
+    "playlists": []
   },
   "spotify": {
-    "artist_ids": [
-      "6HvZYsbFfjnjFrWF950C9d",
-      "6AiX12wXdX3G2k9UQO2rP4",
-      "06HL4z0CvFAxyc27GXpf02"
-    ],
-    "track_ids": [
-      "5Hyr47nZ8fe4upZB1WTl6D"
-    ]
+    "artist_ids": [],
+    "track_ids": []
   }
 }
