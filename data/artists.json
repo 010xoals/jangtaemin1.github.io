@@ -23,20 +23,369 @@
     "id": "yoasobi",
     "name": "YOASOBI",
     "country": "JP",
-    "debut_date": "2019-11-16",
-    "labels": [
-      "Sony Music Japan"
-    ],
-    "slug": "yoasobi"
+    "debut_date": "",
+    "labels": [],
+    "slug": "yoasobi",
+    "channel": "Ayase / YOASOBI"
   },
   {
     "id": "taylor-swift",
     "name": "Taylor Swift",
-    "country": "US",
-    "debut_date": "2006-10-24",
-    "labels": [
-      "Republic"
-    ],
-    "slug": "taylor-swift"
+    "country": "",
+    "debut_date": "",
+    "labels": [],
+    "slug": "taylor-swift",
+    "channel": "Taylor Swift"
+  },
+  {
+    "id": "jyp-entertainment",
+    "name": "JYP Entertainment",
+    "country": "",
+    "debut_date": "",
+    "labels": [],
+    "slug": "jyp-entertainment",
+    "channel": "JYP Entertainment"
+  },
+  {
+    "id": "chaeyoung-the-first-album-lil-fantasy-vol-1-track-10-lonely-doll-waltz",
+    "name": "CHAEYOUNG THE FIRST ALBUM \"LIL FANTASY vol.1\" Track 10. Lonely doll waltz",
+    "country": "",
+    "debut_date": "",
+    "labels": [],
+    "slug": "chaeyoung-the-first-album-lil-fantasy-vol-1-track-10-lonely-doll-waltz",
+    "channel": "JYP Entertainment"
+  },
+  {
+    "id": "smtown",
+    "name": "SMTOWN",
+    "country": "KR",
+    "debut_date": "",
+    "labels": [],
+    "slug": "smtown",
+    "channel": "SMTOWN"
+  },
+  {
+    "id": "red-velvet",
+    "name": "Red Velvet",
+    "country": "KR",
+    "debut_date": "",
+    "labels": [],
+    "slug": "red-velvet",
+    "channel": "SMTOWN"
+  },
+  {
+    "id": "the-future",
+    "name": "THE FUTURE",
+    "country": "KR",
+    "debut_date": "",
+    "labels": [],
+    "slug": "the-future",
+    "channel": "SMTOWN"
+  },
+  {
+    "id": "the-culture",
+    "name": "THE CULTURE",
+    "country": "KR",
+    "debut_date": "",
+    "labels": [],
+    "slug": "the-culture",
+    "channel": "SMTOWN"
+  },
+  {
+    "id": "1thek",
+    "name": "1theK (원더케이)",
+    "country": "KR",
+    "debut_date": "",
+    "labels": [],
+    "slug": "1thek",
+    "channel": "1theK (원더케이)"
+  },
+  {
+    "id": "mv-woody-fire-up",
+    "name": "[MV] Woody(우디) _ Fire Up",
+    "country": "KR",
+    "debut_date": "",
+    "labels": [],
+    "slug": "mv-woody-fire-up",
+    "channel": "1theK (원더케이)"
+  },
+  {
+    "id": "r-tee",
+    "name": "R.Tee",
+    "country": "KR",
+    "debut_date": "",
+    "labels": [],
+    "slug": "r-tee",
+    "channel": "1theK (원더케이)"
+  },
+  {
+    "id": "hybe-labels",
+    "name": "HYBE LABELS",
+    "country": "KR",
+    "debut_date": "",
+    "labels": [],
+    "slug": "hybe-labels",
+    "channel": "HYBE LABELS"
+  },
+  {
+    "id": "txt-starkissed",
+    "name": "TXT (투모로우바이투게더) Starkissed",
+    "country": "KR",
+    "debut_date": "",
+    "labels": [],
+    "slug": "txt-starkissed",
+    "channel": "HYBE LABELS"
+  },
+  {
+    "id": "bighit-music-hit-it-base-2025",
+    "name": "BIGHIT MUSIC HIT IT BASE 2025",
+    "country": "KR",
+    "debut_date": "",
+    "labels": [],
+    "slug": "bighit-music-hit-it-base-2025",
+    "channel": "HYBE LABELS"
+  },
+  {
+    "id": "illit-toki-yo-tomare-concept-film",
+    "name": "ILLIT (아일릿) 'Toki Yo Tomare' Concept Film",
+    "country": "KR",
+    "debut_date": "",
+    "labels": [],
+    "slug": "illit-toki-yo-tomare-concept-film",
+    "channel": "HYBE LABELS"
+  },
+  {
+    "id": "le-sserafim-kawaii-prod-gen-hoshino-film",
+    "name": "LE SSERAFIM (르세라핌) ‘Kawaii (Prod. Gen Hoshino)’ FILM",
+    "country": "KR",
+    "debut_date": "",
+    "labels": [],
+    "slug": "le-sserafim-kawaii-prod-gen-hoshino-film",
+    "channel": "HYBE LABELS"
+  },
+  {
+    "id": "ado",
+    "name": "Ado",
+    "country": "JP",
+    "debut_date": "",
+    "labels": [],
+    "slug": "ado",
+    "channel": "Ado"
+  },
+  {
+    "id": "ayase-yoasobi",
+    "name": "Ayase / YOASOBI",
+    "country": "JP",
+    "debut_date": "",
+    "labels": [],
+    "slug": "ayase-yoasobi",
+    "channel": "Ayase / YOASOBI"
+  },
+  {
+    "id": "by",
+    "name": "大河内一楼「ゆりかごの星」朗読(by市ノ瀬加那)",
+    "country": "JP",
+    "debut_date": "",
+    "labels": [],
+    "slug": "by",
+    "channel": "Ayase / YOASOBI"
+  },
+  {
+    "id": "yoasobi-ballade-ver",
+    "name": "YOASOBI「あの夢をなぞって (Ballade Ver.)」",
+    "country": "JP",
+    "debut_date": "",
+    "labels": [],
+    "slug": "yoasobi-ballade-ver",
+    "channel": "Ayase / YOASOBI"
+  },
+  {
+    "id": "cardigan-behind-the-scenes",
+    "name": "cardigan (behind the scenes",
+    "country": "",
+    "debut_date": "",
+    "labels": [],
+    "slug": "cardigan-behind-the-scenes",
+    "channel": "Taylor Swift"
+  },
+  {
+    "id": "taylor-swift-ft-ice-spice",
+    "name": "Taylor Swift ft. Ice Spice",
+    "country": "",
+    "debut_date": "",
+    "labels": [],
+    "slug": "taylor-swift-ft-ice-spice",
+    "channel": "Taylor Swift"
+  },
+  {
+    "id": "ed-sheeran",
+    "name": "Ed Sheeran",
+    "country": "",
+    "debut_date": "",
+    "labels": [],
+    "slug": "ed-sheeran",
+    "channel": "Ed Sheeran"
+  },
+  {
+    "id": "i-like-this-song",
+    "name": "I like this song",
+    "country": "",
+    "debut_date": "",
+    "labels": [],
+    "slug": "i-like-this-song",
+    "channel": "Ed Sheeran"
+  },
+  {
+    "id": "ed-sheeran-x-zhou-jieqiong",
+    "name": "Ed Sheeran x Zhou JieQiong",
+    "country": "",
+    "debut_date": "",
+    "labels": [],
+    "slug": "ed-sheeran-x-zhou-jieqiong",
+    "channel": "Ed Sheeran"
+  },
+  {
+    "id": "do-you-think-it-s-a-playstation",
+    "name": "Do you think it’s a PlayStation ?",
+    "country": "",
+    "debut_date": "",
+    "labels": [],
+    "slug": "do-you-think-it-s-a-playstation",
+    "channel": "Ed Sheeran"
+  },
+  {
+    "id": "ed-sheeran-diljit-dosanjh",
+    "name": "Ed Sheeran & Diljit Dosanjh",
+    "country": "",
+    "debut_date": "",
+    "labels": [],
+    "slug": "ed-sheeran-diljit-dosanjh",
+    "channel": "Ed Sheeran"
+  },
+  {
+    "id": "ed-sheeran-arijit-singh",
+    "name": "Ed Sheeran & Arijit Singh",
+    "country": "",
+    "debut_date": "",
+    "labels": [],
+    "slug": "ed-sheeran-arijit-singh",
+    "channel": "Ed Sheeran"
+  },
+  {
+    "id": "ariana-grande",
+    "name": "Ariana Grande",
+    "country": "",
+    "debut_date": "",
+    "labels": [],
+    "slug": "ariana-grande",
+    "channel": "Ariana Grande"
+  },
+  {
+    "id": "we-can-t-be-friends-wait-for-your-love",
+    "name": "｡˚❀ we can’t be friends (wait for your love)",
+    "country": "",
+    "debut_date": "",
+    "labels": [],
+    "slug": "we-can-t-be-friends-wait-for-your-love",
+    "channel": "Ariana Grande"
+  },
+  {
+    "id": "ariana-grande-brandy-monica",
+    "name": "Ariana Grande, Brandy, Monica",
+    "country": "",
+    "debut_date": "",
+    "labels": [],
+    "slug": "ariana-grande-brandy-monica",
+    "channel": "Ariana Grande"
+  },
+  {
+    "id": "ariana-grande-mariah-carey",
+    "name": "Ariana Grande, Mariah Carey",
+    "country": "",
+    "debut_date": "",
+    "labels": [],
+    "slug": "ariana-grande-mariah-carey",
+    "channel": "Ariana Grande"
+  },
+  {
+    "id": "studio-footage-recording-yes-and-vocals",
+    "name": "studio footage: recording \"yes, and?\" vocals",
+    "country": "",
+    "debut_date": "",
+    "labels": [],
+    "slug": "studio-footage-recording-yes-and-vocals",
+    "channel": "Ariana Grande"
+  },
+  {
+    "id": "ariana-grande-taro-hakase",
+    "name": "Ariana Grande, Taro Hakase",
+    "country": "",
+    "debut_date": "",
+    "labels": [],
+    "slug": "ariana-grande-taro-hakase",
+    "channel": "Ariana Grande"
+  },
+  {
+    "id": "the-weeknd-ariana-grande",
+    "name": "The Weeknd, Ariana Grande",
+    "country": "",
+    "debut_date": "",
+    "labels": [],
+    "slug": "the-weeknd-ariana-grande",
+    "channel": "Ariana Grande"
+  },
+  {
+    "id": "ariana-grande-kid-cudi",
+    "name": "Ariana Grande & Kid Cudi",
+    "country": "",
+    "debut_date": "",
+    "labels": [],
+    "slug": "ariana-grande-kid-cudi",
+    "channel": "Ariana Grande"
+  },
+  {
+    "id": "studio-footage-vocal-arranging-the-positions-bridge",
+    "name": "studio footage: vocal arranging the “positions” bridge",
+    "country": "",
+    "debut_date": "",
+    "labels": [],
+    "slug": "studio-footage-vocal-arranging-the-positions-bridge",
+    "channel": "Ariana Grande"
+  },
+  {
+    "id": "studio-footage-positions-outro",
+    "name": "studio footage: \"positions\" outro",
+    "country": "",
+    "debut_date": "",
+    "labels": [],
+    "slug": "studio-footage-positions-outro",
+    "channel": "Ariana Grande"
+  },
+  {
+    "id": "ariana-grande-the-weeknd",
+    "name": "Ariana Grande, The Weeknd",
+    "country": "",
+    "debut_date": "",
+    "labels": [],
+    "slug": "ariana-grande-the-weeknd",
+    "channel": "Ariana Grande"
+  },
+  {
+    "id": "ariana-grande-doja-cat",
+    "name": "Ariana Grande, Doja Cat",
+    "country": "",
+    "debut_date": "",
+    "labels": [],
+    "slug": "ariana-grande-doja-cat",
+    "channel": "Ariana Grande"
+  },
+  {
+    "id": "ariana-grande-justin-bieber",
+    "name": "Ariana Grande & Justin Bieber",
+    "country": "",
+    "debut_date": "",
+    "labels": [],
+    "slug": "ariana-grande-justin-bieber",
+    "channel": "Ariana Grande"
   }
 ]
