@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://jangtaemin1.com/sitemap.xml

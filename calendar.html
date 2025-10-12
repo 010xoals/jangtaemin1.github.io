@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Release Calendar — Music Discovery Hub</title>
+  <meta name="description" content="Weekly and monthly view of upcoming releases across K-POP, J-POP, and POP.">
+  <meta property="og:title" content="Release Calendar — Music Discovery Hub">
+  <meta property="og:description" content="Weekly and monthly view of upcoming releases across K-POP, J-POP, and POP.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jangtaemin1.com/calendar.html">
+  <meta property="og:image" content="https://picsum.photos/seed/music-hub/1200/630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container h-wrap">
+    <a class="brand" href="/"><span class="logo">Mu</span><strong>Music Discovery Hub</strong></a>
+    <nav class="tabs">
+      <a class="tab" href="/kpop.html">K-POP</a>
+      <a class="tab" href="/jpop.html">J-POP</a>
+      <a class="tab" href="/pop.html">POP</a>
+      <a class="tab" href="/calendar.html">Calendar</a>
+      <a class="tab" href="/artists/index.html">Artists</a>
+      <a class="tab" href="/games.html">Vote</a>
+      <a class="tab" href="/news.html">News</a>
+    </nav>
+  </div>
+  <div id="ad_top_leaderboard" class="ad ad-leader">AD TOP 970×250 / 320×100</div>
+</header>
+<main class="container">
+
+<section class="hero">
+  <h1>Release Calendar</h1>
+  <p>Weekly & monthly view of upcoming releases across genres.</p>
+</section>
+<div class="searchbar">
+  <input id="q" placeholder="Filter by artist or song…">
+  <select id="region"><option value="">All Regions</option><option>KR</option><option>JP</option><option>US</option><option>Global</option></select>
+</div>
+<table class="table" id="cal"></table>
+<div id="ad_in_article_cal" class="ad infeed">AD In-Article</div>
+<script>
+(async function(){
+  const [artists, songs, releases] = await Promise.all([
+    fetch('/data/artists.json').then(r=>r.json()),
+    fetch('/data/songs.json').then(r=>r.json()),
+    fetch('/data/releases.json').then(r=>r.json())
+  ]);
+  const mapSong = Object.fromEntries(songs.map(s=>[s.id,s]));
+  const mapArtist = Object.fromEntries(artists.map(a=>[a.id,a]));
+  const cal = document.getElementById('cal');
+  function draw(list){
+    cal.innerHTML = '<thead><tr><th>Date</th><th>Song</th><th>Artist</th><th>Region</th></tr></thead>';
+    const tb = document.createElement('tbody');
+    list.forEach(r=>{
+      const s = mapSong[r.song_id]||{}; const a = mapArtist[s.artist_id]||{};
+      const tr = document.createElement('tr');
+      tr.innerHTML = `<td>${r.release_at}</td><td><a href="/song.html?slug=${encodeURIComponent(s.slug||s.id)}">${s.title||''}</a></td><td><a href="/artist.html?slug=${encodeURIComponent(a.slug||a.id)}">${a.name||''}</a></td><td>${r.region}</td>`;
+      tb.appendChild(tr);
+    });
+    cal.appendChild(tb);
+  }
+  const base = releases.slice().sort((a,b)=>a.release_at.localeCompare(b.release_at));
+  draw(base);
+  document.getElementById('q').addEventListener('input', e=>{
+    const q=e.target.value.toLowerCase();
+    const filtered = base.filter(r=>{
+      const s=mapSong[r.song_id]||{}; const a=mapArtist[s.artist_id]||{};
+      return [s.title||'', a.name||''].some(x=>String(x).toLowerCase().includes(q));
+    });
+    draw(filtered);
+  });
+  document.getElementById('region').addEventListener('change', e=>{
+    const val=e.target.value;
+    const filtered = val? base.filter(r=>r.region===val): base;
+    draw(filtered);
+  });
+})();
+</script>
+
+</main>
+<footer class="site-footer">
+  <div class="container f-wrap">
+    <div>© <span id="year"></span> Music Discovery Hub · Built by jangtaemin1.com</div>
+    <div class="links">
+      <a href="/privacy.html">Privacy</a>
+      <a href="/ads.html">Ads</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/rss.xml">RSS</a>
+    </div>
+  </div>
+</footer>
+<script src="/assets/js/app.js"></script>
+</body>
+</html>

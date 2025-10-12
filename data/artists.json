@@ -1,0 +1,42 @@
+[
+  {
+    "id": "newjeans",
+    "name": "NewJeans",
+    "country": "KR",
+    "debut_date": "2022-07-22",
+    "labels": [
+      "ADOR"
+    ],
+    "slug": "newjeans"
+  },
+  {
+    "id": "ive",
+    "name": "IVE",
+    "country": "KR",
+    "debut_date": "2021-12-01",
+    "labels": [
+      "Starship"
+    ],
+    "slug": "ive"
+  },
+  {
+    "id": "yoasobi",
+    "name": "YOASOBI",
+    "country": "JP",
+    "debut_date": "2019-11-16",
+    "labels": [
+      "Sony Music Japan"
+    ],
+    "slug": "yoasobi"
+  },
+  {
+    "id": "taylor-swift",
+    "name": "Taylor Swift",
+    "country": "US",
+    "debut_date": "2006-10-24",
+    "labels": [
+      "Republic"
+    ],
+    "slug": "taylor-swift"
+  }
+]
