@@ -387,5 +387,14 @@
     "labels": [],
     "slug": "ariana-grande-justin-bieber",
     "channel": "Ariana Grande"
+  },
+  {
+    "id": "debut-concert",
+    "name": "Debut Concert",
+    "country": "KR",
+    "debut_date": "",
+    "labels": [],
+    "slug": "debut-concert",
+    "channel": "HYBE LABELS"
   }
 ]
