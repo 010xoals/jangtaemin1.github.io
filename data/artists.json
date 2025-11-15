@@ -414,5 +414,14 @@
     "labels": [],
     "slug": "music-clip",
     "channel": "1theK (원더케이)"
+  },
+  {
+    "id": "girlset",
+    "name": "GIRLSET",
+    "country": "",
+    "debut_date": "",
+    "labels": [],
+    "slug": "girlset",
+    "channel": "JYP Entertainment"
   }
 ]
