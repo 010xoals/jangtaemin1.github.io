@@ -423,5 +423,14 @@
     "labels": [],
     "slug": "girlset",
     "channel": "JYP Entertainment"
+  },
+  {
+    "id": "special-clip",
+    "name": "[Special Clip] 홍이삭",
+    "country": "KR",
+    "debut_date": "",
+    "labels": [],
+    "slug": "special-clip",
+    "channel": "1theK (원더케이)"
   }
 ]
