@@ -459,5 +459,32 @@
     "labels": [],
     "slug": "teaser-2-verivery",
     "channel": "1theK (원더케이)"
+  },
+  {
+    "id": "teaser1-bkwan",
+    "name": "[Teaser1] BKWAN(비콴)",
+    "country": "KR",
+    "debut_date": "",
+    "labels": [],
+    "slug": "teaser1-bkwan",
+    "channel": "1theK (원더케이)"
+  },
+  {
+    "id": "teaser3-bkwan",
+    "name": "[Teaser3] BKWAN(비콴)",
+    "country": "KR",
+    "debut_date": "",
+    "labels": [],
+    "slug": "teaser3-bkwan",
+    "channel": "1theK (원더케이)"
+  },
+  {
+    "id": "teaser2-bkwan",
+    "name": "[Teaser2] BKWAN(비콴)",
+    "country": "KR",
+    "debut_date": "",
+    "labels": [],
+    "slug": "teaser2-bkwan",
+    "channel": "1theK (원더케이)"
   }
 ]
