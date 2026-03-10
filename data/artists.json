@@ -540,5 +540,14 @@
     "labels": [],
     "slug": "ado-vivarium-release-special",
     "channel": "Ado"
+  },
+  {
+    "id": "gavy-nj",
+    "name": "가비엔제이 (Gavy NJ)",
+    "country": "KR",
+    "debut_date": "",
+    "labels": [],
+    "slug": "gavy-nj",
+    "channel": "1theK (원더케이)"
   }
 ]
