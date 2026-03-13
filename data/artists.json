@@ -558,5 +558,14 @@
     "labels": [],
     "slug": "santos-bravos",
     "channel": "HYBE LABELS"
+  },
+  {
+    "id": "mv-blue-smile",
+    "name": "[MV] Blue Smile(블루 스마일)",
+    "country": "KR",
+    "debut_date": "",
+    "labels": [],
+    "slug": "mv-blue-smile",
+    "channel": "1theK (원더케이)"
   }
 ]
