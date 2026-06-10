@@ -675,5 +675,14 @@
     "labels": [],
     "slug": "trailer",
     "channel": "1theK (원더케이)"
+  },
+  {
+    "id": "live-clip-nilo",
+    "name": "[Live Clip] 닐로(Nilo)",
+    "country": "KR",
+    "debut_date": "",
+    "labels": [],
+    "slug": "live-clip-nilo",
+    "channel": "1theK (원더케이)"
   }
 ]
