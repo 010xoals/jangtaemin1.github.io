@@ -702,5 +702,14 @@
     "labels": [],
     "slug": "thank-you-nashville",
     "channel": "Ed Sheeran"
+  },
+  {
+    "id": "live-clip-ja-jung",
+    "name": "[Live Clip] 자정(JA JUNG)",
+    "country": "KR",
+    "debut_date": "",
+    "labels": [],
+    "slug": "live-clip-ja-jung",
+    "channel": "1theK (원더케이)"
   }
 ]
