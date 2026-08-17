@@ -873,5 +873,14 @@
     "labels": [],
     "slug": "step-two",
     "channel": "HYBE LABELS"
+  },
+  {
+    "id": "step-three",
+    "name": "STEP THREE",
+    "country": "KR",
+    "debut_date": "",
+    "labels": [],
+    "slug": "step-three",
+    "channel": "HYBE LABELS"
   }
 ]
