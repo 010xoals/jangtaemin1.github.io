@@ -912,7 +912,7 @@
   },
   {
     "id": "can-t-go-to-toronto-and-not-play-love-yourself",
-    "name": "can't go to Toronto and not play Love Yourself",
+    "name": "Can't go to Toronto and not play Love Yourself",
     "country": "",
     "debut_date": "",
     "labels": [],
@@ -954,5 +954,23 @@
     "labels": [],
     "slug": "team-kr-2nd-mini-album-mark-on-me",
     "channel": "HYBE LABELS"
+  },
+  {
+    "id": "nothing-better-than-a-saturday-night-in-detroit",
+    "name": "Nothing better than a Saturday Night in Detroit",
+    "country": "",
+    "debut_date": "",
+    "labels": [],
+    "slug": "nothing-better-than-a-saturday-night-in-detroit",
+    "channel": "Ed Sheeran"
+  },
+  {
+    "id": "you-guys-requested-sofa-at-the-loop-tour-feel-like-it-s-2011-again",
+    "name": "You guys requested Sofa at the Loop Tour. Feel like it's 2011 again",
+    "country": "",
+    "debut_date": "",
+    "labels": [],
+    "slug": "you-guys-requested-sofa-at-the-loop-tour-feel-like-it-s-2011-again",
+    "channel": "Ed Sheeran"
   }
 ]
