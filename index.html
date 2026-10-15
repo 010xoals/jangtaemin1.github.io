@@ -38,7 +38,7 @@
 .newdrops .empty-drop{grid-column:1/-1;background:#faf7f4;border:1px dashed #e5d7cd;border-radius:10px;padding:22px;text-align:center;color:var(--sub);font-size:12px}
 @media(max-width:640px){.newdrops{padding:17px 13px;margin-top:20px}.newdrops h2{font-size:19px}.newdrops .drop-grid{grid-template-columns:1fr}.newdrops .drop-footer{flex-direction:column}}
 
-</style>
+.video-placeholder{padding:0;overflow:hidden}.video-placeholder iframe{width:100%;aspect-ratio:16/9;min-height:265px;border:0;display:block;background:#161313}.video-fallback{min-height:265px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px;padding:18px}.video-fallback a{color:#fff;font-size:12px;text-decoration:underline}.drop-card{cursor:pointer}.drop-card:focus-visible{outline:3px solid #e98e78;outline-offset:2px}.drop-watch{font-size:11px;font-weight:850;color:var(--coral);white-space:nowrap}@media(max-width:640px){.video-placeholder iframe,.video-fallback{min-height:190px}}</style>
 </head>
 <body>
 <header class="top"><div class="wrap top-inner">
@@ -82,8 +82,8 @@
         </div>
         <div id="newdrop-grid" class="drop-grid" aria-live="polite"></div>
         <div class="drop-footer">
-          <span id="newdrop-status" class="drop-demo">데모 데이터</span>
-          <span class="drop-disclaimer" id="newdrop-note">현재 보이는 곡과 발매일은 디자인 확인용 가상 예시입니다. 실제 신규 발매 정보 수집 기능은 추후 연결합니다.</span>
+          <span id="newdrop-status" class="drop-demo">신곡 수집 대기</span>
+          <span class="drop-disclaimer" id="newdrop-note">실제 발매 정보가 수집되면 표시됩니다. 데이터 수집 전에는 가상의 발매곡을 보여주지 않습니다.</span>
         </div>
       </section>
       <section id="reviews" class="review-section"><div class="heading"><h2>최신 리뷰</h2><span class="small muted">음악에 담긴 서로 다른 이야기</span></div><div class="reviews">
@@ -102,7 +102,7 @@
   <footer class="footer"><span>© RE:SONG · 음악 리뷰 플랫폼 1차 디자인 시안</span><span>모든 곡과 평점, 리뷰는 시연용 가상 데이터입니다. · 개인정보·광고 정책 페이지는 개발 예정</span></footer>
 </main>
 <div class="scrim" id="scrim" aria-hidden="true"><div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"><button class="close" id="close" aria-label="닫기">×</button><div class="modal-body">
-<div class="video-placeholder"><span class="yt">▶</span><strong>공식 YouTube 플레이어 연결 예정</strong><p>정식 버전에서는 곡별 공식 영상을 이 위치에서 재생합니다.</p></div>
+<div class="video-placeholder" id="video-container" aria-label="YouTube 동영상 플레이어"></div>
 <div><span class="tag">곡 상세 · 체험용</span><h2 id="modal-title"></h2><div id="modal-meta" class="meta"></div><p class="small muted" id="modal-score"></p>
 <label>나의 별점</label><div class="stars" id="stars" role="group" aria-label="음악 평점 선택"></div>
 <label for="review-text">나의 리뷰</label><textarea id="review-text" placeholder="이 음악에 대한 당신의 생각을 적어보세요."></textarea><button class="btn" id="save-review">체험용 평가 저장</button><p class="notice" id="save-notice">평가는 이 브라우저에만 임시 저장됩니다. 다른 사람에게 공개되지 않습니다.</p></div>
@@ -131,8 +131,32 @@
   }
   function drawChart(){$("#rankings").innerHTML=tracks.slice(0,5).map((s,i)=>'<div class="rank" data-rank="'+s.id+'" role="button" tabindex="0"><b>'+(i+1)+'</b><span class="thumb" style="background:'+s.bg+'"></span><div class="desc"><strong>'+escapeHTML(s.title)+'</strong><span>'+escapeHTML(s.artist)+'</span></div><span class="score">★ '+s.score.toFixed(1)+'</span></div>').join("")}
   function drawStars(){ $("#stars").innerHTML=[1,2,3,4,5].map(n=>'<button type="button" data-star="'+n+'" class="starbtn '+(selectedRating>=n?'active':'')+'" aria-label="'+n+'점" aria-pressed="'+(selectedRating===n)+'">★</button>').join("")}
-  function openSong(id){currentSong=tracks.find(s=>s.id===id);if(!currentSong)return;const saved=reviews[id]||{};selectedRating=saved.rating||0;$("#modal-title").textContent=currentSong.title;$("#modal-meta").textContent=currentSong.artist+" · "+currentSong.genre+" · 시연용 음악";$("#modal-score").textContent="데모 평균 ★ "+currentSong.score+" · 평가 "+currentSong.count+"명";$("#review-text").value=saved.text||"";$("#save-notice").textContent="평가는 이 브라우저에만 임시 저장됩니다. 다른 사람에게 공개되지 않습니다.";drawStars();$("#scrim").classList.add("open");$("#scrim").setAttribute("aria-hidden","false");$("#close").focus()}
-  function closeSong(){$("#scrim").classList.remove("open");$("#scrim").setAttribute("aria-hidden","true");currentSong=null}
+  function renderVideo(song){
+    const el=$("#video-container");el.replaceChildren();
+    if(song.videoId && /^[\w-]{11}$/.test(song.videoId)){
+      const iframe=document.createElement("iframe");
+      iframe.title=song.artist+" - "+song.title+" (YouTube)";
+      iframe.src="https://www.youtube-nocookie.com/embed/"+song.videoId+"?rel=0";
+      iframe.loading="lazy";iframe.allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share";
+      iframe.referrerPolicy="strict-origin-when-cross-origin";iframe.allowFullscreen=true;el.append(iframe);return;
+    }
+    const outer=document.createElement("div");outer.className="video-fallback";
+    const text=document.createElement("strong");text.textContent="검증된 YouTube 영상이 아직 없습니다.";
+    const link=document.createElement("a");link.href="https://www.youtube.com/results?search_query="+encodeURIComponent(song.artist+" "+song.title);link.target="_blank";link.rel="noopener noreferrer";link.textContent="YouTube에서 검색 →";
+    outer.append(text,link);el.append(outer);
+  }
+  function showSong(song){
+    currentSong=song;if(!song)return;
+    const saved=reviews[song.id]||{};selectedRating=saved.rating||0;
+    $("#modal-title").textContent=song.title;
+    $("#modal-meta").textContent=song.artist+" · "+(song.releaseDate?"발매일 "+song.releaseDate+" · "+song.countryName:song.genre+" · 시연용 음악");
+    $("#modal-score").textContent=song.releaseDate?"MusicBrainz 등록 신곡 · 평점 DB는 아직 미연결":"데모 평균 ★ "+song.score+" · 평가 "+song.count+"명";
+    $("#review-text").value=saved.text||"";$("#save-notice").textContent="평가는 브라우저에만 임시 저장됩니다. 다른 사람에게 공개되지 않습니다.";
+    renderVideo(song);drawStars();$("#scrim").classList.add("open");$("#scrim").setAttribute("aria-hidden","false");$("#close").focus();
+  }
+  function openSong(id){const song=tracks.find(x=>x.id===id);if(song)showSong(song)}
+  function openRelease(id){const s=newReleases.find(x=>x.id===id);if(s)showSong({id:"mb:"+s.id,title:s.title,artist:s.artist,releaseDate:s.date,countryName:s.countryName,videoId:s.videoId})}
+  function closeSong(){$("#scrim").classList.remove("open");$("#scrim").setAttribute("aria-hidden","true");$("#video-container").replaceChildren();currentSong=null}
   $("#songs").addEventListener("click",e=>{const h=e.target.closest("[data-heart]");if(h){e.stopPropagation();const id=Number(h.dataset.heart);favorites=favorites.includes(id)?favorites.filter(x=>x!==id):[...favorites,id];save("favorites",favorites);drawSongs();return}const c=e.target.closest("[data-id]");if(c)openSong(Number(c.dataset.id))});
   $("#songs").addEventListener("keydown",e=>{if((e.key==="Enter"||e.key===" ")&&e.target.matches(".song")){e.preventDefault();openSong(Number(e.target.dataset.id))}});
   $("#rankings").addEventListener("click",e=>{const c=e.target.closest("[data-rank]");if(c)openSong(Number(c.dataset.rank))});
@@ -148,18 +172,7 @@
   // 데이터 연동 후 /data/new-releases.json [{title,artist,release_date,country_code,country_name,video_id?}] 지원.
   // 연결 전에는 항상 '데모 데이터'라고 표시하며 실발매 사실로 오해되지 않도록 함.
   const countryLabel={KR:"한국",JP:"일본",US:"미국",OTHER:"그 외 국가"};
-  const releaseSeeds=[
-    {songId:1,country:"KR",countryName:"한국",daysAgo:0},
-    {songId:2,country:"KR",countryName:"한국",daysAgo:3},
-    {songId:5,country:"JP",countryName:"일본",daysAgo:1},
-    {songId:7,country:"JP",countryName:"일본",daysAgo:5},
-    {songId:3,country:"US",countryName:"미국",daysAgo:2},
-    {songId:4,country:"US",countryName:"미국",daysAgo:6},
-    {songId:6,country:"OTHER",countryName:"캐나다",daysAgo:4},
-    {songId:8,country:"OTHER",countryName:"영국",daysAgo:5},
-    {songId:1,country:"KR",countryName:"한국",daysAgo:9} // 날짜 필터 검사용: 화면에 노출되면 안 됨
-  ];
-  let newReleaseCountry="ALL",releaseMode="demo",newReleases=[];
+  let newReleaseCountry="ALL",releaseMode="loading",newReleases=[];
   function todayInKorea(){
     const parts=new Intl.DateTimeFormat("en-US",{timeZone:"Asia/Seoul",year:"numeric",month:"2-digit",day:"2-digit"}).formatToParts(new Date());
     const val=x=>parts.find(p=>p.type===x).value;
@@ -171,38 +184,38 @@
   function releaseRange(){const end=todayInKorea();return {start:dayBefore(end,6),end}}
   function parseReleaseData(items){
     if(!Array.isArray(items))return [];
-    return items.filter(x=>x&&typeof x.title==="string"&&typeof x.artist==="string"&&/^\d{4}-\d{2}-\d{2}$/.test(x.release_date)).map((x,i)=>{
-      const c=String(x.country_code||"").toUpperCase();
-      return {title:x.title.slice(0,160),artist:x.artist.slice(0,160),date:x.release_date,country:["KR","JP","US"].includes(c)?c:"OTHER",countryName:String(x.country_name||countryLabel[c]||"기타").slice(0,60),bg:tracks[i%tracks.length].bg,videoId:/^[\w-]{11}$/.test(x.video_id||"")?x.video_id:null};
-    });
+    const ids=new Set();
+    return items.filter(x=>x&&typeof x.id==="string"&&/^[0-9a-f-]{36}$/i.test(x.id)&&typeof x.title==="string"&&typeof x.artist==="string"&&/^\d{4}-\d{2}-\d{2}$/.test(x.release_date)&&["KR","JP","US","OTHER"].includes(x.country_code)).map((x,i)=>{
+      let name=countryLabel[x.country_code];
+      try{if(/^[A-Z]{2}$/.test(x.country_name||""))name=new Intl.DisplayNames(["ko-KR"],{type:"region"}).of(x.country_name)||name;}catch(_){}
+      return {id:x.id,title:x.title.slice(0,160),artist:x.artist.slice(0,160),date:x.release_date,country:x.country_code,countryName:name,bg:tracks[i%tracks.length].bg,videoId:/^[\w-]{11}$/.test(x.video_id||"")?x.video_id:null};
+    }).filter(x=>{if(ids.has(x.id))return false;ids.add(x.id);return true});
   }
   function drawReleases(){
     const {start,end}=releaseRange();
     $("#newdrop-range").textContent=start.replaceAll("-",".")+" – "+end.replaceAll("-",".");
     const week=newReleases.filter(s=>s.date>=start&&s.date<=end).sort((a,b)=>b.date.localeCompare(a.date));
     for(const code of ["ALL","KR","JP","US","OTHER"]){
-      const key="#country-count-"+code.toLowerCase();
-      const node=$(key);
+      const node=$("#country-count-"+code.toLowerCase());
       if(node)node.textContent="("+week.filter(s=>code==="ALL"||s.country===code).length+")";
     }
     const visible=week.filter(s=>newReleaseCountry==="ALL"||s.country===newReleaseCountry);
-    $("#newdrop-grid").innerHTML=visible.length?visible.map((s,i)=>{
-      const text=escapeHTML(s.title),artist=escapeHTML(s.artist),country=escapeHTML(s.countryName);
-      return '<article class="drop-card"><div class="drop-cover" style="background:'+s.bg+'" aria-hidden="true"></div><div class="drop-detail"><div class="drop-title">'+text+'</div><div class="drop-artist">'+artist+'</div><div class="drop-meta"><span class="drop-country">'+country+'</span><time datetime="'+s.date+'">'+s.date.replaceAll("-",".")+' 발매</time></div></div></article>';
-    }).join(""):'<div class="empty-drop">해당 국가에서 지난 7일 동안 확인된 신규 발매 곡이 없습니다.</div>';
-    $("#newdrop-status").textContent=releaseMode==="demo"?"시안용 가상 데이터":"발매 목록 불러옴";
-    $("#newdrop-note").textContent=releaseMode==="demo"?"현재 보이는 곡과 발매일은 디자인 확인용 가상 예시입니다. 실제 신규 발매 정보 수집 기능은 추후 연결합니다.":"발매일은 수집된 데이터 기준입니다. 아티스트의 활동 국가로 분류하며 최신 정보와 다를 수 있습니다.";
+    $("#newdrop-grid").innerHTML=visible.length?visible.map(x=>{
+      const title=escapeHTML(x.title),artist=escapeHTML(x.artist),name=escapeHTML(x.countryName);
+      return '<article class="drop-card" data-release="'+x.id+'" tabindex="0" role="button" aria-label="'+title+' 상세 보기"><div class="drop-cover" style="background:'+x.bg+'" aria-hidden="true"></div><div class="drop-detail"><div class="drop-title">'+title+'</div><div class="drop-artist">'+artist+'</div><div class="drop-meta"><span class="drop-country">'+name+'</span><time datetime="'+x.date+'">'+x.date.replaceAll("-",".")+' 발매</time></div></div><span class="drop-watch">'+(x.videoId?"▶ 감상":"곡 확인 →")+'</span></article>';
+    }).join(""):'<div class="empty-drop">'+(releaseMode==="loading"?"신곡 정보를 불러오는 중입니다.":releaseMode==="waiting"?"아직 최초 수집이 실행되지 않았습니다.":releaseMode==="error"?"신곡 정보를 불러오지 못했습니다.":"최근 7일간 수집된 "+(newReleaseCountry==="ALL"?"":countryLabel[newReleaseCountry]+" ")+"신곡이 없습니다.")+'</div>';
+    $("#newdrop-status").textContent=releaseMode==="ready"?"MusicBrainz 등록 정보":releaseMode==="waiting"?"첫 수집 대기":releaseMode==="error"?"조회 실패":"불러오는 중";
+    $("#newdrop-note").textContent=releaseMode==="ready"?"MusicBrainz에 등록된 최근 7일 싱글만 표시합니다. 일부 국가·곡은 누락될 수 있으며 아티스트 국가 분류는 추정 기준입니다.":"검증된 데이터만 표시합니다. 가상의 음악을 신규 발매곡으로 표시하지 않습니다.";
   }
-  function drawDemoReleases(){const {end}=releaseRange();newReleases=releaseSeeds.map(x=>{const song=tracks.find(t=>t.id===x.songId);return {title:song.title,artist:song.artist,date:dayBefore(end,x.daysAgo),country:x.country,countryName:x.countryName,bg:song.bg}});releaseMode="demo";drawReleases()}
   async function loadNewReleases(){
-    try {
-      const response=await fetch("/data/new-releases.json",{cache:"no-store"});
-      if(!response.ok)throw Error("No release feed");
-      const json=await response.json();
-      const records=parseReleaseData(Array.isArray(json)?json:json.items);
-      newReleases=records;releaseMode="feed";drawReleases();
-    }catch(_error){drawDemoReleases()}
+    try{const r=await fetch("/data/new-releases.json",{cache:"no-store"});if(!r.ok)throw Error("release feed unavailable");
+      const j=await r.json();newReleases=parseReleaseData(Array.isArray(j)?j:j.items);
+      releaseMode=Array.isArray(j)?(newReleases.length?"ready":"waiting"):(j.generated_at?"ready":"waiting");
+    }catch(_){newReleases=[];releaseMode="error"}
+    drawReleases();
   }
+  $("#newdrop-grid").addEventListener("click",e=>{const card=e.target.closest("[data-release]");if(card)openRelease(card.dataset.release)});
+  $("#newdrop-grid").addEventListener("keydown",e=>{const card=e.target.closest("[data-release]");if(card&&(e.key==="Enter"||e.key===" ")){e.preventDefault();openRelease(card.dataset.release)}});
   $("#region-tabs").addEventListener("click",e=>{
     const btn=e.target.closest("[data-country]");if(!btn)return;
     newReleaseCountry=btn.dataset.country;
@@ -210,7 +223,7 @@
     drawReleases();
   });
 
-  drawSongs();drawChart();drawDemoReleases();loadNewReleases();
+  drawSongs();drawChart();drawReleases();loadNewReleases();
 })();
 </script>
 </body>
