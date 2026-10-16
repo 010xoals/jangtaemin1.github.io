@@ -1,0 +1,45 @@
+name: QA Video Matching (Development Only)
+on:
+  push:
+    branches: [feature/video-connection-phase1]
+    paths:
+      - .github/workflows/test-video-enrichment.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: API key presence check
+        env:
+          YT_API_KEY: ${{ secrets.YT_API_KEY }}
+        run: test -n "$YT_API_KEY"
+      - name: Backfill videos only
+        env:
+          YT_API_KEY: ${{ secrets.YT_API_KEY }}
+          VIDEO_ONLY: "1"
+          MAX_YOUTUBE_SEARCHES: "30"
+        run: node scripts/update_new_releases.cjs
+      - name: Validate release data
+        run: |
+          node - <<'NODE'
+          const f = require('./data/new-releases.json');
+          const ids = f.items.filter(x => /^[\w-]{11}$/.test(x.video_id||''));
+          if(!f.items.length) throw Error('Empty release list');
+          console.log('QA_RESONG_VIDEO',JSON.stringify({total:f.items.length,withVideos:ids.length,countries:f.items.reduce((a,x)=>(a[x.country_code]=(a[x.country_code]||0)+1,a),{})}));
+          NODE
+      - name: Store QA results on this branch only
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/new-releases.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'data: video-match QA backfill'
+            git push
+          fi
