@@ -1,0 +1,25 @@
+name: QA RE:SONG Policy and Login
+on:
+  push:
+    branches: [feature/google-oauth-launch-2026-10]
+    paths:
+      - .github/workflows/qa-auth-release.yml
+      - assets/js/community.js
+      - index.html
+      - privacy.html
+      - terms.html
+      - tests/oauth-release.test.cjs
+      - supabase/migrations/20261016_self_service_account_deletion.sql
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  policy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --test tests/community.test.cjs tests/oauth-release.test.cjs
