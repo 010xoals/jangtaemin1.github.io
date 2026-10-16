@@ -56,6 +56,10 @@ function authUI(){
 }
 async function refreshAccount(){
   if(!db)return;
+  if(!canSignIn()){member=null;authUI();if(song)await loadReviews(song);return}
+  const {data:sessionData,error:sessionError}=await db.auth.getSession();
+  if(sessionError){status("로그인 상태를 확인하지 못했습니다.");return}
+  if(!sessionData.session){member=null;authUI();if(song)await loadReviews(song);return}
   const {data,error}=await db.auth.getUser();
   if(error){status("로그인 상태를 확인하지 못했습니다.");return}
   member=data.user;
@@ -181,12 +185,17 @@ async function init(){
   try{
     const {createClient}=await import("https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm");
     db=createClient(origin.origin,cfg.publishableKey,{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:true}});
+    // Verify real anonymous database access before presenting the service as connected.
+    const probe=await db.from("songs").select("id",{head:true,count:"exact"});
+    if(probe.error)throw Error("Read-only Supabase probe failed");
     $("#community-offline-message").hidden=true;
     loginBtn.disabled=!canSignIn();
-    db.auth.onAuthStateChange((_event,_session)=>{
-      // The Supabase auth callback must not synchronously call another auth method.
-      setTimeout(()=>{refreshAccount().catch(()=>status("로그인 확인에 실패했습니다."));},0);
-    });
+    if(canSignIn()){
+      db.auth.onAuthStateChange((_event,_session)=>{
+        // Supabase auth callbacks must not execute another auth API call synchronously.
+        setTimeout(()=>{refreshAccount().catch(()=>status("로그인 확인에 실패했습니다."));},0);
+      });
+    }
     await refreshAccount();
     status(canSignIn()?"회원 평가 서비스가 연결되었습니다.":"실제 평점 DB가 연결되었습니다. Google 로그인은 준비 중이며 신곡 감상과 실제 평가 조회는 가능합니다.");
   }catch(e){
