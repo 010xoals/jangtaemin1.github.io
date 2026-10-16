@@ -66,7 +66,7 @@ async function fetchReleases(start,end){
   // MusicBrainz indexes partial dates (YYYY) together with precise dates.
   // Fetch all search pages before filtering for exact YYYY-MM-DD.
   const groups=[];
-  const pageLimit=Number(process.env.MB_SEARCH_PAGES||7);
+  const pageLimit=Math.min(5,Math.max(1,Number(process.env.MB_SEARCH_PAGES||5)));
   for(let date=end;date>=start;date=minusDays(date,1)){
     let fetched=0,total=0,exact=0;
     for(let page=0;page<pageLimit;page++){
