@@ -19,10 +19,10 @@ test("all member UI targets exist in the HTML",()=>{
   const ids=["community-message","auth-signin","auth-signout","account-controls","account-name","account-nickname","community-detail","rating-stars","rating-body","rating-submit","community-review-list","rating-summary-live","account-save-nickname","rating-auth-hint","community-offline-message","nickname-bar"];
   for(const id of ids)assert.match(html,new RegExp('id="'+id+'"'),id+" is missing");
 });
-test("Supabase browser config has public key and Google OAuth stays disabled",()=>{
+test("Supabase browser config has public key and Google OAuth is active",()=>{
   assert.match(cfg,/https:\/\/slgfotvdellanbjcihlf\.supabase\.co/);
   assert.match(cfg,/publishableKey:\s*"sb_publishable_/);
-  assert.match(cfg,/enableGoogleLogin:\s*false/);
+  assert.match(cfg,/enableGoogleLogin:\s*true/);
   assert.match(community,/canSignIn\(\)/);
   assert.match(community,/probe\.error/);
   assert.match(html,/resong:open-song/);

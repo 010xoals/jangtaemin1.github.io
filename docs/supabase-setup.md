@@ -85,3 +85,12 @@ Repo Settings > Secrets and variables > Actions:
 - 회원 스스로 계정과 연결 리뷰를 삭제하는 `public.delete_my_account()` RPC 적용. 내부 privileged 함수는 미노출 스키마에 있음.
 - 신규 회원 로그인 공개에 앞서 운영자의 비공개 연락처를 확정하고 개인정보 처리 안내를 보완해야 하므로 `enableGoogleLogin: false` 유지.
 - 화면에 `/privacy.html`, `/terms.html` 안내와 계정 탈퇴/내 리뷰 삭제 UI 구현. 자가 삭제 실사용 테스트는 로그인 활성화 후 수행.
+
+## Google 인증 UI 활성화 및 연락처
+- 공개 문의 주소: 05xoals@gmail.com
+- Supabase Google OAuth 활성화 및 Google 로그인 페이지 HTTP 302 이동 확인.
+- `config/public.js`의 `enableGoogleLogin: true`로 로그인 시범 공개.
+- /privacy.html 및 /terms.html 안내 등록.
+- 회원별 평점 저장, 리뷰 삭제, 계정 자가 탈퇴 코드가 공개됨.
+- 사용자 본인의 Google 계정으로 로그인한 후 첫 평가 저장/수정/삭제 및 탈퇴는 아직 최종 검증 필요.
+- Google Cloud OAuth 앱이 Testing 상태이면 등록된 테스트 사용자만 로그인할 수 있음. 공개 대상 확대 시 Google Cloud Audience 설정 검토.
