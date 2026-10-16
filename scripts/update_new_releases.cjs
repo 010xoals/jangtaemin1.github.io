@@ -63,14 +63,18 @@ async function searchVideo(song){
   return status.embeddable===true&&status.privacyStatus==="public"?id:null;
 }
 async function fetchReleases(start,end){
+  // Search each exact date separately: the broad MusicBrainz range query
+  // can yield year-only ("2026") results ahead of YYYY-MM-DD releases.
   const groups=[];
-  const query="firstreleasedate:["+start+" TO "+end+"] AND primarytype:single";
-  for(let page=0;page<MAX_PAGES;page++){
+  for(let date=end;date>=start;date=minusDays(date,1)){
+    const q="firstreleasedate:"+date+" AND primarytype:single";
     const u=new URL(API+"/release-group");
-    u.searchParams.set("query",query);u.searchParams.set("fmt","json");u.searchParams.set("limit","100");u.searchParams.set("offset",String(page*100));
+    u.searchParams.set("query",q);u.searchParams.set("fmt","json");u.searchParams.set("limit","100");u.searchParams.set("offset","0");
     const j=await mb(u);
-    groups.push(...(j["release-groups"]||[]));
-    if(groups.length>=Number(j.count||0)||!(j["release-groups"]||[]).length)break;
+    const found=j["release-groups"]||[];
+    const dated=found.filter(g=>g["first-release-date"]===date);
+    console.log("Search day",date,"total",j.count,"sampleDates",JSON.stringify(found.slice(0,3).map(x=>x["first-release-date"])),"exact",dated.length);
+    groups.push(...dated);
   }
   return groups;
 }
