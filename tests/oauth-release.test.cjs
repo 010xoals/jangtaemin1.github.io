@@ -10,7 +10,7 @@ test("homepage and client parse and contain privacy routes",()=>{
 test("privacy and terms pages explain OAuth, storage and deletion",()=>{
   for(const key of ["Google","Supabase","탈퇴","리뷰"])assert.ok(privacy.includes(key),key);
   for(const key of ["MusicBrainz","YouTube","계정","리뷰"])assert.ok(terms.includes(key),key);
-  assert.ok(privacy.includes("비공개 문의 이메일은 운영자 확인 후 등록 예정"));
+  assert.ok(privacy.includes("문의 이메일은 운영자 확인 후 등록 예정"));
 });
 test("deletion is self-only, no arbitrary user argument, anonymous users blocked",()=>{
   assert.ok(sql.includes("actor := (select auth.uid())"));
