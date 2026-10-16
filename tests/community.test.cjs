@@ -19,11 +19,12 @@ test("all member UI targets exist in the HTML",()=>{
   const ids=["community-message","auth-signin","auth-signout","account-controls","account-name","account-nickname","community-detail","rating-stars","rating-body","rating-submit","community-review-list","rating-summary-live","account-save-nickname","rating-auth-hint","community-offline-message","nickname-bar"];
   for(const id of ids)assert.match(html,new RegExp('id="'+id+'"'),id+" is missing");
 });
-test("offline mode is safe without a connected Supabase project",()=>{
-  assert.match(cfg,/url:\s*""/);
-  assert.match(cfg,/publishableKey:\s*""/);
-  assert.match(community,/if\(!cfg\?\.url\|\|!cfg\?\.publishableKey\)/);
-  assert.match(community,/loginBtn\.disabled=true/);
+test("Supabase browser config has public key and Google OAuth stays disabled",()=>{
+  assert.match(cfg,/https:\/\/slgfotvdellanbjcihlf\.supabase\.co/);
+  assert.match(cfg,/publishableKey:\s*"sb_publishable_/);
+  assert.match(cfg,/enableGoogleLogin:\s*false/);
+  assert.match(community,/canSignIn\(\)/);
+  assert.match(community,/probe\.error/);
   assert.match(html,/resong:open-song/);
   assert.match(html,/resong:close-song/);
 });
