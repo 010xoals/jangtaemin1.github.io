@@ -1,0 +1,27 @@
+name: QA RE:SONG Community Foundation
+on:
+  push:
+    branches:
+      - feature/community-foundation-2026-10
+    paths:
+      - .github/workflows/qa-community.yml
+      - tests/**
+      - supabase/**
+      - assets/js/community.js
+      - config/public.js
+      - index.html
+      - scripts/sync_supabase_catalog.cjs
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Syntax and schema contract tests
+        run: node --test tests/community.test.cjs
