@@ -6,6 +6,7 @@ on:
       - redesign/paper-stereo
     paths:
       - .github/workflows/update_new_releases.yml
+      - scripts/update_new_releases.cjs
   workflow_dispatch:
   schedule:
     # KST 11:23 daily (UTC 02:23). Scheduled workflows run on the default branch only.
