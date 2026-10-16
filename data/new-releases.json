@@ -1,7 +1,10 @@
 {
-  "generated_at": null,
-  "range": null,
-  "source": "MusicBrainz — 수집 대기",
-  "country_basis": "artist country (unknown excluded)",
+  "generated_at": "2026-10-16T10:25:03.764Z",
+  "range": {
+    "start": "2026-10-10",
+    "end": "2026-10-16"
+  },
+  "source": "MusicBrainz release groups (singles)",
+  "country_basis": "artist country (MusicBrainz area); unknown excluded",
   "items": []
 }
