@@ -76,3 +76,12 @@ Repo Settings > Secrets and variables > Actions:
 - RLS 경고 2건은 `restrict_trigger_function_exec` 마이그레이션을 적용해 0건으로 해소
 - `enableGoogleLogin: false`인 동안 실제 DB 조회는 가능하지만 Google 가입·평가 저장은 비활성화함
 - Google OAuth 설정·개인정보처리방침 및 자동 DB 동기화 비밀키 설치 전에는 `enableGoogleLogin`을 true로 변경하지 말 것
+
+## 2026-10-16 Google OAuth 연결 검증
+- Supabase Auth 설정 `external.google=true` 응답 확인.
+- Google 로그인 API가 `accounts.google.com`으로 HTTP 302 리디렉션 성공.
+- 익명 음악·평점 집계·닉네임 공개 조회 성공.
+- Google 실제 계정 인증 완료 및 리뷰 작성 테스트는 아직 미실시.
+- 회원 스스로 계정과 연결 리뷰를 삭제하는 `public.delete_my_account()` RPC 적용. 내부 privileged 함수는 미노출 스키마에 있음.
+- 신규 회원 로그인 공개에 앞서 운영자의 비공개 연락처를 확정하고 개인정보 처리 안내를 보완해야 하므로 `enableGoogleLogin: false` 유지.
+- 화면에 `/privacy.html`, `/terms.html` 안내와 계정 탈퇴/내 리뷰 삭제 UI 구현. 자가 삭제 실사용 테스트는 로그인 활성화 후 수행.
