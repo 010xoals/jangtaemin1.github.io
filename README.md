@@ -30,3 +30,10 @@ B안 PAPER STEREO 테마로 제작한 한국·일본·미국·그 외 국가별 
 - `tests/community.test.cjs`: 브라우저와 DB 정책 간 계약 테스트.
 
 **현재 상태:** 공개 홈페이지에는 연동을 위한 코드만 추가됨. Supabase DB에 SQL 실행, Google OAuth 대시보드 설정, 서비스 정책 정비는 아직 미완료이므로 실제 사용자 로그인·리뷰 저장은 오픈되지 않았음.
+
+## 실제 Supabase 프로젝트 연결
+- 서울 `RESONG` 프로젝트 생성 완료; UUID `slgfotvdellanbjcihlf`.
+- 테이블 `songs`에 신곡 67곡 저장, 보안 경고 0건.
+- 클라이언트 공개키 및 프로젝트 URL 반영. 실제 익명 조회 가능 상태로 배포 예정.
+- Google OAuth 아직 미설정 → `enableGoogleLogin: false`; 로그인/리뷰 쓰기 비활성화.
+- 신곡의 정기 DB 동기화는 GitHub Secrets `SUPABASE_URL`과 `SUPABASE_SERVICE_ROLE_KEY` 추가 후 자동 작동.
