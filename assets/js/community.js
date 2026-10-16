@@ -17,6 +17,8 @@ const submitBtn=$("#rating-submit");
 const reviewList=$("#community-review-list");
 const ratingSummary=$("#rating-summary-live");
 const nicknameBtn=$("#account-save-nickname");
+const deleteReviewBtn=$("#review-delete");
+const deleteAccountBtn=$("#account-delete");
 let db=null,member=null,song=null,currentRating=0,ownReview=null,loadSerial=0;
 const canSignIn=()=>window.RESONG_PUBLIC_CONFIG?.enableGoogleLogin===true;
 
@@ -32,7 +34,7 @@ function reviewStars(score){
 function resetVisible(){
   reviewList.replaceChildren(textEl("p","곡을 선택하면 실제 회원 리뷰를 조회합니다.","muted small"));
   ratingSummary.textContent="평가 내역 불러오기 전";
-  bodyInput.value=""; currentRating=0;ownReview=null;paintStars();
+  bodyInput.value=""; currentRating=0;ownReview=null;paintStars();deleteReviewBtn.hidden=true;
 }
 function paintStars(){
   for(const el of stars.querySelectorAll("[data-rating]")){
@@ -51,6 +53,7 @@ function authUI(){
   displayLabel.textContent=signed?"로그인됨":"";
   bodyInput.disabled=!signed||!canSignIn();
   submitBtn.disabled=!signed||!canSignIn();
+  deleteAccountBtn.disabled=!signed||!canSignIn();
   const hint=$("#rating-auth-hint");
   hint.textContent=!canSignIn()?"Google 로그인 연결 후 리뷰 작성이 가능합니다.":signed?"내 평점을 선택한 후 리뷰를 남겨보세요.":"Google 로그인 후 나의 별점과 리뷰를 등록할 수 있어요.";
 }
@@ -113,6 +116,7 @@ async function loadReviews(selected){
     bodyInput.value=ownReview?.body||"";
   }else{currentRating=0;bodyInput.value=""}
   paintStars();
+  deleteReviewBtn.hidden=!(member&&ownReview&&canSignIn());
 }
 async function saveReview(){
   if(!db||!member||!song||!canSignIn())return status("현재 평점 작성 기능은 아직 오픈 전입니다.");
@@ -132,6 +136,28 @@ async function saveReview(){
   }
   status("나의 평가를 저장했습니다.");
   await loadReviews(song);
+}
+async function deleteReview(){
+  if(!db||!member||!ownReview||!song||!canSignIn())return;
+  if(!confirm("이 곡에 작성한 나의 평점과 리뷰를 삭제할까요?"))return;
+  deleteReviewBtn.disabled=true;
+  const {error}=await db.from("reviews").delete().eq("id",ownReview.id).eq("user_id",member.id);
+  deleteReviewBtn.disabled=false;
+  if(error){status("리뷰 삭제에 실패했습니다.");return}
+  status("나의 리뷰와 평점을 삭제했습니다.");
+  await loadReviews(song);
+}
+async function deleteAccount(){
+  if(!db||!member||!canSignIn())return;
+  const word=prompt("탈퇴하면 계정, 닉네임, 모든 리뷰와 평점이 영구 삭제됩니다. 계속하려면 '탈퇴'를 입력하세요.");
+  if(word!=="탈퇴")return;
+  if(!confirm("RE:SONG 계정과 내 모든 리뷰를 정말로 삭제할까요? 되돌릴 수 없습니다."))return;
+  deleteAccountBtn.disabled=true;status("회원 계정을 삭제하는 중입니다…");
+  const {error}=await db.rpc("delete_my_account");
+  if(error){deleteAccountBtn.disabled=false;status("회원 탈퇴에 실패했습니다. 잠시 후 다시 시도해 주세요.");return}
+  try{await db.auth.signOut({scope:"local"})}catch(_){}
+  member=null;ownReview=null;status("회원 계정이 삭제되었습니다.");authUI();
+  if(song)await loadReviews(song);
 }
 async function saveNickname(){
   if(!db||!member||!canSignIn())return;
@@ -156,8 +182,11 @@ window.addEventListener("resong:close-song",()=>{song=null;loadSerial++});
 stars.addEventListener("click",e=>{const b=e.target.closest("[data-rating]");if(!b||!member)return;currentRating=Number(b.dataset.rating);paintStars()});
 submitBtn.addEventListener("click",saveReview);
 nicknameBtn.addEventListener("click",saveNickname);
+deleteReviewBtn.addEventListener("click",deleteReview);
+deleteAccountBtn.addEventListener("click",deleteAccount);
 loginBtn.addEventListener("click",async()=>{
   if(!db||!canSignIn())return;
+  if(!confirm("RE:SONG 이용안내 및 개인정보 처리 안내를 확인했습니다. Google 로그인으로 계속할까요?"))return;
   loginBtn.disabled=true;
   const {error}=await db.auth.signInWithOAuth({provider:"google",options:{redirectTo:location.origin+"/"}});
   if(error){status("Google 로그인을 시작하지 못했습니다.");loginBtn.disabled=false}
