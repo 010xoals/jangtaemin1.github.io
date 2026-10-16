@@ -123,12 +123,13 @@
         <div class="heading"><h2>실제 음악 평가 · 리뷰</h2></div>
         <div class="ready-panel">
           <strong>나의 음악 기록을 남기는 공간</strong>
-          <p>로그인 기능과 실제 회원 평가 저장을 순차적으로 연결하고 있습니다. 연결 전에는 회원 정보를 수집하지 않으며, 신곡 감상은 로그인 없이 사용할 수 있습니다.</p>
+          <p>회원 평점 데이터베이스와 Google 인증 연결을 점검했습니다. 개인정보 문의처 등 운영 정보가 준비되면 회원 로그인을 열 예정이며, 현재 신곡 감상은 로그인 없이 사용할 수 있습니다.</p>
           <p id="community-message" class="community-message" role="status">회원 서비스 연결 상태를 확인하는 중입니다.</p>
           <div class="nickname-bar" id="nickname-bar" hidden>
             <label for="account-nickname" class="small">닉네임 변경</label>
             <input id="account-nickname" type="text" placeholder="닉네임 (1~40자)" maxlength="40" autocomplete="nickname"/>
             <button id="account-save-nickname" class="auth-btn outline" type="button">저장</button>
+            <button id="account-delete" class="auth-btn outline" type="button" disabled>회원 탈퇴</button>
           </div>
         </div>
       </section>
@@ -144,7 +145,7 @@
       </div>
     </aside>
   </div>
-  <footer class="footer"><span>© RE:SONG · 음악을 발견하는 공간</span><span>MusicBrainz 발매 정보 일부를 제공합니다. · 평가와 광고 기능은 개발 중</span></footer>
+  <footer class="footer"><span>© RE:SONG · 음악을 발견하는 공간</span><span><a href="/privacy.html">개인정보 처리 안내</a> · <a href="/terms.html">서비스 이용 안내</a> · 평가 및 광고 기능 개발 중</span></footer>
 </main>
 <div class="scrim" id="scrim" aria-hidden="true"><div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
   <button class="close" id="close" aria-label="닫기">×</button>
@@ -167,6 +168,7 @@
           <textarea id="rating-body" maxlength="1500" placeholder="음악을 듣고 느낀 점을 적어주세요." disabled></textarea>
           <p id="rating-auth-hint" class="small muted">Google 로그인 후 평가할 수 있어요.</p>
           <button id="rating-submit" class="btn" type="button" disabled>평점 · 리뷰 저장</button>
+          <button id="review-delete" class="auth-btn outline" type="button" hidden>내 리뷰 삭제</button>
         </div>
         <div class="review-list-section">
           <h3>회원 리뷰</h3><div id="community-review-list" class="community-review-list" aria-live="polite"></div>
