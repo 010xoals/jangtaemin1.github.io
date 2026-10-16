@@ -37,3 +37,11 @@ B안 PAPER STEREO 테마로 제작한 한국·일본·미국·그 외 국가별 
 - 클라이언트 공개키 및 프로젝트 URL 반영. 실제 익명 조회 가능 상태로 배포 예정.
 - Google OAuth 아직 미설정 → `enableGoogleLogin: false`; 로그인/리뷰 쓰기 비활성화.
 - 신곡의 정기 DB 동기화는 GitHub Secrets `SUPABASE_URL`과 `SUPABASE_SERVICE_ROLE_KEY` 추가 후 자동 작동.
+
+## 2026-10-16 Google 로그인 시범 공개
+- Google OAuth 제공자 활성화 및 Google 인증 화면 리디렉션 검증 완료.
+- 홈페이지에서 Google 로그인/평점/리뷰 UI 활성화. 실제 사용자 로그인 이후의 리뷰 저장은 사용자 직접 검증이 필요.
+- 문의 메일: 05xoals@gmail.com; 개인정보 안내 `/privacy.html`, 이용안내 `/terms.html`.
+- Supabase 프로젝트는 서울 리전, 음원 카탈로그 67곡 초기 등록.
+- 개인정보 처리 및 신고 대응 체계는 시범 운영 중 보완.
+- GitHub Actions의 신곡→DB 정기 자동 동기화는 서버 비밀키 등록 전에는 건너뜀.
