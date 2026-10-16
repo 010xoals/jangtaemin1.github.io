@@ -1,8 +1,9 @@
-/* Safe to publish: only the Supabase project URL and publishable (anon) key belong here.
- * NEVER put a service_role key or Google client secret in this file.
- * Set values after the Supabase project schema and OAuth policies are configured.
+/* RE:SONG Supabase browser configuration. These values are PUBLIC, not secret.
+ * SECURITY: Never put SUPABASE_SERVICE_ROLE_KEY, sb_secret_*, or OAuth client secrets here.
+ * Google OAuth stays disabled until provider configuration and privacy documents are ready.
  */
 window.RESONG_PUBLIC_CONFIG = {
-  url: "",
-  publishableKey: ""
+  url: "https://slgfotvdellanbjcihlf.supabase.co",
+  publishableKey: "sb_publishable_7vK51-7WhdtswhN1tTfUmg_RfaqKzFa",
+  enableGoogleLogin: false
 };
