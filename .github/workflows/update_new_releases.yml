@@ -39,6 +39,16 @@ jobs:
           MUSICBRAINZ_USER_AGENT: "RESONG/0.2 (https://jangtaemin1.com; https://github.com/010xoals/jangtaemin1.github.io)"
           MAX_YOUTUBE_SEARCHES: "30"
         run: node scripts/update_new_releases.cjs
+      - name: Sync verified song catalog to Supabase (when configured)
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: |
+          if [ -n "$SUPABASE_URL" ] && [ -n "$SUPABASE_SERVICE_ROLE_KEY" ]; then
+            node scripts/sync_supabase_catalog.cjs
+          else
+            echo "Supabase catalog sync waiting for project configuration"
+          fi
       - name: Commit feed (if changed)
         run: |
           git config user.name "github-actions[bot]"
