@@ -95,6 +95,7 @@ async function main(){
   const groups=await fetchReleases(start,end);
   const previous=await loadPrevious();
   const artists=new Map(),unique=new Map();
+  console.log("MusicBrainz search diagnostics",JSON.stringify({first:groups.slice(0,3).map(g=>({type:g["primary-type"],date:g["first-release-date"],artistCreditCount:(g["artist-credit"]||[]).length})),dated:groups.filter(g=>fullDate(g["first-release-date"])).length,withinRange:groups.filter(g=>g["first-release-date"]>=start&&g["first-release-date"]<=end).length,typedSingle:groups.filter(g=>String(g["primary-type"]).toLowerCase()==="single").length}));
   const candidates=groups.filter(g=>fullDate(g["first-release-date"])&&g["first-release-date"]>=start&&g["first-release-date"]<=end&&(g["primary-type"]||"").toLowerCase()==="single");
   candidates.sort((a,b)=>String(b["first-release-date"]).localeCompare(String(a["first-release-date"])));
   for(const g of candidates){
