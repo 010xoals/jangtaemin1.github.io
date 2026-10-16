@@ -47,6 +47,27 @@
 .region-tabs button:focus-visible{outline:3px solid #f35e56}
 .country-stat{display:flex;justify-content:space-between;gap:9px;border-bottom:1px solid var(--line);padding:9px 0;font-size:12px}
 .country-stat:last-child{border-bottom:0}.country-stat strong{color:var(--coral)}
+
+[hidden]{display:none!important}
+.auth-btn{padding:9px 12px;background:#f35e56;color:#fff;border:1px solid #f35e56;border-radius:8px;white-space:nowrap;font-size:12px;font-weight:800}
+.auth-btn.outline{background:#fff7f3;color:#d25148}
+.auth-btn:disabled{opacity:.48;cursor:not-allowed}
+.auth-account{display:flex;align-items:center;gap:6px}
+.community-message{background:#fff5f0;border-radius:8px;padding:10px;font-size:12px;color:#935648}
+.nickname-bar{display:flex;align-items:center;gap:7px;margin-top:13px;flex-wrap:wrap}
+.nickname-bar input{min-width:150px;flex:1;border-radius:8px;border:1px solid var(--line);background:#fff;padding:9px;font-size:12px}
+.community-detail{margin-top:20px}
+.community-rating-summary{font-size:13px;font-weight:800;color:#d35e51;margin-bottom:13px}
+.rating-stars{display:flex;gap:5px;margin:5px 0 13px}
+.rating-stars button{border:0;background:none;color:#c7bab3;font-size:27px;padding:0 2px}
+.rating-stars button.active{color:#f35e56}
+.review-form{background:#fff9f5;border:1px solid #f2e1d5;border-radius:11px;padding:12px}
+.review-form textarea{margin:7px 0;width:100%;height:78px;resize:vertical;background:#fff;border:1px solid var(--line);border-radius:8px;padding:10px;font-size:12px}
+.review-list-section{margin-top:15px}.review-list-section h3{font-size:14px;margin-bottom:7px}
+.community-review{padding:12px 0;border-bottom:1px solid var(--line)}
+.community-review-top{display:flex;justify-content:space-between;align-items:center;font-size:12px}
+.community-review p{margin:7px 0;color:#484047;font-size:12px;white-space:pre-wrap;overflow-wrap:anywhere}
+@media(max-width:640px){.top-inner{gap:7px}.auth-btn{padding:7px 9px}.auth-account{font-size:10px}}
 </style>
 </head>
 <body>
@@ -55,6 +76,11 @@
   <nav class="topnav" aria-label="주 메뉴"><a class="active" href="#home">홈</a><a href="#new-releases">음악 검색</a><a href="#new-releases">최근 신곡</a><a href="#status">수집 현황</a><a href="#reviews">평가 서비스</a><a href="#reviews">커뮤니티</a></nav>
   <label class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" aria-label="음악 제목 또는 아티스트 검색" placeholder="곡명, 아티스트를 검색하세요"></label>
   <button class="iconbtn" id="mylist" type="button" aria-pressed="false" title="영상 연결 곡만 보기" aria-label="영상 연결 곡만 보기">▶</button>
+  <button id="auth-signin" class="auth-btn" type="button" disabled>Google 로그인</button>
+  <div id="account-controls" class="auth-account" hidden>
+    <span id="account-name" class="small muted">음악 친구</span>
+    <button id="auth-signout" class="auth-btn outline" type="button">로그아웃</button>
+  </div>
 </div></header>
 <main class="wrap" id="home">
   <section class="hero" aria-label="사이트 소개">
@@ -94,10 +120,16 @@
         <div class="songs" id="songs" aria-live="polite"></div>
       </section>
       <section id="reviews" class="review-section">
-        <div class="heading"><h2>평점·리뷰 서비스 준비 중</h2></div>
-        <div class="ready-panel"><strong>실제 회원이 평가하는 음악 커뮤니티로 개발하고 있어요.</strong>
-          <p>현재는 발매곡 검색과 YouTube 음악 감상 기능을 먼저 제공합니다. 회원 로그인과 여러 사람의 평점·리뷰 집계 기능이 준비되면 이곳에서 공개합니다.</p>
-          <span class="small muted">가상 평점이나 작성자를 실제 사용자 평가처럼 표시하지 않습니다.</span>
+        <div class="heading"><h2>실제 음악 평가 · 리뷰</h2></div>
+        <div class="ready-panel">
+          <strong>나의 음악 기록을 남기는 공간</strong>
+          <p>로그인 기능과 실제 회원 평가 저장을 순차적으로 연결하고 있습니다. 연결 전에는 회원 정보를 수집하지 않으며, 신곡 감상은 로그인 없이 사용할 수 있습니다.</p>
+          <p id="community-message" class="community-message" role="status">회원 서비스 연결 상태를 확인하는 중입니다.</p>
+          <div class="nickname-bar" id="nickname-bar">
+            <label for="account-nickname" class="small">닉네임 변경</label>
+            <input id="account-nickname" type="text" placeholder="닉네임 (1~40자)" maxlength="40" autocomplete="nickname"/>
+            <button id="account-save-nickname" class="auth-btn outline" type="button">저장</button>
+          </div>
         </div>
       </section>
       <section class="cta"><div><h2><span style="color:var(--coral)">RE:SONG</span>와 함께<br>더 많은 음악을 발견하세요.</h2><p>매일 갱신되는 실제 신곡과 연결된 음악을 찾아보세요.</p></div><a href="#new-releases" class="btn">이번 주 신곡 보기 →</a></section>
@@ -120,7 +152,27 @@
     <div class="video-placeholder" id="video-container" aria-label="YouTube 영상 재생 또는 검색 안내"></div>
     <div><span class="tag">실제 발매 정보</span><h2 id="modal-title"></h2><div id="modal-meta" class="meta"></div>
       <p class="small muted" id="modal-score"></p>
-      <div class="ready-panel"><strong>평점과 리뷰는 다음 단계에서 열립니다.</strong><p>로그인과 공용 평가 데이터베이스를 연결한 후 다른 사용자의 리뷰를 볼 수 있어요.</p></div>
+      <div id="community-detail" class="community-detail" hidden>
+        <div class="community-rating-summary" id="rating-summary-live" aria-live="polite">실제 평가를 불러오는 중입니다.</div>
+        <div class="review-form">
+          <label class="small">나의 평점</label>
+          <div class="rating-stars" id="rating-stars" role="group" aria-label="나의 별점">
+            <button type="button" data-rating="1" aria-label="1점">★</button>
+            <button type="button" data-rating="2" aria-label="2점">★</button>
+            <button type="button" data-rating="3" aria-label="3점">★</button>
+            <button type="button" data-rating="4" aria-label="4점">★</button>
+            <button type="button" data-rating="5" aria-label="5점">★</button>
+          </div>
+          <label for="rating-body" class="small">나의 리뷰</label>
+          <textarea id="rating-body" maxlength="1500" placeholder="음악을 듣고 느낀 점을 적어주세요." disabled></textarea>
+          <p id="rating-auth-hint" class="small muted">Google 로그인 후 평가할 수 있어요.</p>
+          <button id="rating-submit" class="btn" type="button" disabled>평점 · 리뷰 저장</button>
+        </div>
+        <div class="review-list-section">
+          <h3>회원 리뷰</h3><div id="community-review-list" class="community-review-list" aria-live="polite"></div>
+        </div>
+      </div>
+      <div class="ready-panel" id="community-offline-message"><strong>회원 평가 DB 연동 준비 중</strong><p>로그인과 평가 기능은 실제 데이터베이스가 연결된 후 활성화됩니다. 현재는 신곡 감상을 이용할 수 있습니다.</p></div>
       <p id="song-source" class="small muted"></p>
     </div>
   </div>
@@ -185,11 +237,14 @@
      search.href="https://www.youtube.com/results?search_query="+encodeURIComponent(s.artist+" "+s.title);
      search.rel="noopener noreferrer";search.target="_blank";fallback.append(strong,search);cont.append(fallback);
    }
-   $("#scrim").classList.add("open");$("#scrim").setAttribute("aria-hidden","false");$("#close").focus();
+   $("#scrim").classList.add("open");$("#scrim").setAttribute("aria-hidden","false");
+   window.dispatchEvent(new CustomEvent("resong:open-song",{detail:{id:s.id,title:s.title,artist:s.artist}}));
+   $("#close").focus();
  }
  function closeSong(){
    $("#scrim").classList.remove("open");$("#scrim").setAttribute("aria-hidden","true");
    $("#video-container").replaceChildren();
+   window.dispatchEvent(new Event("resong:close-song"));
  }
  async function load(){
    try{
@@ -224,5 +279,7 @@
 })();
 
 </script>
+<script src="/config/public.js"></script>
+<script type="module" src="/assets/js/community.js"></script>
 </body>
 </html>
