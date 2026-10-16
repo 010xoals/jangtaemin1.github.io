@@ -44,6 +44,7 @@ function authUI(){
   const signed=Boolean(member);
   loginBtn.hidden=signed;
   profileBar.hidden=!signed;
+  $("#nickname-bar").hidden=!signed;
   displayLabel.textContent=signed?"로그인됨":"";
   bodyInput.disabled=!signed;
   submitBtn.disabled=!signed;
@@ -140,8 +141,8 @@ async function saveNickname(){
 function revealSong(detail){
   if(!detail?.id||!/^[0-9a-f-]{36}$/i.test(detail.id))return;
   song=detail; resetVisible();
-  if(db){communitySection.hidden=false;loadReviews(song)}
-  else communitySection.hidden=true;
+  if(db){communitySection.hidden=false;$("#community-offline-message").hidden=true;loadReviews(song)}
+  else{communitySection.hidden=true;$("#community-offline-message").hidden=false}
 }
 window.addEventListener("resong:open-song",e=>revealSong(e.detail));
 window.addEventListener("resong:close-song",()=>{song=null;loadSerial++});
@@ -177,6 +178,7 @@ async function init(){
   try{
     const {createClient}=await import("https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm");
     db=createClient(origin.origin,cfg.publishableKey,{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:true}});
+    $("#community-offline-message").hidden=true;
     loginBtn.disabled=false;
     db.auth.onAuthStateChange((_event,_session)=>{
       // Postpone calls to Supabase from the auth callback to avoid SDK lock deadlocks.
@@ -185,7 +187,7 @@ async function init(){
     await refreshAccount();
     status("회원 평가 서비스가 연결되었습니다.");
   }catch(e){
-    db=null;loginBtn.disabled=true;communitySection.hidden=true;
+    db=null;loginBtn.disabled=true;communitySection.hidden=true;$("#community-offline-message").hidden=false;
     status("회원 평가 모듈을 불러오지 못했습니다. 신곡 감상은 계속 이용할 수 있습니다.");
   }
 }
