@@ -63,18 +63,26 @@ async function searchVideo(song){
   return status.embeddable===true&&status.privacyStatus==="public"?id:null;
 }
 async function fetchReleases(start,end){
-  // Search each exact date separately: the broad MusicBrainz range query
-  // can yield year-only ("2026") results ahead of YYYY-MM-DD releases.
+  // MusicBrainz indexes partial dates (YYYY) together with precise dates.
+  // Fetch all search pages before filtering for exact YYYY-MM-DD.
   const groups=[];
+  const pageLimit=Number(process.env.MB_SEARCH_PAGES||7);
   for(let date=end;date>=start;date=minusDays(date,1)){
-    const q="firstreleasedate:"+date+" AND primarytype:single";
-    const u=new URL(API+"/release-group");
-    u.searchParams.set("query",q);u.searchParams.set("fmt","json");u.searchParams.set("limit","100");u.searchParams.set("offset","0");
-    const j=await mb(u);
-    const found=j["release-groups"]||[];
-    const dated=found.filter(g=>g["first-release-date"]===date);
-    console.log("Search day",date,"total",j.count,"sampleDates",JSON.stringify(found.slice(0,3).map(x=>x["first-release-date"])),"exact",dated.length);
-    groups.push(...dated);
+    let fetched=0,total=0,exact=0;
+    for(let page=0;page<pageLimit;page++){
+      const u=new URL(API+"/release-group");
+      u.searchParams.set("query","firstreleasedate:"+date+" AND primarytype:single");
+      u.searchParams.set("fmt","json");u.searchParams.set("limit","100");
+      u.searchParams.set("offset",String(page*100));
+      const j=await mb(u);
+      const found=j["release-groups"]||[];
+      total=Number(j.count||0);
+      const dated=found.filter(g=>g["first-release-date"]===date);
+      groups.push(...dated);
+      fetched+=found.length;exact+=dated.length;
+      if(!found.length||fetched>=total)break;
+    }
+    console.log("Search day summary",JSON.stringify({date,total,fetched,exact}));
   }
   return groups;
 }
