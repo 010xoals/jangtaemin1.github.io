@@ -18,6 +18,7 @@ const reviewList=$("#community-review-list");
 const ratingSummary=$("#rating-summary-live");
 const nicknameBtn=$("#account-save-nickname");
 let db=null,member=null,song=null,currentRating=0,ownReview=null,loadSerial=0;
+const canSignIn=()=>window.RESONG_PUBLIC_CONFIG?.enableGoogleLogin===true;
 
 function status(text){msg.textContent=text}
 function textEl(tag,content,className){
@@ -43,13 +44,15 @@ function paintStars(){
 function authUI(){
   const signed=Boolean(member);
   loginBtn.hidden=signed;
+  loginBtn.textContent=canSignIn()?"Google 로그인":"로그인 준비 중";
+  loginBtn.disabled=!db||!canSignIn();
   profileBar.hidden=!signed;
   $("#nickname-bar").hidden=!signed;
   displayLabel.textContent=signed?"로그인됨":"";
-  bodyInput.disabled=!signed;
-  submitBtn.disabled=!signed;
+  bodyInput.disabled=!signed||!canSignIn();
+  submitBtn.disabled=!signed||!canSignIn();
   const hint=$("#rating-auth-hint");
-  hint.textContent=signed?"내 평점을 선택한 후 리뷰를 남겨보세요.":"Google 로그인 후 나의 별점과 리뷰를 등록할 수 있어요.";
+  hint.textContent=!canSignIn()?"Google 로그인 연결 후 리뷰 작성이 가능합니다.":signed?"내 평점을 선택한 후 리뷰를 남겨보세요.":"Google 로그인 후 나의 별점과 리뷰를 등록할 수 있어요.";
 }
 async function refreshAccount(){
   if(!db)return;
@@ -108,7 +111,7 @@ async function loadReviews(selected){
   paintStars();
 }
 async function saveReview(){
-  if(!db||!member||!song)return status("로그인이 필요합니다.");
+  if(!db||!member||!song||!canSignIn())return status("현재 평점 작성 기능은 아직 오픈 전입니다.");
   if(currentRating<1||currentRating>5)return status("별점 1~5개를 선택해 주세요.");
   if(bodyInput.value.length>1500)return status("리뷰는 1,500자 이내로 작성해 주세요.");
   submitBtn.disabled=true;status("평가 저장 중…");
@@ -127,7 +130,7 @@ async function saveReview(){
   await loadReviews(song);
 }
 async function saveNickname(){
-  if(!db||!member)return;
+  if(!db||!member||!canSignIn())return;
   const name=nicknameInput.value.trim();
   if(!name||name.length>40)return status("닉네임은 1~40자로 입력해 주세요.");
   nicknameBtn.disabled=true;
@@ -150,7 +153,7 @@ stars.addEventListener("click",e=>{const b=e.target.closest("[data-rating]");if(
 submitBtn.addEventListener("click",saveReview);
 nicknameBtn.addEventListener("click",saveNickname);
 loginBtn.addEventListener("click",async()=>{
-  if(!db)return;
+  if(!db||!canSignIn())return;
   loginBtn.disabled=true;
   const {error}=await db.auth.signInWithOAuth({provider:"google",options:{redirectTo:location.origin+"/"}});
   if(error){status("Google 로그인을 시작하지 못했습니다.");loginBtn.disabled=false}
@@ -179,13 +182,13 @@ async function init(){
     const {createClient}=await import("https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm");
     db=createClient(origin.origin,cfg.publishableKey,{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:true}});
     $("#community-offline-message").hidden=true;
-    loginBtn.disabled=false;
+    loginBtn.disabled=!canSignIn();
     db.auth.onAuthStateChange((_event,_session)=>{
       // The Supabase auth callback must not synchronously call another auth method.
       setTimeout(()=>{refreshAccount().catch(()=>status("로그인 확인에 실패했습니다."));},0);
     });
     await refreshAccount();
-    status("회원 평가 서비스가 연결되었습니다.");
+    status(canSignIn()?"회원 평가 서비스가 연결되었습니다.":"실제 평점 DB가 연결되었습니다. Google 로그인은 준비 중이며 신곡 감상과 실제 평가 조회는 가능합니다.");
   }catch(e){
     db=null;loginBtn.disabled=true;communitySection.hidden=true;$("#community-offline-message").hidden=false;
     status("회원 평가 모듈을 불러오지 못했습니다. 신곡 감상은 계속 이용할 수 있습니다.");
