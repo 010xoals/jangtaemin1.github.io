@@ -49,7 +49,7 @@
 </div></header>
 <main class="wrap" id="home">
   <section class="hero" aria-label="사이트 소개">
-    <div class="hero-copy"><span class="eyebrow">GOOD MUSIC, BRIGHTER DAYS</span><h1>좋아하는 음악을,<br><em>당신의 언어로.</em></h1><p>유튜브로 듣고, 평가하고, 함께 이야기하는<br>새로운 음악 리뷰 커뮤니티 RE:SONG.</p><div class="actions"><a class="btn" href="#discover">지금 음악 둘러보기 →</a><a class="btn ghost" href="#about">RE:SONG 소개</a></div></div>
+    <div class="hero-copy"><span class="eyebrow">GOOD MUSIC, BRIGHTER DAYS</span><h1>좋아하는 음악을,<br><em>당신의 언어로.</em></h1><p>유튜브로 듣고, 평가하고, 함께 이야기하는<br>새로운 음악 리뷰 커뮤니티 RE:SONG.</p><div class="actions"><a class="btn" href="#new-releases">최근 7일 신곡 보기 →</a><a class="btn ghost" href="#about">RE:SONG 소개</a></div></div>
     <div class="hero-art" aria-hidden="true"><div class="vinyl"></div><div class="needle"></div><span class="sticker">good music,<br>good stories.</span></div>
   </section>
   <div class="values" id="about">
@@ -60,13 +60,6 @@
   </div>
   <div class="content">
     <div class="primary">
-      <section id="discover">
-        <div class="heading"><h2>이번 주 인기 음악</h2><a href="#charts">차트 보기 →</a></div>
-        <div class="genres" id="genres" role="group" aria-label="장르 필터">
-          <button class="genre active" data-genre="전체">전체</button><button class="genre" data-genre="K-POP">K-POP</button><button class="genre" data-genre="J-POP">J-POP</button><button class="genre" data-genre="POP">POP</button><button class="genre" data-genre="R&B">R&B</button><button class="genre" data-genre="인디">인디</button>
-        </div><div class="songs" id="songs" aria-live="polite"></div>
-      </section>
-
       <section id="new-releases" class="newdrops" aria-labelledby="newdrops-title">
         <div class="drop-head">
           <h2 id="newdrops-title">이번 주 신규 음악 <span style="color:var(--coral)">NEW</span></h2>
@@ -86,6 +79,13 @@
           <span class="drop-disclaimer" id="newdrop-note">실제 발매 정보가 수집되면 표시됩니다. 데이터 수집 전에는 가상의 발매곡을 보여주지 않습니다.</span>
         </div>
       </section>
+      <section id="discover">
+        <div class="heading"><h2>음악 평가 체험 <span class="small muted">(가상 예시)</span></h2><a href="#charts">차트 보기 →</a></div>
+        <div class="genres" id="genres" role="group" aria-label="장르 필터">
+          <button class="genre active" data-genre="전체">전체</button><button class="genre" data-genre="K-POP">K-POP</button><button class="genre" data-genre="J-POP">J-POP</button><button class="genre" data-genre="POP">POP</button><button class="genre" data-genre="R&B">R&B</button><button class="genre" data-genre="인디">인디</button>
+        </div><div class="songs" id="songs" aria-live="polite"></div>
+      </section>
+
       <section id="reviews" class="review-section"><div class="heading"><h2>최신 리뷰</h2><span class="small muted">음악에 담긴 서로 다른 이야기</span></div><div class="reviews">
         <article class="review"><div class="author">◉ musiclover <span class="time">· 데모 사용자</span></div><div class="liked">★★★★★ 5.0</div><p class="quote">처음 듣던 순간부터 멜로디가 너무 좋네요. 특별한 하루에 오래 남을 것 같은 음악이에요.</p><span class="small muted">가상 리뷰 · 실제 회원 데이터 아님</span></article>
         <article class="review"><div class="author">◉ bluecat <span class="time">· 데모 사용자</span></div><div class="liked">★★★★☆ 4.0</div><p class="quote">편곡에서 듣게 되는 매력이 있어요. 가사가 특히 마음에 남았습니다.</p><span class="small muted">가상 리뷰 · 실제 회원 데이터 아님</span></article>
@@ -162,7 +162,7 @@
   $("#rankings").addEventListener("click",e=>{const c=e.target.closest("[data-rank]");if(c)openSong(Number(c.dataset.rank))});
   $("#rankings").addEventListener("keydown",e=>{if(e.key==="Enter"){const c=e.target.closest("[data-rank]");if(c)openSong(Number(c.dataset.rank))}});
   $("#genres").addEventListener("click",e=>{if(!e.target.matches("[data-genre]"))return;currentGenre=e.target.dataset.genre;document.querySelectorAll(".genre").forEach(x=>x.classList.toggle("active",x===e.target));drawSongs()});
-  $("#search").addEventListener("input",drawSongs);
+  $("#search").addEventListener("input",()=>{drawSongs();drawReleases()});
   $("#mylist").addEventListener("click",()=>{showOnlyFavorites=!showOnlyFavorites;$("#mylist").textContent=showOnlyFavorites?"♥":"♡";$("#mylist").title=showOnlyFavorites?"전체 음악 보기":"나의 찜 목록";document.querySelector("#discover").scrollIntoView({behavior:"smooth"});drawSongs()});
   $("#stars").addEventListener("click",e=>{const c=e.target.closest("[data-star]");if(!c)return;selectedRating=Number(c.dataset.star);drawStars()});
   $("#save-review").addEventListener("click",()=>{if(!currentSong)return;if(!selectedRating){$("#save-notice").textContent="먼저 별점을 선택해 주세요.";return}reviews[currentSong.id]={rating:selectedRating,text:$("#review-text").value.trim()};save("reviews",reviews);$("#save-notice").textContent="이 브라우저에만 저장되었습니다. 실제 공유 리뷰는 로그인·DB 연결 후 제공됩니다."});
@@ -199,7 +199,8 @@
       const node=$("#country-count-"+code.toLowerCase());
       if(node)node.textContent="("+week.filter(s=>code==="ALL"||s.country===code).length+")";
     }
-    const visible=week.filter(s=>newReleaseCountry==="ALL"||s.country===newReleaseCountry);
+    const query=$("#search").value.trim().toLocaleLowerCase("ko");
+    const visible=week.filter(s=>(newReleaseCountry==="ALL"||s.country===newReleaseCountry)&&(!query||(s.title+" "+s.artist).toLocaleLowerCase("ko").includes(query)));
     $("#newdrop-grid").innerHTML=visible.length?visible.map(x=>{
       const title=escapeHTML(x.title),artist=escapeHTML(x.artist),name=escapeHTML(x.countryName);
       return '<article class="drop-card" data-release="'+x.id+'" tabindex="0" role="button" aria-label="'+title+' 상세 보기"><div class="drop-cover" style="background:'+x.bg+'" aria-hidden="true"></div><div class="drop-detail"><div class="drop-title">'+title+'</div><div class="drop-artist">'+artist+'</div><div class="drop-meta"><span class="drop-country">'+name+'</span><time datetime="'+x.date+'">'+x.date.replaceAll("-",".")+' 발매</time></div></div><span class="drop-watch">'+(x.videoId?"▶ 감상":"곡 확인 →")+'</span></article>';
