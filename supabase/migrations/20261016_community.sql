@@ -80,7 +80,8 @@ as $$
 declare
   proposed_name text;
 begin
-  proposed_name := left(btrim(coalesce(nullif(new.raw_user_meta_data->>'name',''), '음악 친구')), 40);
+  -- Do not publish the user's Google account name without an explicit nickname choice.
+  proposed_name := '음악 친구';
   insert into public.profiles (id, display_name)
   values (new.id, coalesce(nullif(proposed_name,''),'음악 친구'))
   on conflict (id) do nothing;
@@ -95,7 +96,7 @@ create trigger resong_auth_user_created
 
 -- Optional one-time backfill for already-signed-in users.
 insert into public.profiles (id, display_name)
-select id, coalesce(nullif(left(btrim(raw_user_meta_data->>'name'),40),''),'음악 친구')
+select id, '음악 친구'
 from auth.users
 on conflict (id) do nothing;
 
