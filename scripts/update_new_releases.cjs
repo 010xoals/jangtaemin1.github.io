@@ -29,7 +29,7 @@ async function mb(url){
     const r=await fetch(url,{headers:{"User-Agent":UA,"Accept":"application/json"}});
     if(r.ok)return r.json();
     if([429,500,502,503,504].includes(r.status)&&i<3){await sleep(1500*(i+1));continue}
-    throw new Error("MusicBrainz "+r.status+" at "+url.split("?")[0]);
+    throw new Error("MusicBrainz "+r.status+" at "+String(url).split("?")[0]+" "+(await r.text()).slice(0,180));
   }
 }
 async function yt(endpoint,params){
