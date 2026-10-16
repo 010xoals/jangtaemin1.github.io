@@ -20,3 +20,13 @@ B안 PAPER STEREO 테마로 제작한 한국·일본·미국·그 외 국가별 
 - 이전 사이트 백업: `backup/pre-resong-launch-2026-10-16`
 - 배포 방식: GitHub Pages (main)에서 변경 후 자동 배포
 - 상세 내용: docs/new-releases-setup.md
+
+## 회원 시스템 (준비 완료 / DB 연결 대기)
+- `supabase/migrations/20261016_community.sql`: 회원 닉네임·음악 카탈로그·곡별 평가 DB 및 RLS 보안 정책.
+- `assets/js/community.js`: Google OAuth, 닉네임 수정, 실제 평점·리뷰 CRUD와 실시간 읽기(조회할 때 최신 데이터).
+- `config/public.js`: Supabase 공개 프로젝트 URL 및 publishable/anon key 자리. **값이 비어 있으면 로그인 버튼 비활성화.**
+- `scripts/sync_supabase_catalog.cjs`: GitHub Actions에서 신곡 데이터 DB 자동 동기화(Secrets가 등록된 경우에만 실행).
+- `docs/supabase-setup.md`: 실제 프로젝트 연결/승인 후 필요한 단계 및 수동 QA.
+- `tests/community.test.cjs`: 브라우저와 DB 정책 간 계약 테스트.
+
+**현재 상태:** 공개 홈페이지에는 연동을 위한 코드만 추가됨. Supabase DB에 SQL 실행, Google OAuth 대시보드 설정, 서비스 정책 정비는 아직 미완료이므로 실제 사용자 로그인·리뷰 저장은 오픈되지 않았음.
