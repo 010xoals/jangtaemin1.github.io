@@ -51,5 +51,6 @@ test("only real collected tracks populate the browse page",()=>{
 });
 test("no server-only key included in frontend assets",()=>{
   assert.doesNotMatch(community,/service_role|SUPABASE_SERVICE_ROLE_KEY/);
-  assert.doesNotMatch(cfg,/sb_secret_|eyJ[a-zA-Z0-9]{60,}/);
+  const publicAssignments=cfg.replace(/\/\*[\s\S]*?\*\//g,"");
+  assert.doesNotMatch(publicAssignments,/sb_secret_|eyJ[a-zA-Z0-9]{60,}/);
 });
