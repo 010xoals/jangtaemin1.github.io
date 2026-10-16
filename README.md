@@ -1,17 +1,22 @@
-# RE:SONG
+# RE:SONG — 음악을 발견하는 공간
 
-공개 주소: https://www.jangtaemin1.com/
+공개 사이트: https://www.jangtaemin1.com/
 
-B안 PAPER STEREO 음악 리뷰 홈페이지. 소스코드를 main 브랜치에 커밋하면 GitHub Pages가 자동으로 다시 배포합니다.
+B안 PAPER STEREO 테마로 제작한 한국·일본·미국·그 외 국가별 신곡 정보 서비스입니다.
 
-## 현황
-- 최근 7일 신규 싱글 정보: MusicBrainz 기반, 국가별 분류(한국/일본/미국/그 외)
-- YouTube Data API v3로 확인한 공개 임베드 영상만 연결
-- 별점/리뷰 시연 화면은 이 브라우저에만 저장됨(회원·공용 DB 개발 예정)
-- YouTube 검색 키는 GitHub Actions Secret YT_API_KEY에 보관
-- GitHub Actions에서 수집 파일 data/new-releases.json을 매일 갱신
+## 현재 기능
+- MusicBrainz에 등록된 최근 7일 싱글 일부와 아티스트 국가 분류
+- YouTube Data API 검색으로 일치 가능성이 높은 공개/임베드 영상 연결
+- YouTube 영상 연결 곡 모아보기 및 신곡 검색, 원본 정보 링크
+- GitHub Actions 매일 신곡 수집 및 영상 ID 자동 보강
 
-## 주의
-- 음악 데이터는 전체 신곡이 아닌 일부이고 국가·영상 자동매칭이 부정확할 수 있음.
-- AdSense는 아직 미연결. 예전 ads.txt의 가짜 pub-000... 번호는 제거함.
-- 이전 사이트 백업: backup/pre-resong-launch-2026-10-16
+## 다음 개발
+- 실제 사용자 로그인, 공용 평점·리뷰 DB 및 집계
+- 관리자 검수, 잘못된 동영상 수정·신고
+- 검색/SEO, 라이선스·개인정보 정책, 광고 수익화
+
+주의: 자동 YouTube 연결은 진짜 공식 영상임을 보증하지 않습니다. 현재 평점과 커뮤니티 기능은 준비 중입니다.
+
+- 이전 사이트 백업: `backup/pre-resong-launch-2026-10-16`
+- 배포 방식: GitHub Pages (main)에서 변경 후 자동 배포
+- 상세 내용: docs/new-releases-setup.md

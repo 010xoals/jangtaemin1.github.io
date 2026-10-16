@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-10-16T10:35:58.022Z",
+  "generated_at": "2026-10-16T10:56:13.186Z",
   "range": {
     "start": "2026-10-10",
     "end": "2026-10-16"
   },
   "source": "MusicBrainz release groups (singles)",
-  "country_basis": "artist country (MusicBrainz area); unknown excluded",
+  "country_basis": "MusicBrainz artist country, not guaranteed activity location",
   "items": [
     {
       "id": "9da0abdf-d037-4554-8d8d-00f1b7b0b2c7",
@@ -16,7 +16,10 @@
       "country_name": "US",
       "source": "MusicBrainz",
       "source_url": "https://musicbrainz.org/release-group/9da0abdf-d037-4554-8d8d-00f1b7b0b2c7",
-      "video_id": null
+      "video_id": "toRgDej38HM",
+      "video_checked_at": "2026-10-16T10:56:02.909Z",
+      "video_match_method": "automated_title_channel_match",
+      "video_channel": "Raydeo World"
     },
     {
       "id": "ac1d145c-4dc4-4a30-b51a-7a10b37c637d",
@@ -27,7 +30,10 @@
       "country_name": "IT",
       "source": "MusicBrainz",
       "source_url": "https://musicbrainz.org/release-group/ac1d145c-4dc4-4a30-b51a-7a10b37c637d",
-      "video_id": null
+      "video_id": "64ZHO8A5-tQ",
+      "video_checked_at": "2026-10-16T10:56:03.368Z",
+      "video_match_method": "automated_title_channel_match",
+      "video_channel": "HUNT3R DOM - Topic"
     },
     {
       "id": "23d33609-f285-4d63-84c7-a7d883685e9e",
@@ -38,7 +44,10 @@
       "country_name": "AU",
       "source": "MusicBrainz",
       "source_url": "https://musicbrainz.org/release-group/23d33609-f285-4d63-84c7-a7d883685e9e",
-      "video_id": null
+      "video_id": "c1871jGn6j4",
+      "video_checked_at": "2026-10-16T10:56:05.023Z",
+      "video_match_method": "automated_title_channel_match",
+      "video_channel": "Olivia Escuyos"
     },
     {
       "id": "7afabf5f-b596-4ffe-95a5-41da22906baa",
@@ -49,7 +58,8 @@
       "country_name": "CA",
       "source": "MusicBrainz",
       "source_url": "https://musicbrainz.org/release-group/7afabf5f-b596-4ffe-95a5-41da22906baa",
-      "video_id": null
+      "video_id": null,
+      "video_checked_at": "2026-10-16T10:56:06.324Z"
     },
     {
       "id": "576750d1-9091-488e-8a80-ed8f6f18f8e7",
@@ -60,7 +70,8 @@
       "country_name": "GB",
       "source": "MusicBrainz",
       "source_url": "https://musicbrainz.org/release-group/576750d1-9091-488e-8a80-ed8f6f18f8e7",
-      "video_id": null
+      "video_id": null,
+      "video_checked_at": "2026-10-16T10:56:07.982Z"
     },
     {
       "id": "3753a3df-5f32-409c-8e01-1c441cea19e2",
@@ -71,7 +82,8 @@
       "country_name": "MX",
       "source": "MusicBrainz",
       "source_url": "https://musicbrainz.org/release-group/3753a3df-5f32-409c-8e01-1c441cea19e2",
-      "video_id": null
+      "video_id": null,
+      "video_checked_at": "2026-10-16T10:56:09.362Z"
     },
     {
       "id": "55d0b983-8376-4569-9432-1a26b2f39928",
@@ -82,7 +94,8 @@
       "country_name": "GB",
       "source": "MusicBrainz",
       "source_url": "https://musicbrainz.org/release-group/55d0b983-8376-4569-9432-1a26b2f39928",
-      "video_id": null
+      "video_id": null,
+      "video_checked_at": "2026-10-16T10:56:10.774Z"
     },
     {
       "id": "c3db8ff6-b195-454f-8cdd-958035792bda",
@@ -104,7 +117,10 @@
       "country_name": "GB",
       "source": "MusicBrainz",
       "source_url": "https://musicbrainz.org/release-group/087c3ed9-3166-4db5-888b-127052114cbc",
-      "video_id": null
+      "video_id": "ahSiIzcwzy0",
+      "video_checked_at": "2026-10-16T10:56:12.251Z",
+      "video_match_method": "automated_title_channel_match",
+      "video_channel": "Kev’Laa"
     },
     {
       "id": "09ec2fa5-fd38-49a2-937f-98c9c4e571a8",
@@ -137,7 +153,10 @@
       "country_name": "US",
       "source": "MusicBrainz",
       "source_url": "https://musicbrainz.org/release-group/3e6a67a3-158a-4586-b7f0-c884ef4f7803",
-      "video_id": null
+      "video_id": "wzJI34e4O3k",
+      "video_checked_at": "2026-10-16T10:56:04.666Z",
+      "video_match_method": "automated_title_channel_match",
+      "video_channel": "FOREVER LEE"
     },
     {
       "id": "60b55974-4e10-4108-bdce-061ba7b1952d",
@@ -148,7 +167,8 @@
       "country_name": "JP",
       "source": "MusicBrainz",
       "source_url": "https://musicbrainz.org/release-group/60b55974-4e10-4108-bdce-061ba7b1952d",
-      "video_id": null
+      "video_id": null,
+      "video_checked_at": "2026-10-16T10:56:02.508Z"
     },
     {
       "id": "91a78138-68af-4a59-804b-34ef2e6e9a32",
@@ -203,7 +223,8 @@
       "country_name": "US",
       "source": "MusicBrainz",
       "source_url": "https://musicbrainz.org/release-group/b2f097c8-79f5-427c-8e05-500e89a95e29",
-      "video_id": null
+      "video_id": null,
+      "video_checked_at": "2026-10-16T10:56:06.094Z"
     },
     {
       "id": "5f56ad1a-3670-416c-8cc8-fce19c6b32b7",
@@ -236,7 +257,8 @@
       "country_name": "KR",
       "source": "MusicBrainz",
       "source_url": "https://musicbrainz.org/release-group/9465e764-c533-4a79-bc99-2df531f25644",
-      "video_id": null
+      "video_id": null,
+      "video_checked_at": "2026-10-16T10:56:02.314Z"
     },
     {
       "id": "a5c74415-0000-4b42-a2e0-314f32833c3d",
@@ -247,7 +269,10 @@
       "country_name": "US",
       "source": "MusicBrainz",
       "source_url": "https://musicbrainz.org/release-group/a5c74415-0000-4b42-a2e0-314f32833c3d",
-      "video_id": null
+      "video_id": "SpQ3bYuRJ3c",
+      "video_checked_at": "2026-10-16T10:56:07.671Z",
+      "video_match_method": "automated_title_channel_match",
+      "video_channel": "The Pretty Reckless - Topic"
     },
     {
       "id": "de9de508-8c84-4c84-a590-40c79af411af",
@@ -291,7 +316,10 @@
       "country_name": "JP",
       "source": "MusicBrainz",
       "source_url": "https://musicbrainz.org/release-group/5f4ce271-f751-49bf-b309-d405a1b5e700",
-      "video_id": null
+      "video_id": "6kF0PtIzguo",
+      "video_checked_at": "2026-10-16T10:56:04.177Z",
+      "video_match_method": "automated_title_channel_match",
+      "video_channel": "SUPER REPLiCA - Topic"
     },
     {
       "id": "c462eced-fc51-450b-acc0-eb32312fef87",
@@ -313,7 +341,10 @@
       "country_name": "JP",
       "source": "MusicBrainz",
       "source_url": "https://musicbrainz.org/release-group/1322f59a-1284-49c3-8546-02a2c1a36a1c",
-      "video_id": null
+      "video_id": "B2g4ZwP6lIM",
+      "video_checked_at": "2026-10-16T10:56:05.744Z",
+      "video_match_method": "automated_title_channel_match",
+      "video_channel": "DEXCORE OFFICIAL CHANNEL"
     },
     {
       "id": "14589985-99c6-4598-b7cd-bf9c3da939b2",
@@ -324,7 +355,8 @@
       "country_name": "US",
       "source": "MusicBrainz",
       "source_url": "https://musicbrainz.org/release-group/14589985-99c6-4598-b7cd-bf9c3da939b2",
-      "video_id": null
+      "video_id": null,
+      "video_checked_at": "2026-10-16T10:56:09.028Z"
     },
     {
       "id": "87491534-91b3-4c80-ba5b-8e8fac8d8866",
@@ -335,7 +367,10 @@
       "country_name": "US",
       "source": "MusicBrainz",
       "source_url": "https://musicbrainz.org/release-group/87491534-91b3-4c80-ba5b-8e8fac8d8866",
-      "video_id": null
+      "video_id": "_Q1YKwCYb7Q",
+      "video_checked_at": "2026-10-16T10:56:10.542Z",
+      "video_match_method": "automated_title_channel_match",
+      "video_channel": "BlondieMusicOfficial"
     },
     {
       "id": "46e323cb-7f2d-4060-970f-e6ca0a6e32d2",
@@ -346,7 +381,10 @@
       "country_name": "JP",
       "source": "MusicBrainz",
       "source_url": "https://musicbrainz.org/release-group/46e323cb-7f2d-4060-970f-e6ca0a6e32d2",
-      "video_id": null
+      "video_id": "GyAPN14dHcU",
+      "video_checked_at": "2026-10-16T10:56:07.208Z",
+      "video_match_method": "automated_title_channel_match",
+      "video_channel": "BLOOD STAIN CHILD"
     },
     {
       "id": "f57c1639-391c-4f83-bb06-685a2578460f",
@@ -357,7 +395,8 @@
       "country_name": "US",
       "source": "MusicBrainz",
       "source_url": "https://musicbrainz.org/release-group/f57c1639-391c-4f83-bb06-685a2578460f",
-      "video_id": null
+      "video_id": null,
+      "video_checked_at": "2026-10-16T10:56:11.781Z"
     },
     {
       "id": "13261837-ab37-45c6-bb3b-989f36fa895a",
@@ -368,7 +407,10 @@
       "country_name": "US",
       "source": "MusicBrainz",
       "source_url": "https://musicbrainz.org/release-group/13261837-ab37-45c6-bb3b-989f36fa895a",
-      "video_id": null
+      "video_id": "vO25AeXKQkc",
+      "video_checked_at": "2026-10-16T10:56:13.186Z",
+      "video_match_method": "automated_title_channel_match",
+      "video_channel": "That Handsome Devil"
     },
     {
       "id": "d3fc3def-b6ef-42d7-9184-cef034cd2676",
@@ -456,7 +498,10 @@
       "country_name": "JP",
       "source": "MusicBrainz",
       "source_url": "https://musicbrainz.org/release-group/0dbcb9e6-f719-444d-a8bf-e20ec3cfe56c",
-      "video_id": null
+      "video_id": "Bix7-SashJM",
+      "video_checked_at": "2026-10-16T10:56:08.767Z",
+      "video_match_method": "automated_title_channel_match",
+      "video_channel": "ちゃんみな [CHANMINA]"
     },
     {
       "id": "b8e5e4f1-be39-45db-abed-77a099b4d38e",
@@ -467,7 +512,8 @@
       "country_name": "JP",
       "source": "MusicBrainz",
       "source_url": "https://musicbrainz.org/release-group/b8e5e4f1-be39-45db-abed-77a099b4d38e",
-      "video_id": null
+      "video_id": null,
+      "video_checked_at": "2026-10-16T10:56:10.028Z"
     },
     {
       "id": "56b6d50f-5a91-4b41-b6df-d18b2a1db1f8",
@@ -500,7 +546,10 @@
       "country_name": "JP",
       "source": "MusicBrainz",
       "source_url": "https://musicbrainz.org/release-group/666f91de-c04d-4803-b8f4-309628efa3dc",
-      "video_id": null
+      "video_id": "J63aZNuoRek",
+      "video_checked_at": "2026-10-16T10:56:11.510Z",
+      "video_match_method": "automated_title_channel_match",
+      "video_channel": "明透 -ᴀsᴜ-"
     },
     {
       "id": "384165e4-11d5-4d35-bcc1-ef9a2a234279",
@@ -511,7 +560,10 @@
       "country_name": "JP",
       "source": "MusicBrainz",
       "source_url": "https://musicbrainz.org/release-group/384165e4-11d5-4d35-bcc1-ef9a2a234279",
-      "video_id": null
+      "video_id": "4Ijazk1XAo4",
+      "video_checked_at": "2026-10-16T10:56:12.741Z",
+      "video_match_method": "automated_title_channel_match",
+      "video_channel": "MISS MERCY"
     },
     {
       "id": "47fe7ee0-40d9-4806-8f4d-baa99716310b",
@@ -610,7 +662,10 @@
       "country_name": "KR",
       "source": "MusicBrainz",
       "source_url": "https://musicbrainz.org/release-group/15211863-af68-44e8-a442-d7b142fa6a00",
-      "video_id": null
+      "video_id": "D968qfUZMUE",
+      "video_checked_at": "2026-10-16T10:56:03.767Z",
+      "video_match_method": "automated_title_channel_match",
+      "video_channel": "A2O WORLD"
     },
     {
       "id": "dbe884d1-81d0-4f71-8572-93aac4a1dbb6",
@@ -621,7 +676,10 @@
       "country_name": "KR",
       "source": "MusicBrainz",
       "source_url": "https://musicbrainz.org/release-group/dbe884d1-81d0-4f71-8572-93aac4a1dbb6",
-      "video_id": null
+      "video_id": "D8CYC5P6Z8Y",
+      "video_checked_at": "2026-10-16T10:56:05.442Z",
+      "video_match_method": "automated_title_channel_match",
+      "video_channel": "A2O WORLD"
     },
     {
       "id": "a2beb9dc-f41d-4234-875c-f231bdf25e3e",
@@ -676,7 +734,10 @@
       "country_name": "KR",
       "source": "MusicBrainz",
       "source_url": "https://musicbrainz.org/release-group/58a85ae9-1a01-4546-9df7-bd05ec689f34",
-      "video_id": null
+      "video_id": "Z3QJ3CmeGuc",
+      "video_checked_at": "2026-10-16T10:56:06.720Z",
+      "video_match_method": "automated_title_channel_match",
+      "video_channel": "MEOVV"
     },
     {
       "id": "3cd54537-1893-4b26-9250-5e4ce5f42842",
@@ -687,7 +748,10 @@
       "country_name": "KR",
       "source": "MusicBrainz",
       "source_url": "https://musicbrainz.org/release-group/3cd54537-1893-4b26-9250-5e4ce5f42842",
-      "video_id": null
+      "video_id": "EHGlV4TfUPU",
+      "video_checked_at": "2026-10-16T10:56:08.361Z",
+      "video_match_method": "automated_title_channel_match",
+      "video_channel": "afterglow_seoul"
     },
     {
       "id": "05563ef1-06a7-42e8-9378-d0e327e3d0b7",
@@ -731,7 +795,10 @@
       "country_name": "KR",
       "source": "MusicBrainz",
       "source_url": "https://musicbrainz.org/release-group/909ab3cb-0f56-4141-a0e4-3cd593934d08",
-      "video_id": null
+      "video_id": "1UC90FeAaGc",
+      "video_checked_at": "2026-10-16T10:56:09.768Z",
+      "video_match_method": "automated_title_channel_match",
+      "video_channel": "HOSHI - Topic"
     },
     {
       "id": "02669662-5952-4fcc-9d6d-5dc0fe728369",
@@ -742,7 +809,10 @@
       "country_name": "KR",
       "source": "MusicBrainz",
       "source_url": "https://musicbrainz.org/release-group/02669662-5952-4fcc-9d6d-5dc0fe728369",
-      "video_id": null
+      "video_id": "w4bU0H9DmW8",
+      "video_checked_at": "2026-10-16T10:56:11.201Z",
+      "video_match_method": "automated_title_channel_match",
+      "video_channel": "Hearts2Hearts - Topic"
     }
   ]
 }
