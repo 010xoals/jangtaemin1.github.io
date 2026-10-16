@@ -181,8 +181,8 @@ async function init(){
     $("#community-offline-message").hidden=true;
     loginBtn.disabled=false;
     db.auth.onAuthStateChange((_event,_session)=>{
-      // Postpone calls to Supabase from the auth callback to avoid SDK lock deadlocks.
-      Promise.resolve().then(()=>refreshAccount()).catch(()=>status("로그인 확인에 실패했습니다."));
+      // The Supabase auth callback must not synchronously call another auth method.
+      setTimeout(()=>{refreshAccount().catch(()=>status("로그인 확인에 실패했습니다."));},0);
     });
     await refreshAccount();
     status("회원 평가 서비스가 연결되었습니다.");
