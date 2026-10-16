@@ -1,0 +1,24 @@
+name: QA RESONG Supabase Readonly
+on:
+  push:
+    branches: [feature/supabase-readonly-live-2026-10]
+    paths:
+      - .github/workflows/qa-supabase-readonly.yml
+      - tests/**
+      - assets/js/community.js
+      - config/public.js
+      - index.html
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Community contract and browser safety tests
+        run: node --test tests/community.test.cjs
