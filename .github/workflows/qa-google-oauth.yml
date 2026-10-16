@@ -17,5 +17,6 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      # Re-run after Google provider credentials were saved in Supabase.
       - name: Verify Supabase Auth provider and safe browser read access
         run: node tests/oauth-smoke.cjs
