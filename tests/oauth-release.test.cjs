@@ -10,7 +10,7 @@ test("homepage and client parse and contain privacy routes",()=>{
 test("privacy and terms pages explain OAuth, storage and deletion",()=>{
   for(const key of ["Google","Supabase","탈퇴","리뷰"])assert.ok(privacy.includes(key),key);
   for(const key of ["MusicBrainz","YouTube","계정","리뷰"])assert.ok(terms.includes(key),key);
-  assert.ok(privacy.includes("문의 이메일은 운영자 확인 후 등록 예정"));
+  assert.ok(privacy.includes("mailto:05xoals@gmail.com"));
 });
 test("deletion is self-only, no arbitrary user argument, anonymous users blocked",()=>{
   assert.ok(sql.includes("actor := (select auth.uid())"));
@@ -22,8 +22,8 @@ test("deletion is self-only, no arbitrary user argument, anonymous users blocked
   assert.ok(client.includes('db.rpc("delete_my_account")'));
   assert.ok(client.includes('word!=="탈퇴"'));
 });
-test("login is deliberately gated until operator contact and policy review",()=>{
+test("login is active after operator contact and policy pages are published",()=>{
   const sandbox={window:{}};vm.runInNewContext(read("config/public.js"),sandbox);
-  assert.equal(sandbox.window.RESONG_PUBLIC_CONFIG.enableGoogleLogin,false);
+  assert.equal(sandbox.window.RESONG_PUBLIC_CONFIG.enableGoogleLogin,true);
   assert.ok(!client.includes("supabase.co/auth/v1/callback"));
 });
