@@ -1,0 +1,28 @@
+name: QA RE:SONG Google Login Launch
+on:
+  push:
+    branches: [feature/google-login-public-2026-10]
+    paths:
+      - .github/workflows/qa-google-login-launch.yml
+      - index.html
+      - config/public.js
+      - privacy.html
+      - terms.html
+      - tests/**
+      - assets/js/community.js
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Contract tests and OAuth UI readiness
+        run: node --test tests/community.test.cjs tests/oauth-release.test.cjs
+      - name: Live Supabase Auth provider and Google redirect smoke test
+        run: node tests/oauth-smoke.cjs
