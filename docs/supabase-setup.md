@@ -5,9 +5,10 @@
 - [x] RLS(회원 본인만 리뷰 작성·수정·삭제) 설계
 - [x] 공개용 Google 로그인 UI와 실제 평점/리뷰 조회·저장 코드 작성
 - [x] GitHub Actions에서 신규 MusicBrainz 곡을 DB에 동기화할 백엔드 스크립트
-- [ ] Supabase 프로젝트에 실제로 SQL 실행
+- [x] Supabase 서울 `RESONG` 프로젝트 생성 및 SQL 실행 / 보안 경고 0건
 - [ ] Supabase Google OAuth 활성화 및 허용 Redirect URL 설정
-- [ ] GitHub Secrets 등록 및 공개용 설정 파일에 프로젝트 공개키 추가
+- [x] 공개용 설정 파일에 프로젝트 URL 및 `sb_publishable_...` 반영 (Google 로그인은 명시적으로 비활성화)
+- [ ] GitHub Actions Secret `SUPABASE_URL` / `SUPABASE_SERVICE_ROLE_KEY` 추가 (자동 최신곡 DB 동기화)
 - [ ] 서로 다른 두 테스트 회원으로 실제 저장/평균/권한 테스트
 - [ ] 개인정보처리방침·이용약관·문의 채널 정비 후 회원 기능 공개
 
@@ -67,3 +68,11 @@ Repo Settings > Secrets and variables > Actions:
 - 회원 정보와 Google OAuth를 도입하기 전 개인정보처리방침, 이용약관, 신고/삭제 요청 통로를 마련해야 합니다.
 - 리뷰 스팸/신고/관리자 기능은 아직 후속 과제이며, 서비스 공개 전 검토가 필요합니다.
 - MusicBrainz 상업적 API 이용 조건 및 YouTube API 서비스 약관 준수 검토 필요.
+
+## 2026-10-16 실제 연결 기록
+- Project ref: `slgfotvdellanbjcihlf`, Seoul (`ap-northeast-2`), Free plan (project creation $0/month)
+- 실제 곡 67개, 그중 YouTube 영상 21개 연결
+- 회원 0명 / 실제 리뷰 0개: 회원기능 오픈 전의 정상 상태
+- RLS 경고 2건은 `restrict_trigger_function_exec` 마이그레이션을 적용해 0건으로 해소
+- `enableGoogleLogin: false`인 동안 실제 DB 조회는 가능하지만 Google 가입·평가 저장은 비활성화함
+- Google OAuth 설정·개인정보처리방침 및 자동 DB 동기화 비밀키 설치 전에는 `enableGoogleLogin`을 true로 변경하지 말 것
