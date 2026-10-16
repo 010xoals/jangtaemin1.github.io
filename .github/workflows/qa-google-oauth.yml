@@ -1,0 +1,21 @@
+name: QA RE:SONG Google OAuth
+on:
+  push:
+    branches: [feature/google-oauth-launch-2026-10]
+    paths:
+      - .github/workflows/qa-google-oauth.yml
+      - tests/oauth-smoke.cjs
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  oauth:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify Supabase Auth provider and safe browser read access
+        run: node tests/oauth-smoke.cjs
