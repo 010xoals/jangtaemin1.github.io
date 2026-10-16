@@ -1,88 +1,231 @@
 <!doctype html>
-<html lang="en">
+<html lang="ko">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Music Discovery Hub — Home</title>
-  <meta name="description" content="K-POP, J-POP, POP picks, release calendar, artist wiki, and fan voting.">
-  <meta property="og:title" content="Music Discovery Hub — Home">
-  <meta property="og:description" content="K-POP, J-POP, POP picks, release calendar, artist wiki, and fan voting.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://jangtaemin1.com/">
-  <meta property="og:image" content="https://picsum.photos/seed/music-hub/1200/630">
-  <meta name="twitter:card" content="summary_large_image">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#faf7f2">
+<title>RE:SONG — 좋아하는 음악을, 당신의 언어로</title>
+<meta name="description" content="음악을 발견하고, 공식 YouTube 플레이어로 감상하고, 나의 평가와 리뷰를 남기는 음악 커뮤니티.">
+<style>
+:root {--ink:#262327;--sub:#746e71;--line:#eae3dd;--paper:#faf7f2;--coral:#f35e56;--coral-2:#ff8371;--soft:#fff;--peach:#fff0e8;--shadow:0 20px 55px rgba(63,39,28,.08);--r:16px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Pretendard,"Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.5}a{color:inherit;text-decoration:none}button,input,textarea{font:inherit}button{cursor:pointer}button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid #e98e78;outline-offset:2px}.wrap{max-width:1190px;margin:0 auto;padding:0 24px}.muted{color:var(--sub)}.small{font-size:12px}.top{position:sticky;top:0;z-index:20;background:rgba(250,247,242,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.top-inner{min-height:76px;display:flex;align-items:center;gap:30px}.brand{display:flex;align-items:center;gap:10px;font-size:22px;font-weight:900;letter-spacing:-1.1px;white-space:nowrap}.wave{display:flex;align-items:center;gap:3px;height:25px}.wave i{width:3px;height:12px;border-radius:6px;background:var(--coral)}.wave i:nth-child(2){height:24px}.wave i:nth-child(3){height:17px}.wave i:nth-child(4){height:10px}.topnav{display:flex;align-items:center;gap:21px;font-size:13px;font-weight:750;white-space:nowrap}.topnav a{padding:27px 0 23px;border-bottom:3px solid transparent}.topnav a.active{color:var(--coral);border-color:var(--coral)}.search{display:flex;align-items:center;gap:10px;border:1px solid #e6ded7;border-radius:12px;background:#fff;height:41px;padding:0 13px;margin-left:auto;flex:1;max-width:290px}.search input{border:0;outline:0;width:100%;background:none;font-size:12px}.iconbtn{border:0;background:transparent;color:#50494b;font-size:20px}.tag{display:inline-block;border-radius:100px;font-size:11px;font-weight:800;padding:5px 11px;background:#fff5ef;color:#c9564e}.hero{margin-top:24px;background:#fff1e6;border:1px solid #f2e4db;border-radius:19px;min-height:340px;display:grid;grid-template-columns:1.1fr .9fr;overflow:hidden}.hero-copy{padding:44px 56px;z-index:1;display:flex;flex-direction:column;align-items:flex-start;justify-content:center}.eyebrow{font-size:11px;letter-spacing:2px;font-weight:900;color:#b97762}.hero h1{font-size:46px;line-height:1.18;letter-spacing:-2.6px;margin:16px 0}.hero h1 em{font-style:normal;color:var(--coral)}.hero p{font-size:15px;color:#6f6561;margin:0 0 24px}.actions{display:flex;gap:10px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--coral);color:#fff;background:var(--coral);border-radius:8px;padding:11px 17px;font-size:13px;font-weight:800;transition:transform .16s}.btn:hover{transform:translateY(-2px)}.btn.ghost{color:var(--ink);border-color:#e5b5ab;background:rgba(255,255,255,.7)}.hero-art{position:relative;min-height:310px;background:linear-gradient(120deg,rgba(255,247,234,.15),rgba(239,178,151,.5)),radial-gradient(circle at 70% 38%,#fdd3b0,#f9eadb 64%)}.vinyl{width:288px;height:288px;border-radius:50%;position:absolute;right:68px;top:27px;box-shadow:18px 24px 35px #8d5b514a;transform:rotate(-12deg);background:repeating-radial-gradient(circle,#2b2625 0px,#1c1b1c 3px,#343131 4px,#171717 6px);border:8px solid #171717}.vinyl:before{content:"";position:absolute;inset:101px;border-radius:50%;background:radial-gradient(circle,#33221f 0 9px,#f05d54 10px 70px,#a83732 71px 80px);border:2px solid #f8a29a}.vinyl:after{content:"RE:SONG";position:absolute;left:111px;top:129px;font-size:14px;font-weight:900;color:#fff;letter-spacing:1px}.needle{width:12px;height:176px;position:absolute;right:87px;top:10px;border-radius:10px;background:linear-gradient(90deg,#baa9a0,#fff6ea,#998577);transform:rotate(28deg);transform-origin:top center;box-shadow:2px 2px 7px #0003}.sticker{position:absolute;bottom:26px;left:38px;color:#a16958;font-size:14px;transform:rotate(-8deg);font-style:italic}.values{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:15px 0 26px;background:#fff;border:1px solid var(--line);border-radius:15px}.value{display:flex;align-items:center;gap:11px;padding:20px 18px;border-right:1px solid var(--line)}.value:last-child{border-right:0}.bubble{border-radius:50%;width:41px;height:41px;background:#fff0ec;color:var(--coral);display:grid;place-items:center;font-size:19px;flex:0 0 41px}.value strong{font-size:13px;display:block}.value span{font-size:11px;color:var(--sub)}.content{display:grid;grid-template-columns:minmax(0,1fr) 275px;gap:25px;margin-bottom:28px}.heading{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}.heading h2{font-size:21px;letter-spacing:-.7px;margin:0}.heading a{color:var(--coral);font-size:12px;font-weight:800}.genres{display:flex;gap:5px;background:#f1ebe6;border-radius:9px;padding:5px;margin-bottom:14px;overflow:auto}.genre{border:0;border-radius:7px;padding:7px 11px;background:transparent;white-space:nowrap;color:#736e72;font-size:12px}.genre.active{background:var(--coral);color:#fff;font-weight:850}.songs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.song{min-width:0;cursor:pointer}.cover{position:relative;aspect-ratio:1;border-radius:10px;overflow:hidden;box-shadow:0 6px 16px #443a3120;display:grid;place-items:center}.cover:after{content:"";position:absolute;inset:0;background:linear-gradient(160deg,transparent 55%,rgba(23,18,22,.22))}.cover-mark{width:45%;aspect-ratio:1;border:2px solid #ffffffa2;border-radius:50%;position:relative;filter:drop-shadow(0 6px 12px #3322)}.cover-mark:after{content:"";position:absolute;inset:33%;border-radius:50%;background:#fff8}.number{position:absolute;z-index:1;top:9px;left:9px;border-radius:7px;background:var(--coral);color:#fff;font-size:12px;font-weight:900;padding:1px 7px}.playicon{position:absolute;z-index:1;right:9px;bottom:9px;background:#fffdf1e6;border:0;border-radius:50%;width:33px;height:33px;color:var(--coral);font-size:16px;opacity:0;transition:opacity .15s}.song:hover .playicon{opacity:1}.song h3{font-size:14px;margin:9px 0 2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.song .artist{font-size:12px;color:var(--sub)}.song-bottom{display:flex;align-items:center;justify-content:space-between;margin-top:8px;font-size:12px}.rating{color:var(--coral);font-weight:850}.heart{border:0;background:transparent;color:#665e60;font-size:19px;padding:0}.heart.saved{color:var(--coral)}.side-card{background:#fff;border:1px solid var(--line);border-radius:13px;padding:15px;margin-bottom:16px}.side-card h3{margin:0 0 12px;font-size:15px}.rank{display:flex;align-items:center;gap:9px;margin-bottom:10px;cursor:pointer}.rank:last-child{margin:0}.rank b{font-size:13px;width:13px}.thumb{width:34px;height:34px;border-radius:6px;flex:0 0 34px}.rank .desc{flex:1;min-width:0;font-size:12px}.rank .desc strong{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.rank .desc span{font-size:10px;color:var(--sub)}.rank .score{font-size:11px;color:var(--coral);font-weight:850}.ad{min-height:124px;border:1px dashed #d9d0c7;border-radius:12px;background:linear-gradient(140deg,#fff1e9,#f8ede8);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:4px;color:#807571;text-align:center;font-size:11px}.review-section{margin-top:26px}.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:11px}.review{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px;min-height:160px;display:flex;flex-direction:column}.review .author{font-weight:800;font-size:12px}.review .time{color:#999;font-size:11px}.review .quote{font-size:12px;line-height:1.65;margin:10px 0 auto}.review .liked{color:var(--coral);font-size:12px;margin-top:15px}.trending{margin-top:15px}.trend{display:flex;align-items:center;justify-content:space-between;padding:8px 9px;background:#fff6f1;border-radius:9px;color:#bf685d;font-size:12px;margin:6px 0}.cta{background:linear-gradient(110deg,#ffd3c2,#fff2e8);border:1px solid #f3d2c5;border-radius:14px;margin:30px 0;padding:25px 30px;display:flex;align-items:center;justify-content:space-between;gap:16px}.cta h2{font-size:22px;letter-spacing:-.6px;margin:0}.cta p{font-size:12px;color:#8c6c61;margin:5px 0 0}.footer{margin-top:42px;padding:25px 0;border-top:1px solid var(--line);font-size:12px;color:#827775;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}.empty{grid-column:1/-1;padding:32px;background:#fff;border-radius:12px;color:var(--sub);text-align:center}.scrim{position:fixed;inset:0;background:#1e1726a6;z-index:50;display:none;align-items:center;justify-content:center;padding:16px}.scrim.open{display:flex}.modal{background:#fffdfb;border-radius:17px;max-width:790px;width:100%;max-height:90vh;overflow:auto;position:relative;box-shadow:0 35px 80px #140b1a55}.close{position:absolute;right:15px;top:12px;background:#fff;border:1px solid var(--line);border-radius:50%;font-size:20px;width:35px;height:35px;z-index:2}.modal-body{padding:28px;display:grid;grid-template-columns:1fr 1fr;gap:24px}.video-placeholder{min-height:265px;background:#2a2527;border-radius:12px;color:white;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;padding:15px}.video-placeholder .yt{font-size:42px;color:#ff6660}.video-placeholder p{font-size:12px;color:#dfd7da}.modal h2{font-size:25px;margin:0 0 5px}.modal .meta{font-size:12px;color:var(--sub);margin-bottom:17px}.stars{display:flex;gap:5px;margin:8px 0}.starbtn{font-size:27px;background:none;border:0;color:#d3c9c2;padding:0}.starbtn.active{color:var(--coral)}.modal label{font-size:12px;font-weight:800}.modal textarea{width:100%;height:105px;resize:vertical;padding:11px;border-radius:10px;border:1px solid var(--line);margin:8px 0 11px;background:#fff}.notice{font-size:11px;color:var(--sub);line-height:1.5}.hidden{display:none !important}
+@media(max-width:1000px){.top-inner{flex-wrap:wrap;gap:0 18px;padding-top:10px;padding-bottom:10px}.topnav{order:3;width:100%;overflow:auto}.topnav a{padding:10px 0}.hero-copy{padding:34px}.hero h1{font-size:36px}.vinyl{right:20px;top:45px;width:235px;height:235px}.vinyl:before{inset:80px}.vinyl:after{left:89px;top:103px;font-size:12px}.needle{right:32px}.values{grid-template-columns:repeat(2,1fr)}.value:nth-child(2){border-right:0}.value:nth-child(-n+2){border-bottom:1px solid var(--line)}.content{grid-template-columns:1fr}.aside{display:grid;grid-template-columns:1fr 1fr;gap:15px}.aside .side-card{margin:0}.aside .trending{grid-column:1/-1}.song .playicon{opacity:1}}
+@media(max-width:640px){.wrap{padding:0 15px}.top-inner{min-height:63px;gap:9px}.brand{font-size:19px}.search{order:2;max-width:none;flex-basis:100%;margin:4px 0}.topnav{gap:17px}.topnav a{font-size:12px}.hero{margin-top:15px;display:block}.hero-copy{padding:30px 23px}.hero h1{font-size:34px}.hero p{font-size:13px}.hero-art{min-height:150px}.vinyl{width:188px;height:188px;right:28px;top:-18px}.vinyl:before{inset:61px}.vinyl:after{left:72px;top:79px;font-size:10px}.needle{right:43px;top:-15px;height:125px}.sticker{left:20px;bottom:15px}.values{margin:12px 0 20px}.value{padding:12px 8px;gap:7px}.bubble{width:32px;height:32px;flex-basis:32px;font-size:15px}.value strong{font-size:11px}.value span{font-size:10px}.songs{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.reviews{grid-template-columns:1fr}.aside{grid-template-columns:1fr}.cta{padding:20px;flex-direction:column;align-items:flex-start}.cta h2{font-size:20px}.modal-body{grid-template-columns:1fr;padding:20px;gap:14px}.video-placeholder{min-height:180px}.footer{margin-top:25px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
+
+/* 최근 7일 신곡: 한국 / 일본 / 미국 / 기타 국가 */
+.newdrops{margin-top:29px;padding:23px;background:#fff;border:1px solid var(--line);border-radius:15px}
+.newdrops .drop-head{display:flex;align-items:center;justify-content:space-between;gap:13px;flex-wrap:wrap;margin-bottom:12px}
+.newdrops h2{margin:0;font-size:21px;letter-spacing:-.6px}
+.newdrops .date-range{font-size:11px;color:var(--sub);background:#faf4ef;border-radius:6px;padding:6px 9px;font-weight:700}
+.newdrops .newdrop-sub{font-size:12px;color:var(--sub);margin:0 0 14px}
+.newdrops .region-tabs{display:flex;gap:7px;overflow:auto;scrollbar-width:thin;padding-bottom:8px;margin-bottom:8px}
+.newdrops .region-tab{border:1px solid #e7dbd3;background:#faf7f3;padding:9px 12px;border-radius:9px;font-size:12px;color:#5e5655;white-space:nowrap;font-weight:750}
+.newdrops .region-tab.active{color:white;background:var(--coral);border-color:var(--coral)}
+.newdrops .region-tab small{opacity:.7;margin-left:4px;font-size:11px}
+.newdrops .drop-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.newdrops .drop-card{display:flex;align-items:center;gap:12px;padding:10px;border:1px solid #eee6e1;border-radius:11px;background:#fff;min-width:0}
+.newdrops .drop-cover{width:68px;height:68px;border-radius:8px;flex:0 0 68px;display:grid;place-items:center}
+.newdrops .drop-cover:before{content:"♫";font-size:22px;color:#fff8;text-shadow:0 1px 8px #0002}
+.newdrops .drop-detail{min-width:0;flex:1}
+.newdrops .drop-title{font-size:13px;font-weight:850;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.newdrops .drop-artist{font-size:12px;color:var(--sub);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.newdrops .drop-meta{display:flex;align-items:center;flex-wrap:wrap;gap:7px;margin-top:6px;font-size:10px;color:#8f7c72}
+.newdrops .drop-country{font-weight:850;color:#d35e51;background:#fff2ec;padding:2px 6px;border-radius:5px}
+.newdrops .drop-demo{display:inline-flex;align-items:center;gap:5px;color:#ad6d50;background:#fff4e8;border-radius:6px;padding:4px 8px;font-size:11px;font-weight:800}
+.newdrops .drop-footer{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-top:14px}
+.newdrops .drop-disclaimer{color:#827974;font-size:11px;line-height:1.5}
+.newdrops .empty-drop{grid-column:1/-1;background:#faf7f4;border:1px dashed #e5d7cd;border-radius:10px;padding:22px;text-align:center;color:var(--sub);font-size:12px}
+@media(max-width:640px){.newdrops{padding:17px 13px;margin-top:20px}.newdrops h2{font-size:19px}.newdrops .drop-grid{grid-template-columns:1fr}.newdrops .drop-footer{flex-direction:column}}
+
+.video-placeholder{padding:0;overflow:hidden}.video-placeholder iframe{width:100%;aspect-ratio:16/9;min-height:265px;border:0;display:block;background:#161313}.video-fallback{min-height:265px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px;padding:18px}.video-fallback a{color:#fff;font-size:12px;text-decoration:underline}.drop-card{cursor:pointer}.drop-card:focus-visible{outline:3px solid #e98e78;outline-offset:2px}.drop-watch{font-size:11px;font-weight:850;color:var(--coral);white-space:nowrap}@media(max-width:640px){.video-placeholder iframe,.video-fallback{min-height:190px}}</style>
 </head>
 <body>
-<header class="site-header">
-  <div class="container h-wrap">
-    <a class="brand" href="/"><span class="logo">Mu</span><strong>Music Discovery Hub</strong></a>
-    <nav class="tabs">
-      <a class="tab" href="/kpop.html">K-POP</a>
-      <a class="tab" href="/jpop.html">J-POP</a>
-      <a class="tab" href="/pop.html">POP</a>
-      <a class="tab" href="/calendar.html">Calendar</a>
-      <a class="tab" href="/artists/index.html">Artists</a>
-      <a class="tab" href="/games.html">Vote</a>
-      <a class="tab" href="/news.html">News</a>
-    </nav>
+<header class="top"><div class="wrap top-inner">
+  <a class="brand" href="#home" aria-label="RE:SONG 홈"><span class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i></span>RE:SONG</a>
+  <nav class="topnav" aria-label="주 메뉴"><a class="active" href="#home">홈</a><a href="#discover">음악 검색</a><a href="#new-releases">최근 신곡</a><a href="#charts">음악 차트</a><a href="#discover">평가하기</a><a href="#reviews">커뮤니티</a></nav>
+  <label class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" aria-label="음악 제목 또는 아티스트 검색" placeholder="곡명, 아티스트를 검색하세요"></label>
+  <button class="iconbtn" id="mylist" title="나의 찜 목록" aria-label="나의 찜 목록">♡</button>
+</div></header>
+<main class="wrap" id="home">
+  <section class="hero" aria-label="사이트 소개">
+    <div class="hero-copy"><span class="eyebrow">GOOD MUSIC, BRIGHTER DAYS</span><h1>좋아하는 음악을,<br><em>당신의 언어로.</em></h1><p>유튜브로 듣고, 평가하고, 함께 이야기하는<br>새로운 음악 리뷰 커뮤니티 RE:SONG.</p><div class="actions"><a class="btn" href="#new-releases">최근 7일 신곡 보기 →</a><a class="btn ghost" href="#about">RE:SONG 소개</a></div></div>
+    <div class="hero-art" aria-hidden="true"><div class="vinyl"></div><div class="needle"></div><span class="sticker">good music,<br>good stories.</span></div>
+  </section>
+  <div class="values" id="about">
+    <div class="value"><div class="bubble">♫</div><div><strong>유튜브로 바로 감상</strong><span>좋아하는 음악을 직접 확인</span></div></div>
+    <div class="value"><div class="bubble">☆</div><div><strong>평점과 리뷰 작성</strong><span>당신의 생각을 공유하세요</span></div></div>
+    <div class="value"><div class="bubble">♧</div><div><strong>다른 사람들의 평가</strong><span>다양한 시선을 만나보세요</span></div></div>
+    <div class="value"><div class="bubble">▥</div><div><strong>음악 차트</strong><span>지금 인기 있는 음악은?</span></div></div>
   </div>
-  <div id="ad_top_leaderboard" class="ad ad-leader">AD TOP 970×250 / 320×100</div>
-</header>
-<main class="container">
+  <div class="content">
+    <div class="primary">
+      <section id="new-releases" class="newdrops" aria-labelledby="newdrops-title">
+        <div class="drop-head">
+          <h2 id="newdrops-title">이번 주 신규 음악 <span style="color:var(--coral)">NEW</span></h2>
+          <span class="date-range" id="newdrop-range">최근 7일</span>
+        </div>
+        <p class="newdrop-sub">최근 7일 동안 발매된 음악을 아티스트의 주요 활동 국가별로 만나보세요.</p>
+        <div class="region-tabs" id="region-tabs" role="group" aria-label="신규 발매 국가 필터">
+          <button type="button" class="region-tab active" data-country="ALL" aria-pressed="true">전체 <small id="country-count-all"></small></button>
+          <button type="button" class="region-tab" data-country="KR" aria-pressed="false">🇰🇷 한국 <small id="country-count-kr"></small></button>
+          <button type="button" class="region-tab" data-country="JP" aria-pressed="false">🇯🇵 일본 <small id="country-count-jp"></small></button>
+          <button type="button" class="region-tab" data-country="US" aria-pressed="false">🇺🇸 미국 <small id="country-count-us"></small></button>
+          <button type="button" class="region-tab" data-country="OTHER" aria-pressed="false">🌐 그 외 국가 <small id="country-count-other"></small></button>
+        </div>
+        <div id="newdrop-grid" class="drop-grid" aria-live="polite"></div>
+        <div class="drop-footer">
+          <span id="newdrop-status" class="drop-demo">신곡 수집 대기</span>
+          <span class="drop-disclaimer" id="newdrop-note">실제 발매 정보가 수집되면 표시됩니다. 데이터 수집 전에는 가상의 발매곡을 보여주지 않습니다.</span>
+        </div>
+      </section>
+      <section id="discover">
+        <div class="heading"><h2>음악 평가 체험 <span class="small muted">(가상 예시)</span></h2><a href="#charts">차트 보기 →</a></div>
+        <div class="genres" id="genres" role="group" aria-label="장르 필터">
+          <button class="genre active" data-genre="전체">전체</button><button class="genre" data-genre="K-POP">K-POP</button><button class="genre" data-genre="J-POP">J-POP</button><button class="genre" data-genre="POP">POP</button><button class="genre" data-genre="R&B">R&B</button><button class="genre" data-genre="인디">인디</button>
+        </div><div class="songs" id="songs" aria-live="polite"></div>
+      </section>
 
-<section class="hero">
-  <h1>Music Discovery Hub</h1>
-  <p>Top 5 picks, release calendar, artist wiki, and fan voting — built for ad revenue & growth.</p>
-</section>
-<div class="section">
-  <h2>Trending Today</h2>
-  <div class="grid">
-    <a class="card" href="/kpop.html">
-      <img class="cover" src="https://picsum.photos/seed/kpop/800/800" alt="K-POP">
-      <div class="pad">
-        <div class="row"><div class="title">K-POP Picks</div><span class="badge">Explore</span></div>
-        <p class="meta">Year · Month · Week · Today</p>
-      </div>
-    </a>
-    <a class="card" href="/jpop.html">
-      <img class="cover" src="https://picsum.photos/seed/jpop/800/800" alt="J-POP">
-      <div class="pad">
-        <div class="row"><div class="title">J-POP Picks</div><span class="badge">Explore</span></div>
-        <p class="meta">Year · Month · Week · Today</p>
-      </div>
-    </a>
-    <a class="card" href="/pop.html">
-      <img class="cover" src="https://picsum.photos/seed/pop/800/800" alt="POP">
-      <div class="pad">
-        <div class="row"><div class="title">POP Picks</div><span class="badge">Explore</span></div>
-        <p class="meta">Year · Month · Week · Today</p>
-      </div>
-    </a>
-  </div>
-  <div id="ad_infeed_home_1" class="ad infeed">AD In-Feed</div>
-</div>
-<div class="section">
-  <h2>Release Calendar</h2>
-  <p class="meta">See all upcoming drops across K-POP · J-POP · POP.</p>
-  <a class="btn" href="/calendar.html">Open Calendar →</a>
-</div>
-
-</main>
-<footer class="site-footer">
-  <div class="container f-wrap">
-    <div>© <span id="year"></span> Music Discovery Hub · Built by jangtaemin1.com</div>
-    <div class="links">
-      <a href="/privacy.html">Privacy</a>
-      <a href="/ads.html">Ads</a>
-      <a href="/contact.html">Contact</a>
-      <a href="/rss.xml">RSS</a>
+      <section id="reviews" class="review-section"><div class="heading"><h2>최신 리뷰</h2><span class="small muted">음악에 담긴 서로 다른 이야기</span></div><div class="reviews">
+        <article class="review"><div class="author">◉ musiclover <span class="time">· 데모 사용자</span></div><div class="liked">★★★★★ 5.0</div><p class="quote">처음 듣던 순간부터 멜로디가 너무 좋네요. 특별한 하루에 오래 남을 것 같은 음악이에요.</p><span class="small muted">가상 리뷰 · 실제 회원 데이터 아님</span></article>
+        <article class="review"><div class="author">◉ bluecat <span class="time">· 데모 사용자</span></div><div class="liked">★★★★☆ 4.0</div><p class="quote">편곡에서 듣게 되는 매력이 있어요. 가사가 특히 마음에 남았습니다.</p><span class="small muted">가상 리뷰 · 실제 회원 데이터 아님</span></article>
+        <article class="review"><div class="author">◉ sunday <span class="time">· 데모 사용자</span></div><div class="liked">★★★★★ 5.0</div><p class="quote">요즘 자꾸 반복해서 듣고 싶어지는 곡. 이 느낌을 다른 사람들과 나누고 싶어요.</p><span class="small muted">가상 리뷰 · 실제 회원 데이터 아님</span></article>
+      </div></section>
+      <section class="cta"><div><h2><span style="color:var(--coral)">RE:SONG</span>와 함께<br>더 많은 음악을 발견하세요.</h2><p>음악 취향을 기록하는 새로운 방법, 지금 미리 체험해 보세요.</p></div><a href="#discover" class="btn">음악 살펴보기 →</a></section>
     </div>
+    <aside class="aside" id="charts">
+      <div class="side-card"><h3>주간 TOP 5 <span class="small muted">(데모)</span></h3><div id="rankings"></div></div>
+      <div class="side-card ad"><strong>ADVERTISEMENT</strong><span>광고 영역 예시</span><span>실제 광고는 아직 연결되지 않았습니다.</span></div>
+      <div class="side-card trending"><h3>지금 뜨는 토픽</h3><div class="trend"><span>#발견한_명곡</span><span>↗</span></div><div class="trend"><span>#플레이리스트</span><span>↗</span></div><div class="trend"><span>#오늘의_음악</span><span>↗</span></div></div>
+    </aside>
   </div>
-</footer>
-<script src="/assets/js/app.js"></script>
+  <footer class="footer"><span>© RE:SONG · 음악 리뷰 플랫폼 1차 디자인 시안</span><span>모든 곡과 평점, 리뷰는 시연용 가상 데이터입니다. · 개인정보·광고 정책 페이지는 개발 예정</span></footer>
+</main>
+<div class="scrim" id="scrim" aria-hidden="true"><div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"><button class="close" id="close" aria-label="닫기">×</button><div class="modal-body">
+<div class="video-placeholder" id="video-container" aria-label="YouTube 동영상 플레이어"></div>
+<div><span class="tag">곡 상세 · 체험용</span><h2 id="modal-title"></h2><div id="modal-meta" class="meta"></div><p class="small muted" id="modal-score"></p>
+<label>나의 별점</label><div class="stars" id="stars" role="group" aria-label="음악 평점 선택"></div>
+<label for="review-text">나의 리뷰</label><textarea id="review-text" placeholder="이 음악에 대한 당신의 생각을 적어보세요."></textarea><button class="btn" id="save-review">체험용 평가 저장</button><p class="notice" id="save-notice">평가는 이 브라우저에만 임시 저장됩니다. 다른 사람에게 공개되지 않습니다.</p></div>
+</div></div></div>
+<script>
+(function () {
+  "use strict";
+  const tracks=[
+   {id:1,title:"푸른 밤의 기록",artist:"Dear Mon",genre:"인디",score:4.8,count:320,bg:"linear-gradient(135deg,#82c8ed,#a87ae7 55%,#fdafd0)"},
+   {id:2,title:"너에게 가는 길",artist:"Luna Wave",genre:"K-POP",score:4.6,count:287,bg:"linear-gradient(135deg,#f5a8d1,#ef6f93 60%,#a84994)"},
+   {id:3,title:"새벽의 온도",artist:"Cloudier",genre:"R&B",score:4.5,count:231,bg:"linear-gradient(145deg,#c2cbe8,#78bfd6,#fbdfb2)"},
+   {id:4,title:"다시, 봄",artist:"The Ridge",genre:"POP",score:4.4,count:198,bg:"linear-gradient(130deg,#ffd6ba,#ff8c8a 55%,#c74d62)"},
+   {id:5,title:"빛나는 하루",artist:"Solaris",genre:"J-POP",score:4.3,count:170,bg:"linear-gradient(135deg,#fee6b7,#f7a0aa,#dc6c9d)"},
+   {id:6,title:"파도 사이로",artist:"Bluebay",genre:"인디",score:4.2,count:159,bg:"linear-gradient(135deg,#8cd5d6,#c4bafa,#746ac3)"},
+   {id:7,title:"별을 따라서",artist:"Noir Days",genre:"K-POP",score:4.2,count:145,bg:"linear-gradient(120deg,#a2b4e3,#e3a7b9,#f4d1d8)"},
+   {id:8,title:"하얀 소음",artist:"Echo Line",genre:"POP",score:4.1,count:133,bg:"linear-gradient(135deg,#d0e8d2,#e9cfb6,#df9d8f)"}
+  ];
+  const prefix="resong-design-demo-",store=(name,defaultValue)=>{try{return JSON.parse(localStorage.getItem(prefix+name))||defaultValue}catch(e){return defaultValue}};
+  let favorites=store("favorites",[]),reviews=store("reviews",{}),currentGenre="전체",currentSong=null,selectedRating=0,showOnlyFavorites=false;
+  const $=(s)=>document.querySelector(s),escapeHTML=(s)=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+  function save(k,v){try{localStorage.setItem(prefix+k,JSON.stringify(v))}catch(e){}}
+  function drawSongs(){
+   const term=$("#search").value.trim().toLocaleLowerCase("ko");
+   const result=tracks.filter(s=>(currentGenre==="전체"||s.genre===currentGenre)&&(!showOnlyFavorites||favorites.includes(s.id))&&(s.title+" "+s.artist).toLocaleLowerCase("ko").includes(term));
+   $("#songs").innerHTML=result.length?result.map((s,i)=>'<article class="song" data-id="'+s.id+'" tabindex="0" role="button" aria-label="'+escapeHTML(s.title)+' 상세 보기"><div class="cover" style="background:'+s.bg+'"><span class="cover-mark"></span><span class="number">'+(i+1)+'</span><span class="playicon">▶</span></div><h3>'+escapeHTML(s.title)+'</h3><div class="artist">'+escapeHTML(s.artist)+' · '+escapeHTML(s.genre)+'</div><div class="song-bottom"><span class="rating">★ '+s.score.toFixed(1)+' <span class="muted">('+s.count+')</span></span><button class="heart '+(favorites.includes(s.id)?'saved':'')+'" data-heart="'+s.id+'" title="찜하기" aria-label="'+escapeHTML(s.title)+' 찜하기">'+(favorites.includes(s.id)?"♥":"♡")+'</button></div></article>').join(""):'<p class="empty">조건에 맞는 음악이 없습니다. 다른 검색어를 입력해 보세요.</p>';
+  }
+  function drawChart(){$("#rankings").innerHTML=tracks.slice(0,5).map((s,i)=>'<div class="rank" data-rank="'+s.id+'" role="button" tabindex="0"><b>'+(i+1)+'</b><span class="thumb" style="background:'+s.bg+'"></span><div class="desc"><strong>'+escapeHTML(s.title)+'</strong><span>'+escapeHTML(s.artist)+'</span></div><span class="score">★ '+s.score.toFixed(1)+'</span></div>').join("")}
+  function drawStars(){ $("#stars").innerHTML=[1,2,3,4,5].map(n=>'<button type="button" data-star="'+n+'" class="starbtn '+(selectedRating>=n?'active':'')+'" aria-label="'+n+'점" aria-pressed="'+(selectedRating===n)+'">★</button>').join("")}
+  function renderVideo(song){
+    const el=$("#video-container");el.replaceChildren();
+    if(song.videoId && /^[\w-]{11}$/.test(song.videoId)){
+      const iframe=document.createElement("iframe");
+      iframe.title=song.artist+" - "+song.title+" (YouTube)";
+      iframe.src="https://www.youtube-nocookie.com/embed/"+song.videoId+"?rel=0";
+      iframe.loading="lazy";iframe.allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share";
+      iframe.referrerPolicy="strict-origin-when-cross-origin";iframe.allowFullscreen=true;el.append(iframe);return;
+    }
+    const outer=document.createElement("div");outer.className="video-fallback";
+    const text=document.createElement("strong");text.textContent="검증된 YouTube 영상이 아직 없습니다.";
+    const link=document.createElement("a");link.href="https://www.youtube.com/results?search_query="+encodeURIComponent(song.artist+" "+song.title);link.target="_blank";link.rel="noopener noreferrer";link.textContent="YouTube에서 검색 →";
+    outer.append(text,link);el.append(outer);
+  }
+  function showSong(song){
+    currentSong=song;if(!song)return;
+    const saved=reviews[song.id]||{};selectedRating=saved.rating||0;
+    $("#modal-title").textContent=song.title;
+    $("#modal-meta").textContent=song.artist+" · "+(song.releaseDate?"발매일 "+song.releaseDate+" · "+song.countryName:song.genre+" · 시연용 음악");
+    $("#modal-score").textContent=song.releaseDate?"MusicBrainz 등록 신곡 · 평점 DB는 아직 미연결":"데모 평균 ★ "+song.score+" · 평가 "+song.count+"명";
+    $("#review-text").value=saved.text||"";$("#save-notice").textContent="평가는 브라우저에만 임시 저장됩니다. 다른 사람에게 공개되지 않습니다.";
+    renderVideo(song);drawStars();$("#scrim").classList.add("open");$("#scrim").setAttribute("aria-hidden","false");$("#close").focus();
+  }
+  function openSong(id){const song=tracks.find(x=>x.id===id);if(song)showSong(song)}
+  function openRelease(id){const s=newReleases.find(x=>x.id===id);if(s)showSong({id:"mb:"+s.id,title:s.title,artist:s.artist,releaseDate:s.date,countryName:s.countryName,videoId:s.videoId})}
+  function closeSong(){$("#scrim").classList.remove("open");$("#scrim").setAttribute("aria-hidden","true");$("#video-container").replaceChildren();currentSong=null}
+  $("#songs").addEventListener("click",e=>{const h=e.target.closest("[data-heart]");if(h){e.stopPropagation();const id=Number(h.dataset.heart);favorites=favorites.includes(id)?favorites.filter(x=>x!==id):[...favorites,id];save("favorites",favorites);drawSongs();return}const c=e.target.closest("[data-id]");if(c)openSong(Number(c.dataset.id))});
+  $("#songs").addEventListener("keydown",e=>{if((e.key==="Enter"||e.key===" ")&&e.target.matches(".song")){e.preventDefault();openSong(Number(e.target.dataset.id))}});
+  $("#rankings").addEventListener("click",e=>{const c=e.target.closest("[data-rank]");if(c)openSong(Number(c.dataset.rank))});
+  $("#rankings").addEventListener("keydown",e=>{if(e.key==="Enter"){const c=e.target.closest("[data-rank]");if(c)openSong(Number(c.dataset.rank))}});
+  $("#genres").addEventListener("click",e=>{if(!e.target.matches("[data-genre]"))return;currentGenre=e.target.dataset.genre;document.querySelectorAll(".genre").forEach(x=>x.classList.toggle("active",x===e.target));drawSongs()});
+  $("#search").addEventListener("input",()=>{drawSongs();drawReleases()});
+  $("#mylist").addEventListener("click",()=>{showOnlyFavorites=!showOnlyFavorites;$("#mylist").textContent=showOnlyFavorites?"♥":"♡";$("#mylist").title=showOnlyFavorites?"전체 음악 보기":"나의 찜 목록";document.querySelector("#discover").scrollIntoView({behavior:"smooth"});drawSongs()});
+  $("#stars").addEventListener("click",e=>{const c=e.target.closest("[data-star]");if(!c)return;selectedRating=Number(c.dataset.star);drawStars()});
+  $("#save-review").addEventListener("click",()=>{if(!currentSong)return;if(!selectedRating){$("#save-notice").textContent="먼저 별점을 선택해 주세요.";return}reviews[currentSong.id]={rating:selectedRating,text:$("#review-text").value.trim()};save("reviews",reviews);$("#save-notice").textContent="이 브라우저에만 저장되었습니다. 실제 공유 리뷰는 로그인·DB 연결 후 제공됩니다."});
+  $("#close").addEventListener("click",closeSong);$("#scrim").addEventListener("click",e=>{if(e.target===$("#scrim"))closeSong()});document.addEventListener("keydown",e=>{if(e.key==="Escape"&&$("#scrim").classList.contains("open"))closeSong()});
+
+  // 국가 구분은 발매 지역이 아닌 아티스트 주요 활동 국가 기준(초기 설계).
+  // 데이터 연동 후 /data/new-releases.json [{title,artist,release_date,country_code,country_name,video_id?}] 지원.
+  // 연결 전에는 항상 '데모 데이터'라고 표시하며 실발매 사실로 오해되지 않도록 함.
+  const countryLabel={KR:"한국",JP:"일본",US:"미국",OTHER:"그 외 국가"};
+  let newReleaseCountry="ALL",releaseMode="loading",newReleases=[];
+  function todayInKorea(){
+    const parts=new Intl.DateTimeFormat("en-US",{timeZone:"Asia/Seoul",year:"numeric",month:"2-digit",day:"2-digit"}).formatToParts(new Date());
+    const val=x=>parts.find(p=>p.type===x).value;
+    return [val("year"),val("month"),val("day")].join("-");
+  }
+  function dayBefore(today,days){
+    const d=new Date(today+"T00:00:00Z");d.setUTCDate(d.getUTCDate()-days);return d.toISOString().slice(0,10);
+  }
+  function releaseRange(){const end=todayInKorea();return {start:dayBefore(end,6),end}}
+  function parseReleaseData(items){
+    if(!Array.isArray(items))return [];
+    const ids=new Set();
+    return items.filter(x=>x&&typeof x.id==="string"&&/^[0-9a-f-]{36}$/i.test(x.id)&&typeof x.title==="string"&&typeof x.artist==="string"&&/^\d{4}-\d{2}-\d{2}$/.test(x.release_date)&&["KR","JP","US","OTHER"].includes(x.country_code)).map((x,i)=>{
+      let name=countryLabel[x.country_code];
+      try{if(/^[A-Z]{2}$/.test(x.country_name||""))name=new Intl.DisplayNames(["ko-KR"],{type:"region"}).of(x.country_name)||name;}catch(_){}
+      return {id:x.id,title:x.title.slice(0,160),artist:x.artist.slice(0,160),date:x.release_date,country:x.country_code,countryName:name,bg:tracks[i%tracks.length].bg,videoId:/^[\w-]{11}$/.test(x.video_id||"")?x.video_id:null};
+    }).filter(x=>{if(ids.has(x.id))return false;ids.add(x.id);return true});
+  }
+  function drawReleases(){
+    const {start,end}=releaseRange();
+    $("#newdrop-range").textContent=start.replaceAll("-",".")+" – "+end.replaceAll("-",".");
+    const week=newReleases.filter(s=>s.date>=start&&s.date<=end).sort((a,b)=>b.date.localeCompare(a.date));
+    for(const code of ["ALL","KR","JP","US","OTHER"]){
+      const node=$("#country-count-"+code.toLowerCase());
+      if(node)node.textContent="("+week.filter(s=>code==="ALL"||s.country===code).length+")";
+    }
+    const query=$("#search").value.trim().toLocaleLowerCase("ko");
+    const visible=week.filter(s=>(newReleaseCountry==="ALL"||s.country===newReleaseCountry)&&(!query||(s.title+" "+s.artist).toLocaleLowerCase("ko").includes(query)));
+    $("#newdrop-grid").innerHTML=visible.length?visible.map(x=>{
+      const title=escapeHTML(x.title),artist=escapeHTML(x.artist),name=escapeHTML(x.countryName);
+      return '<article class="drop-card" data-release="'+x.id+'" tabindex="0" role="button" aria-label="'+title+' 상세 보기"><div class="drop-cover" style="background:'+x.bg+'" aria-hidden="true"></div><div class="drop-detail"><div class="drop-title">'+title+'</div><div class="drop-artist">'+artist+'</div><div class="drop-meta"><span class="drop-country">'+name+'</span><time datetime="'+x.date+'">'+x.date.replaceAll("-",".")+' 발매</time></div></div><span class="drop-watch">'+(x.videoId?"▶ 감상":"곡 확인 →")+'</span></article>';
+    }).join(""):'<div class="empty-drop">'+(releaseMode==="loading"?"신곡 정보를 불러오는 중입니다.":releaseMode==="waiting"?"아직 최초 수집이 실행되지 않았습니다.":releaseMode==="error"?"신곡 정보를 불러오지 못했습니다.":"최근 7일간 수집된 "+(newReleaseCountry==="ALL"?"":countryLabel[newReleaseCountry]+" ")+"신곡이 없습니다.")+'</div>';
+    $("#newdrop-status").textContent=releaseMode==="ready"?"MusicBrainz 등록 정보":releaseMode==="waiting"?"첫 수집 대기":releaseMode==="error"?"조회 실패":"불러오는 중";
+    $("#newdrop-note").textContent=releaseMode==="ready"?"MusicBrainz에 등록된 최근 7일 싱글만 표시합니다. 일부 국가·곡은 누락될 수 있으며 아티스트 국가 분류는 추정 기준입니다.":"검증된 데이터만 표시합니다. 가상의 음악을 신규 발매곡으로 표시하지 않습니다.";
+  }
+  async function loadNewReleases(){
+    try{const r=await fetch("/data/new-releases.json",{cache:"no-store"});if(!r.ok)throw Error("release feed unavailable");
+      const j=await r.json();newReleases=parseReleaseData(Array.isArray(j)?j:j.items);
+      releaseMode=Array.isArray(j)?(newReleases.length?"ready":"waiting"):(j.generated_at?"ready":"waiting");
+    }catch(_){newReleases=[];releaseMode="error"}
+    drawReleases();
+  }
+  $("#newdrop-grid").addEventListener("click",e=>{const card=e.target.closest("[data-release]");if(card)openRelease(card.dataset.release)});
+  $("#newdrop-grid").addEventListener("keydown",e=>{const card=e.target.closest("[data-release]");if(card&&(e.key==="Enter"||e.key===" ")){e.preventDefault();openRelease(card.dataset.release)}});
+  $("#region-tabs").addEventListener("click",e=>{
+    const btn=e.target.closest("[data-country]");if(!btn)return;
+    newReleaseCountry=btn.dataset.country;
+    document.querySelectorAll(".region-tab").forEach(el=>{const on=el===btn;el.classList.toggle("active",on);el.setAttribute("aria-pressed",on?"true":"false")});
+    drawReleases();
+  });
+
+  drawSongs();drawChart();drawReleases();loadNewReleases();
+})();
+</script>
 </body>
 </html>
