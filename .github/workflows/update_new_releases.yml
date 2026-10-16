@@ -1,6 +1,11 @@
 name: Update RE:SONG New Releases
 
 on:
+  push:
+    branches:
+      - redesign/paper-stereo
+    paths:
+      - .github/workflows/update_new_releases.yml
   workflow_dispatch:
   schedule:
     # KST 11:23 daily (UTC 02:23). Scheduled workflows run on the default branch only.
@@ -24,11 +29,20 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "22"
+      - name: Verify YouTube key is configured
+        env:
+          YT_API_KEY: ${{ secrets.YT_API_KEY }}
+        run: |
+          if [ -z "$YT_API_KEY" ]; then
+            echo "YT_API_KEY GitHub Actions secret is missing or not available"
+            exit 1
+          fi
+          echo "YouTube secret is configured (value hidden)"
       - name: Collect singles and embeddable YouTube videos
         env:
           YT_API_KEY: ${{ secrets.YT_API_KEY }}
           MUSICBRAINZ_USER_AGENT: "RESONG/0.2 (https://jangtaemin1.com; https://github.com/010xoals/jangtaemin1.github.io)"
-          MB_PAGES: "3"
+          MB_PAGES: "2"
           MAX_YOUTUBE_SEARCHES: "12"
         run: node scripts/update_new_releases.cjs
       - name: Commit feed (if changed)
