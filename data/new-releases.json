@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-17T07:08:11.766Z",
+  "generated_at": "2026-10-18T07:22:55.948Z",
   "range": {
-    "start": "2026-10-11",
-    "end": "2026-10-17"
+    "start": "2026-10-12",
+    "end": "2026-10-18"
   },
   "source": "MusicBrainz release groups (singles)",
   "country_basis": "MusicBrainz artist country, not guaranteed activity location",
@@ -17,7 +17,7 @@
       "source": "MusicBrainz",
       "source_url": "https://musicbrainz.org/release-group/36cef1a3-3c80-4250-8f45-2f096cb35337",
       "video_id": null,
-      "video_checked_at": "2026-10-17T07:08:01.664Z"
+      "video_checked_at": "2026-10-18T07:22:48.452Z"
     },
     {
       "id": "78b1f653-fc8a-4e61-9f5c-62a8afedfb15",
@@ -29,7 +29,7 @@
       "source": "MusicBrainz",
       "source_url": "https://musicbrainz.org/release-group/78b1f653-fc8a-4e61-9f5c-62a8afedfb15",
       "video_id": null,
-      "video_checked_at": "2026-10-17T07:08:02.852Z"
+      "video_checked_at": "2026-10-18T07:22:49.268Z"
     },
     {
       "id": "7b7d33c2-7119-4285-adbe-e33756bdd399",
@@ -41,7 +41,81 @@
       "source": "MusicBrainz",
       "source_url": "https://musicbrainz.org/release-group/7b7d33c2-7119-4285-adbe-e33756bdd399",
       "video_id": null,
-      "video_checked_at": "2026-10-17T07:08:01.917Z"
+      "video_checked_at": "2026-10-18T07:22:48.653Z"
+    },
+    {
+      "id": "103900e1-1643-44d7-9b9a-7f187a83d0e0",
+      "title": "Teibelian Fantasia II",
+      "artist": "Milieu",
+      "release_date": "2026-10-17",
+      "country_code": "US",
+      "country_name": "US",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/103900e1-1643-44d7-9b9a-7f187a83d0e0",
+      "video_id": null,
+      "video_checked_at": "2026-10-18T07:22:49.944Z"
+    },
+    {
+      "id": "8c16dd8f-7c06-4a07-b5a6-afae565d6369",
+      "title": "Headstone Hash",
+      "artist": "Milieu",
+      "release_date": "2026-10-17",
+      "country_code": "US",
+      "country_name": "US",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/8c16dd8f-7c06-4a07-b5a6-afae565d6369",
+      "video_id": null,
+      "video_checked_at": "2026-10-18T07:22:50.645Z"
+    },
+    {
+      "id": "803872d2-8f01-4629-8cb8-0e039f49ca1b",
+      "title": "░░してよ",
+      "artist": "¿?shimon",
+      "release_date": "2026-10-17",
+      "country_code": "JP",
+      "country_name": "JP",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/803872d2-8f01-4629-8cb8-0e039f49ca1b",
+      "video_id": null,
+      "video_checked_at": "2026-10-18T07:22:48.035Z"
+    },
+    {
+      "id": "33feb06b-5381-4ade-bc3a-be0b7cc71b0d",
+      "title": "原子崩し",
+      "artist": "岸田教団&THE明星ロケッツ",
+      "release_date": "2026-10-17",
+      "country_code": "JP",
+      "country_name": "JP",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/33feb06b-5381-4ade-bc3a-be0b7cc71b0d",
+      "video_id": "6VI_QeTG95k",
+      "video_checked_at": "2026-10-18T07:22:48.934Z",
+      "video_match_method": "automated_title_channel_match",
+      "video_channel": "岸田教団&THE明星ロケッツ 公式"
+    },
+    {
+      "id": "dd87aba6-3a48-41fd-9920-980d8745cd49",
+      "title": "october 18th, 2026.",
+      "artist": "white flowers and pale blue sky",
+      "release_date": "2026-10-17",
+      "country_code": "OTHER",
+      "country_name": "RU",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/dd87aba6-3a48-41fd-9920-980d8745cd49",
+      "video_id": null,
+      "video_checked_at": "2026-10-18T07:22:49.576Z"
+    },
+    {
+      "id": "70518a68-19fa-4d59-b4dd-ca028b28809e",
+      "title": "耶稣之血从未辜负我",
+      "artist": "/(…)丿Θ",
+      "release_date": "2026-10-17",
+      "country_code": "OTHER",
+      "country_name": "CN",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/70518a68-19fa-4d59-b4dd-ca028b28809e",
+      "video_id": null,
+      "video_checked_at": "2026-10-18T07:22:50.078Z"
     },
     {
       "id": "ee2d220f-4b98-4349-8b13-36dec5126acd",
@@ -54,8 +128,45 @@
       "source_url": "https://musicbrainz.org/release-group/ee2d220f-4b98-4349-8b13-36dec5126acd",
       "video_id": "gROJDME4FTU",
       "video_checked_at": "2026-10-17T07:08:01.307Z",
+      "video_match_method": "automated_title_channel_match"
+    },
+    {
+      "id": "bdae4e09-fb57-423a-abcd-6e859f9c9a30",
+      "title": "Dans un autre monde",
+      "artist": "Star Academy 2026",
+      "release_date": "2026-10-17",
+      "country_code": "OTHER",
+      "country_name": "FR",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/bdae4e09-fb57-423a-abcd-6e859f9c9a30",
+      "video_id": "bhozkxs58Dw",
+      "video_checked_at": "2026-10-18T07:22:50.997Z",
       "video_match_method": "automated_title_channel_match",
-      "video_channel": "East Of Eden"
+      "video_channel": "Star Academy Officiel"
+    },
+    {
+      "id": "9c06898c-1a33-48c7-8643-70699e7365ee",
+      "title": "20261017A",
+      "artist": "1911ATNL",
+      "release_date": "2026-10-17",
+      "country_code": "OTHER",
+      "country_name": "PL",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/9c06898c-1a33-48c7-8643-70699e7365ee",
+      "video_id": null,
+      "video_checked_at": "2026-10-18T07:22:51.630Z"
+    },
+    {
+      "id": "98f00020-218f-4399-83a7-644beb2bcc85",
+      "title": "20261016A",
+      "artist": "1911ATNL",
+      "release_date": "2026-10-17",
+      "country_code": "OTHER",
+      "country_name": "PL",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/98f00020-218f-4399-83a7-644beb2bcc85",
+      "video_id": null,
+      "video_checked_at": "2026-10-18T07:22:52.552Z"
     },
     {
       "id": "96aeb3b6-f50a-461c-a724-4a8f2bf38822",
@@ -67,21 +178,21 @@
       "source": "MusicBrainz",
       "source_url": "https://musicbrainz.org/release-group/96aeb3b6-f50a-461c-a724-4a8f2bf38822",
       "video_id": null,
-      "video_checked_at": "2026-10-17T07:08:03.077Z"
+      "video_checked_at": "2026-10-18T07:22:53.293Z"
     },
     {
-      "id": "16e3cb42-f14f-4122-bf66-6e42579e6fd1",
-      "title": "Hide",
-      "artist": "Before We Fade",
+      "id": "ac1d145c-4dc4-4a30-b51a-7a10b37c637d",
+      "title": "Pretty when you lie",
+      "artist": "HUNT3R DOM",
       "release_date": "2026-10-16",
       "country_code": "OTHER",
-      "country_name": "NL",
+      "country_name": "IT",
       "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/16e3cb42-f14f-4122-bf66-6e42579e6fd1",
-      "video_id": "Yfou1DAutv4",
-      "video_checked_at": "2026-10-17T07:08:04.232Z",
+      "source_url": "https://musicbrainz.org/release-group/ac1d145c-4dc4-4a30-b51a-7a10b37c637d",
+      "video_id": "ZDiKvhRdz4A",
+      "video_checked_at": "2026-10-18T07:22:54.410Z",
       "video_match_method": "automated_title_channel_match",
-      "video_channel": "Before We Fade - Topic"
+      "video_channel": "HUNT3R DOM"
     },
     {
       "id": "9da0abdf-d037-4554-8d8d-00f1b7b0b2c7",
@@ -106,98 +217,30 @@
       "source": "MusicBrainz",
       "source_url": "https://musicbrainz.org/release-group/55d0b983-8376-4569-9432-1a26b2f39928",
       "video_id": null,
-      "video_checked_at": "2026-10-16T10:56:10.774Z"
+      "video_checked_at": "2026-10-18T07:22:55.157Z"
     },
     {
-      "id": "c3db8ff6-b195-454f-8cdd-958035792bda",
-      "title": "The Great Wave",
-      "artist": "Dawid's",
+      "id": "3753a3df-5f32-409c-8e01-1c441cea19e2",
+      "title": "will u...?",
+      "artist": "Sutfer",
       "release_date": "2026-10-16",
       "country_code": "OTHER",
-      "country_name": "PL",
+      "country_name": "MX",
       "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/c3db8ff6-b195-454f-8cdd-958035792bda",
-      "video_id": "VeeVxuhet3I"
-    },
-    {
-      "id": "23d33609-f285-4d63-84c7-a7d883685e9e",
-      "title": "GROWING PAINS",
-      "artist": "Olivia Escuyos",
-      "release_date": "2026-10-16",
-      "country_code": "OTHER",
-      "country_name": "AU",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/23d33609-f285-4d63-84c7-a7d883685e9e",
-      "video_id": "c1871jGn6j4",
-      "video_checked_at": "2026-10-16T10:56:05.023Z",
-      "video_match_method": "automated_title_channel_match"
-    },
-    {
-      "id": "7afabf5f-b596-4ffe-95a5-41da22906baa",
-      "title": "Hidden emotions",
-      "artist": "PorroFluff",
-      "release_date": "2026-10-16",
-      "country_code": "OTHER",
-      "country_name": "CA",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/7afabf5f-b596-4ffe-95a5-41da22906baa",
+      "source_url": "https://musicbrainz.org/release-group/3753a3df-5f32-409c-8e01-1c441cea19e2",
       "video_id": null,
-      "video_checked_at": "2026-10-16T10:56:06.324Z"
+      "video_checked_at": "2026-10-18T07:22:55.948Z"
     },
     {
-      "id": "09ec2fa5-fd38-49a2-937f-98c9c4e571a8",
-      "title": "Pigeon Bounce",
-      "artist": "Kev'Laa",
+      "id": "576750d1-9091-488e-8a80-ed8f6f18f8e7",
+      "title": "Tied For Life",
+      "artist": "The End Starts Again",
       "release_date": "2026-10-16",
       "country_code": "OTHER",
       "country_name": "GB",
       "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/09ec2fa5-fd38-49a2-937f-98c9c4e571a8",
-      "video_id": "6_E6zzedTmA",
-      "video_checked_at": "2026-10-17T07:08:05.829Z",
-      "video_match_method": "automated_title_channel_match",
-      "video_channel": "Kev’Laa"
-    },
-    {
-      "id": "a36e83f4-bb4c-48b3-9d28-914fcb153e5d",
-      "title": "Houseflip",
-      "artist": "Nya",
-      "release_date": "2026-10-16",
-      "country_code": "OTHER",
-      "country_name": "DE",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/a36e83f4-bb4c-48b3-9d28-914fcb153e5d",
-      "video_id": "SLE8bTfdX-4",
-      "video_checked_at": "2026-10-17T07:08:07.143Z",
-      "video_match_method": "automated_title_channel_match",
-      "video_channel": "Nya - Topic"
-    },
-    {
-      "id": "087c3ed9-3166-4db5-888b-127052114cbc",
-      "title": "Do The Demon Dance",
-      "artist": "Kev'Laa",
-      "release_date": "2026-10-16",
-      "country_code": "OTHER",
-      "country_name": "GB",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/087c3ed9-3166-4db5-888b-127052114cbc",
-      "video_id": "ahSiIzcwzy0",
-      "video_checked_at": "2026-10-16T10:56:12.251Z",
-      "video_match_method": "automated_title_channel_match"
-    },
-    {
-      "id": "91a78138-68af-4a59-804b-34ef2e6e9a32",
-      "title": "Think of You",
-      "artist": "KETTAMA & Prospa",
-      "release_date": "2026-10-16",
-      "country_code": "OTHER",
-      "country_name": "IE",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/91a78138-68af-4a59-804b-34ef2e6e9a32",
-      "video_id": "d2iWMT9lBb4",
-      "video_checked_at": "2026-10-17T07:08:08.203Z",
-      "video_match_method": "automated_title_channel_match",
-      "video_channel": "KETTAMA"
+      "source_url": "https://musicbrainz.org/release-group/576750d1-9091-488e-8a80-ed8f6f18f8e7",
+      "video_id": null
     },
     {
       "id": "3e6a67a3-158a-4586-b7f0-c884ef4f7803",
@@ -213,184 +256,153 @@
       "video_match_method": "automated_title_channel_match"
     },
     {
-      "id": "60b55974-4e10-4108-bdce-061ba7b1952d",
-      "title": "I Gently open the Door...",
-      "artist": "Acidgvrl & Imaé Rotten Yumiko",
+      "id": "91a78138-68af-4a59-804b-34ef2e6e9a32",
+      "title": "Think of You",
+      "artist": "KETTAMA & Prospa",
       "release_date": "2026-10-16",
-      "country_code": "JP",
-      "country_name": "JP",
+      "country_code": "OTHER",
+      "country_name": "IE",
       "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/60b55974-4e10-4108-bdce-061ba7b1952d",
-      "video_id": null,
-      "video_checked_at": "2026-10-16T10:56:02.508Z"
+      "source_url": "https://musicbrainz.org/release-group/91a78138-68af-4a59-804b-34ef2e6e9a32",
+      "video_id": "d2iWMT9lBb4",
+      "video_checked_at": "2026-10-17T07:08:08.203Z",
+      "video_match_method": "automated_title_channel_match"
     },
     {
-      "id": "a77a18f6-f988-47c0-bbca-59a623873def",
-      "title": "Mr. Speed / Hard Luck Woman",
-      "artist": "KISS",
+      "id": "0b28037c-d5c0-4ffc-826b-91a9bb7bc242",
+      "title": "Are We Lost",
+      "artist": "Goldroom & Tailor",
       "release_date": "2026-10-16",
       "country_code": "US",
       "country_name": "US",
       "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/a77a18f6-f988-47c0-bbca-59a623873def",
+      "source_url": "https://musicbrainz.org/release-group/0b28037c-d5c0-4ffc-826b-91a9bb7bc242",
       "video_id": null,
-      "video_checked_at": "2026-10-17T07:08:03.817Z"
+      "video_checked_at": "2026-10-18T07:22:51.384Z"
     },
     {
-      "id": "20c28169-6b8d-4970-84b5-e209fb3850ac",
-      "title": "Harvest Moon",
-      "artist": "LP",
-      "release_date": "2026-10-16",
-      "country_code": "US",
-      "country_name": "US",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/20c28169-6b8d-4970-84b5-e209fb3850ac",
-      "video_id": "UqCx2vvcuOo",
-      "video_checked_at": "2026-10-17T07:08:05.193Z",
-      "video_match_method": "automated_title_channel_match",
-      "video_channel": "LPVEVO"
-    },
-    {
-      "id": "501a14c9-caa7-4f98-842e-1cb1244089c4",
-      "title": "Dis moi que l'amour",
-      "artist": "Marc Lavoine & Yasmine Lavoine",
-      "release_date": "2026-10-16",
-      "country_code": "OTHER",
-      "country_name": "FR",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/501a14c9-caa7-4f98-842e-1cb1244089c4",
-      "video_id": null,
-      "video_checked_at": "2026-10-17T07:08:09.516Z"
-    },
-    {
-      "id": "e60a69b3-9b66-4ad5-8349-1df4b384e72c",
-      "title": "Everyone Dancing",
-      "artist": "DUSTHOUSE feat. Blood Lament",
-      "release_date": "2026-10-16",
-      "country_code": "OTHER",
-      "country_name": "GB",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/e60a69b3-9b66-4ad5-8349-1df4b384e72c",
-      "video_id": null,
-      "video_checked_at": "2026-10-17T07:08:10.263Z"
-    },
-    {
-      "id": "27246371-2a22-4e4a-8da2-13c969fe2421",
-      "title": "MSGKたいそう",
-      "artist": "ちょこ",
-      "release_date": "2026-10-16",
-      "country_code": "JP",
-      "country_name": "JP",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/27246371-2a22-4e4a-8da2-13c969fe2421",
-      "video_id": "e94rFfcbSvs",
-      "video_checked_at": "2026-10-17T07:08:02.487Z",
-      "video_match_method": "automated_title_channel_match",
-      "video_channel": "ちょこ"
-    },
-    {
-      "id": "71f31545-2fad-4ca8-bd5f-66bfbbc34fdd",
-      "title": "Me manquer (Live Symphonique à Lyon / 2019)",
-      "artist": "Etienne Daho & Elli Medeiros",
-      "release_date": "2026-10-16",
-      "country_code": "OTHER",
-      "country_name": "FR",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/71f31545-2fad-4ca8-bd5f-66bfbbc34fdd",
-      "video_id": null,
-      "video_checked_at": "2026-10-17T07:08:11.142Z"
-    },
-    {
-      "id": "f86f0cc1-abdf-4735-b22b-8cd5a3654e8b",
-      "title": "Alcibiades",
-      "artist": "Spartan",
+      "id": "32d025da-6262-46fe-aa1b-7900cf126952",
+      "title": "October",
+      "artist": "Maduk & Degs",
       "release_date": "2026-10-16",
       "country_code": "OTHER",
       "country_name": "NL",
       "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/f86f0cc1-abdf-4735-b22b-8cd5a3654e8b",
+      "source_url": "https://musicbrainz.org/release-group/32d025da-6262-46fe-aa1b-7900cf126952",
       "video_id": null
     },
     {
-      "id": "ca132ec8-3340-431f-9a2c-be61939ee04c",
-      "title": "This Feeling",
-      "artist": "Da Tweekaz & Rebelion",
+      "id": "0a18bfa2-3a40-450c-8cd8-da171f962d39",
+      "title": "Tum Se",
+      "artist": "AUR",
       "release_date": "2026-10-16",
       "country_code": "OTHER",
-      "country_name": "NO",
+      "country_name": "PK",
       "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/ca132ec8-3340-431f-9a2c-be61939ee04c",
+      "source_url": "https://musicbrainz.org/release-group/0a18bfa2-3a40-450c-8cd8-da171f962d39",
       "video_id": null
     },
     {
-      "id": "c7b3353b-a263-4ebd-8de7-dfdc65dda1d0",
-      "title": "Glimpses",
-      "artist": "AQ Flora & Lukey",
+      "id": "aa1b9cda-3902-45e7-8965-f509d8842267",
+      "title": "Hammer of Justice",
+      "artist": "Trevor Alan Gomes & Toby Fox",
       "release_date": "2026-10-16",
       "country_code": "US",
       "country_name": "US",
       "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/c7b3353b-a263-4ebd-8de7-dfdc65dda1d0",
-      "video_id": "w3CmJuKl1Gk",
-      "video_checked_at": "2026-10-17T07:08:06.672Z",
-      "video_match_method": "automated_title_channel_match",
-      "video_channel": "AQFloraVEVO"
-    },
-    {
-      "id": "72c7379b-5ce3-480b-a2f5-70f33b670140",
-      "title": "Accelerate",
-      "artist": "Massano & Ekko",
-      "release_date": "2026-10-16",
-      "country_code": "OTHER",
-      "country_name": "GB",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/72c7379b-5ce3-480b-a2f5-70f33b670140",
-      "video_id": null
-    },
-    {
-      "id": "b96d1b84-0fb1-4b1c-9cf4-f40308617e5d",
-      "title": "Fight for Love",
-      "artist": "Alesso & Kaitlin Aragon",
-      "release_date": "2026-10-16",
-      "country_code": "OTHER",
-      "country_name": "SE",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/b96d1b84-0fb1-4b1c-9cf4-f40308617e5d",
-      "video_id": null
-    },
-    {
-      "id": "79425ad2-bfe4-4995-a823-5c76462232bc",
-      "title": "17",
-      "artist": "Miss Monique, Henri Bergmann & Mario Eighta",
-      "release_date": "2026-10-16",
-      "country_code": "OTHER",
-      "country_name": "UA",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/79425ad2-bfe4-4995-a823-5c76462232bc",
-      "video_id": null
-    },
-    {
-      "id": "03a7dc88-6e46-42d6-a3b9-56a6259e5499",
-      "title": "I Feel U Feel",
-      "artist": "Bassjackers & Nifra",
-      "release_date": "2026-10-16",
-      "country_code": "OTHER",
-      "country_name": "NL",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/03a7dc88-6e46-42d6-a3b9-56a6259e5499",
-      "video_id": null
-    },
-    {
-      "id": "ce9735f7-2e72-4db5-bf30-3ea275d29e6c",
-      "title": "AURA! (VIVINOS - AAHS Sub : MIZI \"School Festival\".ver)",
-      "artist": "Rubyeye",
-      "release_date": "2026-10-16",
-      "country_code": "KR",
-      "country_name": "KR",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/ce9735f7-2e72-4db5-bf30-3ea275d29e6c",
+      "source_url": "https://musicbrainz.org/release-group/aa1b9cda-3902-45e7-8965-f509d8842267",
       "video_id": null,
-      "video_checked_at": "2026-10-17T07:08:00.882Z"
+      "video_checked_at": "2026-10-18T07:22:52.316Z"
+    },
+    {
+      "id": "ab01da76-14a3-4709-85c9-5dd24c0302c5",
+      "title": "Promise",
+      "artist": "Sachet-Parampara & Kausar Munir",
+      "release_date": "2026-10-16",
+      "country_code": "OTHER",
+      "country_name": "IN",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/ab01da76-14a3-4709-85c9-5dd24c0302c5",
+      "video_id": null
+    },
+    {
+      "id": "29c63508-b0d3-4853-9f0d-37aaff1ca44f",
+      "title": "Shroom Clouds",
+      "artist": "A$AP Rocky feat. reggie & Jeremih",
+      "release_date": "2026-10-16",
+      "country_code": "US",
+      "country_name": "US",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/29c63508-b0d3-4853-9f0d-37aaff1ca44f",
+      "video_id": null,
+      "video_checked_at": "2026-10-18T07:22:53.135Z"
+    },
+    {
+      "id": "db518c21-011a-4baa-9cde-dcb6a6143e9c",
+      "title": "Далеко",
+      "artist": "сплошь",
+      "release_date": "2026-10-16",
+      "country_code": "OTHER",
+      "country_name": "RU",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/db518c21-011a-4baa-9cde-dcb6a6143e9c",
+      "video_id": null
+    },
+    {
+      "id": "3d00945d-1c09-45ec-baae-fd1e4e69932b",
+      "title": "Who is Toby",
+      "artist": "NKOHA",
+      "release_date": "2026-10-16",
+      "country_code": "OTHER",
+      "country_name": "RU",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/3d00945d-1c09-45ec-baae-fd1e4e69932b",
+      "video_id": null
+    },
+    {
+      "id": "f289854e-cecc-4f70-baa1-46d4ddc9cbe3",
+      "title": "wenn du jetzt weinst",
+      "artist": "Rosenrausch",
+      "release_date": "2026-10-16",
+      "country_code": "OTHER",
+      "country_name": "DE",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/f289854e-cecc-4f70-baa1-46d4ddc9cbe3",
+      "video_id": null
+    },
+    {
+      "id": "f7edf262-3c72-4bff-929b-1578a6e4fb6d",
+      "title": "J'assume",
+      "artist": "RnBoi",
+      "release_date": "2026-10-16",
+      "country_code": "OTHER",
+      "country_name": "FR",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/f7edf262-3c72-4bff-929b-1578a6e4fb6d",
+      "video_id": null
+    },
+    {
+      "id": "4ea755ac-fb40-437d-a370-a2413b529dde",
+      "title": "Life Breaks Down",
+      "artist": "Stomer",
+      "release_date": "2026-10-16",
+      "country_code": "OTHER",
+      "country_name": "RU",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/4ea755ac-fb40-437d-a370-a2413b529dde",
+      "video_id": null
+    },
+    {
+      "id": "c2e98082-1729-44cf-87ab-98eafd6747d1",
+      "title": "catch-22",
+      "artist": "雨良 feat. 重音テト",
+      "release_date": "2026-10-16",
+      "country_code": "JP",
+      "country_name": "JP",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/c2e98082-1729-44cf-87ab-98eafd6747d1",
+      "video_id": null,
+      "video_checked_at": "2026-10-18T07:22:49.804Z"
     },
     {
       "id": "8464c5ba-a9a6-4a07-b93e-83146236aae9",
@@ -403,8 +415,7 @@
       "source_url": "https://musicbrainz.org/release-group/8464c5ba-a9a6-4a07-b93e-83146236aae9",
       "video_id": "g7Q2YgWqJcY",
       "video_checked_at": "2026-10-17T07:08:07.858Z",
-      "video_match_method": "automated_title_channel_match",
-      "video_channel": "Yel - Topic"
+      "video_match_method": "automated_title_channel_match"
     },
     {
       "id": "5f4ce271-f751-49bf-b309-d405a1b5e700",
@@ -442,7 +453,7 @@
       "source": "MusicBrainz",
       "source_url": "https://musicbrainz.org/release-group/14589985-99c6-4598-b7cd-bf9c3da939b2",
       "video_id": null,
-      "video_checked_at": "2026-10-16T10:56:09.028Z"
+      "video_checked_at": "2026-10-18T07:22:53.916Z"
     },
     {
       "id": "87491534-91b3-4c80-ba5b-8e8fac8d8866",
@@ -480,7 +491,7 @@
       "source": "MusicBrainz",
       "source_url": "https://musicbrainz.org/release-group/f57c1639-391c-4f83-bb06-685a2578460f",
       "video_id": null,
-      "video_checked_at": "2026-10-16T10:56:11.781Z"
+      "video_checked_at": "2026-10-18T07:22:54.871Z"
     },
     {
       "id": "13261837-ab37-45c6-bb3b-989f36fa895a",
@@ -506,8 +517,7 @@
       "source_url": "https://musicbrainz.org/release-group/d3fc3def-b6ef-42d7-9184-cef034cd2676",
       "video_id": "bXS316P70U0",
       "video_checked_at": "2026-10-17T07:08:09.162Z",
-      "video_match_method": "automated_title_channel_match",
-      "video_channel": "SharpTone Records"
+      "video_match_method": "automated_title_channel_match"
     },
     {
       "id": "f4b94bb6-6f33-4375-8907-ca22bdaa2063",
@@ -519,7 +529,7 @@
       "source": "MusicBrainz",
       "source_url": "https://musicbrainz.org/release-group/f4b94bb6-6f33-4375-8907-ca22bdaa2063",
       "video_id": null,
-      "video_checked_at": "2026-10-17T07:08:10.050Z"
+      "video_checked_at": "2026-10-18T07:22:55.642Z"
     },
     {
       "id": "4fb5e76a-7703-4bdd-82dc-854b90457372",
@@ -532,8 +542,7 @@
       "source_url": "https://musicbrainz.org/release-group/4fb5e76a-7703-4bdd-82dc-854b90457372",
       "video_id": "_2x74FHv-ek",
       "video_checked_at": "2026-10-17T07:08:10.872Z",
-      "video_match_method": "automated_title_channel_match",
-      "video_channel": "eyezic official"
+      "video_match_method": "automated_title_channel_match"
     },
     {
       "id": "0dbcb9e6-f719-444d-a8bf-e20ec3cfe56c",
@@ -549,89 +558,57 @@
       "video_match_method": "automated_title_channel_match"
     },
     {
-      "id": "9e4bdae4-d3e6-407e-9ba0-e03df0426a25",
-      "title": "手と手",
-      "artist": "TRACK15",
+      "id": "b8e5e4f1-be39-45db-abed-77a099b4d38e",
+      "title": "スーモア",
+      "artist": "chef's",
       "release_date": "2026-10-14",
       "country_code": "JP",
       "country_name": "JP",
       "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/9e4bdae4-d3e6-407e-9ba0-e03df0426a25",
-      "video_id": "iYb-w3S4Kco",
-      "video_checked_at": "2026-10-17T07:08:03.507Z",
+      "source_url": "https://musicbrainz.org/release-group/b8e5e4f1-be39-45db-abed-77a099b4d38e",
+      "video_id": "0DMMMngYFXE",
+      "video_checked_at": "2026-10-18T07:22:50.414Z",
       "video_match_method": "automated_title_channel_match",
-      "video_channel": "TRACK15"
+      "video_channel": "chef's"
     },
     {
-      "id": "666f91de-c04d-4803-b8f4-309628efa3dc",
-      "title": "メドレーの観察",
-      "artist": "明透",
+      "id": "47fe7ee0-40d9-4806-8f4d-baa99716310b",
+      "title": "Golden Moonlight",
+      "artist": "烏兎 -uto-",
       "release_date": "2026-10-14",
       "country_code": "JP",
       "country_name": "JP",
       "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/666f91de-c04d-4803-b8f4-309628efa3dc",
-      "video_id": "J63aZNuoRek",
-      "video_checked_at": "2026-10-16T10:56:11.510Z",
+      "source_url": "https://musicbrainz.org/release-group/47fe7ee0-40d9-4806-8f4d-baa99716310b",
+      "video_id": null,
+      "video_checked_at": "2026-10-18T07:22:51.163Z"
+    },
+    {
+      "id": "8f0fbaa4-cbb9-4b4e-b4a7-c9df00976567",
+      "title": "AIM STAR",
+      "artist": "愛美",
+      "release_date": "2026-10-14",
+      "country_code": "JP",
+      "country_name": "JP",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/8f0fbaa4-cbb9-4b4e-b4a7-c9df00976567",
+      "video_id": "gYQvLEs3zuY",
+      "video_checked_at": "2026-10-17T07:08:06.286Z",
       "video_match_method": "automated_title_channel_match"
     },
     {
-      "id": "0dfeef96-3109-4b1e-9356-b02b30f9b3e6",
-      "title": "Atmosphere",
-      "artist": "First to Eleven & Keepsake",
-      "release_date": "2026-10-14",
-      "country_code": "US",
-      "country_name": "US",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/0dfeef96-3109-4b1e-9356-b02b30f9b3e6",
-      "video_id": null
-    },
-    {
-      "id": "26e9af1f-2373-4e51-9999-a63e359132af",
-      "title": "Redemption",
-      "artist": "Inner Self",
-      "release_date": "2026-10-14",
-      "country_code": "US",
-      "country_name": "US",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/26e9af1f-2373-4e51-9999-a63e359132af",
-      "video_id": null
-    },
-    {
-      "id": "021a30b0-e52f-4f89-83c6-78375708a064",
-      "title": "dream catcher",
-      "artist": "冨岡愛",
+      "id": "47696d33-bb13-4460-8954-a0e12c3b0a7c",
+      "title": "あなたみたいに",
+      "artist": "NELKE",
       "release_date": "2026-10-14",
       "country_code": "JP",
       "country_name": "JP",
       "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/021a30b0-e52f-4f89-83c6-78375708a064",
-      "video_id": "w50b45CvOrY",
-      "video_checked_at": "2026-10-17T07:08:04.705Z",
+      "source_url": "https://musicbrainz.org/release-group/47696d33-bb13-4460-8954-a0e12c3b0a7c",
+      "video_id": "D3ocGlcfcQI",
+      "video_checked_at": "2026-10-18T07:22:52.017Z",
       "video_match_method": "automated_title_channel_match",
-      "video_channel": "冨岡 愛"
-    },
-    {
-      "id": "38794de4-274d-469c-9d28-46d4b4999b79",
-      "title": "Ghosts",
-      "artist": "Staind",
-      "release_date": "2026-10-14",
-      "country_code": "US",
-      "country_name": "US",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/38794de4-274d-469c-9d28-46d4b4999b79",
-      "video_id": null
-    },
-    {
-      "id": "f04c9770-03b1-4f6b-a254-1c95a00ba5fc",
-      "title": "Winter",
-      "artist": "Tophouse",
-      "release_date": "2026-10-14",
-      "country_code": "US",
-      "country_name": "US",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/f04c9770-03b1-4f6b-a254-1c95a00ba5fc",
-      "video_id": null
+      "video_channel": "NELKE Channel"
     },
     {
       "id": "78eb84ff-790e-43c0-b26e-3c460957d59e",
@@ -645,18 +622,54 @@
       "video_id": null
     },
     {
-      "id": "8f0fbaa4-cbb9-4b4e-b4a7-c9df00976567",
-      "title": "AIM STAR",
-      "artist": "愛美",
+      "id": "252b991f-f1a2-4086-8a09-af80c062b740",
+      "title": "Arithmetic",
+      "artist": "Bear Cole",
+      "release_date": "2026-10-14",
+      "country_code": "US",
+      "country_name": "US",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/252b991f-f1a2-4086-8a09-af80c062b740",
+      "video_id": null
+    },
+    {
+      "id": "786af49f-1ba6-4108-92f5-f86dfd748cb6",
+      "title": "Infinite Love",
+      "artist": "Bear Cole",
+      "release_date": "2026-10-14",
+      "country_code": "US",
+      "country_name": "US",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/786af49f-1ba6-4108-92f5-f86dfd748cb6",
+      "video_id": null
+    },
+    {
+      "id": "a3c579d9-e8e0-4f0e-a79a-96c625e3cb45",
+      "title": "呼びすて",
+      "artist": "乃紫",
       "release_date": "2026-10-14",
       "country_code": "JP",
       "country_name": "JP",
       "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/8f0fbaa4-cbb9-4b4e-b4a7-c9df00976567",
-      "video_id": "gYQvLEs3zuY",
-      "video_checked_at": "2026-10-17T07:08:06.286Z",
+      "source_url": "https://musicbrainz.org/release-group/a3c579d9-e8e0-4f0e-a79a-96c625e3cb45",
+      "video_id": "MCUDiqJNIgs",
+      "video_checked_at": "2026-10-18T07:22:52.882Z",
       "video_match_method": "automated_title_channel_match",
-      "video_channel": "愛美 Official YouTube Channel"
+      "video_channel": "mia🎀"
+    },
+    {
+      "id": "719c5a97-f03f-4060-b7e9-678a2caed69c",
+      "title": "エスコート",
+      "artist": "THE BEAT GARDEN",
+      "release_date": "2026-10-14",
+      "country_code": "JP",
+      "country_name": "JP",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/719c5a97-f03f-4060-b7e9-678a2caed69c",
+      "video_id": "0lZzisY53Us",
+      "video_checked_at": "2026-10-18T07:22:53.714Z",
+      "video_match_method": "automated_title_channel_match",
+      "video_channel": "THE BEAT GARDEN"
     },
     {
       "id": "b360e515-5b84-4904-9e65-c37aa8071647",
@@ -668,7 +681,7 @@
       "source": "MusicBrainz",
       "source_url": "https://musicbrainz.org/release-group/b360e515-5b84-4904-9e65-c37aa8071647",
       "video_id": null,
-      "video_checked_at": "2026-10-17T07:08:07.410Z"
+      "video_checked_at": "2026-10-18T07:22:54.594Z"
     },
     {
       "id": "15211863-af68-44e8-a442-d7b142fa6a00",
@@ -684,17 +697,16 @@
       "video_match_method": "automated_title_channel_match"
     },
     {
-      "id": "dbe884d1-81d0-4f71-8572-93aac4a1dbb6",
-      "title": "SUPERSTAR",
-      "artist": "A2O SOUL",
+      "id": "686657c4-28e7-410f-b9fa-4543da9b2b78",
+      "title": "BRAND NEW CODE",
+      "artist": "HI-NA",
       "release_date": "2026-10-13",
-      "country_code": "KR",
-      "country_name": "KR",
+      "country_code": "JP",
+      "country_name": "JP",
       "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/dbe884d1-81d0-4f71-8572-93aac4a1dbb6",
-      "video_id": "D8CYC5P6Z8Y",
-      "video_checked_at": "2026-10-16T10:56:05.442Z",
-      "video_match_method": "automated_title_channel_match"
+      "source_url": "https://musicbrainz.org/release-group/686657c4-28e7-410f-b9fa-4543da9b2b78",
+      "video_id": null,
+      "video_checked_at": "2026-10-18T07:22:55.464Z"
     },
     {
       "id": "a2beb9dc-f41d-4234-875c-f231bdf25e3e",
@@ -707,45 +719,7 @@
       "source_url": "https://musicbrainz.org/release-group/a2beb9dc-f41d-4234-875c-f231bdf25e3e",
       "video_id": "kaw7eA3qFSk",
       "video_checked_at": "2026-10-17T07:08:08.669Z",
-      "video_match_method": "automated_title_channel_match",
-      "video_channel": "羊文学"
-    },
-    {
-      "id": "3cd54537-1893-4b26-9250-5e4ce5f42842",
-      "title": "시간 속의 향기",
-      "artist": "dosii",
-      "release_date": "2026-10-12",
-      "country_code": "KR",
-      "country_name": "KR",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/3cd54537-1893-4b26-9250-5e4ce5f42842",
-      "video_id": "EHGlV4TfUPU",
-      "video_checked_at": "2026-10-16T10:56:08.361Z",
       "video_match_method": "automated_title_channel_match"
-    },
-    {
-      "id": "64a7b85b-b6b0-4967-9ca2-26b1d1559cad",
-      "title": "コーディネイト",
-      "artist": "マドロミ feat. 初音ミク",
-      "release_date": "2026-10-12",
-      "country_code": "JP",
-      "country_name": "JP",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/64a7b85b-b6b0-4967-9ca2-26b1d1559cad",
-      "video_id": null,
-      "video_checked_at": "2026-10-17T07:08:09.760Z"
-    },
-    {
-      "id": "0b93351c-0ae5-44ab-ad0f-77db286ad306",
-      "title": "機械人形のソワレ",
-      "artist": "Fty feat. 彩澄しゅお, 彩澄りりせ",
-      "release_date": "2026-10-12",
-      "country_code": "JP",
-      "country_name": "JP",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/0b93351c-0ae5-44ab-ad0f-77db286ad306",
-      "video_id": null,
-      "video_checked_at": "2026-10-17T07:08:10.521Z"
     },
     {
       "id": "58a85ae9-1a01-4546-9df7-bd05ec689f34",
@@ -761,73 +735,51 @@
       "video_match_method": "automated_title_channel_match"
     },
     {
-      "id": "d000be93-ecec-464b-9461-7186e3875bdf",
-      "title": "風の名前",
-      "artist": "MIMI",
-      "release_date": "2026-10-12",
-      "country_code": "JP",
-      "country_name": "JP",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/d000be93-ecec-464b-9461-7186e3875bdf",
-      "video_id": "R0b-kJSwUxY",
-      "video_checked_at": "2026-10-17T07:08:11.766Z",
-      "video_match_method": "automated_title_channel_match",
-      "video_channel": "MIMI"
-    },
-    {
-      "id": "a402dc0d-65c5-4b8a-ac56-37db52a5eb6c",
-      "title": "NEON",
-      "artist": "A20 LITE",
+      "id": "3cd54537-1893-4b26-9250-5e4ce5f42842",
+      "title": "시간 속의 향기",
+      "artist": "dosii",
       "release_date": "2026-10-12",
       "country_code": "KR",
       "country_name": "KR",
       "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/a402dc0d-65c5-4b8a-ac56-37db52a5eb6c",
+      "source_url": "https://musicbrainz.org/release-group/3cd54537-1893-4b26-9250-5e4ce5f42842",
+      "video_id": "EHGlV4TfUPU",
+      "video_checked_at": "2026-10-16T10:56:08.361Z",
+      "video_match_method": "automated_title_channel_match"
+    },
+    {
+      "id": "0b93351c-0ae5-44ab-ad0f-77db286ad306",
+      "title": "機械人形のソワレ",
+      "artist": "Fty feat. 彩澄しゅお, 彩澄りりせ",
+      "release_date": "2026-10-12",
+      "country_code": "JP",
+      "country_name": "JP",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/0b93351c-0ae5-44ab-ad0f-77db286ad306",
       "video_id": null,
-      "video_checked_at": "2026-10-17T07:08:02.172Z"
+      "video_checked_at": "2026-10-17T07:08:10.521Z"
     },
     {
-      "id": "05563ef1-06a7-42e8-9378-d0e327e3d0b7",
-      "title": "ノンブレス・オブリージュ",
-      "artist": "風真いろは",
-      "release_date": "2026-10-11",
+      "id": "64a7b85b-b6b0-4967-9ca2-26b1d1559cad",
+      "title": "コーディネイト",
+      "artist": "マドロミ feat. 初音ミク",
+      "release_date": "2026-10-12",
       "country_code": "JP",
       "country_name": "JP",
       "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/05563ef1-06a7-42e8-9378-d0e327e3d0b7",
-      "video_id": null
+      "source_url": "https://musicbrainz.org/release-group/64a7b85b-b6b0-4967-9ca2-26b1d1559cad",
+      "video_id": null,
+      "video_checked_at": "2026-10-17T07:08:09.760Z"
     },
     {
-      "id": "07891684-c46b-4a09-b563-259e083a9342",
-      "title": "透明軌道",
-      "artist": "HACHI",
-      "release_date": "2026-10-11",
+      "id": "a02ae288-3dc0-41e5-8070-128faa5d94f0",
+      "title": "フォーエバーソング",
+      "artist": "ハンブレッダーズ",
+      "release_date": "2026-10-12",
       "country_code": "JP",
       "country_name": "JP",
       "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/07891684-c46b-4a09-b563-259e083a9342",
-      "video_id": null
-    },
-    {
-      "id": "26b0a7db-1924-4d2d-9287-59283ac23bc0",
-      "title": "Please Dont Notice Me",
-      "artist": "Acidgvrl & Dräindeath",
-      "release_date": "2026-10-11",
-      "country_code": "JP",
-      "country_name": "JP",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/26b0a7db-1924-4d2d-9287-59283ac23bc0",
-      "video_id": null
-    },
-    {
-      "id": "cbedcfae-2c6e-44ee-8fe7-3cb03d9bcb71",
-      "title": "一凛",
-      "artist": "瀬戸乃とと",
-      "release_date": "2026-10-11",
-      "country_code": "JP",
-      "country_name": "JP",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/cbedcfae-2c6e-44ee-8fe7-3cb03d9bcb71",
+      "source_url": "https://musicbrainz.org/release-group/a02ae288-3dc0-41e5-8070-128faa5d94f0",
       "video_id": null
     }
   ]
