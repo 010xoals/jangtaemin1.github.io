@@ -1,23 +1,67 @@
 {
-  "generated_at": "2026-10-25T07:44:27.480Z",
+  "generated_at": "2026-10-26T08:01:57.708Z",
   "range": {
-    "start": "2026-10-19",
-    "end": "2026-10-25"
+    "start": "2026-10-20",
+    "end": "2026-10-26"
   },
   "source": "MusicBrainz release groups (singles)",
   "country_basis": "MusicBrainz artist country, not guaranteed activity location",
   "items": [
     {
-      "id": "1267ed80-e61d-41f2-8a75-32548cf29a9d",
-      "title": "פצע מתנה",
-      "artist": "ישראל אלמו",
-      "release_date": "2026-10-25",
-      "country_code": "OTHER",
-      "country_name": "IL",
+      "id": "b66f8bbe-497c-4d23-9159-801792870111",
+      "title": "Hayloft",
+      "artist": "thquib",
+      "release_date": "2026-10-26",
+      "country_code": "US",
+      "country_name": "US",
       "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/1267ed80-e61d-41f2-8a75-32548cf29a9d",
-      "video_id": null,
-      "video_checked_at": "2026-10-25T07:44:18.660Z"
+      "source_url": "https://musicbrainz.org/release-group/b66f8bbe-497c-4d23-9159-801792870111",
+      "video_id": "MOgaG5r6WvU",
+      "video_checked_at": "2026-10-26T08:01:50.445Z",
+      "video_match_method": "automated_title_channel_match",
+      "video_channel": "thquib - Topic"
+    },
+    {
+      "id": "d1a8d008-b49f-4a49-b5fc-a70c922988f7",
+      "title": "Як тихо!",
+      "artist": "Голос спадщини",
+      "release_date": "2026-10-26",
+      "country_code": "OTHER",
+      "country_name": "UA",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/d1a8d008-b49f-4a49-b5fc-a70c922988f7",
+      "video_id": "O8OIvYieZUc",
+      "video_checked_at": "2026-10-26T08:01:50.809Z",
+      "video_match_method": "automated_title_channel_match",
+      "video_channel": "Голос спадщини"
+    },
+    {
+      "id": "48f7f73c-94fa-4dac-ad0b-3dd908e1343b",
+      "title": "Gulosa Remix",
+      "artist": "Lu! Borgges Beats",
+      "release_date": "2026-10-26",
+      "country_code": "OTHER",
+      "country_name": "BR",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/48f7f73c-94fa-4dac-ad0b-3dd908e1343b",
+      "video_id": "Hm9zeCP119E",
+      "video_checked_at": "2026-10-26T08:01:52.072Z",
+      "video_match_method": "automated_title_channel_match",
+      "video_channel": "Lu! Borgges Beats - Topic"
+    },
+    {
+      "id": "c97240e5-13fd-49a9-9321-c3ee5e1db61b",
+      "title": "殺人事件",
+      "artist": "fuvva",
+      "release_date": "2026-10-26",
+      "country_code": "OTHER",
+      "country_name": "TW",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/c97240e5-13fd-49a9-9321-c3ee5e1db61b",
+      "video_id": "mZG3xIgEeNw",
+      "video_checked_at": "2026-10-26T08:01:52.685Z",
+      "video_match_method": "automated_title_channel_match",
+      "video_channel": "fuvva - Topic"
     },
     {
       "id": "e201fb02-88a2-4c9a-8812-9bcdc092068a",
@@ -30,8 +74,19 @@
       "source_url": "https://musicbrainz.org/release-group/e201fb02-88a2-4c9a-8812-9bcdc092068a",
       "video_id": "btrTJv6iSww",
       "video_checked_at": "2026-10-25T07:44:18.305Z",
-      "video_match_method": "automated_title_channel_match",
-      "video_channel": "KAYLEE VANCE"
+      "video_match_method": "automated_title_channel_match"
+    },
+    {
+      "id": "1267ed80-e61d-41f2-8a75-32548cf29a9d",
+      "title": "פצע מתנה",
+      "artist": "ישראל אלמו",
+      "release_date": "2026-10-25",
+      "country_code": "OTHER",
+      "country_name": "IL",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/1267ed80-e61d-41f2-8a75-32548cf29a9d",
+      "video_id": null,
+      "video_checked_at": "2026-10-26T08:01:53.312Z"
     },
     {
       "id": "e1c42785-cfec-4f33-ad1d-f8b5c2804978",
@@ -44,57 +99,6 @@
       "source_url": "https://musicbrainz.org/release-group/e1c42785-cfec-4f33-ad1d-f8b5c2804978",
       "video_id": "1f_c28cmtg4",
       "video_checked_at": "2026-10-25T07:44:19.838Z",
-      "video_match_method": "automated_title_channel_match",
-      "video_channel": "Andre Coupe - Topic"
-    },
-    {
-      "id": "2b6ace47-df1b-4e2f-833a-2d1dd213904f",
-      "title": "You Are Mine And I'm Yours",
-      "artist": "Rafolino",
-      "release_date": "2026-10-24",
-      "country_code": "OTHER",
-      "country_name": "BR",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/2b6ace47-df1b-4e2f-833a-2d1dd213904f",
-      "video_id": null,
-      "video_checked_at": "2026-10-25T07:44:20.771Z"
-    },
-    {
-      "id": "57cd8039-fbc3-45ae-a051-60ca4cd6e638",
-      "title": "This Life Is Mine",
-      "artist": "Phil Raiter",
-      "release_date": "2026-10-24",
-      "country_code": "OTHER",
-      "country_name": "FR",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/57cd8039-fbc3-45ae-a051-60ca4cd6e638",
-      "video_id": "SAGRmZR15ek",
-      "video_checked_at": "2026-10-24T07:29:31.254Z",
-      "video_match_method": "automated_title_channel_match"
-    },
-    {
-      "id": "003d41ab-4536-416f-b2fc-bc354044939d",
-      "title": "Don't Cry for Me",
-      "artist": "Bear Cole",
-      "release_date": "2026-10-24",
-      "country_code": "US",
-      "country_name": "US",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/003d41ab-4536-416f-b2fc-bc354044939d",
-      "video_id": null,
-      "video_checked_at": "2026-10-25T07:44:19.469Z"
-    },
-    {
-      "id": "760e54aa-3db7-4d03-9ed6-87da3bdf2e6e",
-      "title": "Tailwind",
-      "artist": "Bear Cole",
-      "release_date": "2026-10-24",
-      "country_code": "US",
-      "country_name": "US",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/760e54aa-3db7-4d03-9ed6-87da3bdf2e6e",
-      "video_id": "iZ8QJvVMOzE",
-      "video_checked_at": "2026-10-24T07:29:31.804Z",
       "video_match_method": "automated_title_channel_match"
     },
     {
@@ -111,43 +115,53 @@
       "video_match_method": "automated_title_channel_match"
     },
     {
-      "id": "cb377ade-4582-42a1-b8f3-d4c58141b637",
-      "title": "Fastest of All",
-      "artist": "Singie Lingie",
+      "id": "003d41ab-4536-416f-b2fc-bc354044939d",
+      "title": "Don't Cry for Me",
+      "artist": "Bear Cole",
       "release_date": "2026-10-24",
-      "country_code": "KR",
-      "country_name": "KR",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/cb377ade-4582-42a1-b8f3-d4c58141b637",
-      "video_id": "ClAumtYG3BE",
-      "video_checked_at": "2026-10-25T07:44:17.605Z",
-      "video_match_method": "automated_title_channel_match",
-      "video_channel": "Singie Lingie - Topic"
-    },
-    {
-      "id": "d3e02de9-0572-4136-a6f0-e57885a686a5",
-      "title": "Scapegoat",
-      "artist": "Grim Logick feat. C1PH3R-IO",
-      "release_date": "2026-10-23",
       "country_code": "US",
       "country_name": "US",
       "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/d3e02de9-0572-4136-a6f0-e57885a686a5",
+      "source_url": "https://musicbrainz.org/release-group/003d41ab-4536-416f-b2fc-bc354044939d",
       "video_id": null,
-      "video_checked_at": "2026-10-25T07:44:20.522Z"
+      "video_checked_at": "2026-10-26T08:01:51.789Z"
     },
     {
-      "id": "ede7481b-80cd-4a8c-b029-f9b7df5feb06",
-      "title": "Only A Dream (Radio Edition)",
-      "artist": "Memz",
-      "release_date": "2026-10-23",
-      "country_code": "OTHER",
-      "country_name": "GB",
+      "id": "760e54aa-3db7-4d03-9ed6-87da3bdf2e6e",
+      "title": "Tailwind",
+      "artist": "Bear Cole",
+      "release_date": "2026-10-24",
+      "country_code": "US",
+      "country_name": "US",
       "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/ede7481b-80cd-4a8c-b029-f9b7df5feb06",
-      "video_id": "mKSCZQLJDxc",
-      "video_checked_at": "2026-10-23T07:46:59.441Z",
+      "source_url": "https://musicbrainz.org/release-group/760e54aa-3db7-4d03-9ed6-87da3bdf2e6e",
+      "video_id": "iZ8QJvVMOzE",
+      "video_checked_at": "2026-10-24T07:29:31.804Z",
       "video_match_method": "automated_title_channel_match"
+    },
+    {
+      "id": "173a4594-0b5b-4647-aa70-796fa8623de7",
+      "title": "Dehoes",
+      "artist": "make get out",
+      "release_date": "2026-10-24",
+      "country_code": "OTHER",
+      "country_name": "DE",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/173a4594-0b5b-4647-aa70-796fa8623de7",
+      "video_id": null,
+      "video_checked_at": "2026-10-26T08:01:54.100Z"
+    },
+    {
+      "id": "9245f5f5-a4c0-45e2-b463-fe3937176996",
+      "title": "残音",
+      "artist": "まわりみち",
+      "release_date": "2026-10-24",
+      "country_code": "JP",
+      "country_name": "JP",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/9245f5f5-a4c0-45e2-b463-fe3937176996",
+      "video_id": null,
+      "video_checked_at": "2026-10-26T08:01:50.129Z"
     },
     {
       "id": "c8954e5f-d9d4-4351-9a44-f5a7c7cdcc5b",
@@ -159,7 +173,101 @@
       "source": "MusicBrainz",
       "source_url": "https://musicbrainz.org/release-group/c8954e5f-d9d4-4351-9a44-f5a7c7cdcc5b",
       "video_id": null,
-      "video_checked_at": "2026-10-25T07:44:21.258Z"
+      "video_checked_at": "2026-10-26T08:01:52.443Z"
+    },
+    {
+      "id": "d3e02de9-0572-4136-a6f0-e57885a686a5",
+      "title": "Scapegoat",
+      "artist": "Grim Logick feat. C1PH3R-IO",
+      "release_date": "2026-10-23",
+      "country_code": "US",
+      "country_name": "US",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/d3e02de9-0572-4136-a6f0-e57885a686a5",
+      "video_id": null,
+      "video_checked_at": "2026-10-26T08:01:53.132Z"
+    },
+    {
+      "id": "4ead7d98-b0b7-4ae0-af5a-6318338481d4",
+      "title": "Counting Down Dayz",
+      "artist": "Bobby Real Montgomery",
+      "release_date": "2026-10-23",
+      "country_code": "US",
+      "country_name": "US",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/4ead7d98-b0b7-4ae0-af5a-6318338481d4",
+      "video_id": "U3sg-6efs64",
+      "video_checked_at": "2026-10-26T08:01:53.759Z",
+      "video_match_method": "automated_title_channel_match",
+      "video_channel": "Bobby Real Montgomery - Topic"
+    },
+    {
+      "id": "e864924d-ad70-4c41-83a8-e5e07da8cf02",
+      "title": "Talk To Me Baby",
+      "artist": "TRiGi",
+      "release_date": "2026-10-23",
+      "country_code": "OTHER",
+      "country_name": "IN",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/e864924d-ad70-4c41-83a8-e5e07da8cf02",
+      "video_id": "Cdf0L3A_2-E",
+      "video_checked_at": "2026-10-26T08:01:54.921Z",
+      "video_match_method": "automated_title_channel_match",
+      "video_channel": "TRiGi"
+    },
+    {
+      "id": "5a4554d6-d630-4c47-bf5f-6535bd9ddd8f",
+      "title": "Friendship or Love",
+      "artist": "Phil Raiter",
+      "release_date": "2026-10-23",
+      "country_code": "OTHER",
+      "country_name": "FR",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/5a4554d6-d630-4c47-bf5f-6535bd9ddd8f",
+      "video_id": "EBDrTeRGTX4",
+      "video_checked_at": "2026-10-26T08:01:55.802Z",
+      "video_match_method": "automated_title_channel_match",
+      "video_channel": "Phil Raiter - Topic"
+    },
+    {
+      "id": "eb4bdbc5-3b49-44a7-a953-bf9700f11a64",
+      "title": "Know your Enemy!!",
+      "artist": "Lil Killer Boy",
+      "release_date": "2026-10-23",
+      "country_code": "OTHER",
+      "country_name": "GB",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/eb4bdbc5-3b49-44a7-a953-bf9700f11a64",
+      "video_id": "ltL2GqO9jNY",
+      "video_checked_at": "2026-10-26T08:01:56.788Z",
+      "video_match_method": "automated_title_channel_match",
+      "video_channel": "Lil Killer Boy - Topic"
+    },
+    {
+      "id": "64694a79-758e-445e-bbce-d9e7c52cc1c7",
+      "title": "The Greatest Coup",
+      "artist": "Fife Augury",
+      "release_date": "2026-10-23",
+      "country_code": "OTHER",
+      "country_name": "FR",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/64694a79-758e-445e-bbce-d9e7c52cc1c7",
+      "video_id": "lsAKfjXUzw0",
+      "video_checked_at": "2026-10-26T08:01:57.275Z",
+      "video_match_method": "automated_title_channel_match",
+      "video_channel": "Fife Augury - Topic"
+    },
+    {
+      "id": "35b0aa67-3665-44b3-9d56-e76908c781ff",
+      "title": "Погнали танцевать эту жизнь⁠",
+      "artist": "Inna Story",
+      "release_date": "2026-10-23",
+      "country_code": "OTHER",
+      "country_name": "RU",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/35b0aa67-3665-44b3-9d56-e76908c781ff",
+      "video_id": null,
+      "video_checked_at": "2026-10-26T08:01:57.707Z"
     },
     {
       "id": "ec347968-dba4-4d33-9089-8b2f0e4b5256",
@@ -172,8 +280,7 @@
       "source_url": "https://musicbrainz.org/release-group/ec347968-dba4-4d33-9089-8b2f0e4b5256",
       "video_id": "wcvB_i2X45A",
       "video_checked_at": "2026-10-25T07:44:21.615Z",
-      "video_match_method": "automated_title_channel_match",
-      "video_channel": "I Tend the Light"
+      "video_match_method": "automated_title_channel_match"
     },
     {
       "id": "6efbe944-907e-443c-af9f-a54345619c07",
@@ -186,8 +293,7 @@
       "source_url": "https://musicbrainz.org/release-group/6efbe944-907e-443c-af9f-a54345619c07",
       "video_id": "wJ_A6n5UOH4",
       "video_checked_at": "2026-10-25T07:44:22.507Z",
-      "video_match_method": "automated_title_channel_match",
-      "video_channel": "Runaway Club - Topic"
+      "video_match_method": "automated_title_channel_match"
     },
     {
       "id": "f269d035-4074-45f8-a8ce-d5dc7d2fc28c",
@@ -200,8 +306,42 @@
       "source_url": "https://musicbrainz.org/release-group/f269d035-4074-45f8-a8ce-d5dc7d2fc28c",
       "video_id": "-19NeMiz1ho",
       "video_checked_at": "2026-10-25T07:44:23.574Z",
-      "video_match_method": "automated_title_channel_match",
-      "video_channel": "RAEM - Topic"
+      "video_match_method": "automated_title_channel_match"
+    },
+    {
+      "id": "5f81ac7b-7345-486e-a752-5451e5a529c7",
+      "title": "Caving In",
+      "artist": "Samarth Goel, EuphoriaX & Imo Music",
+      "release_date": "2026-10-23",
+      "country_code": "OTHER",
+      "country_name": "IN",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/5f81ac7b-7345-486e-a752-5451e5a529c7",
+      "video_id": null
+    },
+    {
+      "id": "63ceb13c-c3c7-4c2d-a8ad-d1b9f91f4b70",
+      "title": "CRUSH",
+      "artist": "LAURELS",
+      "release_date": "2026-10-23",
+      "country_code": "JP",
+      "country_name": "JP",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/63ceb13c-c3c7-4c2d-a8ad-d1b9f91f4b70",
+      "video_id": "dpp4I3GxPgE",
+      "video_checked_at": "2026-10-25T07:44:19.119Z",
+      "video_match_method": "automated_title_channel_match"
+    },
+    {
+      "id": "680c5474-0355-402d-8c86-446a67bec79d",
+      "title": "My Heart Says Goodbye",
+      "artist": "Alik Tarraf",
+      "release_date": "2026-10-23",
+      "country_code": "OTHER",
+      "country_name": "AE",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/680c5474-0355-402d-8c86-446a67bec79d",
+      "video_id": null
     },
     {
       "id": "9b4c466a-5e87-4e0f-9de1-af8b031dae84",
@@ -226,8 +366,7 @@
       "source_url": "https://musicbrainz.org/release-group/2e1db76f-b190-4fee-8485-6eab93432d4a",
       "video_id": "JJGLYJgrqZQ",
       "video_checked_at": "2026-10-25T07:44:22.153Z",
-      "video_match_method": "automated_title_channel_match",
-      "video_channel": " Skynny Williams ™️"
+      "video_match_method": "automated_title_channel_match"
     },
     {
       "id": "deffa34b-ed2a-44e1-ad99-cbcd53366079",
@@ -240,8 +379,7 @@
       "source_url": "https://musicbrainz.org/release-group/deffa34b-ed2a-44e1-ad99-cbcd53366079",
       "video_id": "ritWE4-Ijn4",
       "video_checked_at": "2026-10-25T07:44:25.162Z",
-      "video_match_method": "automated_title_channel_match",
-      "video_channel": "MANDRAKIS"
+      "video_match_method": "automated_title_channel_match"
     },
     {
       "id": "9882a75c-8f90-45a0-b4ba-dd0866c7872b",
@@ -254,8 +392,7 @@
       "source_url": "https://musicbrainz.org/release-group/9882a75c-8f90-45a0-b4ba-dd0866c7872b",
       "video_id": "9mzRcAVvSSk",
       "video_checked_at": "2026-10-25T07:44:23.211Z",
-      "video_match_method": "automated_title_channel_match",
-      "video_channel": "MUSICDAILY"
+      "video_match_method": "automated_title_channel_match"
     },
     {
       "id": "093d37a7-9beb-40be-831c-2cbd1548efcc",
@@ -268,8 +405,7 @@
       "source_url": "https://musicbrainz.org/release-group/093d37a7-9beb-40be-831c-2cbd1548efcc",
       "video_id": "O1S9tdHVrBw",
       "video_checked_at": "2026-10-25T07:44:26.020Z",
-      "video_match_method": "automated_title_channel_match",
-      "video_channel": "Rêve"
+      "video_match_method": "automated_title_channel_match"
     },
     {
       "id": "a5e743a6-76a1-4e3b-980a-3c7b354fdfd5",
@@ -282,22 +418,7 @@
       "source_url": "https://musicbrainz.org/release-group/a5e743a6-76a1-4e3b-980a-3c7b354fdfd5",
       "video_id": "RvAKD32IrMk",
       "video_checked_at": "2026-10-25T07:44:26.770Z",
-      "video_match_method": "automated_title_channel_match",
-      "video_channel": "KURT92"
-    },
-    {
-      "id": "b3961482-faa0-4832-a5b9-4bbb706b7d1c",
-      "title": "В нашем стиле",
-      "artist": "nkeeei & ЛСП",
-      "release_date": "2026-10-23",
-      "country_code": "OTHER",
-      "country_name": "BY",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/b3961482-faa0-4832-a5b9-4bbb706b7d1c",
-      "video_id": "JefHi9nqiK0",
-      "video_checked_at": "2026-10-25T07:44:27.480Z",
-      "video_match_method": "automated_title_channel_match",
-      "video_channel": "Денис реакция"
+      "video_match_method": "automated_title_channel_match"
     },
     {
       "id": "2d9c31cf-daca-409c-942c-cd07ec600280",
@@ -310,63 +431,7 @@
       "source_url": "https://musicbrainz.org/release-group/2d9c31cf-daca-409c-942c-cd07ec600280",
       "video_id": "Kngf3G828fw",
       "video_checked_at": "2026-10-25T07:44:18.028Z",
-      "video_match_method": "automated_title_channel_match",
-      "video_channel": "私立恵比寿中学"
-    },
-    {
-      "id": "31709568-fdea-4d2d-9d1b-27e9aff885c2",
-      "title": "the 5 stages of heartbreak",
-      "artist": "Mahalia",
-      "release_date": "2026-10-23",
-      "country_code": "OTHER",
-      "country_name": "GB",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/31709568-fdea-4d2d-9d1b-27e9aff885c2",
-      "video_id": null
-    },
-    {
-      "id": "30ca3d95-2548-451f-b3cb-c937e1922cf5",
-      "title": "Wreck of Me",
-      "artist": "Sophie and the Giants",
-      "release_date": "2026-10-23",
-      "country_code": "OTHER",
-      "country_name": "GB",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/30ca3d95-2548-451f-b3cb-c937e1922cf5",
-      "video_id": null
-    },
-    {
-      "id": "71100cf5-7b4b-4b8a-a401-2e91904acabe",
-      "title": "Dead Man",
-      "artist": "Against Humanity",
-      "release_date": "2026-10-23",
-      "country_code": "OTHER",
-      "country_name": "EG",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/71100cf5-7b4b-4b8a-a401-2e91904acabe",
-      "video_id": null
-    },
-    {
-      "id": "e9e1ec4c-b604-41ca-bf64-2c4a1053fcd9",
-      "title": "STAY COLD",
-      "artist": "OBLADAET",
-      "release_date": "2026-10-23",
-      "country_code": "OTHER",
-      "country_name": "RU",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/e9e1ec4c-b604-41ca-bf64-2c4a1053fcd9",
-      "video_id": null
-    },
-    {
-      "id": "8e21b8a4-9f00-4704-b318-74f860e44a64",
-      "title": "Проспект вечных каникул",
-      "artist": "Твоё далеко",
-      "release_date": "2026-10-23",
-      "country_code": "OTHER",
-      "country_name": "RU",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/8e21b8a4-9f00-4704-b318-74f860e44a64",
-      "video_id": null
+      "video_match_method": "automated_title_channel_match"
     },
     {
       "id": "ed0dd82a-a973-49ac-a1cc-5a9589b73e77",
@@ -379,8 +444,7 @@
       "source_url": "https://musicbrainz.org/release-group/ed0dd82a-a973-49ac-a1cc-5a9589b73e77",
       "video_id": "UCqbRU_aKNU",
       "video_checked_at": "2026-10-25T07:44:24.221Z",
-      "video_match_method": "automated_title_channel_match",
-      "video_channel": "Brennan Savage"
+      "video_match_method": "automated_title_channel_match"
     },
     {
       "id": "2e595ab5-3781-4ad2-8636-7e336df2f0d4",
@@ -392,7 +456,7 @@
       "source": "MusicBrainz",
       "source_url": "https://musicbrainz.org/release-group/2e595ab5-3781-4ad2-8636-7e336df2f0d4",
       "video_id": null,
-      "video_checked_at": "2026-10-25T07:44:24.801Z"
+      "video_checked_at": "2026-10-26T08:01:54.583Z"
     },
     {
       "id": "272fd8b9-27d7-438b-b44c-9caebe053805",
@@ -405,8 +469,7 @@
       "source_url": "https://musicbrainz.org/release-group/272fd8b9-27d7-438b-b44c-9caebe053805",
       "video_id": "I1goO0ftkNM",
       "video_checked_at": "2026-10-25T07:44:25.504Z",
-      "video_match_method": "automated_title_channel_match",
-      "video_channel": "Baby Jane"
+      "video_match_method": "automated_title_channel_match"
     },
     {
       "id": "2bb75a94-5bf6-4a8d-a3b1-c9f422c27811",
@@ -419,44 +482,7 @@
       "source_url": "https://musicbrainz.org/release-group/2bb75a94-5bf6-4a8d-a3b1-c9f422c27811",
       "video_id": "Eba_qvEQSP4",
       "video_checked_at": "2026-10-25T07:44:26.393Z",
-      "video_match_method": "automated_title_channel_match",
-      "video_channel": "hailee steinfeld archive"
-    },
-    {
-      "id": "74497d2c-f627-46ae-8619-4ec28b064a0c",
-      "title": "Souls",
-      "artist": "YrMydriay",
-      "release_date": "2026-10-23",
-      "country_code": "OTHER",
-      "country_name": "RU",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/74497d2c-f627-46ae-8619-4ec28b064a0c",
-      "video_id": null
-    },
-    {
-      "id": "9ccc090e-b0e7-4b95-8910-a21d57de3480",
-      "title": "Back to Sydney",
-      "artist": "Kita Alexander",
-      "release_date": "2026-10-23",
-      "country_code": "OTHER",
-      "country_name": "AU",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/9ccc090e-b0e7-4b95-8910-a21d57de3480",
-      "video_id": null
-    },
-    {
-      "id": "63ceb13c-c3c7-4c2d-a8ad-d1b9f91f4b70",
-      "title": "CRUSH",
-      "artist": "LAURELS",
-      "release_date": "2026-10-23",
-      "country_code": "JP",
-      "country_name": "JP",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/63ceb13c-c3c7-4c2d-a8ad-d1b9f91f4b70",
-      "video_id": "dpp4I3GxPgE",
-      "video_checked_at": "2026-10-25T07:44:19.119Z",
-      "video_match_method": "automated_title_channel_match",
-      "video_channel": "LAURELS - Topic"
+      "video_match_method": "automated_title_channel_match"
     },
     {
       "id": "b837d402-5e83-4bf0-af2b-954f002d4068",
@@ -469,8 +495,7 @@
       "source_url": "https://musicbrainz.org/release-group/b837d402-5e83-4bf0-af2b-954f002d4068",
       "video_id": "y-ws6YmQacw",
       "video_checked_at": "2026-10-25T07:44:27.165Z",
-      "video_match_method": "automated_title_channel_match",
-      "video_channel": "Eddie King - Topic"
+      "video_match_method": "automated_title_channel_match"
     },
     {
       "id": "f14f1218-debe-4201-8807-34d6e0a30f37",
@@ -482,7 +507,7 @@
       "source": "MusicBrainz",
       "source_url": "https://musicbrainz.org/release-group/f14f1218-debe-4201-8807-34d6e0a30f37",
       "video_id": null,
-      "video_checked_at": "2026-10-24T07:29:34.483Z"
+      "video_checked_at": "2026-10-26T08:01:55.491Z"
     },
     {
       "id": "8759625f-0b7d-4399-933a-09b7a26ddd82",
@@ -524,15 +549,118 @@
       "video_match_method": "automated_title_channel_match"
     },
     {
-      "id": "4bc4af34-2db5-4416-b282-ec58f69f18b9",
-      "title": "Carmilla",
-      "artist": "Six Foot Blonde",
+      "id": "79f4194c-f576-4ecd-93de-72657e81231c",
+      "title": "それなのに",
+      "artist": "Uru",
+      "release_date": "2026-10-21",
+      "country_code": "JP",
+      "country_name": "JP",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/79f4194c-f576-4ecd-93de-72657e81231c",
+      "video_id": "JMMRuOIwQyI",
+      "video_checked_at": "2026-10-26T08:01:51.437Z",
+      "video_match_method": "automated_title_channel_match",
+      "video_channel": "Uru Official YouTube Channel"
+    },
+    {
+      "id": "5eedd93f-da74-4030-8a91-208cf404627a",
+      "title": "ZUKIZUKI",
+      "artist": "GROTESQQQUE, Junna & 佐藤古都子 (yutori)",
+      "release_date": "2026-10-21",
+      "country_code": "JP",
+      "country_name": "JP",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/5eedd93f-da74-4030-8a91-208cf404627a",
+      "video_id": null,
+      "video_checked_at": "2026-10-26T08:01:52.257Z"
+    },
+    {
+      "id": "1d4e978f-4fdf-4930-a0df-d7b979ed9d07",
+      "title": "Ember",
+      "artist": "Powerless & siqlo feat. Tia",
+      "release_date": "2026-10-21",
+      "country_code": "JP",
+      "country_name": "JP",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/1d4e978f-4fdf-4930-a0df-d7b979ed9d07",
+      "video_id": null,
+      "video_checked_at": "2026-10-26T08:01:52.933Z"
+    },
+    {
+      "id": "5a743af8-495a-4fb4-980c-6162a34c8fed",
+      "title": "One Shot One PISS",
+      "artist": "シッコマン イン ザ パーティ",
+      "release_date": "2026-10-21",
+      "country_code": "JP",
+      "country_name": "JP",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/5a743af8-495a-4fb4-980c-6162a34c8fed",
+      "video_id": null,
+      "video_checked_at": "2026-10-26T08:01:53.505Z"
+    },
+    {
+      "id": "d37d0245-c4fb-4b5c-8ea0-4aa888d59038",
+      "title": "Parallel Universe",
+      "artist": "Broken By The Scream",
+      "release_date": "2026-10-21",
+      "country_code": "JP",
+      "country_name": "JP",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/d37d0245-c4fb-4b5c-8ea0-4aa888d59038",
+      "video_id": "yK38Bk16I94",
+      "video_checked_at": "2026-10-25T07:44:20.277Z",
+      "video_match_method": "automated_title_channel_match"
+    },
+    {
+      "id": "9620e5f3-cbc5-44c1-acf0-fa49604395a9",
+      "title": "Crow's Court",
+      "artist": "Low Poly & Floret Loret",
       "release_date": "2026-10-21",
       "country_code": "US",
       "country_name": "US",
       "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/4bc4af34-2db5-4416-b282-ec58f69f18b9",
-      "video_id": null
+      "source_url": "https://musicbrainz.org/release-group/9620e5f3-cbc5-44c1-acf0-fa49604395a9",
+      "video_id": null,
+      "video_checked_at": "2026-10-26T08:01:56.389Z"
+    },
+    {
+      "id": "3fc84b97-e66d-48aa-bae9-2c48c0c88680",
+      "title": "ふかいです！",
+      "artist": "理芽",
+      "release_date": "2026-10-21",
+      "country_code": "JP",
+      "country_name": "JP",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/3fc84b97-e66d-48aa-bae9-2c48c0c88680",
+      "video_id": "0Qlv3Dlodhg",
+      "video_checked_at": "2026-10-25T07:44:22.873Z",
+      "video_match_method": "automated_title_channel_match"
+    },
+    {
+      "id": "9ed2ab99-4f70-4e7a-bac1-41e3a213946e",
+      "title": "その絵の名前は/幸福刑",
+      "artist": "25時、ナイトコードで。",
+      "release_date": "2026-10-21",
+      "country_code": "JP",
+      "country_name": "JP",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/9ed2ab99-4f70-4e7a-bac1-41e3a213946e",
+      "video_id": null,
+      "video_checked_at": "2026-10-26T08:01:54.380Z"
+    },
+    {
+      "id": "60e89772-1e41-4faf-8f68-f00ba0e36c0a",
+      "title": "Drawing in the Cold Silence",
+      "artist": "Luciela",
+      "release_date": "2026-10-21",
+      "country_code": "JP",
+      "country_name": "JP",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/60e89772-1e41-4faf-8f68-f00ba0e36c0a",
+      "video_id": "mYNY1G9ZgKo",
+      "video_checked_at": "2026-10-26T08:01:55.172Z",
+      "video_match_method": "automated_title_channel_match",
+      "video_channel": "Luciela"
     },
     {
       "id": "2ae624d2-f45a-4cf2-93e1-b2dfd446270e",
@@ -548,90 +676,114 @@
       "video_match_method": "automated_title_channel_match"
     },
     {
-      "id": "d37d0245-c4fb-4b5c-8ea0-4aa888d59038",
-      "title": "Parallel Universe",
-      "artist": "Broken By The Scream",
+      "id": "a73e80e6-68ee-494a-a733-6f6a5e2f3d54",
+      "title": "暁の星",
+      "artist": "水樹奈々",
       "release_date": "2026-10-21",
       "country_code": "JP",
       "country_name": "JP",
       "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/d37d0245-c4fb-4b5c-8ea0-4aa888d59038",
-      "video_id": "yK38Bk16I94",
-      "video_checked_at": "2026-10-25T07:44:20.277Z",
+      "source_url": "https://musicbrainz.org/release-group/a73e80e6-68ee-494a-a733-6f6a5e2f3d54",
+      "video_id": "v72csCcpEwA",
+      "video_checked_at": "2026-10-26T08:01:56.174Z",
       "video_match_method": "automated_title_channel_match",
-      "video_channel": "Metal Blade Records"
+      "video_channel": "水樹奈々"
     },
     {
-      "id": "9620e5f3-cbc5-44c1-acf0-fa49604395a9",
-      "title": "Crow's Court",
-      "artist": "Low Poly & Floret Loret",
+      "id": "1997ead9-93b4-45b2-8b78-8a1211a05a2f",
+      "title": "強風オールバック",
+      "artist": "ゆこぴ feat. しぐれうい",
       "release_date": "2026-10-21",
-      "country_code": "US",
-      "country_name": "US",
+      "country_code": "JP",
+      "country_name": "JP",
       "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/9620e5f3-cbc5-44c1-acf0-fa49604395a9",
+      "source_url": "https://musicbrainz.org/release-group/1997ead9-93b4-45b2-8b78-8a1211a05a2f",
+      "video_id": null,
+      "video_checked_at": "2026-10-26T08:01:57.010Z"
+    },
+    {
+      "id": "fc67634b-3793-4acc-955b-d9bb09b4975a",
+      "title": "FIRESTARTER",
+      "artist": "Elia Stellaria & Meatokki",
+      "release_date": "2026-10-21",
+      "country_code": "JP",
+      "country_name": "JP",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/fc67634b-3793-4acc-955b-d9bb09b4975a",
+      "video_id": null,
+      "video_checked_at": "2026-10-26T08:01:57.443Z"
+    },
+    {
+      "id": "e7c42276-5ca8-42ba-b85d-34516d87d28c",
+      "title": "ビンテージマンション",
+      "artist": "ん・フェニ",
+      "release_date": "2026-10-21",
+      "country_code": "JP",
+      "country_name": "JP",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/e7c42276-5ca8-42ba-b85d-34516d87d28c",
       "video_id": null
     },
     {
-      "id": "1d4e978f-4fdf-4930-a0df-d7b979ed9d07",
-      "title": "Ember",
-      "artist": "Powerless & siqlo feat. Tia",
+      "id": "51668d61-ddce-47f2-9f86-1570c4b666e3",
+      "title": "凪の底",
+      "artist": "月追う彼方",
       "release_date": "2026-10-21",
       "country_code": "JP",
       "country_name": "JP",
       "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/1d4e978f-4fdf-4930-a0df-d7b979ed9d07",
-      "video_id": null,
-      "video_checked_at": "2026-10-25T07:44:21.038Z"
-    },
-    {
-      "id": "5a743af8-495a-4fb4-980c-6162a34c8fed",
-      "title": "One Shot One PISS",
-      "artist": "シッコマン イン ザ パーティ",
-      "release_date": "2026-10-21",
-      "country_code": "JP",
-      "country_name": "JP",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/5a743af8-495a-4fb4-980c-6162a34c8fed",
-      "video_id": null,
-      "video_checked_at": "2026-10-25T07:44:21.823Z"
-    },
-    {
-      "id": "bdf4d195-dc32-4f78-aba0-949e25938f8c",
-      "title": "Buried Underneath",
-      "artist": "Young Medicine",
-      "release_date": "2026-10-21",
-      "country_code": "US",
-      "country_name": "US",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/bdf4d195-dc32-4f78-aba0-949e25938f8c",
+      "source_url": "https://musicbrainz.org/release-group/51668d61-ddce-47f2-9f86-1570c4b666e3",
       "video_id": null
     },
     {
-      "id": "3fc84b97-e66d-48aa-bae9-2c48c0c88680",
-      "title": "ふかいです！",
-      "artist": "理芽",
+      "id": "2b81019e-9829-4df5-9093-934794dd8c5c",
+      "title": "トムとジェリーとヘイターと私",
+      "artist": "Creepy Nuts",
       "release_date": "2026-10-21",
       "country_code": "JP",
       "country_name": "JP",
       "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/3fc84b97-e66d-48aa-bae9-2c48c0c88680",
-      "video_id": "0Qlv3Dlodhg",
-      "video_checked_at": "2026-10-25T07:44:22.873Z",
-      "video_match_method": "automated_title_channel_match",
-      "video_channel": "理芽 -RIM-"
+      "source_url": "https://musicbrainz.org/release-group/2b81019e-9829-4df5-9093-934794dd8c5c",
+      "video_id": null
     },
     {
-      "id": "9ed2ab99-4f70-4e7a-bac1-41e3a213946e",
-      "title": "その絵の名前は/幸福刑",
-      "artist": "25時、ナイトコードで。",
+      "id": "be691ea6-136e-4ad7-8487-dc1e5ca5439a",
+      "title": "Re:START",
+      "artist": "Ayumu",
       "release_date": "2026-10-21",
       "country_code": "JP",
       "country_name": "JP",
       "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/9ed2ab99-4f70-4e7a-bac1-41e3a213946e",
-      "video_id": null,
-      "video_checked_at": "2026-10-25T07:44:23.838Z"
+      "source_url": "https://musicbrainz.org/release-group/be691ea6-136e-4ad7-8487-dc1e5ca5439a",
+      "video_id": null
+    },
+    {
+      "id": "5b0b0022-092e-48a5-adbc-2ea6ff13bf55",
+      "title": "Come into my world!",
+      "artist": "WOODZ",
+      "release_date": "2026-10-20",
+      "country_code": "KR",
+      "country_name": "KR",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/5b0b0022-092e-48a5-adbc-2ea6ff13bf55",
+      "video_id": "cwLCZQHm06o",
+      "video_checked_at": "2026-10-26T08:01:49.860Z",
+      "video_match_method": "automated_title_channel_match",
+      "video_channel": "WOODZ"
+    },
+    {
+      "id": "1d3aad69-d583-488d-991b-c964ef290a57",
+      "title": "Illusion",
+      "artist": "ONEW",
+      "release_date": "2026-10-20",
+      "country_code": "KR",
+      "country_name": "KR",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/1d3aad69-d583-488d-991b-c964ef290a57",
+      "video_id": "1PFJquTgvPo",
+      "video_checked_at": "2026-10-26T08:01:51.130Z",
+      "video_match_method": "automated_title_channel_match",
+      "video_channel": "it's Live"
     },
     {
       "id": "1de383da-f0e4-49a7-9962-91388bf9d0fa",
