@@ -12,12 +12,12 @@
 <div id="users" class="card hidden"><h2>직원 계정 관리</h2><p class="muted">직원이 먼저 이메일로 로그인 시도한 뒤 관리자가 권한을 부여할 수 있습니다.</p><label>직원 이메일</label><input id="userEmail" type="email"><label>권한</label><select id="userRole"><option value="viewer">조회 / 사용 요청</option><option value="approver">조회 / 사용 승인</option></select><button id="grant">사용 권한 부여</button></div>
 </div></main><script type="module">
 import{createClient}from"https://esm.sh/@supabase/supabase-js@2.49.8";
-const URL="https://rztssbcijmnejdyepdwc.supabase.co",KEY="sb_publishable_jF_bQvLVZtXzHSA7XP7e9A_ShnsLtsY";
-const sb=createClient(URL,KEY,{auth:{autoRefreshToken:true,persistSession:true,detectSessionInUrl:true}});
+const SUPABASE_URL="https://rztssbcijmnejdyepdwc.supabase.co",KEY="sb_publishable_jF_bQvLVZtXzHSA7XP7e9A_ShnsLtsY";
+const sb=createClient(SUPABASE_URL,KEY,{auth:{autoRefreshToken:true,persistSession:true,detectSessionInUrl:true}});
 const $=id=>document.getElementById(id);let state=null,session=null,scans=new Map(),plan=[];
 const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const message=(s,error=false)=>{$("msg").textContent=s;$("msg").className=error?"error":""};
-async function api(action,extra={}){const {data:{session:s}}=await sb.auth.getSession();if(!s)throw Error("로그인이 만료됐습니다.");const r=await fetch(URL+"/functions/v1/boxon-api",{method:"POST",headers:{"Content-Type":"application/json","Authorization":"Bearer "+s.access_token,"apikey":KEY},body:JSON.stringify({action,...extra})});const j=await r.json();if(!r.ok)throw Error(j.error||"요청 실패");return j}
+async function api(action,extra={}){const {data:{session:s}}=await sb.auth.getSession();if(!s)throw Error("로그인이 만료됐습니다.");const r=await fetch(SUPABASE_URL+"/functions/v1/boxon-api",{method:"POST",headers:{"Content-Type":"application/json","Authorization":"Bearer "+s.access_token,"apikey":KEY},body:JSON.stringify({action,...extra})});const j=await r.json();if(!r.ok)throw Error(j.error||"요청 실패");return j}
 const run=fn=>async(...args)=>{try{await fn(...args)}catch(e){message(e.message||String(e),true)}};
 const boxes=()=>new Map((state?.boxes||[]).map(x=>[x.id,x]));
 const items=()=>state.stock.filter(x=>x.quantity>0).map(x=>({...x,box:boxes().get(x.box_id)}));
