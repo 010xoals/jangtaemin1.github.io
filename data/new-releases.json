@@ -1,12 +1,26 @@
 {
-  "generated_at": "2026-11-01T09:27:14.285Z",
+  "generated_at": "2026-11-02T09:41:11.223Z",
   "range": {
-    "start": "2026-10-26",
-    "end": "2026-11-01"
+    "start": "2026-10-27",
+    "end": "2026-11-02"
   },
   "source": "MusicBrainz release groups (singles)",
   "country_basis": "MusicBrainz artist country, not guaranteed activity location",
   "items": [
+    {
+      "id": "a0f8dd90-3ec9-4174-8397-d73982290e8c",
+      "title": "Dead To Me",
+      "artist": "SWIM",
+      "release_date": "2026-11-02",
+      "country_code": "OTHER",
+      "country_name": "CA",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/a0f8dd90-3ec9-4174-8397-d73982290e8c",
+      "video_id": "qrC11sepEiU",
+      "video_checked_at": "2026-11-02T09:41:07.410Z",
+      "video_match_method": "automated_title_channel_match",
+      "video_channel": "SWIM"
+    },
     {
       "id": "242759a5-f631-446d-b46c-ab55917d093f",
       "title": "here to die (slowed+distorted)",
@@ -17,7 +31,7 @@
       "source": "MusicBrainz",
       "source_url": "https://musicbrainz.org/release-group/242759a5-f631-446d-b46c-ab55917d093f",
       "video_id": null,
-      "video_checked_at": "2026-11-01T09:27:11.473Z"
+      "video_checked_at": "2026-11-02T09:41:08.488Z"
     },
     {
       "id": "d3b353c2-68b6-4600-b54a-7c0a6ff75b60",
@@ -30,8 +44,31 @@
       "source_url": "https://musicbrainz.org/release-group/d3b353c2-68b6-4600-b54a-7c0a6ff75b60",
       "video_id": "aV8TozvBNNQ",
       "video_checked_at": "2026-11-01T09:27:12.110Z",
-      "video_match_method": "automated_title_channel_match",
-      "video_channel": "Buddy DML - Topic"
+      "video_match_method": "automated_title_channel_match"
+    },
+    {
+      "id": "247cd73e-762b-4526-8662-0f2c59f2ee5e",
+      "title": "IMessages",
+      "artist": "Acidgvrl, Yean Ari Yumiko & Imaé Rotten Yumiko",
+      "release_date": "2026-11-01",
+      "country_code": "JP",
+      "country_name": "JP",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/247cd73e-762b-4526-8662-0f2c59f2ee5e",
+      "video_id": null,
+      "video_checked_at": "2026-11-02T09:41:06.813Z"
+    },
+    {
+      "id": "9bd3a2f8-431e-435e-9601-cb306e77a838",
+      "title": "Two Hymns for the Oak Branch Gourd",
+      "artist": "Thorn Wych",
+      "release_date": "2026-10-31",
+      "country_code": "OTHER",
+      "country_name": "GB",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/9bd3a2f8-431e-435e-9601-cb306e77a838",
+      "video_id": null,
+      "video_checked_at": "2026-11-02T09:41:08.915Z"
     },
     {
       "id": "a36784ed-f1e4-474f-ba2f-72ccb356a8de",
@@ -47,20 +84,6 @@
       "video_match_method": "automated_title_channel_match"
     },
     {
-      "id": "67a573e0-96dc-4f98-9c49-aa22932dfc2e",
-      "title": "Wake The Dead",
-      "artist": "Kev'Laa",
-      "release_date": "2026-10-30",
-      "country_code": "OTHER",
-      "country_name": "GB",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/67a573e0-96dc-4f98-9c49-aa22932dfc2e",
-      "video_id": "v5nO5Py60G4",
-      "video_checked_at": "2026-11-01T09:27:12.482Z",
-      "video_match_method": "automated_title_channel_match",
-      "video_channel": "Kev'Laa - Topic"
-    },
-    {
       "id": "23796b2e-ca8b-41e1-814c-c951aa62f29a",
       "title": "Gonna Be",
       "artist": "DJ Landan Time",
@@ -71,8 +94,7 @@
       "source_url": "https://musicbrainz.org/release-group/23796b2e-ca8b-41e1-814c-c951aa62f29a",
       "video_id": "AIEoBtzNm48",
       "video_checked_at": "2026-11-01T09:27:12.867Z",
-      "video_match_method": "automated_title_channel_match",
-      "video_channel": "DJ Landan Time - Topic"
+      "video_match_method": "automated_title_channel_match"
     },
     {
       "id": "30c685dd-08aa-4451-a5df-92e353d1258c",
@@ -85,8 +107,20 @@
       "source_url": "https://musicbrainz.org/release-group/30c685dd-08aa-4451-a5df-92e353d1258c",
       "video_id": "C9Z1qnogGMQ",
       "video_checked_at": "2026-11-01T09:27:13.220Z",
-      "video_match_method": "automated_title_channel_match",
-      "video_channel": "Kowshik Saha - Topic"
+      "video_match_method": "automated_title_channel_match"
+    },
+    {
+      "id": "c6e5def0-8e29-4313-9879-b79039462c71",
+      "title": "Legacy",
+      "artist": "StrongholdFNAF",
+      "release_date": "2026-10-30",
+      "country_code": "US",
+      "country_name": "US",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/c6e5def0-8e29-4313-9879-b79039462c71",
+      "video_id": "OCWg50ZOB4c",
+      "video_checked_at": "2026-10-31T08:36:27.011Z",
+      "video_match_method": "automated_title_channel_match"
     },
     {
       "id": "cbfef113-e24d-4355-9172-299b5b85f9bb",
@@ -99,6 +133,31 @@
       "source_url": "https://musicbrainz.org/release-group/cbfef113-e24d-4355-9172-299b5b85f9bb",
       "video_id": "2vYP5KY96jI",
       "video_checked_at": "2026-10-30T08:48:32.931Z",
+      "video_match_method": "automated_title_channel_match"
+    },
+    {
+      "id": "5e8f569c-a24b-4235-85ac-bd6ffff7a34d",
+      "title": "Fuck The Consequences",
+      "artist": "Antibody feat. Paresis",
+      "release_date": "2026-10-30",
+      "country_code": "OTHER",
+      "country_name": "DE",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/5e8f569c-a24b-4235-85ac-bd6ffff7a34d",
+      "video_id": null,
+      "video_checked_at": "2026-11-02T09:41:09.465Z"
+    },
+    {
+      "id": "f6a2d34a-1045-481b-b406-7e067166844f",
+      "title": "Halloween Party",
+      "artist": "Roberts Stones",
+      "release_date": "2026-10-30",
+      "country_code": "OTHER",
+      "country_name": "GB",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/f6a2d34a-1045-481b-b406-7e067166844f",
+      "video_id": "zKQg_fXzTv4",
+      "video_checked_at": "2026-10-31T08:36:28.638Z",
       "video_match_method": "automated_title_channel_match"
     },
     {
@@ -128,32 +187,6 @@
       "video_match_method": "automated_title_channel_match"
     },
     {
-      "id": "f6a2d34a-1045-481b-b406-7e067166844f",
-      "title": "Halloween Party",
-      "artist": "Roberts Stones",
-      "release_date": "2026-10-30",
-      "country_code": "OTHER",
-      "country_name": "GB",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/f6a2d34a-1045-481b-b406-7e067166844f",
-      "video_id": "zKQg_fXzTv4",
-      "video_checked_at": "2026-10-31T08:36:28.638Z",
-      "video_match_method": "automated_title_channel_match"
-    },
-    {
-      "id": "c6e5def0-8e29-4313-9879-b79039462c71",
-      "title": "Legacy",
-      "artist": "StrongholdFNAF",
-      "release_date": "2026-10-30",
-      "country_code": "US",
-      "country_name": "US",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/c6e5def0-8e29-4313-9879-b79039462c71",
-      "video_id": "OCWg50ZOB4c",
-      "video_checked_at": "2026-10-31T08:36:27.011Z",
-      "video_match_method": "automated_title_channel_match"
-    },
-    {
       "id": "537ce5e6-b894-44fd-922d-fd955f5121a9",
       "title": "Waste of Time",
       "artist": "Narcotic Hearts",
@@ -167,41 +200,40 @@
       "video_match_method": "automated_title_channel_match"
     },
     {
-      "id": "9027a280-58ac-49f6-bd4c-606620c3e4a3",
-      "title": "Freddy's A Nightmare",
-      "artist": "Kev'Laa",
+      "id": "a12922fb-0836-490e-b6fe-0c53afd67f95",
+      "title": "GHOSTBUSTERS (RETRO VISION by Soul Machine)",
+      "artist": "Soul Machine",
       "release_date": "2026-10-30",
       "country_code": "OTHER",
-      "country_name": "GB",
+      "country_name": "FR",
       "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/9027a280-58ac-49f6-bd4c-606620c3e4a3",
-      "video_id": "0Qfe4Iv8BQc",
-      "video_checked_at": "2026-10-30T08:48:31.805Z",
-      "video_match_method": "automated_title_channel_match"
-    },
-    {
-      "id": "5e8f569c-a24b-4235-85ac-bd6ffff7a34d",
-      "title": "Fuck The Consequences",
-      "artist": "Antibody feat. Paresis",
-      "release_date": "2026-10-30",
-      "country_code": "OTHER",
-      "country_name": "DE",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/5e8f569c-a24b-4235-85ac-bd6ffff7a34d",
+      "source_url": "https://musicbrainz.org/release-group/a12922fb-0836-490e-b6fe-0c53afd67f95",
       "video_id": null,
-      "video_checked_at": "2026-11-01T09:27:13.438Z"
+      "video_checked_at": "2026-11-02T09:41:09.724Z"
     },
     {
-      "id": "fd712b1f-5b94-4cab-8be6-4e42b77c7ab0",
-      "title": "This Ya Home",
-      "artist": "Acidgvrl",
+      "id": "237ef590-68aa-400e-9b2e-a78245fe947a",
+      "title": "Good Gurl",
+      "artist": "PROTEK",
       "release_date": "2026-10-29",
-      "country_code": "JP",
-      "country_name": "JP",
+      "country_code": "OTHER",
+      "country_name": "CA",
       "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/fd712b1f-5b94-4cab-8be6-4e42b77c7ab0",
-      "video_id": "efEIC0U-Lh8",
-      "video_checked_at": "2026-10-31T08:36:26.726Z",
+      "source_url": "https://musicbrainz.org/release-group/237ef590-68aa-400e-9b2e-a78245fe947a",
+      "video_id": null,
+      "video_checked_at": "2026-11-02T09:41:09.985Z"
+    },
+    {
+      "id": "1434edba-d94b-464e-9876-2cc0aaf64923",
+      "title": "The Burial",
+      "artist": "Freeze the Fall",
+      "release_date": "2026-10-28",
+      "country_code": "OTHER",
+      "country_name": "CA",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/1434edba-d94b-464e-9876-2cc0aaf64923",
+      "video_id": "0l3mxKv0lR8",
+      "video_checked_at": "2026-10-31T08:36:30.636Z",
       "video_match_method": "automated_title_channel_match"
     },
     {
@@ -218,56 +250,30 @@
       "video_match_method": "automated_title_channel_match"
     },
     {
-      "id": "1434edba-d94b-464e-9876-2cc0aaf64923",
-      "title": "The Burial",
-      "artist": "Freeze the Fall",
-      "release_date": "2026-10-28",
-      "country_code": "OTHER",
-      "country_name": "CA",
+      "id": "91f9b17b-6cab-4638-906f-8d15bc5d3847",
+      "title": "INSIDE HEWY'S THOUGHTS",
+      "artist": "Hewy Micheaux",
+      "release_date": "2026-10-27",
+      "country_code": "US",
+      "country_name": "US",
       "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/1434edba-d94b-464e-9876-2cc0aaf64923",
-      "video_id": "0l3mxKv0lR8",
-      "video_checked_at": "2026-10-31T08:36:30.636Z",
-      "video_match_method": "automated_title_channel_match"
-    },
-    {
-      "id": "f802dd1e-ca3c-4285-ac27-d70c83240009",
-      "title": "僕の手は君だけのもの",
-      "artist": "ザ・ダービーズ",
-      "release_date": "2026-10-28",
-      "country_code": "JP",
-      "country_name": "JP",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/f802dd1e-ca3c-4285-ac27-d70c83240009",
+      "source_url": "https://musicbrainz.org/release-group/91f9b17b-6cab-4638-906f-8d15bc5d3847",
       "video_id": null,
-      "video_checked_at": "2026-11-01T09:27:10.912Z"
+      "video_checked_at": "2026-11-02T09:41:07.015Z"
     },
     {
-      "id": "5c92ce65-9e34-4df5-a718-51fc17f57fcb",
-      "title": "Nouvelle Vague",
-      "artist": "進藤あまね",
-      "release_date": "2026-10-28",
-      "country_code": "JP",
-      "country_name": "JP",
+      "id": "3c17f6dc-dddf-421d-962d-ca054b87bd5f",
+      "title": "Rynksire",
+      "artist": "Piercz",
+      "release_date": "2026-10-27",
+      "country_code": "OTHER",
+      "country_name": "VN",
       "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/5c92ce65-9e34-4df5-a718-51fc17f57fcb",
-      "video_id": "aSC3O0Rcf1Y",
-      "video_checked_at": "2026-10-31T08:36:31.750Z",
-      "video_match_method": "automated_title_channel_match"
-    },
-    {
-      "id": "295fd3ce-2247-4e58-8703-0cc178e548a5",
-      "title": "SPIN",
-      "artist": "BAND‐MAID",
-      "release_date": "2026-10-28",
-      "country_code": "JP",
-      "country_name": "JP",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/295fd3ce-2247-4e58-8703-0cc178e548a5",
-      "video_id": "Z7I13kDOoQk",
-      "video_checked_at": "2026-11-01T09:27:11.789Z",
+      "source_url": "https://musicbrainz.org/release-group/3c17f6dc-dddf-421d-962d-ca054b87bd5f",
+      "video_id": "3rfQClog9gQ",
+      "video_checked_at": "2026-11-02T09:41:10.265Z",
       "video_match_method": "automated_title_channel_match",
-      "video_channel": "BAND-MAID"
+      "video_channel": "Piercz - Topic"
     },
     {
       "id": "45345356-21d1-472f-8933-c7087f3fef5a",
@@ -283,123 +289,114 @@
       "video_match_method": "automated_title_channel_match"
     },
     {
-      "id": "0803608e-47e9-45c6-aadf-670ef01680de",
-      "title": "Cannula",
-      "artist": "Crowquill",
+      "id": "af187c28-b823-48d6-ad29-917b56a2be0d",
+      "title": "Luis Shared A Picture",
+      "artist": "Graham Kartna",
+      "release_date": "2026-10-27",
+      "country_code": "OTHER",
+      "country_name": "CA",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/af187c28-b823-48d6-ad29-917b56a2be0d",
+      "video_id": "893Z40JBdzE",
+      "video_checked_at": "2026-11-02T09:41:10.585Z",
+      "video_match_method": "automated_title_channel_match",
+      "video_channel": "Graham Kartna - Topic"
+    },
+    {
+      "id": "8179ca1b-4b4c-4a47-a39b-d9a90b12a40c",
+      "title": "Medusa",
+      "artist": "Saxon",
       "release_date": "2026-10-27",
       "country_code": "OTHER",
       "country_name": "GB",
       "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/0803608e-47e9-45c6-aadf-670ef01680de",
-      "video_id": "8g4JhNsNo80",
-      "video_checked_at": "2026-11-01T09:27:13.678Z",
+      "source_url": "https://musicbrainz.org/release-group/8179ca1b-4b4c-4a47-a39b-d9a90b12a40c",
+      "video_id": "alyzaHBHdpU",
+      "video_checked_at": "2026-11-02T09:41:10.914Z",
       "video_match_method": "automated_title_channel_match",
-      "video_channel": "Crowquill - Topic"
+      "video_channel": "PlanetSaxon"
     },
     {
-      "id": "fa63992e-6f90-4c02-8919-b70735fc6739",
-      "title": "2026 PROMO",
-      "artist": "Agonize",
+      "id": "78081857-4688-4b34-9215-8e229601b20d",
+      "title": "Chptr. 1",
+      "artist": "JAY B",
+      "release_date": "2026-10-27",
+      "country_code": "KR",
+      "country_name": "KR",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/78081857-4688-4b34-9215-8e229601b20d",
+      "video_id": "jmi0FN4aLLs",
+      "video_checked_at": "2026-11-02T09:41:06.597Z",
+      "video_match_method": "automated_title_channel_match",
+      "video_channel": "JAY B"
+    },
+    {
+      "id": "d88cd95e-1e6a-4643-8787-bd6b377a9622",
+      "title": "Them Bones",
+      "artist": "Brass Against",
       "release_date": "2026-10-27",
       "country_code": "US",
       "country_name": "US",
       "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/fa63992e-6f90-4c02-8919-b70735fc6739",
+      "source_url": "https://musicbrainz.org/release-group/d88cd95e-1e6a-4643-8787-bd6b377a9622",
+      "video_id": "6DAZRfEPzJU",
+      "video_checked_at": "2026-11-02T09:41:08.230Z",
+      "video_match_method": "automated_title_channel_match",
+      "video_channel": "Brass Against"
+    },
+    {
+      "id": "c9c3bf86-1341-4444-bcb8-aae71b5e54d3",
+      "title": "Leeches (demo)",
+      "artist": "Gallows",
+      "release_date": "2026-10-27",
+      "country_code": "OTHER",
+      "country_name": "GB",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/c9c3bf86-1341-4444-bcb8-aae71b5e54d3",
+      "video_id": "-JtxDEfP5tw",
+      "video_checked_at": "2026-11-02T09:41:11.223Z",
+      "video_match_method": "automated_title_channel_match",
+      "video_channel": "Gallows - Topic"
+    },
+    {
+      "id": "77ed2a32-49a6-4aef-b3d8-f0b0daa907d0",
+      "title": "Tioga Road",
+      "artist": "Duce × Etza × JEANS",
+      "release_date": "2026-10-27",
+      "country_code": "US",
+      "country_name": "US",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/77ed2a32-49a6-4aef-b3d8-f0b0daa907d0",
       "video_id": null,
-      "video_checked_at": "2026-11-01T09:27:11.214Z"
+      "video_checked_at": "2026-11-02T09:41:08.716Z"
     },
     {
-      "id": "b66f8bbe-497c-4d23-9159-801792870111",
-      "title": "Hayloft",
-      "artist": "thquib",
-      "release_date": "2026-10-26",
+      "id": "772743c6-531f-4510-b646-8b58d29caa55",
+      "title": "Lost In The Night",
+      "artist": "Dead Man's Bones",
+      "release_date": "2026-10-27",
       "country_code": "US",
       "country_name": "US",
       "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/b66f8bbe-497c-4d23-9159-801792870111",
-      "video_id": "MOgaG5r6WvU",
-      "video_checked_at": "2026-10-26T08:01:50.445Z",
-      "video_match_method": "automated_title_channel_match"
-    },
-    {
-      "id": "d1a8d008-b49f-4a49-b5fc-a70c922988f7",
-      "title": "Як тихо!",
-      "artist": "Голос спадщини",
-      "release_date": "2026-10-26",
-      "country_code": "OTHER",
-      "country_name": "UA",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/d1a8d008-b49f-4a49-b5fc-a70c922988f7",
-      "video_id": "O8OIvYieZUc",
-      "video_checked_at": "2026-10-26T08:01:50.809Z",
-      "video_match_method": "automated_title_channel_match"
-    },
-    {
-      "id": "48f7f73c-94fa-4dac-ad0b-3dd908e1343b",
-      "title": "Gulosa Remix",
-      "artist": "Lu! Borgges Beats",
-      "release_date": "2026-10-26",
-      "country_code": "OTHER",
-      "country_name": "BR",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/48f7f73c-94fa-4dac-ad0b-3dd908e1343b",
-      "video_id": "Hm9zeCP119E",
-      "video_checked_at": "2026-10-26T08:01:52.072Z",
-      "video_match_method": "automated_title_channel_match"
-    },
-    {
-      "id": "0d259632-44fc-41a0-a2f4-c868157025d9",
-      "title": "Haunted",
-      "artist": "Bear the Astronot",
-      "release_date": "2026-10-26",
-      "country_code": "US",
-      "country_name": "US",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/0d259632-44fc-41a0-a2f4-c868157025d9",
-      "video_id": "G1cywOVhOac",
-      "video_checked_at": "2026-10-29T08:43:39.542Z",
-      "video_match_method": "automated_title_channel_match"
-    },
-    {
-      "id": "864b4bba-0d16-4275-9344-e8b2aee730f2",
-      "title": "My Darling",
-      "artist": "Brhn Nysa",
-      "release_date": "2026-10-26",
-      "country_code": "OTHER",
-      "country_name": "NG",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/864b4bba-0d16-4275-9344-e8b2aee730f2",
-      "video_id": "a8BxcF1fSis",
-      "video_checked_at": "2026-10-29T08:43:41.014Z",
-      "video_match_method": "automated_title_channel_match"
-    },
-    {
-      "id": "c97240e5-13fd-49a9-9321-c3ee5e1db61b",
-      "title": "殺人事件",
-      "artist": "fuvva",
-      "release_date": "2026-10-26",
-      "country_code": "OTHER",
-      "country_name": "TW",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/c97240e5-13fd-49a9-9321-c3ee5e1db61b",
-      "video_id": "mZG3xIgEeNw",
-      "video_checked_at": "2026-11-01T09:27:13.931Z",
+      "source_url": "https://musicbrainz.org/release-group/772743c6-531f-4510-b646-8b58d29caa55",
+      "video_id": "j7K6FC_psGc",
+      "video_checked_at": "2026-11-02T09:41:09.235Z",
       "video_match_method": "automated_title_channel_match",
-      "video_channel": "fuvva - Topic"
+      "video_channel": "Dead Man's Bones"
     },
     {
-      "id": "261389da-ff42-4262-9c75-5ca923948417",
-      "title": "Back Home",
-      "artist": "LVDS",
-      "release_date": "2026-10-26",
-      "country_code": "OTHER",
-      "country_name": "NL",
+      "id": "171b4e37-4ccb-43c8-ba0e-069ac97efb9a",
+      "title": "Ego I Am",
+      "artist": "Turn For Our",
+      "release_date": "2026-10-27",
+      "country_code": "KR",
+      "country_name": "KR",
       "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/261389da-ff42-4262-9c75-5ca923948417",
-      "video_id": "p8-I5JnYZ88",
-      "video_checked_at": "2026-11-01T09:27:14.285Z",
+      "source_url": "https://musicbrainz.org/release-group/171b4e37-4ccb-43c8-ba0e-069ac97efb9a",
+      "video_id": "1ZHCGXrUrEI",
+      "video_checked_at": "2026-11-02T09:41:07.880Z",
       "video_match_method": "automated_title_channel_match",
-      "video_channel": "LVDS - Topic"
+      "video_channel": "Turn For Our - Topic"
     }
   ]
 }
