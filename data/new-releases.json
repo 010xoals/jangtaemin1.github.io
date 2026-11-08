@@ -1,49 +1,24 @@
 {
-  "generated_at": "2026-11-07T08:58:07.016Z",
+  "generated_at": "2026-11-08T09:13:50.316Z",
   "range": {
-    "start": "2026-11-01",
-    "end": "2026-11-07"
+    "start": "2026-11-02",
+    "end": "2026-11-08"
   },
   "source": "MusicBrainz release groups (singles)",
   "country_basis": "MusicBrainz artist country, not guaranteed activity location",
   "items": [
     {
-      "id": "e5539feb-602c-4948-9276-224508e71c46",
-      "title": "Disstrackted",
-      "artist": "AMU Henry Smalls",
-      "release_date": "2026-11-07",
-      "country_code": "US",
-      "country_name": "US",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/e5539feb-602c-4948-9276-224508e71c46",
-      "video_id": null,
-      "video_checked_at": "2026-11-07T08:58:02.237Z"
-    },
-    {
-      "id": "2651eb7f-47ad-4b07-ba34-0d5da4975f5f",
-      "title": "Remedy",
-      "artist": "The Frst ft. Major Moment",
-      "release_date": "2026-11-06",
-      "country_code": "US",
-      "country_name": "US",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/2651eb7f-47ad-4b07-ba34-0d5da4975f5f",
-      "video_id": null,
-      "video_checked_at": "2026-11-07T08:58:03.283Z"
-    },
-    {
-      "id": "35484cd0-a68b-47a0-9c1f-061ae9df7801",
-      "title": "Zanzibar",
-      "artist": "Sessa",
+      "id": "5b7c3708-ad84-4e40-ae3a-2d7632f232dc",
+      "title": "White Boy Blues",
+      "artist": "Memz",
       "release_date": "2026-11-06",
       "country_code": "OTHER",
-      "country_name": "BR",
+      "country_name": "GB",
       "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/35484cd0-a68b-47a0-9c1f-061ae9df7801",
-      "video_id": "sC34lu7MQ5E",
-      "video_checked_at": "2026-11-07T08:58:02.540Z",
-      "video_match_method": "automated_title_channel_match",
-      "video_channel": "Sessa Ayla"
+      "source_url": "https://musicbrainz.org/release-group/5b7c3708-ad84-4e40-ae3a-2d7632f232dc",
+      "video_id": "5CoqDpUUFB8",
+      "video_checked_at": "2026-11-07T08:58:03.661Z",
+      "video_match_method": "automated_title_channel_match"
     },
     {
       "id": "039a1f29-5fd5-40d1-af7e-1eb77b9fcf97",
@@ -56,50 +31,34 @@
       "source_url": "https://musicbrainz.org/release-group/039a1f29-5fd5-40d1-af7e-1eb77b9fcf97",
       "video_id": "k4qv47ADPPw",
       "video_checked_at": "2026-11-07T08:58:03.935Z",
-      "video_match_method": "automated_title_channel_match",
-      "video_channel": "Curtis Macdonald - Topic"
+      "video_match_method": "automated_title_channel_match"
     },
     {
-      "id": "5b7c3708-ad84-4e40-ae3a-2d7632f232dc",
-      "title": "White Boy Blues",
-      "artist": "Memz",
+      "id": "35484cd0-a68b-47a0-9c1f-061ae9df7801",
+      "title": "Zanzibar",
+      "artist": "Sessa",
       "release_date": "2026-11-06",
       "country_code": "OTHER",
-      "country_name": "GB",
+      "country_name": "BR",
       "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/5b7c3708-ad84-4e40-ae3a-2d7632f232dc",
-      "video_id": "5CoqDpUUFB8",
-      "video_checked_at": "2026-11-07T08:58:03.661Z",
-      "video_match_method": "automated_title_channel_match",
-      "video_channel": "Memz - Topic"
+      "source_url": "https://musicbrainz.org/release-group/35484cd0-a68b-47a0-9c1f-061ae9df7801",
+      "video_id": "sC34lu7MQ5E",
+      "video_checked_at": "2026-11-07T08:58:02.540Z",
+      "video_match_method": "automated_title_channel_match"
     },
     {
-      "id": "d7f6149a-db18-4d05-8884-ef294a8dcb27",
-      "title": "Airforce One",
-      "artist": "Baba Jay",
+      "id": "74a4e430-cc6e-4687-ae34-5708eeae6eda",
+      "title": "Invisible",
+      "artist": "Before We Fade",
       "release_date": "2026-11-06",
       "country_code": "OTHER",
-      "country_name": "AT",
+      "country_name": "NL",
       "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/d7f6149a-db18-4d05-8884-ef294a8dcb27",
-      "video_id": "5e-YfwOFP8Y",
-      "video_checked_at": "2026-11-07T08:58:04.328Z",
+      "source_url": "https://musicbrainz.org/release-group/74a4e430-cc6e-4687-ae34-5708eeae6eda",
+      "video_id": "PVE2nB6U8Fg",
+      "video_checked_at": "2026-11-08T09:13:48.360Z",
       "video_match_method": "automated_title_channel_match",
-      "video_channel": "Baba Jay - Topic"
-    },
-    {
-      "id": "0297351e-0cd0-43c5-8dfa-28335f59fcde",
-      "title": "Shards",
-      "artist": "Noumenia",
-      "release_date": "2026-11-06",
-      "country_code": "OTHER",
-      "country_name": "IT",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/0297351e-0cd0-43c5-8dfa-28335f59fcde",
-      "video_id": "_Zv641Sh3io",
-      "video_checked_at": "2026-11-07T08:58:04.988Z",
-      "video_match_method": "automated_title_channel_match",
-      "video_channel": "Noumenia - Topic"
+      "video_channel": "Before We Fade - Topic"
     },
     {
       "id": "132d84d5-d1c8-4d4a-bec4-f0b82fb08ffe",
@@ -111,7 +70,7 @@
       "source": "MusicBrainz",
       "source_url": "https://musicbrainz.org/release-group/132d84d5-d1c8-4d4a-bec4-f0b82fb08ffe",
       "video_id": null,
-      "video_checked_at": "2026-11-07T08:58:05.206Z"
+      "video_checked_at": "2026-11-08T09:13:49.173Z"
     },
     {
       "id": "8d4e9304-c8a9-4b5a-97da-c7a29e61d189",
@@ -124,8 +83,33 @@
       "source_url": "https://musicbrainz.org/release-group/8d4e9304-c8a9-4b5a-97da-c7a29e61d189",
       "video_id": "CS09wFwHFO0",
       "video_checked_at": "2026-11-07T08:58:05.503Z",
+      "video_match_method": "automated_title_channel_match"
+    },
+    {
+      "id": "406518f6-342d-4ffb-89ee-46a18a4f00f3",
+      "title": "All Solids Melt Into Aether",
+      "artist": "Maria W Horn",
+      "release_date": "2026-11-06",
+      "country_code": "OTHER",
+      "country_name": "SE",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/406518f6-342d-4ffb-89ee-46a18a4f00f3",
+      "video_id": "Q1yLEwvoYSA",
+      "video_checked_at": "2026-11-08T09:13:49.494Z",
       "video_match_method": "automated_title_channel_match",
-      "video_channel": "Marina Domínguez - Topic"
+      "video_channel": "Maria W Horn - Topic"
+    },
+    {
+      "id": "2651eb7f-47ad-4b07-ba34-0d5da4975f5f",
+      "title": "Remedy",
+      "artist": "The Frst ft. Major Moment",
+      "release_date": "2026-11-06",
+      "country_code": "US",
+      "country_name": "US",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/2651eb7f-47ad-4b07-ba34-0d5da4975f5f",
+      "video_id": null,
+      "video_checked_at": "2026-11-08T09:13:47.968Z"
     },
     {
       "id": "314f34c0-b837-4dae-98cf-b13f08846985",
@@ -138,8 +122,76 @@
       "source_url": "https://musicbrainz.org/release-group/314f34c0-b837-4dae-98cf-b13f08846985",
       "video_id": "0cas4mBK_cs",
       "video_checked_at": "2026-11-07T08:58:04.723Z",
+      "video_match_method": "automated_title_channel_match"
+    },
+    {
+      "id": "77708996-e7d1-4eea-a397-0c3c681c13de",
+      "title": "When Winter Comes",
+      "artist": "CrusaderBeach",
+      "release_date": "2026-11-06",
+      "country_code": "OTHER",
+      "country_name": "GB",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/77708996-e7d1-4eea-a397-0c3c681c13de",
+      "video_id": "4YjA0vt2ihY",
+      "video_checked_at": "2026-11-08T09:13:49.787Z",
       "video_match_method": "automated_title_channel_match",
-      "video_channel": "David R Maneiro - Topic"
+      "video_channel": "CrusaderBeach Solo Piano"
+    },
+    {
+      "id": "0297351e-0cd0-43c5-8dfa-28335f59fcde",
+      "title": "Shards",
+      "artist": "Noumenia",
+      "release_date": "2026-11-06",
+      "country_code": "OTHER",
+      "country_name": "IT",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/0297351e-0cd0-43c5-8dfa-28335f59fcde",
+      "video_id": "_Zv641Sh3io",
+      "video_checked_at": "2026-11-07T08:58:04.988Z",
+      "video_match_method": "automated_title_channel_match"
+    },
+    {
+      "id": "6f04ab2c-9cb0-419b-a85d-e1dbdd231fb5",
+      "title": "AstralDream (Radio Edit)",
+      "artist": "Deejay Juan Cast",
+      "release_date": "2026-11-05",
+      "country_code": "OTHER",
+      "country_name": "IT",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/6f04ab2c-9cb0-419b-a85d-e1dbdd231fb5",
+      "video_id": "C5Tq3PRXLEQ",
+      "video_checked_at": "2026-11-08T09:13:50.073Z",
+      "video_match_method": "automated_title_channel_match",
+      "video_channel": "Deejay Juan Cast - Topic"
+    },
+    {
+      "id": "006880a5-15d0-435c-a154-e4fdd8d6ad4c",
+      "title": "Open Blue Ocean",
+      "artist": "David Weeks",
+      "release_date": "2026-11-05",
+      "country_code": "US",
+      "country_name": "US",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/006880a5-15d0-435c-a154-e4fdd8d6ad4c",
+      "video_id": "XSYw0_abnbM",
+      "video_checked_at": "2026-11-08T09:13:48.965Z",
+      "video_match_method": "automated_title_channel_match",
+      "video_channel": "David Weeks - Topic"
+    },
+    {
+      "id": "adc393b9-265d-4f2e-8187-dc0ab76fe68d",
+      "title": "Yâr Senin Derdini Çekmeyen Gönül",
+      "artist": "Kaan Kansu Toprak",
+      "release_date": "2026-11-05",
+      "country_code": "OTHER",
+      "country_name": "TR",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/adc393b9-265d-4f2e-8187-dc0ab76fe68d",
+      "video_id": "FnoMS4yXlrg",
+      "video_checked_at": "2026-11-08T09:13:50.316Z",
+      "video_match_method": "automated_title_channel_match",
+      "video_channel": "Kaan Kansu Toprak"
     },
     {
       "id": "bbb85a90-64a6-4a36-a2f0-1a0d3357167d",
@@ -178,8 +230,7 @@
       "source_url": "https://musicbrainz.org/release-group/d6a5c174-2aa4-4ff9-b98e-acd8edc22583",
       "video_id": "0QXtMa7P1Vc",
       "video_checked_at": "2026-11-07T08:58:05.993Z",
-      "video_match_method": "automated_title_channel_match",
-      "video_channel": "Alex Type"
+      "video_match_method": "automated_title_channel_match"
     },
     {
       "id": "3e735b4a-c8a7-4e9d-9aa2-b29b230ad465",
@@ -192,8 +243,7 @@
       "source_url": "https://musicbrainz.org/release-group/3e735b4a-c8a7-4e9d-9aa2-b29b230ad465",
       "video_id": "f4QY0A8bgNo",
       "video_checked_at": "2026-11-07T08:58:06.354Z",
-      "video_match_method": "automated_title_channel_match",
-      "video_channel": "Jisaiah Rhodes"
+      "video_match_method": "automated_title_channel_match"
     },
     {
       "id": "a0f8dd90-3ec9-4174-8397-d73982290e8c",
@@ -206,60 +256,6 @@
       "source_url": "https://musicbrainz.org/release-group/a0f8dd90-3ec9-4174-8397-d73982290e8c",
       "video_id": "qrC11sepEiU",
       "video_checked_at": "2026-11-07T08:58:06.759Z",
-      "video_match_method": "automated_title_channel_match",
-      "video_channel": "SWIM"
-    },
-    {
-      "id": "242759a5-f631-446d-b46c-ab55917d093f",
-      "title": "here to die (slowed+distorted)",
-      "artist": "lefty",
-      "release_date": "2026-11-01",
-      "country_code": "OTHER",
-      "country_name": "GB",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/242759a5-f631-446d-b46c-ab55917d093f",
-      "video_id": null,
-      "video_checked_at": "2026-11-07T08:58:07.016Z"
-    },
-    {
-      "id": "22f4d4a0-4065-47e7-abee-e400cc343443",
-      "title": "推したら引けない恋でした",
-      "artist": "博衣こより",
-      "release_date": "2026-11-01",
-      "country_code": "JP",
-      "country_name": "JP",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/22f4d4a0-4065-47e7-abee-e400cc343443",
-      "video_id": "Cl3LkvJkQzQ",
-      "video_checked_at": "2026-11-07T08:58:02.044Z",
-      "video_match_method": "automated_title_channel_match",
-      "video_channel": "Koyori ch. 博衣こより - holoX -"
-    },
-    {
-      "id": "7c5857a1-4063-422e-a6f0-82d7d029f639",
-      "title": "推したら引けない恋でした",
-      "artist": "KoZMy",
-      "release_date": "2026-11-01",
-      "country_code": "JP",
-      "country_name": "JP",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/7c5857a1-4063-422e-a6f0-82d7d029f639",
-      "video_id": "Cl3LkvJkQzQ",
-      "video_checked_at": "2026-11-07T08:58:02.859Z",
-      "video_match_method": "automated_title_channel_match",
-      "video_channel": "Koyori ch. 博衣こより - holoX -"
-    },
-    {
-      "id": "d3b353c2-68b6-4600-b54a-7c0a6ff75b60",
-      "title": "Me Again",
-      "artist": "Buddy DML",
-      "release_date": "2026-11-01",
-      "country_code": "OTHER",
-      "country_name": "GH",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/d3b353c2-68b6-4600-b54a-7c0a6ff75b60",
-      "video_id": "aV8TozvBNNQ",
-      "video_checked_at": "2026-11-01T09:27:12.110Z",
       "video_match_method": "automated_title_channel_match"
     }
   ]
