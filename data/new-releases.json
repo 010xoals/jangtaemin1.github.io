@@ -1,12 +1,24 @@
 {
-  "generated_at": "2026-11-10T10:06:12.433Z",
+  "generated_at": "2026-11-11T09:38:47.700Z",
   "range": {
-    "start": "2026-11-04",
-    "end": "2026-11-10"
+    "start": "2026-11-05",
+    "end": "2026-11-11"
   },
   "source": "MusicBrainz release groups (singles)",
   "country_basis": "MusicBrainz artist country, not guaranteed activity location",
   "items": [
+    {
+      "id": "96256eca-507b-417f-b777-e198f4b88a76",
+      "title": "original releases",
+      "artist": "joney",
+      "release_date": "2026-11-11",
+      "country_code": "JP",
+      "country_name": "JP",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/96256eca-507b-417f-b777-e198f4b88a76",
+      "video_id": null,
+      "video_checked_at": "2026-11-11T09:38:46.676Z"
+    },
     {
       "id": "661c3b0b-7b5a-4b2d-b6e1-0232cc185fd4",
       "title": "Bird Laugh / Fluorescence",
@@ -32,47 +44,6 @@
       "video_checked_at": "2026-11-10T10:06:03.985Z"
     },
     {
-      "id": "f65a39a1-a028-43a5-b087-f1e38b27a8ae",
-      "title": "Bester Freund",
-      "artist": "Mehnersmoos",
-      "release_date": "2026-11-09",
-      "country_code": "OTHER",
-      "country_name": "DE",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/f65a39a1-a028-43a5-b087-f1e38b27a8ae",
-      "video_id": "j0a_iLz1s0U",
-      "video_checked_at": "2026-11-09T09:58:20.136Z",
-      "video_match_method": "automated_title_channel_match"
-    },
-    {
-      "id": "a50f2fc1-3b2c-4170-be09-7ee82a88c595",
-      "title": "Diamond Eyes (Sol Invicto remix)",
-      "artist": "Sol Invicto",
-      "release_date": "2026-11-07",
-      "country_code": "US",
-      "country_name": "US",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/a50f2fc1-3b2c-4170-be09-7ee82a88c595",
-      "video_id": "Vx23wyyLNcw",
-      "video_checked_at": "2026-11-10T10:06:04.308Z",
-      "video_match_method": "automated_title_channel_match",
-      "video_channel": "IlonkaMVTV!"
-    },
-    {
-      "id": "406518f6-342d-4ffb-89ee-46a18a4f00f3",
-      "title": "All Solids Melt Into Aether",
-      "artist": "Maria W Horn",
-      "release_date": "2026-11-06",
-      "country_code": "OTHER",
-      "country_name": "SE",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/406518f6-342d-4ffb-89ee-46a18a4f00f3",
-      "video_id": "Q1yLEwvoYSA",
-      "video_checked_at": "2026-11-10T10:06:04.693Z",
-      "video_match_method": "automated_title_channel_match",
-      "video_channel": "Maria W Horn - Topic"
-    },
-    {
       "id": "5b7c3708-ad84-4e40-ae3a-2d7632f232dc",
       "title": "White Boy Blues",
       "artist": "Memz",
@@ -83,8 +54,7 @@
       "source_url": "https://musicbrainz.org/release-group/5b7c3708-ad84-4e40-ae3a-2d7632f232dc",
       "video_id": "5CoqDpUUFB8",
       "video_checked_at": "2026-11-10T10:06:05.393Z",
-      "video_match_method": "automated_title_channel_match",
-      "video_channel": "Memz - Topic"
+      "video_match_method": "automated_title_channel_match"
     },
     {
       "id": "35484cd0-a68b-47a0-9c1f-061ae9df7801",
@@ -97,8 +67,7 @@
       "source_url": "https://musicbrainz.org/release-group/35484cd0-a68b-47a0-9c1f-061ae9df7801",
       "video_id": "sC34lu7MQ5E",
       "video_checked_at": "2026-11-10T10:06:05.945Z",
-      "video_match_method": "automated_title_channel_match",
-      "video_channel": "Sessa Ayla"
+      "video_match_method": "automated_title_channel_match"
     },
     {
       "id": "2651eb7f-47ad-4b07-ba34-0d5da4975f5f",
@@ -123,8 +92,7 @@
       "source_url": "https://musicbrainz.org/release-group/039a1f29-5fd5-40d1-af7e-1eb77b9fcf97",
       "video_id": "k4qv47ADPPw",
       "video_checked_at": "2026-11-10T10:06:05.669Z",
-      "video_match_method": "automated_title_channel_match",
-      "video_channel": "Curtis Macdonald - Topic"
+      "video_match_method": "automated_title_channel_match"
     },
     {
       "id": "74a4e430-cc6e-4687-ae34-5708eeae6eda",
@@ -162,8 +130,7 @@
       "source_url": "https://musicbrainz.org/release-group/d7f6149a-db18-4d05-8884-ef294a8dcb27",
       "video_id": "5e-YfwOFP8Y",
       "video_checked_at": "2026-11-10T10:06:07.384Z",
-      "video_match_method": "automated_title_channel_match",
-      "video_channel": "Baba Jay - Topic"
+      "video_match_method": "automated_title_channel_match"
     },
     {
       "id": "132d84d5-d1c8-4d4a-bec4-f0b82fb08ffe",
@@ -201,8 +168,7 @@
       "source_url": "https://musicbrainz.org/release-group/0cb2fb1b-dec9-41db-8bab-5612e4b1decc",
       "video_id": "5xj1rhQL-xI",
       "video_checked_at": "2026-11-10T10:06:08.650Z",
-      "video_match_method": "automated_title_channel_match",
-      "video_channel": "Christopher Lennertz - Topic"
+      "video_match_method": "automated_title_channel_match"
     },
     {
       "id": "50561b5c-52a2-482f-8103-15171174edc5",
@@ -215,8 +181,35 @@
       "source_url": "https://musicbrainz.org/release-group/50561b5c-52a2-482f-8103-15171174edc5",
       "video_id": "7HK392nTTdQ",
       "video_checked_at": "2026-11-10T10:06:06.359Z",
+      "video_match_method": "automated_title_channel_match"
+    },
+    {
+      "id": "2fd84b13-1f77-40c8-8326-45500eea2e79",
+      "title": "Infinite Rooftop",
+      "artist": "Arkael Nûn",
+      "release_date": "2026-11-06",
+      "country_code": "OTHER",
+      "country_name": "FR",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/2fd84b13-1f77-40c8-8326-45500eea2e79",
+      "video_id": "lq7sGlF0jh0",
+      "video_checked_at": "2026-11-11T09:38:46.983Z",
       "video_match_method": "automated_title_channel_match",
-      "video_channel": "Derign - Topic"
+      "video_channel": "Arkael Nûn - Topic"
+    },
+    {
+      "id": "6f04ab2c-9cb0-419b-a85d-e1dbdd231fb5",
+      "title": "AstralDream (Radio Edit)",
+      "artist": "Deejay Juan Cast",
+      "release_date": "2026-11-05",
+      "country_code": "OTHER",
+      "country_name": "IT",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/6f04ab2c-9cb0-419b-a85d-e1dbdd231fb5",
+      "video_id": "C5Tq3PRXLEQ",
+      "video_checked_at": "2026-11-11T09:38:47.295Z",
+      "video_match_method": "automated_title_channel_match",
+      "video_channel": "Deejay Juan Cast - Topic"
     },
     {
       "id": "ce22302f-98f4-4f17-8f3d-03f7e756ab03",
@@ -229,8 +222,7 @@
       "source_url": "https://musicbrainz.org/release-group/ce22302f-98f4-4f17-8f3d-03f7e756ab03",
       "video_id": "2mthZrfAFR0",
       "video_checked_at": "2026-11-10T10:06:09.316Z",
-      "video_match_method": "automated_title_channel_match",
-      "video_channel": "Daz Shields - Topic"
+      "video_match_method": "automated_title_channel_match"
     },
     {
       "id": "5062a803-2c96-4dc4-9d53-c66c5018e06a",
@@ -243,8 +235,7 @@
       "source_url": "https://musicbrainz.org/release-group/5062a803-2c96-4dc4-9d53-c66c5018e06a",
       "video_id": "eATLOxPX-vE",
       "video_checked_at": "2026-11-10T10:06:10.005Z",
-      "video_match_method": "automated_title_channel_match",
-      "video_channel": "Chubb+Bits - Topic"
+      "video_match_method": "automated_title_channel_match"
     },
     {
       "id": "f9c4e2e8-2ad9-4c08-92d0-aa9e3d12e77a",
@@ -269,8 +260,7 @@
       "source_url": "https://musicbrainz.org/release-group/d2d0128f-45f8-4acc-8095-bbf38e11dfe8",
       "video_id": "xUttvgxv5lg",
       "video_checked_at": "2026-11-10T10:06:11.241Z",
-      "video_match_method": "automated_title_channel_match",
-      "video_channel": "Chubb+Bits - Topic"
+      "video_match_method": "automated_title_channel_match"
     },
     {
       "id": "1b083738-1f69-4993-affd-bf4606b606e4",
@@ -295,8 +285,7 @@
       "source_url": "https://musicbrainz.org/release-group/222d4d4f-82f7-4cdf-b593-0b8c20d21bff",
       "video_id": "eoOFFcl2csA",
       "video_checked_at": "2026-11-10T10:06:11.782Z",
-      "video_match_method": "automated_title_channel_match",
-      "video_channel": "Chubb+Bits - Topic"
+      "video_match_method": "automated_title_channel_match"
     },
     {
       "id": "bfbf6129-5fb7-4386-87ec-54be69d98700",
@@ -309,8 +298,7 @@
       "source_url": "https://musicbrainz.org/release-group/bfbf6129-5fb7-4386-87ec-54be69d98700",
       "video_id": "9-j5vQysqKA",
       "video_checked_at": "2026-11-10T10:06:12.166Z",
-      "video_match_method": "automated_title_channel_match",
-      "video_channel": "Chubb+Bits - Topic"
+      "video_match_method": "automated_title_channel_match"
     },
     {
       "id": "b8b466f9-d97d-4e64-a5a2-c3e663a9cd02",
@@ -323,8 +311,7 @@
       "source_url": "https://musicbrainz.org/release-group/b8b466f9-d97d-4e64-a5a2-c3e663a9cd02",
       "video_id": "TkKvGeTj2Cc",
       "video_checked_at": "2026-11-10T10:06:12.433Z",
-      "video_match_method": "automated_title_channel_match",
-      "video_channel": "Vanguard - Topic"
+      "video_match_method": "automated_title_channel_match"
     },
     {
       "id": "6b628ad4-27b4-4bff-8d5c-bf799777c17c",
@@ -337,8 +324,7 @@
       "source_url": "https://musicbrainz.org/release-group/6b628ad4-27b4-4bff-8d5c-bf799777c17c",
       "video_id": "f4qb-JKphMQ",
       "video_checked_at": "2026-11-10T10:06:03.526Z",
-      "video_match_method": "automated_title_channel_match",
-      "video_channel": "Ado"
+      "video_match_method": "automated_title_channel_match"
     },
     {
       "id": "477670c0-c463-41fe-8692-6b6a366607df",
@@ -349,7 +335,10 @@
       "country_name": "IT",
       "source": "MusicBrainz",
       "source_url": "https://musicbrainz.org/release-group/477670c0-c463-41fe-8692-6b6a366607df",
-      "video_id": null
+      "video_id": "jni_U5ShIiA",
+      "video_checked_at": "2026-11-11T09:38:47.700Z",
+      "video_match_method": "automated_title_channel_match",
+      "video_channel": "FireSoundZ"
     },
     {
       "id": "86f2815d-5184-4d46-bf1e-1dd367822e67",
@@ -362,8 +351,7 @@
       "source_url": "https://musicbrainz.org/release-group/86f2815d-5184-4d46-bf1e-1dd367822e67",
       "video_id": "g8ARJgfVYJM",
       "video_checked_at": "2026-11-10T10:06:06.927Z",
-      "video_match_method": "automated_title_channel_match",
-      "video_channel": "Cage The Elephant"
+      "video_match_method": "automated_title_channel_match"
     },
     {
       "id": "bc309cf2-9b1a-4fe8-8876-2e7223c52708",
@@ -388,8 +376,7 @@
       "source_url": "https://musicbrainz.org/release-group/3a842d70-fe50-43aa-b2a4-5b701c700210",
       "video_id": "jsNCKT8qfd8",
       "video_checked_at": "2026-11-10T10:06:08.278Z",
-      "video_match_method": "automated_title_channel_match",
-      "video_channel": "Olivia Rodrigo"
+      "video_match_method": "automated_title_channel_match"
     },
     {
       "id": "91e077fb-e071-4a85-8bc2-0dace673624a",
@@ -426,8 +413,7 @@
       "source_url": "https://musicbrainz.org/release-group/ef5093a3-7c6c-4ce3-b777-2c9e03be310c",
       "video_id": "v43UclTjsow",
       "video_checked_at": "2026-11-10T10:06:10.406Z",
-      "video_match_method": "automated_title_channel_match",
-      "video_channel": "Convictions"
+      "video_match_method": "automated_title_channel_match"
     },
     {
       "id": "e482e551-2eef-446e-a984-46ce62d2af4e",
@@ -452,8 +438,7 @@
       "source_url": "https://musicbrainz.org/release-group/fc3eddf3-47f7-42b7-814e-b633e7f0d240",
       "video_id": "aANqg8mz-ak",
       "video_checked_at": "2026-11-10T10:06:03.108Z",
-      "video_match_method": "automated_title_channel_match",
-      "video_channel": "한로로 HANRORO"
+      "video_match_method": "automated_title_channel_match"
     }
   ]
 }
