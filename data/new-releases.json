@@ -1,23 +1,105 @@
 {
-  "generated_at": "2026-11-12T09:58:51.566Z",
+  "generated_at": "2026-11-13T09:46:00.980Z",
   "range": {
-    "start": "2026-11-06",
-    "end": "2026-11-12"
+    "start": "2026-11-07",
+    "end": "2026-11-13"
   },
   "source": "MusicBrainz release groups (singles)",
   "country_basis": "MusicBrainz artist country, not guaranteed activity location",
   "items": [
     {
-      "id": "326ccf19-c436-4f61-8fc5-1dc78e171829",
-      "title": "Only You Know",
-      "artist": "TREYDELAGHETTO",
-      "release_date": "2026-11-12",
+      "id": "d5633e23-a655-4d3e-9a9a-f89a475c1c95",
+      "title": "примара",
+      "artist": "Imager",
+      "release_date": "2026-11-13",
       "country_code": "OTHER",
-      "country_name": "CH",
+      "country_name": "UA",
       "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/326ccf19-c436-4f61-8fc5-1dc78e171829",
+      "source_url": "https://musicbrainz.org/release-group/d5633e23-a655-4d3e-9a9a-f89a475c1c95",
+      "video_id": "fCN28v3_wU4",
+      "video_checked_at": "2026-11-13T09:45:59.296Z",
+      "video_match_method": "automated_title_channel_match",
+      "video_channel": "Imager - Topic"
+    },
+    {
+      "id": "58b6bb76-fc9b-46b1-9e1c-dac71fa0c30c",
+      "title": "Weather",
+      "artist": "TRiGi",
+      "release_date": "2026-11-13",
+      "country_code": "OTHER",
+      "country_name": "IN",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/58b6bb76-fc9b-46b1-9e1c-dac71fa0c30c",
+      "video_id": "ubOZh8w_sYs",
+      "video_checked_at": "2026-11-13T09:45:59.723Z",
+      "video_match_method": "automated_title_channel_match",
+      "video_channel": "TRiGi - Topic"
+    },
+    {
+      "id": "1e327c83-3f9b-465b-9801-b0ccaf621697",
+      "title": "Nothing More (Radio Edit)",
+      "artist": "Memz",
+      "release_date": "2026-11-13",
+      "country_code": "OTHER",
+      "country_name": "GB",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/1e327c83-3f9b-465b-9801-b0ccaf621697",
+      "video_id": "cbYBFaFmlok",
+      "video_checked_at": "2026-11-13T09:46:00.154Z",
+      "video_match_method": "automated_title_channel_match",
+      "video_channel": "Memz - Topic"
+    },
+    {
+      "id": "b4e3d64d-972a-46b5-abc7-4051e9502b7a",
+      "title": "TWINK HUNT",
+      "artist": "Judas",
+      "release_date": "2026-11-13",
+      "country_code": "US",
+      "country_name": "US",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/b4e3d64d-972a-46b5-abc7-4051e9502b7a",
+      "video_id": "-M_eruOfB7M",
+      "video_checked_at": "2026-11-13T09:45:58.908Z",
+      "video_match_method": "automated_title_channel_match",
+      "video_channel": "Judas - Topic"
+    },
+    {
+      "id": "b5acf14b-6cf5-47da-9d01-7a147211d233",
+      "title": "Fernweh / Innenwelt",
+      "artist": "The Offline with SHOLTO & Tom McBrien",
+      "release_date": "2026-11-13",
+      "country_code": "OTHER",
+      "country_name": "DE",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/b5acf14b-6cf5-47da-9d01-7a147211d233",
       "video_id": null,
-      "video_checked_at": "2026-11-12T09:58:48.772Z"
+      "video_checked_at": "2026-11-13T09:46:00.358Z"
+    },
+    {
+      "id": "e2b0ecad-ff7e-4b98-a95a-f791ca576016",
+      "title": "New Beginnings",
+      "artist": "Humrich & Winter Trillionaire",
+      "release_date": "2026-11-13",
+      "country_code": "OTHER",
+      "country_name": "UG",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/e2b0ecad-ff7e-4b98-a95a-f791ca576016",
+      "video_id": null,
+      "video_checked_at": "2026-11-13T09:46:00.617Z"
+    },
+    {
+      "id": "7f25364c-c2ac-4e1f-9120-4034367de6e2",
+      "title": "Mayor Que Yo",
+      "artist": "Marvic Trejo",
+      "release_date": "2026-11-13",
+      "country_code": "OTHER",
+      "country_name": "DO",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/7f25364c-c2ac-4e1f-9120-4034367de6e2",
+      "video_id": "2e9l9RFdkKg",
+      "video_checked_at": "2026-11-13T09:46:00.980Z",
+      "video_match_method": "automated_title_channel_match",
+      "video_channel": "Marvic Trejo"
     },
     {
       "id": "febd7df8-5e44-4d44-befe-07bd7ef9a4d3",
@@ -30,6 +112,18 @@
       "source_url": "https://musicbrainz.org/release-group/febd7df8-5e44-4d44-befe-07bd7ef9a4d3",
       "video_id": null,
       "video_checked_at": "2026-11-12T09:58:49.166Z"
+    },
+    {
+      "id": "326ccf19-c436-4f61-8fc5-1dc78e171829",
+      "title": "Only You Know",
+      "artist": "TREYDELAGHETTO",
+      "release_date": "2026-11-12",
+      "country_code": "OTHER",
+      "country_name": "CH",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/326ccf19-c436-4f61-8fc5-1dc78e171829",
+      "video_id": null,
+      "video_checked_at": "2026-11-12T09:58:48.772Z"
     },
     {
       "id": "488ad723-c7fc-4f2b-8266-bda0b4765bd7",
@@ -54,8 +148,7 @@
       "source_url": "https://musicbrainz.org/release-group/e0d14022-7486-4fc5-9447-4e29c49b3135",
       "video_id": "nuqXk1wZrCA",
       "video_checked_at": "2026-11-12T09:58:48.330Z",
-      "video_match_method": "automated_title_channel_match",
-      "video_channel": "Takefuji Drums"
+      "video_match_method": "automated_title_channel_match"
     },
     {
       "id": "661c3b0b-7b5a-4b2d-b6e1-0232cc185fd4",
@@ -70,6 +163,19 @@
       "video_checked_at": "2026-11-12T09:58:48.549Z"
     },
     {
+      "id": "4503511f-5693-438b-ab37-6f02a7e11ac0",
+      "title": "Stauland",
+      "artist": "UNGESCHÖNT",
+      "release_date": "2026-11-10",
+      "country_code": "OTHER",
+      "country_name": "DE",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/4503511f-5693-438b-ab37-6f02a7e11ac0",
+      "video_id": "of3ysY5JkOs",
+      "video_checked_at": "2026-11-12T09:58:50.729Z",
+      "video_match_method": "automated_title_channel_match"
+    },
+    {
       "id": "08c96b9d-c287-4ecb-a304-c2d8f6fb006a",
       "title": "Something About You Baby (Radio Edition)",
       "artist": "Memz",
@@ -82,32 +188,16 @@
       "video_checked_at": "2026-11-12T09:58:50.358Z"
     },
     {
-      "id": "4503511f-5693-438b-ab37-6f02a7e11ac0",
-      "title": "Stauland",
-      "artist": "UNGESCHÖNT",
-      "release_date": "2026-11-10",
-      "country_code": "OTHER",
-      "country_name": "DE",
+      "id": "11325c52-4ae5-46b1-96bf-2aebc4f8e979",
+      "title": "Ha! I Use Ableton",
+      "artist": "Acidgvrl & Ümi Yumiko",
+      "release_date": "2026-11-07",
+      "country_code": "JP",
+      "country_name": "JP",
       "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/4503511f-5693-438b-ab37-6f02a7e11ac0",
-      "video_id": "of3ysY5JkOs",
-      "video_checked_at": "2026-11-12T09:58:50.729Z",
-      "video_match_method": "automated_title_channel_match",
-      "video_channel": "UNGESCHÖNT - Topic"
-    },
-    {
-      "id": "f65a39a1-a028-43a5-b087-f1e38b27a8ae",
-      "title": "Bester Freund",
-      "artist": "Mehnersmoos",
-      "release_date": "2026-11-09",
-      "country_code": "OTHER",
-      "country_name": "DE",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/f65a39a1-a028-43a5-b087-f1e38b27a8ae",
-      "video_id": "j0a_iLz1s0U",
-      "video_checked_at": "2026-11-12T09:58:51.073Z",
-      "video_match_method": "automated_title_channel_match",
-      "video_channel": "Mehnersmoos"
+      "source_url": "https://musicbrainz.org/release-group/11325c52-4ae5-46b1-96bf-2aebc4f8e979",
+      "video_id": null,
+      "video_checked_at": "2026-11-13T09:45:58.578Z"
     },
     {
       "id": "e5539feb-602c-4948-9276-224508e71c46",
@@ -120,134 +210,6 @@
       "source_url": "https://musicbrainz.org/release-group/e5539feb-602c-4948-9276-224508e71c46",
       "video_id": null,
       "video_checked_at": "2026-11-12T09:58:48.992Z"
-    },
-    {
-      "id": "2651eb7f-47ad-4b07-ba34-0d5da4975f5f",
-      "title": "Remedy",
-      "artist": "The Frst ft. Major Moment",
-      "release_date": "2026-11-06",
-      "country_code": "US",
-      "country_name": "US",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/2651eb7f-47ad-4b07-ba34-0d5da4975f5f",
-      "video_id": null,
-      "video_checked_at": "2026-11-12T09:58:49.456Z"
-    },
-    {
-      "id": "039a1f29-5fd5-40d1-af7e-1eb77b9fcf97",
-      "title": "Allowing the Heartache to Fade",
-      "artist": "Curtis Macdonald",
-      "release_date": "2026-11-06",
-      "country_code": "US",
-      "country_name": "US",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/039a1f29-5fd5-40d1-af7e-1eb77b9fcf97",
-      "video_id": "k4qv47ADPPw",
-      "video_checked_at": "2026-11-10T10:06:05.669Z",
-      "video_match_method": "automated_title_channel_match"
-    },
-    {
-      "id": "35484cd0-a68b-47a0-9c1f-061ae9df7801",
-      "title": "Zanzibar",
-      "artist": "Sessa",
-      "release_date": "2026-11-06",
-      "country_code": "OTHER",
-      "country_name": "BR",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/35484cd0-a68b-47a0-9c1f-061ae9df7801",
-      "video_id": "sC34lu7MQ5E",
-      "video_checked_at": "2026-11-10T10:06:05.945Z",
-      "video_match_method": "automated_title_channel_match"
-    },
-    {
-      "id": "5b7c3708-ad84-4e40-ae3a-2d7632f232dc",
-      "title": "White Boy Blues",
-      "artist": "Memz",
-      "release_date": "2026-11-06",
-      "country_code": "OTHER",
-      "country_name": "GB",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/5b7c3708-ad84-4e40-ae3a-2d7632f232dc",
-      "video_id": "5CoqDpUUFB8",
-      "video_checked_at": "2026-11-10T10:06:05.393Z",
-      "video_match_method": "automated_title_channel_match"
-    },
-    {
-      "id": "d7f6149a-db18-4d05-8884-ef294a8dcb27",
-      "title": "Airforce One",
-      "artist": "Baba Jay",
-      "release_date": "2026-11-06",
-      "country_code": "OTHER",
-      "country_name": "AT",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/d7f6149a-db18-4d05-8884-ef294a8dcb27",
-      "video_id": "5e-YfwOFP8Y",
-      "video_checked_at": "2026-11-10T10:06:07.384Z",
-      "video_match_method": "automated_title_channel_match"
-    },
-    {
-      "id": "74a4e430-cc6e-4687-ae34-5708eeae6eda",
-      "title": "Invisible",
-      "artist": "Before We Fade",
-      "release_date": "2026-11-06",
-      "country_code": "OTHER",
-      "country_name": "NL",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/74a4e430-cc6e-4687-ae34-5708eeae6eda",
-      "video_id": null,
-      "video_checked_at": "2026-11-12T09:58:51.346Z"
-    },
-    {
-      "id": "132d84d5-d1c8-4d4a-bec4-f0b82fb08ffe",
-      "title": "The Alchemist / The Witness",
-      "artist": "Matan Caspi",
-      "release_date": "2026-11-06",
-      "country_code": "OTHER",
-      "country_name": "IL",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/132d84d5-d1c8-4d4a-bec4-f0b82fb08ffe",
-      "video_id": null,
-      "video_checked_at": "2026-11-12T09:58:51.566Z"
-    },
-    {
-      "id": "8d4e9304-c8a9-4b5a-97da-c7a29e61d189",
-      "title": "AA Ana Psicóloga",
-      "artist": "Marina Domínguez",
-      "release_date": "2026-11-06",
-      "country_code": "OTHER",
-      "country_name": "ES",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/8d4e9304-c8a9-4b5a-97da-c7a29e61d189",
-      "video_id": "CS09wFwHFO0",
-      "video_checked_at": "2026-11-07T08:58:05.503Z",
-      "video_match_method": "automated_title_channel_match"
-    },
-    {
-      "id": "0297351e-0cd0-43c5-8dfa-28335f59fcde",
-      "title": "Shards",
-      "artist": "Noumenia",
-      "release_date": "2026-11-06",
-      "country_code": "OTHER",
-      "country_name": "IT",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/0297351e-0cd0-43c5-8dfa-28335f59fcde",
-      "video_id": "_Zv641Sh3io",
-      "video_checked_at": "2026-11-07T08:58:04.988Z",
-      "video_match_method": "automated_title_channel_match"
-    },
-    {
-      "id": "314f34c0-b837-4dae-98cf-b13f08846985",
-      "title": "Mi mayor anhelo",
-      "artist": "David R Maneiro",
-      "release_date": "2026-11-06",
-      "country_code": "US",
-      "country_name": "US",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/314f34c0-b837-4dae-98cf-b13f08846985",
-      "video_id": "0cas4mBK_cs",
-      "video_checked_at": "2026-11-12T09:58:50.087Z",
-      "video_match_method": "automated_title_channel_match",
-      "video_channel": "David R Maneiro - Topic"
     }
   ]
 }
