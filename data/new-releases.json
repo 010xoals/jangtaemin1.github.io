@@ -1,12 +1,26 @@
 {
-  "generated_at": "2026-11-14T09:08:31.601Z",
+  "generated_at": "2026-11-16T09:56:47.554Z",
   "range": {
-    "start": "2026-11-08",
-    "end": "2026-11-14"
+    "start": "2026-11-10",
+    "end": "2026-11-16"
   },
   "source": "MusicBrainz release groups (singles)",
   "country_basis": "MusicBrainz artist country, not guaranteed activity location",
   "items": [
+    {
+      "id": "54ecc0a6-0ccf-4ba8-8238-8e6bad76708d",
+      "title": "Mon Art",
+      "artist": "Malcolm23’",
+      "release_date": "2026-11-16",
+      "country_code": "OTHER",
+      "country_name": "CI",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/54ecc0a6-0ccf-4ba8-8238-8e6bad76708d",
+      "video_id": "JKIwWnNQdt0",
+      "video_checked_at": "2026-11-16T09:56:46.248Z",
+      "video_match_method": "automated_title_channel_match",
+      "video_channel": "Malcolm23' - Topic"
+    },
     {
       "id": "2958bbe5-427d-4332-981a-7a60f92ed96e",
       "title": "Last Dance of the Departed",
@@ -18,33 +32,6 @@
       "source_url": "https://musicbrainz.org/release-group/2958bbe5-427d-4332-981a-7a60f92ed96e",
       "video_id": "TPmFvn6PXR4",
       "video_checked_at": "2026-11-14T09:08:29.967Z",
-      "video_match_method": "automated_title_channel_match",
-      "video_channel": "1919"
-    },
-    {
-      "id": "b4e3d64d-972a-46b5-abc7-4051e9502b7a",
-      "title": "TWINK HUNT",
-      "artist": "Judas",
-      "release_date": "2026-11-13",
-      "country_code": "US",
-      "country_name": "US",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/b4e3d64d-972a-46b5-abc7-4051e9502b7a",
-      "video_id": "-M_eruOfB7M",
-      "video_checked_at": "2026-11-13T09:45:58.908Z",
-      "video_match_method": "automated_title_channel_match"
-    },
-    {
-      "id": "1e327c83-3f9b-465b-9801-b0ccaf621697",
-      "title": "Nothing More (Radio Edit)",
-      "artist": "Memz",
-      "release_date": "2026-11-13",
-      "country_code": "OTHER",
-      "country_name": "GB",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/1e327c83-3f9b-465b-9801-b0ccaf621697",
-      "video_id": "cbYBFaFmlok",
-      "video_checked_at": "2026-11-13T09:46:00.154Z",
       "video_match_method": "automated_title_channel_match"
     },
     {
@@ -61,18 +48,6 @@
       "video_match_method": "automated_title_channel_match"
     },
     {
-      "id": "b5acf14b-6cf5-47da-9d01-7a147211d233",
-      "title": "Fernweh / Innenwelt",
-      "artist": "The Offline with SHOLTO & Tom McBrien",
-      "release_date": "2026-11-13",
-      "country_code": "OTHER",
-      "country_name": "DE",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/b5acf14b-6cf5-47da-9d01-7a147211d233",
-      "video_id": null,
-      "video_checked_at": "2026-11-13T09:46:00.358Z"
-    },
-    {
       "id": "58b6bb76-fc9b-46b1-9e1c-dac71fa0c30c",
       "title": "Weather",
       "artist": "TRiGi",
@@ -84,6 +59,56 @@
       "video_id": "ubOZh8w_sYs",
       "video_checked_at": "2026-11-13T09:45:59.723Z",
       "video_match_method": "automated_title_channel_match"
+    },
+    {
+      "id": "1e327c83-3f9b-465b-9801-b0ccaf621697",
+      "title": "Nothing More (Radio Edit)",
+      "artist": "Memz",
+      "release_date": "2026-11-13",
+      "country_code": "OTHER",
+      "country_name": "GB",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/1e327c83-3f9b-465b-9801-b0ccaf621697",
+      "video_id": "cbYBFaFmlok",
+      "video_checked_at": "2026-11-13T09:46:00.154Z",
+      "video_match_method": "automated_title_channel_match"
+    },
+    {
+      "id": "b4e3d64d-972a-46b5-abc7-4051e9502b7a",
+      "title": "TWINK HUNT",
+      "artist": "Judas",
+      "release_date": "2026-11-13",
+      "country_code": "US",
+      "country_name": "US",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/b4e3d64d-972a-46b5-abc7-4051e9502b7a",
+      "video_id": "-M_eruOfB7M",
+      "video_checked_at": "2026-11-13T09:45:58.908Z",
+      "video_match_method": "automated_title_channel_match"
+    },
+    {
+      "id": "b5acf14b-6cf5-47da-9d01-7a147211d233",
+      "title": "Fernweh / Innenwelt",
+      "artist": "The Offline with SHOLTO & Tom McBrien",
+      "release_date": "2026-11-13",
+      "country_code": "OTHER",
+      "country_name": "DE",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/b5acf14b-6cf5-47da-9d01-7a147211d233",
+      "video_id": null,
+      "video_checked_at": "2026-11-16T09:56:46.456Z"
+    },
+    {
+      "id": "e2b0ecad-ff7e-4b98-a95a-f791ca576016",
+      "title": "New Beginnings",
+      "artist": "Humrich & Winter Trillionaire",
+      "release_date": "2026-11-13",
+      "country_code": "OTHER",
+      "country_name": "UG",
+      "source": "MusicBrainz",
+      "source_url": "https://musicbrainz.org/release-group/e2b0ecad-ff7e-4b98-a95a-f791ca576016",
+      "video_id": null,
+      "video_checked_at": "2026-11-16T09:56:46.647Z"
     },
     {
       "id": "7f25364c-c2ac-4e1f-9120-4034367de6e2",
@@ -99,18 +124,6 @@
       "video_match_method": "automated_title_channel_match"
     },
     {
-      "id": "e2b0ecad-ff7e-4b98-a95a-f791ca576016",
-      "title": "New Beginnings",
-      "artist": "Humrich & Winter Trillionaire",
-      "release_date": "2026-11-13",
-      "country_code": "OTHER",
-      "country_name": "UG",
-      "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/e2b0ecad-ff7e-4b98-a95a-f791ca576016",
-      "video_id": null,
-      "video_checked_at": "2026-11-13T09:46:00.617Z"
-    },
-    {
       "id": "febd7df8-5e44-4d44-befe-07bd7ef9a4d3",
       "title": "Forever Crush",
       "artist": "TREYDELAGHETTO",
@@ -120,7 +133,7 @@
       "source": "MusicBrainz",
       "source_url": "https://musicbrainz.org/release-group/febd7df8-5e44-4d44-befe-07bd7ef9a4d3",
       "video_id": null,
-      "video_checked_at": "2026-11-14T09:08:30.163Z"
+      "video_checked_at": "2026-11-16T09:56:46.809Z"
     },
     {
       "id": "326ccf19-c436-4f61-8fc5-1dc78e171829",
@@ -132,7 +145,7 @@
       "source": "MusicBrainz",
       "source_url": "https://musicbrainz.org/release-group/326ccf19-c436-4f61-8fc5-1dc78e171829",
       "video_id": null,
-      "video_checked_at": "2026-11-14T09:08:30.389Z"
+      "video_checked_at": "2026-11-16T09:56:47.020Z"
     },
     {
       "id": "488ad723-c7fc-4f2b-8266-bda0b4765bd7",
@@ -145,21 +158,19 @@
       "source_url": "https://musicbrainz.org/release-group/488ad723-c7fc-4f2b-8266-bda0b4765bd7",
       "video_id": "_3BsJiMtqHc",
       "video_checked_at": "2026-11-14T09:08:30.823Z",
-      "video_match_method": "automated_title_channel_match",
-      "video_channel": "Tramuntana. - Topic"
+      "video_match_method": "automated_title_channel_match"
     },
     {
-      "id": "e0d14022-7486-4fc5-9447-4e29c49b3135",
-      "title": "Ecceia",
-      "artist": "Takefuji Drums",
+      "id": "96256eca-507b-417f-b777-e198f4b88a76",
+      "title": "original releases",
+      "artist": "joney",
       "release_date": "2026-11-11",
       "country_code": "JP",
       "country_name": "JP",
       "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/e0d14022-7486-4fc5-9447-4e29c49b3135",
-      "video_id": "nuqXk1wZrCA",
-      "video_checked_at": "2026-11-12T09:58:48.330Z",
-      "video_match_method": "automated_title_channel_match"
+      "source_url": "https://musicbrainz.org/release-group/96256eca-507b-417f-b777-e198f4b88a76",
+      "video_id": null,
+      "video_checked_at": "2026-11-16T09:56:45.716Z"
     },
     {
       "id": "661c3b0b-7b5a-4b2d-b6e1-0232cc185fd4",
@@ -171,7 +182,7 @@
       "source": "MusicBrainz",
       "source_url": "https://musicbrainz.org/release-group/661c3b0b-7b5a-4b2d-b6e1-0232cc185fd4",
       "video_id": null,
-      "video_checked_at": "2026-11-14T09:08:29.596Z"
+      "video_checked_at": "2026-11-16T09:56:45.907Z"
     },
     {
       "id": "08c96b9d-c287-4ecb-a304-c2d8f6fb006a",
@@ -183,21 +194,21 @@
       "source": "MusicBrainz",
       "source_url": "https://musicbrainz.org/release-group/08c96b9d-c287-4ecb-a304-c2d8f6fb006a",
       "video_id": null,
-      "video_checked_at": "2026-11-14T09:08:31.145Z"
+      "video_checked_at": "2026-11-16T09:56:47.290Z"
     },
     {
-      "id": "f65a39a1-a028-43a5-b087-f1e38b27a8ae",
-      "title": "Bester Freund",
-      "artist": "Mehnersmoos",
-      "release_date": "2026-11-09",
+      "id": "4503511f-5693-438b-ab37-6f02a7e11ac0",
+      "title": "Stauland",
+      "artist": "UNGESCHÖNT",
+      "release_date": "2026-11-10",
       "country_code": "OTHER",
       "country_name": "DE",
       "source": "MusicBrainz",
-      "source_url": "https://musicbrainz.org/release-group/f65a39a1-a028-43a5-b087-f1e38b27a8ae",
-      "video_id": "j0a_iLz1s0U",
-      "video_checked_at": "2026-11-14T09:08:31.601Z",
+      "source_url": "https://musicbrainz.org/release-group/4503511f-5693-438b-ab37-6f02a7e11ac0",
+      "video_id": "of3ysY5JkOs",
+      "video_checked_at": "2026-11-16T09:56:47.554Z",
       "video_match_method": "automated_title_channel_match",
-      "video_channel": "Mehnersmoos"
+      "video_channel": "UNGESCHÖNT - Topic"
     }
   ]
 }
